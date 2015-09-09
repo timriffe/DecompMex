@@ -2,9 +2,17 @@
 # Data Prep by Jose Manuel Aburto, inherited Sep 7, #
 #####################################################
 
+# deaths data originally from:
+# http://www3.inegi.org.mx/sistemas/microdatos/encuestas.aspx?c=33398&s=est
+
+# let's see if we can make an automatic downloader / processing script.
+
+
+
+
 ########## Program to analyze sex mortality differences in Avoidable Mortality
-setwd("//Users//josemanuelaf//Desktop//Aburto 2015 gender disparities//Data")
-setwd('C:\\Users\\aburtoflores\\Desktop\\Working papers\\Aburto 2015 gender disparities\\Data')
+#setwd("//Users//josemanuelaf//Desktop//Aburto 2015 gender disparities//Data")
+#setwd('C:\\Users\\aburtoflores\\Desktop\\Working papers\\Aburto 2015 gender disparities\\Data')
 
 #install.packages('reshape')
 #install.packages('gdata')
