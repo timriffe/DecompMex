@@ -1,3 +1,9 @@
+
+#library(LifeTable)
+# one year, and one sex at a time
+#LT(Nx = Exposure, Dx = Deaths, Mx = Dx/Nx, ages = 0:(length(Mx) - 1), axmethod = "midpoint", sex = "female", mxsmooth = FALSE, 
+#		axsmooth = FALSE, radix = 1, verbose = FALSE)
+
 ########## Program to analyze sex mortality differences in Avoidable Mortality
 setwd("//Users//josemanuelaf//Desktop//Aburto 2015 gender disparities//Data")
 setwd('C:\\Users\\aburtoflores\\Desktop\\Working papers\\Riffe & Aburto 2015\\Data')
