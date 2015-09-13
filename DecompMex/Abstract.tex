@@ -16,35 +16,102 @@
 \newcommand{\dd}{\; \mathrm{d}}
 \newcommand{\tc}{\quad\quad\text{,}}
 \newcommand{\tp}{\quad\quad\text{.}}
+\title{Mexico!}
+
+\author[1]{JM ABurto\thanks{email here}}
+\author[2]{Tim Riffe}
+\affil[1]{Max Planck/EDSD}
+\affil[2]{Max Planck Institute for Demographic Research}
+
 
 \begin{document}
+\maketitle
 
 \section{Background}
 What is the question we are asking? Has anyone asked it before? What did they do
 and find? What are we going to do that's different and what will we find?
 
-\section{Data & Methods} 
+\section{Data \& Methods} 
 
 Cause of death classification and age reporting are considered to be inaccurate in death registration in older ages. For this reason, we truncate analysis at age 75. This is also a reasonable decision because most changes in life expectancy are likely due to changes in mortality patterns below the age of 75. There are different ways to summarize mortality conditions in specified age ranges, and we choose to focus on temporary life expectancy between the ages of 0 and 75 (Arriaga, 1982), at times breaking this quantity into large age groups.
 
-Exposures came from ___
+Exposures came from 
 
-Death counts were tabulated by the authors based on official microdata available from ___
-
+Death counts were tabulated by the authors based on official microdata available from 
 \subsection{Classification of causes of death}
-The period of years covered in this study spans both ICD 9 and ICD 10, …. find language... based on XXX (2013)
-Causes were grouped into _ categories based 
+The period of years covered in this study spans both ICD 9 and ICD 10, \ldots find
+language\ldots based on XXX (2013) Causes were grouped into X categories based 
 
 Data quality and limitation (appendix?)
-
+In the case of Mexico, data for old ages are not sufficiently reliable at the
+state level to perform calculations as specified in the above equations, and so
+we truncate anayses at age 75 using the formulas recommended by Arriaga (1982).
 \subsection{Best practices lifetable}
-This method was first proposed by Vallin \& Mesle (2008)
+This method was first proposed by Vallin \& Mesle (2008), and we summarize it
+briefly here. The imaginary best practices lifetable for Mexico is a composite
+of the lowest observed mortality rates by age, cause, and state for a given sex
+and year. In continous terms, we define life expecancy, $e(0)$, as:
+\begin{equation}
+\int _0 ^\infty l(x) \dd x \tc
+\end{equation}
+where $l(x)$ is the survivorship function defined with radix of one, or as a
+function of the force of mortality, $\mu(x)$ as:
+\begin{equation}
+\label{eq:lx}
+l(x) = e^{-\int_0^x \mu(a) \dd a}
+\end{equation}
 
+In general, $\mu(x)$ can be treated as the sum of $C$ cause-specific mortality
+rates at age $x$:
+\begin{equation}
+\label{eq:mx}
+\mu(x) = \sum_1^C \mu_c(x)
+\end{equation}
+
+In the case of best practices mortality, and assuming that causes of death are
+independent of one another VCR (XXXX), we treat $\mu(x)$ as a composite of the
+lowest observed cause-specific mortality rates our of all 32 Mexican states in the given age $x$.
+
+\begin{equation}
+\label{eq:mxmin}
+\mu(x)^{\star} = \sum_1^C min(\mu_c(x))
+\end{equation}
+
+This best practices $\mu^{\star}$ has a unique age profile, and it uniquely
+determines a pattern of $l(x)^{\star}$, per \eqref{eq:lx}, that corresponds with a
+best practices life expectancy, $e(0)^{\star}$. $e(0)^{\star}$ can be treated as a
+sort of maximum presently acheivable life expectancy given the best available
+practices and technologies within a given set of populations and assuming
+perfect diffussion. It is an imaginary quantity because no particular population
+ever acheives this mortality pattern, and none may ever. However, this value is
+a real referent not based on a projection of improvements into the future, and
+so it bounds our optimism in a practical way.
 
 \subsection{temporary life expectancy}
+
+Given the data, we require an estimate of temporary life expectancy between ages
+0 and 75, or the average years of life lived between the ages of 0 and 75 according to a
+given set of period mortality rates. We denote this quantity as
+${}_{75}e_0$, and its best practices minimum as ${}_{75}e_0^{\star}$. Defined in
+terms of $l(x)^\star$
+
+\begin{equation}
+{}_{75}e_0^{\star} = \int _0^{75} l(x)^\star \dd x \quad \tc
+\end{equation}
+or in general for bounded ages, with a lower bound $lb$ and upper bound, $ub$
+
+\begin{equation}
+{}_{ub}e_{lb}^{\star} = \frac{\int _{lb}^{ub} l(x)^\star \dd x }{l(lb)^\star}
+\quad \tc
+\end{equation}
+
+
+
+
 \subsection{decomposing differences in temp life expectancy}
 
-
+\section{Trends in best practices life expectancy}
+The spaghetti plots\ldots
 
 \section{State trends in departures from best practices temp e(0)}
 Small multiples maps (time series of maps)
