@@ -35,9 +35,9 @@ et_trends <- function(states,van,bp,ylim = range(pretty(c(states$e0,van$e0,bp$e0
 	bp$Sex <- factor(bp$Sex,levels=c(1,2),labels=c("Males", "Females"))
 	
 	Fig1<-xyplot(e0~Year|Sex,data=states,groups=State,type="l",lwd=2,between=list(x=2),
-			xlim=c(1990,2010),main="",ylim=ylim,ylab="Life Expectancy",
+			xlim=c(1990,2010),main="",ylim=ylim,ylab="temp e(0)",
 			col=makeTransparent("black",alpha=65),par.settings=my.settings,xlab="Period", 
-			key=list(space="bottom",background="white",text=list(c('Life Expectancy','VG Life Expectancy','BP Life Expectancy')),cex=.8,
+			key=list(space="bottom",background="white",text=list(c('State temp e(0)','VG temp e(0)','BP temp e(0)')),cex=.8,
 					lines=list(lty=1,lwd=2,col=c(makeTransparent("black",alpha=65),makeTransparent("red",alpha=100),
 									makeTransparent("blue",alpha=100)))),
 			scales=list(alternating=1,x=list(cex=.75,at=c(seq(1990,2010,5))),
@@ -52,7 +52,7 @@ et_trends <- function(states,van,bp,ylim = range(pretty(c(states$e0,van$e0,bp$e0
 	
 	
 	Fig2<-xyplot(e0~Year|Sex,data=van,type="l",lwd=2,between=list(x=2),
-			xlim=c(1990,2010),main="Life expectancy experiment",ylim=ylim,ylab="Life Expectancy",
+			xlim=c(1990,2010),main="",ylim=ylim,ylab="temp e(0)",
 			col=makeTransparent("red",alpha=100),par.settings=my.settings,xlab="Period"#,
 #			key=list(space="bottom",background="white",text=list(c('Life Expectancy','VG Life Expectancy','BP Life Expectancy')),cex=.8,
 #					lines=list(lty=1,lwd=2,col=c(makeTransparent("black",alpha=65),makeTransparent("red",alpha=100),
@@ -70,7 +70,7 @@ et_trends <- function(states,van,bp,ylim = range(pretty(c(states$e0,van$e0,bp$e0
 	
 	
 	Fig3<-xyplot(e0~Year|Sex,data=bp,type="l",lwd=2,between=list(x=2),
-			xlim=c(1990,2010),main="Life expectancy experiment",ylim=ylim,ylab="Life Expectancy",
+			xlim=c(1990,2010),main="",ylim=ylim,ylab="temp e(0)",
 			col=makeTransparent("blue",alpha=100),par.settings=my.settings,xlab="Period"#,
 #			key=list(space="bottom",background="white",text=list(c('Life Expectancy','VG Life Expectancy','BP Life Expectancy')),cex=.8,
 #					lines=list(lty=1,lwd=2,col=c(makeTransparent("black",alpha=65),makeTransparent("red",alpha=100),
