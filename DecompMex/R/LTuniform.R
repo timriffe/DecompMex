@@ -1,5 +1,6 @@
 
 LTuniform <- function(mx,sex = "f"){
+	mx <- as.matrix(mx)
 	#install.packages("/home/tim/git/HMDLifeTables/HMDLifeTables/HMDLifeTables",repos=NULL)
 	require(HMDLifeTables)
 	i.openage <- nrow(mx)

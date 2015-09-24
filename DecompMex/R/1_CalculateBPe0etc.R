@@ -11,17 +11,27 @@ if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
 library(data.table)
 library(reshape2)
 source("R/Functions.R")
+source("R/LTuniform.R")
 # load in data made in DataPrep.R
 Mxs        <- local(get(load("Data/Mxs.Rdata")))
 Mxsc       <- local(get(load("Data/Mxsc.Rdata")))
-MxscSm       <- local(get(load("Data/MxscSm.Rdata")))
-
+Mxsc       <- local(get(load("Data/MxscSm.Rdata")))
 
 #########################################
 # npow get BP Mx
-Mxsc$Mx    <- Mxsc$Dx/Mxsc$Exposure
-Mxsc       <- as.data.table(Mxsc)
-Mxscmin    <- Mxsc[,min(Mx), by = list(Year, Sex, Age, AM.Group)]
+myLT <- function(mx,sex){
+	sex <- ifelse(all(sex == 1),"m","f")
+	LTuniformvecminimal(mx,sex)
+}
+myLTlx <- function(mx,sex){
+	sex <- ifelse(all(sex == 1),"m","f")
+	LTuniform(mx,sex)$lx
+}
+
+#Mxsc$Mx    <- Mxsc$Dx/Mxsc$Exposure
+#Mxsc       <- as.data.table(Mxsc)
+
+Mxscmin    <- Mxsc[,min(Mxcsm), by = list(Year, Sex, Age, AM.Group)]
 setnames(Mxscmin, "V1","Mx")
 Mxsmin     <- Mxscmin[,sum(Mx),by=list(Year, Sex, Age)]
 setnames(Mxsmin, "V1","Mx")
@@ -49,7 +59,7 @@ bpe40_74 <- BPlx[,getTempe0(.SD,40,74),by=list(Year, Sex)]
 # get e0 and lx columsn for states
 #Deaths.PopM <- Mxs[,sum(Mx),by=list(State,Year,Sex,Age)]
 #setnames(Deaths.PopM, "V1","Mx")
-
+head(Mxs)
 Statese0    <- Mxs[,myLT(Mx, Sex), by = list(State,Year,Sex)]
 setnames(Statese0, "V1","e0")
 Stateslx    <- Mxs[,lx:=myLTlx(Mx, Sex), by = list(State,Year,Sex)]
