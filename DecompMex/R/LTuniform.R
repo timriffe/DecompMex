@@ -70,6 +70,28 @@ LTuniformvecminimal <- compiler::cmpfun(function(mx,sex = "f"){
 	ex[1]
 })
 
+mcx2etemp <- compiler::cmpfun(function(mxc,Sex,lowera,uppera){
+	dim(mxc) <- c(length(mxc)/10,10)
+	mx       <- rowSums(mxc, na.rm = TRUE)
+	
+	i.openage <- length(mx)
+	OPENAGE   <- i.openage - 1
+	RADIX     <- 1
+	ax        <- mx * 0 + .5
+	ax[1]   <- HMDLifeTables:::AKm02a0(m0 = mx[1], sex = Sex)
+	qx        <- mx / (1 + (1 - ax) * mx)
+	qx[i.openage]       <- ifelse(is.na(qx[i.openage]), NA, 1)
+	ax[i.openage]       <- 1 / mx[i.openage]                   
+	px 				    <- 1 - qx
+	px[is.nan(px)]      <- 0
+	lx 			        <- c(RADIX, RADIX * cumprod(px[1:OPENAGE]))
+	dx 				    <- lx * qx
+	Lx 				    <- lx - (1 - ax) * dx
+	Lx[i.openage ]	    <- lx[i.openage ] * ax[i.openage ]
+	
+	Age <- 1:length(mx) - 1
+	sum(Lx[Age >= lowera & Age <= uppera] ) / lx[Age == lowera] 
+})
 
 
 
