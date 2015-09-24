@@ -14,6 +14,7 @@ source("R/Functions.R")
 # load in data made in DataPrep.R
 Mxs        <- local(get(load("Data/Mxs.Rdata")))
 Mxsc       <- local(get(load("Data/Mxsc.Rdata")))
+MxscSm       <- local(get(load("Data/MxscSm.Rdata")))
 
 
 #########################################
