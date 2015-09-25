@@ -34,7 +34,9 @@
 \maketitle
 
 \begin{abstract}
-Progress in life expectancy in Mexico has
+We analyze trends in temporary life expectancy for three large age groups from 1990 to 2010 for all 32 Mexican states, and compare these with a synthetic best practices trend. We assess the impact of amenable/avoidable mortality on temporary life expectancy at the state level by sex. We apply demographic measures and use standard decomposition techniques to disentangle the effects of selected causes of death. We find improvements in temporary life expectancy for the population aged 0 to 14, as they continuously approached the best practices trend. However, the adult population aged 15 to 39 shows deterioration among males after 2006 in almost every state. Opposing this trend, females show a convergence trend toward the best practices benchmark between ages 15 and 39. Adults aged 40 to 74 show an unexpected decrease in the best practices indicator, and major variation among states in temporary life expectancy. These findings might strengthen the case for reforms that will enable all the Mexicans to improve in their health status.
+​
+
 
 
 \end{abstract}
@@ -103,11 +105,23 @@ benchmarks are calculated on the basis of the lowest observed mortality within
 ages and causes, among the full set of 32 Mexican states. This concept was first
 proposed by \citet{wunsch1975minimum}, later explored by
 \citet{vallin2008minimum}, and more recently applied under a different
-definition by \citet{eikemo2014}. We apply demographic measures and standard decomposition techniques to
-isolate the cause and age-specific shortcomings between states and the
-corresponding best-practices lifetable. 
+definition by \citet{eikemo2014}. We apply demographic measures and
+standard decomposition techniques to isolate the cause and age-specific shortcomings between states and the corresponding best-practices lifetable. 
 
-We hypothesize age-dependent variations in temporary life expectancy outcomes. In particular, we expect convergence between the states in temporary life expectancy for young people since public health interventions are mainly focused in infant mortality and child health. For instance, the vaccination program and the health reform aim to cover fully children in all the country and recent evidence suggest a decrease in mortality between ages 0-14 due to a decline in infectious and respiratory diseases \citep{canudas2014}.On the contrary,  we expect little improvements in temporary life expectancy for the adult and old population due to the unprecedented rise in homicide mortality and the increase in diabetes mortality in these ages \citep{canudas2014}. Although every state have the commitment to providing universal coverage and equitable access to health care since the early 2000's, we anticipate heterogeneity between states in mortality improvements due to the different epidemiological patterns in the states \citep{Frenk2006}.
+We hypothesize age-dependent variations in temporary life expectancy outcomes.
+In particular, we expect convergence between states in temporary life expectancy
+for young people, since public health interventions are mainly focused in infant
+mortality and child health. For instance, the vaccination program and the health
+reform aim to fully cover children in the entire country, and recent
+evidence suggests a decrease in mortality between ages 0 to 14 due to a decline
+in infectious and respiratory diseases \citep{canudas2014}. On the contrary, we
+expect little improvements in temporary life expectancy for the adult and older
+adult population due to the unprecedented rise in homicide mortality and the
+increase in diabetes mortality in these ages \citep{canudas2014}. Although every
+state has the commitment to providing universal coverage and equitable access to
+health care since the early 2000's, we anticipate heterogeneity between states
+in mortality improvements due to state differences in epidemiological patterns
+\citep{Frenk2006}.
 
 
 \section*{Data \& Methods} 
@@ -167,14 +181,32 @@ We truncated analysis at age 75 because classification of causes of deaths and a
 
 
 \subsection*{Demographic Methods}
-We first calculated age-sex-cause specific death rates for the 32 states up to age 75 and estimated period life tables for females and males from 1990 to 2010 following standard life table techniques \citep{preston2001}. Second, we estimated temporal life expectancy to capture differential effects of the morality categories among three subgroups: child (ages 0-14), young (ages 15-40) and adult (40-75). We did this following procedures previously used \citep{arriaga1984}. 
+We first smooth cause-specific death rates over age and time for each
+state and sex separately using the 2-d p-spline method proposed by
+\citet{GC2012}.
+This helps eliminate stochastic zeros, which otherwise would accumulate in the best-practices mortality
+schedule, and artificially inflate BP life expectancy. Smoothed death rates are
+then constrained to sum to the unsmoothed all-cause death rates. There are no
+zeros in all-cause death rates. We then calculate period life tables up to
+age 74 for males and females from 1990 to 2010 following the HMD Methods
+Protocol \citep{HMDMP}. Second, we estimated temporary life expectancy to
+capture differential effects of all-cause mortality among three large age
+groups: children (ages 0-14), young adults (ages 15-40) and older adults
+(40-74). We do this following the formulas of \citet{arriaga1984}, as
+defined below.
 
-We then constructed the Best Practices Lifetables (BP) for every year and estimated cause-specific contributions to the difference between state-specific temporary life expectancy and BP temporary life expectancy ($e^{\star}$) applying standard decomposition methods \citep{horiuchi2008}. All the analyses were carried out using the  R software.
+We then construct the best practices lifetables (BP) for every year and sex
+and estimated cause-specific contributions to the difference between
+state-specific temporary life expectancy and BP temporary life expectancy
+($e^{\star}$) applying standard decomposition methods
+\citep{horiuchi2008}.\footnote{The decomposition will be carried out and
+incorporated in the final paper version.} All the analyses were carried out
+using \texttt{R}.
 
 \subsection*{Best Practices Lifetable}
-This approach was first proposed by \citet{vallin2008minimum}, and we summarize it
-briefly here. The imaginary best practices (BP) lifetable is a composite of the lowest observed mortality rates by age, cause, and state for a given sex
-and year. In continuous terms, we define life expectancy, $e(0)$, as:
+This approach was first proposed by \citet{wunsch1975minimum}, and we summarize it
+briefly here. The synthetic best practices (BP) lifetable is a composite of the
+lowest observed mortality rates by age, cause, and state for a given sex and year. In continuous terms, we define life expectancy, $e(0)$, as:
 \begin{equation}
 \int _0 ^\infty l(x) \dd x \tc
 \end{equation}
@@ -186,22 +218,26 @@ l(x) = e^{-\int_0^x \mu(a) \dd a}
 \end{equation}
 
 In general, $\mu(x)$ can be treated as the sum of $I$ cause-specific mortality
-rates at age $x$ assuming that causes of death are independent of one another like $\mu(x) = \sum_1^I \mu_i(x)$. In the case of best practices mortality we treat $\mu(x)$ as a composite of the lowest observed cause-specific mortality rates in the given age $x$.
-
+rates at age $x$ assuming that causes of death are independent of one another:
 \begin{equation}
 \label{eq:mxmin}
 \mu(x)^{\star} = \sum_1^I min(\mu_i(x))
 \end{equation}
-
-This BP life expectancy ($\mu^{\star}(x)$) has a unique age profile, and it uniquely
-determines a pattern of $l(x)^{\star}$, per \eqref{eq:lx}, that corresponds with a
+This BP mortality rate schedule ($\mu^{\star}(x)$) has a unique
+age profile, and it determines a pattern of $l(x)^{\star}$, per \eqref{eq:lx}, that corresponds with a
 best practices life expectancy, $e(0)^{\star}$. Thus, $e(0)^{\star}$ can be treated as a
 maximum presently achievable life expectancy given the best available
 practices and technologies within a given set of populations and assuming
 perfect diffusion \citep{vallin2008minimum}. It is an imaginary quantity because no particular population
 ever achieves this mortality pattern, and none may ever. However, this value is
 a real referent not based on a projection of improvements into the future, and
-so it bounds our optimism in a practical way.
+so it bounds our optimism in a practical way. This definition of best practices
+is different from other uses found in the literature, and it is important to
+notice that it is not the same as the vanguard, or record-holder life
+expectancy. Vanguard life expectancy is the notion that was treated by
+\citet{oeppen2002broken}, and it is different from our definition of best
+practices in that the vanguard life expectancy of a given year is based on
+all-cause mortality and refers to a single population.
 
 \subsection*{Temporary Life Expectancy}
 
@@ -210,29 +246,65 @@ $x_1$ and $x_2$, for $x_1<x_2$, or the average years of life lived between these
 $e(x_1,x_2)$, and its best practices maximum as $e^{\star}(x_1,x_2)$. Defined in
 terms of $l(x)^\star$:
 
-
 \begin{equation}
 e^{\star}(x_1,x_2) = \frac{\int _{x_1}^{x_2} l(x)^\star \dd x}{l(x_1)^\star}
 \end{equation}
 
 \subsection*{Limitations}
-The limitations of our study should be mentioned. First, mortality data are likely to present innacuracies in cause-of-death classification due to comorbidities , particularly at older ages \citep{tobias2001}. To mitigate this, we focus on ages below 75 grouping causes of death according to the avoidable mortality concept using ICD codes and previous used smooth techniques . Second, our estimates regarding homicide mortality are likely to be underestimated because of inaccurate practices regarding counting, reporting and because the large number of missing individuals in Mexico \citep{HRW2011}. Third, the Avoidable Mortality concept should be understood as an indicator of potential weaknesses with respect to health care and some public health policies and not as a definitive assessment \citep{nolte&mckee2008}. Fourth, the amount of deaths that should be considered avoidable within the avoidable classification is not clear \citep{beltran2011avoidable}. For instance, \citet{nolte2012amenable} consider only 50 percent of heart disease amenable in industrialized countries, based on previous review of evidence. However, we do not have information to measure precise percentage of the avoidable mortality within the groups. We overcame this by applying a methodological framework based on mortality levels that had been observed and therefore potentially achievable within the country based on previous works \citep{vallin2008minimum}.
+The limitations of our study should be mentioned. First, mortality data are
+likely to present innacuracies in cause-of-death classification due to
+comorbidities, particularly at older ages \citep{tobias2001}. To mitigate this,
+we focus on ages below 75, grouping causes of death using ICD codes according to
+the avoidable mortality concept.
+Second, our estimates regarding homicide mortality are likely to be
+underestimated because of inaccurate practices regarding counting, reporting,
+and due to the large number of missing individuals in Mexico \citep{HRW2011}.
+Third, avoidable mortality should be understood as an indicator of potential
+weaknesses with respect to health care and some public health policies and not
+as a definitive assessment \citep{nolte&mckee2008}. Fourth, the amount of deaths
+that should be considered avoidable within the avoidable classification is not
+clear \citep{beltran2011avoidable}. For instance, \citet{nolte2012amenable}
+consider only 50 percent of heart disease amenable in industrialized countries,
+based on a previous review of evidence.
 
-Despite these limitations, we made use of the most reliable data available publicly to perform our analyses in a 20-year period at the sub-national level in Mexico accounting for all the categories we were interested.
+We do not have information to precisely
+measure percentages of avoidable mortality within cause groups. Nonetheless, the
+difference between a given mortality schedule and the best practices schedule of
+the same year can be conceived of as a minimal definition of avoidable
+mortality, a sort of lower bound to how much mortality could have been avoided.
+Certainly, even a best practices schedule will contain elements of mortality
+most would consider avoidable. To the extent that the components of the BP schedule were indeed
+attained somewhere in the popualtion universe, one can view any excess mortality
+with respect to the BP schedule as avoidable. The concept of BP is nonetheless a
+model, and not a real population, but we find it useful. Since we conduct
+age-cause decompositions against the BP trend in each year, we consider both
+views of avoidability.
+
+Despite limitations in data, we made use of the most reliable data available
+publicly to perform our analyses at the sub-national level in Mexico accounting
+for all the cause codes required for this study.
 
 \section*{Results}
-\subsection{Trends in best practices life expectancy}
+\subsection*{Trends in best practices life expectancy}
 
-Figure 1 shows state-specific  (black lines), vanguard  (red lines) and BP (blue lines) remaining life expectancies for ages 0-14 (\ref{fig:e0_14} ), 15-39 (\ref{fig:e15_39}) and 40-74 (\ref{fig:e40_74}). The red line represent the record life expectancy of the 32 states within a year and the blue one represent the maximum potentially achievable for the Mexican population. The figure clearly shows a convergence pattern among the states toward the BP expectancy; however the latter present a stagnant 
+Figure 1 shows state-specific  (black lines), vanguard  (red lines) and BP (blue
+lines) remaining life expectancies for ages 0-14 (\ref{fig:e0_14} ), 15-39
+(\ref{fig:e15_39}) and 40-74 (\ref{fig:e40_74}). The red line represents the
+vanguard life expectancy out of the 32 states within each year and the blue line
+represents the maximum potentially achievable for the Mexican population under
+the best practices definition.
+The figures clearly shows a convergence pattern among the states toward the BP
+expectancy through at least the year 2000; however the latter period shows
+stagnation and even decreases for some states.
 
 \begin{figure}
 \centering
 \caption{Temporary life expectancy for states (black line), vanguard life
-expectancy (red) and best practices life expectancy  $e^\star (0,14)$ (blue) by
-sex, 1990-2010.}
+expectancy (red) and best practices life expectancy by sex, 1990-2010.}
 \begin{subfigure}{\textwidth}
 \centering
 \caption{$e(0,14)$}
+\vspace{-2em}
 \label{fig:e0_14}
 \includegraphics[scale=.5]{Figures/et0_14.pdf}
 \end{subfigure}
@@ -240,6 +312,7 @@ sex, 1990-2010.}
 \begin{subfigure}{\textwidth}
 \centering
 \caption{$e(15,39)$}
+\vspace{-2em}
 \label{fig:e15_39}
 \includegraphics[scale=.5]{Figures/et15_39.pdf}
 \end{subfigure}
@@ -247,27 +320,67 @@ sex, 1990-2010.}
 \begin{subfigure}{\textwidth}
 \centering
 \caption{$e(40,74)$}
+\vspace{-2em}
 \label{fig:e40_74}
 \includegraphics[scale=.5]{Figures/et40_74.pdf}
 \end{subfigure}
 Source: own calculations based on INEGI and SOMEDE files. 
 \end{figure}
 
+\FloatBarrier
+%\subsection*{State trends in departures from best practices temp e(0)}
+%Small multiples maps (time series of maps)
 
-\subsection*{State trends in departures from best practices temp e(0)}
-Small multiples maps (time series of maps)
+\subsection*{Age and cause contributions to state differences from the best
+practices trend.}
+This section will be completed at a later date.
+%This will show a few small multiples figures, tbd 
 
-\subsection*{Age and cause contributions to differences}
-
-This will show a few small multiples figures, tbd 
+%\section*{Discussion}
+%Talk about the role of homicide and other major causes. How many years of life
+%were lost? (not just expectancy). maybe..
 
 \section*{Discussion}
-Talk about the role of homicide and other major causes. How many years of life
-were lost? (not just expectancy). maybe..
+It is both curious and concerning that the best practices trends have not been
+steadily increasing over the period studied. Rather, trends were irregular for
+children, flat for adults, and decreasing for older adults. We expected
+that the geographic diversity in Mexico would offset the recent mortality
+setbacks known from states such as Chihuahua and Durango. If the best practices
+trend determines our expectations for future mortality, we can conclude that
+our expectations ought to have been stagnant or deflating over time, depending
+on the age group considered. It would still represent a great success if
+mortality were to drop to the best practices level in all states, as unrealistic as this may seem, but at the same time we expect
+the best practices trend to increase given a mix of new technologies, reforms,
+and improved material wellbeing.
 
-\section*{Conclusions}
-Homicide is a public health concern..
+Despite this pessimistic finding about the best practices trend, all states have
+converged toward the best practices temporary life expectancy for the age group
+from 0 to 14 over the 21 years studied. This is an important finding to report,
+and it could be related to decreases in infectious and respiratory diseases
+\citep{canudas2014}, which is consistent with public health
+interventions in the period. A forthcoming age-cause decomposition exercise will
+shed more light on this point.
 
+Males experienced the same positive trend of convergence in the age group 15 to
+39 until the year 2006, when a sudden and sizeable excess in homicide mortality
+began in particular states, especially on the Northern border with the U.S.A.
+The surge in violent deaths overlapped with a more widespread and earlier
+trend in increasing diabetes mortality. It is important to note that the
+so-called accident hump grew manifold in size due to violent deaths in
+particular states. Here too, our forthcoming decomposition
+will shed further light on these observations. Between-state variance in
+temporary life expectancy was much smaller for females over the same period,
+though females showed the same overall trend of convergence, followed by
+divergence after 2006.
+
+For older adults in the 39 to 74 age group, all states except for Chihuahua and
+Baja California converged, albeit not toward the best practices trend. Instead,
+the best practices trend decreased toward the state trends. Males experienced no
+notable improvements in these age groups over the period, while females only
+experienced minor improvements, excepting Chihuahua and
+Baja California. Of the three age groups considered, the older adult age group
+has the most potential for gains in the future. All age groups considered have
+room to improve, and many states have much potential for recovery.
 
 %}
 %\bibliographystyle{plainnat}
