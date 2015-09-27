@@ -9,6 +9,8 @@ Hexagon <- function (x, y, ...) {
 	polygon(xcoords+x,ycoords+y,...)
 }
 
+
+ramp <- colorRampPalette(rev(RColorBrewer::brewer.pal(9,"OrRd")),space="Lab"),
 HexMex <- function(data,value.name = "e0",breaks = NULL, 
 		ramp = colorRampPalette(RColorBrewer::brewer.pal(9,"OrRd"),space="Lab"),labels = TRUE,...){
 	s3  <- sqrt(3)
