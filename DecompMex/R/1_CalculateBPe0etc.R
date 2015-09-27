@@ -92,7 +92,6 @@ setnames(van40_74,"V1","e0")
 
 which.min(as.data.frame(ste40_74)[ste40_74$Year == 2010 & ste40_74$Sex == 1,])
 
-
-
-
-
+#
+#data <- as.data.frame(ste40_74)[ste40_74$Sex==1&ste40_74$Year == 2008,]
+#rownames(data) <- data$State
