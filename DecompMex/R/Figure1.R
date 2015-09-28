@@ -91,7 +91,7 @@ et_trends <- function(states,van,bp,ylim = range(pretty(c(states$e0,van$e0,bp$e0
 }
 
 
-Fig0_14 <- et_trends(ste0_14,van0_14,bpe0_14,c(14,15))
+Fig0_14  <- et_trends(ste0_14,van0_14,bpe0_14,c(14,15))
 Fig15_39 <- et_trends(ste15_39,van15_39,bpe15_39,c(22.5,25))
 Fig40_74 <- et_trends(ste40_74,van40_74,bpe40_74,c(28,35))
 

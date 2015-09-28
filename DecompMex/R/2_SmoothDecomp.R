@@ -11,11 +11,8 @@ if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
 	setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
 }
 
-MxscSm    <- local(get(load("/home/tim/Dropbox/DecompMex/Data/MxscSm.Rdata")))
-any(is.na(MxscSm$Exposure))
-table(MxscSm$Age)
 MxscSm    <- local(get(load("Data/MxscSm.Rdata")))
-setnames(MxscSm,"AM.Group","Cause")
+
 # prior to this, smoothing code run on Berkeley server
 
 # 1) get the minimum for each cause/age/sex/year
@@ -62,8 +59,8 @@ FST <-  lapply(1990:2010, function(yr,LTC, Empty){
 			names(STlist) <- unique(YR$State)
 			STlist
 		}, LTC = LTC, Empty)
-names(MST) <- 1959:2004
-names(FST) <- 1959:2004
+names(MST)  <- 1959:2004
+names(FST)  <- 1959:2004
 names(FBPL) <- 1959:2004
 names(MBPL) <- 1959:2004
 # next
