@@ -1,4 +1,6 @@
-setwd('C:\\Users\\aburtoflores\\Desktop\\Working papers\\Aburto & Riffe 2015')
+
+#	setwd('C:\\Users\\aburtoflores\\Desktop\\Working papers\\Aburto & Riffe 2015')
+
 
 if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
 	# if I'm on the laptop
@@ -90,7 +92,7 @@ setnames(van40_74,"V1","e0")
 
 
 
-which.min(as.data.frame(ste40_74)[ste40_74$Year == 2010 & ste40_74$Sex == 1,])
+#which.min(as.data.frame(ste40_74)[ste40_74$Year == 2010 & ste40_74$Sex == 1,])
 
 #
 #data <- as.data.frame(ste40_74)[ste40_74$Sex==1&ste40_74$Year == 2008,]
