@@ -15,7 +15,7 @@ ramp <- colorRampPalette(rev(RColorBrewer::brewer.pal(9,"OrRd")),space="Lab")
 # matches using numeric codes. data must be a single year/sex, such that each state
 # is only present once, and we use state numeric codes 1:32 to match to hexagons.
 
-HexMex <- function(data,value.name = "e0",version = 1, breaks = NULL, 
+HexMex <- function(data,value.name = "e0",version = 3, breaks = NULL, 
 		ramp = colorRampPalette(RColorBrewer::brewer.pal(9,"OrRd"),space="Lab"),
 		labels = TRUE,add=FALSE,...){
 	s3  <- sqrt(3)
@@ -76,6 +76,33 @@ HexMex <- function(data,value.name = "e0",version = 1, breaks = NULL,
 				),value=NA)
 		
 	}
+	if (version == 3){
+		states <- data.frame(
+				x=c(0:3 * s3,              # row 1
+						-1:3*s3+s32,           # row 2
+						0:4*s3,7:8*s3,    # row 3
+						0:7*s3+s32,    # row 4
+						2:7*s3, # row 5
+						3:4*s3+s32         # row 6
+				),               
+				y=c(    rep(7.5,4),                            # row 1
+						rep(6,5),                              # row 2
+						rep(4.5,7),                            # row 3
+						rep(3,8),	                           # row 4
+						rep(1.5,6),	                           # row 5
+						rep(0,2)                               # row 6
+				),                        
+				name=c("BCN","SON","CHH","COA",                             # row 1
+						"BCS","SIN","DUR","NL","TAM",                      # row 2
+						"NAY","ZAC","SLP","QUE","HID",     "YUC","QROO",      # row 3
+						"JAL","AGU","GUA","DF","TLA","VER","TAB","CAM",        # row 4
+						"COL","MEX","MOR","PUE","OAX","CHP",           # row 5
+						       "MIC","GRO"                         # row 6
+				),value=NA)
+		
+	}
+	
+	
 	# this just needed to be coded once.
 	StatesLookup <- structure(list(Name = c("Aguascalientes", "Baja California", 
 							"Baja California Sur", "Campeche", "Coahuila", "Colima", "Chiapas", 
@@ -86,11 +113,15 @@ HexMex <- function(data,value.name = "e0",version = 1, breaks = NULL,
 							"Tlaxcala", "Veracruz", "Yucatán", "Zacatecas"), lettercode = c("AG", 
 							"BN", "BS", "CM", "CA", "CL", "CP", "CH", "DF", "DU", "GT", "GR", 
 							"HI", "JA", "MX", "MC", "MR", "NA", "NL", "OA", "PU", "QE", "QR", 
-							"SL", "SI", "SO", "TB", "TM", "TL", "VE", "YU", "ZA"), code = 1:32), .Names = c("Name", 
-					"lettercode", "code"), row.names = c("AG", "BN", "BS", "CM", 
-					"CA", "CL", "CP", "CH", "DF", "DU", "GT", "GR", "HI", "JA", "MX", 
-					"MC", "MR", "NA", "NL", "OA", "PU", "QE", "QR", "SL", "SI", "SO", 
-					"TB", "TM", "TL", "VE", "YU", "ZA"), class = "data.frame")
+							"SL", "SI", "SO", "TB", "TM", "TL", "VE", "YU", "ZA"), code = 1:32, 
+					Name3 = c("AGU", "BCN", "BCS", "CAM",  "COA", "COL","CHP",
+							"CHH", "DF", "DUR", "GUA", "GRO", "HID", "JAL", "MEX", "MIC", 
+							"MOR", "NAY", "NL", "OAX", "PUE", "QUE", "QROO", "SLP", "SIN", 
+							"SON", "TAB", "TAM", "TLA", "VER", "YUC", "ZAC")), .Names = c("Name", 
+					"lettercode", "code", "Name3"), row.names = c("AGU", "BCN", "BCS", "CAM",  "COA", "COL","CHP",
+					"CHH", "DF", "DUR", "GUA", "GRO", "HID", "JAL", "MEX", "MIC", 
+					"MOR", "NAY", "NL", "OAX", "PUE", "QUE", "QROO", "SLP", "SIN", 
+					"SON", "TAB", "TAM", "TLA", "VER", "YUC", "ZAC"), class = "data.frame")
 	states$Name      <- StatesLookup[states$name,"Name"]
 	states$code      <- StatesLookup[states$name,"code"]
 	rownames(states) <- states$code
@@ -152,4 +183,7 @@ data <- as.data.frame(ste40_74)[ste40_74$Sex==1&ste40_74$Year == 2008,]
 rownames(data) <- data$State
 
 
-HexMex
+HexMex(data, version =1)
+dev.new()
+HexMex(data, version =2)
+HexMex(data, version =3)
