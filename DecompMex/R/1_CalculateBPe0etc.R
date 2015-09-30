@@ -1,4 +1,6 @@
-setwd('C:\\Users\\aburtoflores\\Desktop\\Working papers\\Aburto & Riffe 2015')
+
+#	setwd('C:\\Users\\aburtoflores\\Desktop\\Working papers\\Aburto & Riffe 2015')
+
 
 if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
 	# if I'm on the laptop
@@ -17,21 +19,10 @@ Mxs        <- local(get(load("Data/Mxs.Rdata")))
 #Mxsc       <- local(get(load("Data/Mxsc.Rdata")))
 Mxsc       <- local(get(load("Data/MxscSm.Rdata")))
 
-#########################################
-# npow get BP Mx
-myLT <- function(mx,sex){
-	sex <- ifelse(all(sex == 1),"m","f")
-	LTuniformvecminimal(mx,sex)
-}
-myLTlx <- function(mx,sex){
-	sex <- ifelse(all(sex == 1),"m","f")
-	LTuniform(mx,sex)$lx
-}
-
 #Mxsc$Mx    <- Mxsc$Dx/Mxsc$Exposure
 #Mxsc       <- as.data.table(Mxsc)
-
-Mxscmin    <- Mxsc[,min(Mxcsm), by = list(Year, Sex, Age, AM.Group)]
+head(Mxsc)
+Mxscmin    <- Mxsc[,min(Mxcsm), by = list(Year, Sex, Age, Cause)]
 setnames(Mxscmin, "V1","Mx")
 Mxsmin     <- Mxscmin[,sum(Mx),by=list(Year, Sex, Age)]
 setnames(Mxsmin, "V1","Mx")
@@ -52,7 +43,7 @@ BPlx[,Lx:=lx2Lx(lx),by = list(Year,Sex)]
 #head(Mxs)
 #######################################
 # get temp e0 for BP
-bpe0_14 <- BPlx[,getTempe0(.SD),by=list(Year, Sex)]
+bpe0_14  <- BPlx[,getTempe0(.SD),by=list(Year, Sex)]
 bpe15_39 <- BPlx[,getTempe0(.SD,15,39),by=list(Year, Sex)]
 bpe40_74 <- BPlx[,getTempe0(.SD,40,74),by=list(Year, Sex)]
 setnames(bpe0_14,"V1","e0")
@@ -65,7 +56,7 @@ setnames(bpe40_74,"V1","e0")
 # get e0 and lx columsn for states
 #Deaths.PopM <- Mxs[,sum(Mx),by=list(State,Year,Sex,Age)]
 #setnames(Deaths.PopM, "V1","Mx")
-head(Mxs)
+#head(Mxs)
 Statese0    <- Mxs[,myLT(Mx, Sex), by = list(State,Year,Sex)]
 setnames(Statese0, "V1","e0")
 Stateslx    <- Mxs[,lx:=myLTlx(Mx, Sex), by = list(State,Year,Sex)]
@@ -90,9 +81,8 @@ setnames(van40_74,"V1","e0")
 
 
 
-which.min(as.data.frame(ste40_74)[ste40_74$Year == 2010 & ste40_74$Sex == 1,])
+#which.min(as.data.frame(ste40_74)[ste40_74$Year == 2010 & ste40_74$Sex == 1,])
 
-
-
-
-
+#
+#data <- as.data.frame(ste40_74)[ste40_74$Sex==1&ste40_74$Year == 2008,]
+#rownames(data) <- data$State
