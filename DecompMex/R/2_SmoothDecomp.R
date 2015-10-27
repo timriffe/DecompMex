@@ -135,3 +135,9 @@ for (yr in 1959:2004){
 
 save(Females, file = "Data/fcontrib.Rdata")
 save(Males, file = "Data/mcontrib.Rdata")
+
+
+
+############################
+# setwd("home/tim/Dropbox/DecompMex")
+
