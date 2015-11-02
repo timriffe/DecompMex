@@ -1,8 +1,33 @@
 
+
+#' @title \code{AKm02a0} estimates a0 using the Andreev-Kingkade rule of thumb.
+#'
+#' @description \code{AKm02a0} is an auxiliary function used by version 6 of the four HMD lifetable functions, \code{ltper_AxN()}, \code{ltcoh_AxN()}, \code{ltperBoth_AxN()}, \code{ltcohBoth_AxN()}. This is an approximation provided in an appendix by the authors. \code{AKm02a0_direct()} provides an analytical solution, which is overly precise and more laborious to explain in the MP. We prefer a separate table for m0 because it is only an approximation.
+#'
+#' @param m0 a value or vector of values of m0, the death probability for age 0 infants.
+#' @param sex either "m" or "f"
+#' 
+#' @return a0, the estimated average age at death of those dying in the first year of life, either a single value or a vector of a_0 values.
+#' 
+#' @author Tim Riffe \email{triffe@@demog.berkeley.edu}
+#' 
+#' @export
+
+
+AKm02a0 <- function(m0, sex = "m"){
+	sex <- rep(sex, length(m0))
+	ifelse(sex == "m", 
+			ifelse(m0 < .0230, {0.14929 - 1.99545 * m0},
+					ifelse(m0 < 0.08307, {0.02832 + 3.26201 * m0},.29915)),
+			# f
+			ifelse(m0 < 0.01724, {0.14903 - 2.05527 * m0},
+					ifelse(m0 < 0.06891, {0.04667 + 3.88089 * m0}, 0.31411))
+	)
+}
 LTuniform <- function(mx,sex = "f"){
 	mx <- as.matrix(mx)
 	#install.packages("/home/tim/git/HMDLifeTables/HMDLifeTables/HMDLifeTables",repos=NULL)
-	require(HMDLifeTables)
+	#require(HMDLifeTables)
 	i.openage <- nrow(mx)
 	ax        <- mx * 0 + .5                                          # ax = .5, pg 38 MPv5
 	
@@ -55,7 +80,7 @@ LTuniformvecminimal <- compiler::cmpfun(function(mx,sex = "f"){
 	OPENAGE   <- i.openage - 1
 	RADIX     <- 1
 	ax        <- mx * 0 + .5
-	ax[1]   <- HMDLifeTables:::AKm02a0(m0 = mx[1], sex = sex)
+	ax[1]     <- AKm02a0(m0 = mx[1], sex = sex)
 	qx        <- mx / (1 + (1 - ax) * mx)
 	qx[i.openage]       <- ifelse(is.na(qx[i.openage]), NA, 1)
 	ax[i.openage]       <- 1 / mx[i.openage]                   
@@ -78,7 +103,7 @@ mcx2etemp <- compiler::cmpfun(function(mxc,Sex,lowera,uppera){
 	OPENAGE   <- i.openage - 1
 	RADIX     <- 1
 	ax        <- mx * 0 + .5
-	ax[1]   <- HMDLifeTables:::AKm02a0(m0 = mx[1], sex = Sex)
+	ax[1]     <- AKm02a0(m0 = mx[1], sex = Sex)
 	qx        <- mx / (1 + (1 - ax) * mx)
 	qx[i.openage]       <- ifelse(is.na(qx[i.openage]), NA, 1)
 	ax[i.openage]       <- 1 / mx[i.openage]                   
