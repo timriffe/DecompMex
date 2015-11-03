@@ -1,5 +1,5 @@
-
 \documentclass{article}
+\usepackage{filecontents}
 \usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{amsmath}
 \usepackage{array}
@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{setspace}
+\usepackage{animate}
 %\usepackage[active,tightpage]{preview}
 \usepackage{natbib}
 \bibpunct{(}{)}{,}{a}{}{;} 
@@ -334,6 +335,30 @@ Source: own calculations based on INEGI and SOMEDE files.
 \subsection*{Age and cause contributions to state differences from the best
 practices trend.}
 This section will be completed at a later date.
+
+\begin{figure}
+\caption{Cause-specific contributions to the difference between observed and BP. (preliminar figure)}
+\centering
+\includegraphics[scale=.5]{Figures/TLE_Decomp.pdf}
+Source: own calculations based on INEGI and SOMEDE
+\end{figure}
+
+\begin{figure}[\textwidth]
+\caption{Homicide-specific contributions to the difference between observed and BP. (preliminar figure)}
+\centering
+\includegraphics[scale=.4]{Figures/HexMex_maps_homicide.pdf}
+Source: own calculations based on INEGI and SOMEDE
+\end{figure}
+
+
+\begin{figure}
+\centering
+\caption{Deviance from BP caused by Homicide 1990-2010}
+\animategraphics[autoplay, controls, scale=.5]{3}{Figures/HexMex_Homicide_15-39}{0}{20}
+\end{figure}
+
+
+
 %This will show a few small multiples figures, tbd 
 
 %\section*{Discussion}
