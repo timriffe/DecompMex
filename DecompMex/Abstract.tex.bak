@@ -1,5 +1,5 @@
-
 \documentclass{article}
+\usepackage{filecontents}
 \usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{amsmath}
 \usepackage{array}
@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{setspace}
+\usepackage{animate}
 %\usepackage[active,tightpage]{preview}
 \usepackage{natbib}
 \bibpunct{(}{)}{,}{a}{}{;} 
@@ -21,12 +22,14 @@
 \newcommand{\tp}{\quad\quad\text{.}}
 \bibliographystyle{apalike}
 
-\title{The Contributions of Homicides an Other Health Interventions to the  Best Practices Life Expectancy in Mexico, 1990-2010}
+\title{ Deviations from best practices mortality:Homicides and adult mortality in Mexican states, 1990-2015}
 
-\author[1]{Jose Manuel Aburto\thanks{aburtoflores@demogr.mpg.de}}
+%\author[1]{Nancy Plascencia\thanks{nancy.plascemcia@agricomer.com}}
+\author[1]{Jose Manuel Aburto}
+%\author[3]{Ainhoa Alustiza}
 \author[2]{Tim Riffe}
-\affil[1]{Max Planck Institute for Demographic Research, EDSD}
-\affil[2]{Max Planck Institute for Demographic Research}
+\affil[1]{European Doctoral School of Demography}
+\affil[1,2]{Max Planck Institute for Demographic Research}
 
 
 \begin{document}
@@ -44,19 +47,22 @@ We analyze trends in temporary life expectancy for three large age groups from 1
 
 \section*{Background}
 The \nth{20} century was marked by sizable improvements in mortality, living
-conditions and health in most Latin American countries \citep{who2000}. In
-Mexico, these improvements have slowed down recently as a result of opposing
+conditions and health in most Latin American countries \citep{who2000}. 
+In Mexico, these improvements have slowed down recently as a result of opposing
 trends in particular causes of death. For instance, homicide and diabetes
-increased drammatically, even as infectious and
+increased dramatically, even as infectious and
 respiratory diseases continued to fall. While life
 expectancy at birth increased by 4.3 years for males (from 67.6 to 71.9) and 3.4
 for females (from 73.8 to 77.2) between 1990 and 2000 \citep{SOMEDE},
 between 2000 and 2010, life expectancy at birth entered into a period of
-stagnation for males and slowed progress for females \citep{canudas2014}. This
+stagnation for males and slowed progress for females \citep{canudas2014}. 
+
+
+This
 period coincides with the implementation of different public health
 interventions, such as the Universal Vaccination Program and Seguro
 Popular, which aim to provide primary and secondary
-health care to the uninsured population, allocate funds to cover catastrophic
+health care to the uninsured population and allocate funds to cover catastrophic
 health expenditures \citep{knaul2005}. Further, the Oportunidades program
 was introduced to supply incentives for families to invest in themselves and
 benefit from education, health, and nutrition \citep{neufeld2012}. Some evidence
@@ -67,8 +73,8 @@ because of these interventions \citep{sepulveda2006}. Similarly, some evidence
 suggests that by 2012 Seguro Popular had covered an additional 52 million
 people in Mexico that did not have any access to public health care and, as a result, there has been a reduction in catastrophic health expenditures \citep{knaul2012}.
 
- Although these results are important, they do not reveal heterogeneity between
- Mexican states, which is an important task given the high degree of social and
+ Although these results are important and underscore the progress in public health interventions,  they do not reveal heterogeneity between
+ Mexican states and epidemiological patterns for adult mortality. Which is an important task given the high degree of social and
  health inequalities in Mexico and the heterogeneity in how public health interventions have taken place within the states (e.g., Oportunidades is focused on the poorest states and Seguro Popular did not started at the same time in the states) \citep{Frenk2006}.  Given these improvements
  in health care coverage, the strong role of institutions, and ongoing public
  health interventions, it is necessary to assess the varied impacts that
@@ -103,7 +109,7 @@ yet prepared for years after 2010.} Finally, we compare state mortality patterns
 with best-practice benchmarks for large age groups (e.g., 0-14, 15-39, 40-75). These best practice
 benchmarks are calculated on the basis of the lowest observed mortality within
 ages and causes, among the full set of 32 Mexican states. This concept was first
-proposed by \citet{wunsch1975minimum}, later explored by
+proposed by \citet{whelpton1947}, later explored by  \citet{wunsch1975minimum} and
 \citet{vallin2008minimum}, and more recently applied under a different
 definition by \citet{eikemo2014}. We apply demographic measures and
 standard decomposition techniques to isolate the cause and age-specific shortcomings between states and the corresponding best-practices lifetable. 
@@ -199,12 +205,11 @@ We then construct the best practices lifetables (BP) for every year and sex
 and estimated cause-specific contributions to the difference between
 state-specific temporary life expectancy and BP temporary life expectancy
 ($e^{\star}$) applying standard decomposition methods
-\citep{horiuchi2008}.\footnote{The decomposition will be carried out and
-incorporated in the final paper version.} All the analyses were carried out
+\citep{horiuchi2008}. All the analyses were carried out
 using \texttt{R}.
 
 \subsection*{Best Practices Lifetable}
-This approach was first proposed by \citet{wunsch1975minimum}, and we summarize it
+This approach was first proposed by \citet{whelpton1947}, and we summarize it
 briefly here. The synthetic best practices (BP) lifetable is a composite of the
 lowest observed mortality rates by age, cause, and state for a given sex and year. In continuous terms, we define life expectancy, $e(0)$, as:
 \begin{equation}
@@ -250,6 +255,8 @@ terms of $l(x)^\star$:
 e^{\star}(x_1,x_2) = \frac{\int _{x_1}^{x_2} l(x)^\star \dd x}{l(x_1)^\star}
 \end{equation}
 
+The interpretation of temporary life expectancy has the advantage, that if nobody dies between the starting and ending age, then the maximum life expectancy is $x_2-x_1$. Which sets a maximum achievable and, therefore, measurable.
+
 \subsection*{Limitations}
 The limitations of our study should be mentioned. First, mortality data are
 likely to present innacuracies in cause-of-death classification due to
@@ -287,26 +294,28 @@ for all the cause codes required for this study.
 \section*{Results}
 \subsection*{Trends in best practices life expectancy}
 
-Figure 1 shows state-specific  (black lines), vanguard  (red lines) and BP (blue
-lines) remaining life expectancies for ages 0-14 (\ref{fig:e0_14} ), 15-39
+Figure 1 shows state-specific  (black lines), vanguard  (red lines) and BP (blue lines) remaining life expectancies for ages 0-14 (\ref{fig:e0_14} ), 15-39
 (\ref{fig:e15_39}) and 40-74 (\ref{fig:e40_74}). The red line represents the
 vanguard life expectancy out of the 32 states within each year and the blue line
 represents the maximum potentially achievable for the Mexican population under
 the best practices definition.
 The figures clearly shows a convergence pattern among the states toward the BP
 expectancy through at least the year 2000; however the latter period shows
-stagnation and even decreases for some states.
+stagnation and even decreases for some states. Particularly, improvements and a trend to achieve BP is seen between ages 0 and 14. Opposing this trend, male temporary life expectancy between 15 and 39 years shows a clear downward after 2005, with some states experiencing a dramatic deterioration in temporary life expectancy. Results for females show stagnation in achieving BP temporary life expectancy. As in males' results, some states experienced losses of life after 2005, leading to widening the gap between states and BP line. 
+Importantly, temporary life expectancy for adults between 40 and 75 years shows stagnation and deterioration during the 20-year period. Even the BP life expectancy exhibits a downward trend, pointing to increases in adult mortality. Furthermore, also the BP line has been moving further from the maximum temporary life expectancy, which means that the survival in this population group is not following the rectangularization hypothesis. 
+
 
 \begin{figure}
+\label{Fig_temporary_le}
 \centering
 \caption{Temporary life expectancy for states (black line), vanguard life
-expectancy (red) and best practices life expectancy by sex, 1990-2010.}
+expectancy (red) and best practices life expectancy by sex, 1990-2015.}
 \begin{subfigure}{\textwidth}
 \centering
 \caption{$e(0,14)$}
 \vspace{-2em}
 \label{fig:e0_14}
-\includegraphics[scale=.5]{Figures/et0_14.pdf}
+\includegraphics[scale=.5]{Figures/et0_14s.pdf}
 \end{subfigure}
 \\
 \begin{subfigure}{\textwidth}
@@ -314,7 +323,7 @@ expectancy (red) and best practices life expectancy by sex, 1990-2010.}
 \caption{$e(15,39)$}
 \vspace{-2em}
 \label{fig:e15_39}
-\includegraphics[scale=.5]{Figures/et15_39.pdf}
+\includegraphics[scale=.5]{Figures/et15_39s.pdf}
 \end{subfigure}
 \\
 \begin{subfigure}{\textwidth}
@@ -322,18 +331,117 @@ expectancy (red) and best practices life expectancy by sex, 1990-2010.}
 \caption{$e(40,74)$}
 \vspace{-2em}
 \label{fig:e40_74}
-\includegraphics[scale=.5]{Figures/et40_74.pdf}
+\includegraphics[scale=.5]{Figures/et40_74s.pdf}
 \end{subfigure}
 Source: own calculations based on INEGI and SOMEDE files. 
 \end{figure}
 
-\FloatBarrier
+%\FloatBarrier
 %\subsection*{State trends in departures from best practices temp e(0)}
 %Small multiples maps (time series of maps)
 
-\subsection*{Age and cause contributions to state differences from the best
-practices trend.}
-This section will be completed at a later date.
+
+\subsection*{Age and cause-specific contributions to state differences from the best
+practices trend. \footnote{This section will be completed at a later date and updated to 2015. Preliminary results are shown.
+}}
+
+Figure 2, 3 and 4  show cause-specific contributions of avoidable mortality to the gap between temporary life expectancy and the BP life expectancy for males (panels (a))  and females (panels (b)) between 0 and 14, 15 and 39, and 40 and 74 years respectively. Results near 0 mean that they are very close to the minimum observed among all the states, results greater than zero mean deterioration in mortality relative to the minimum observed. 
+
+Reductions in the gap between the observed life expectancy and the best practices between 0 and 14 years are mainly driven by the causes amenable to medical service (\ref{fig:e0_14_males}). Since the 1990s, reductions in mortality of these articular conditions had led to convergence among the states and reducing health disparities. In some states, the gap went from half a year to less than a quarter of year. The results are similar for men and women (\ref{fig:e0_14_females}). Contributions of the other avoidable categories are negligible. 
+
+Among the young-adult population (15-39), the deviation of the states from BP life expectancy is, almost entirely, explained by homicide mortality and road traffic accidents for males (\ref{fig:e15_39_males}). In the 1990s, some states were more than a quarter of year far from the BP line. This trend was reversed as the 1990s ended and the 2000s begun, almost all the states were less than 0.05 years (blue line) from achieving the minimum homicide-mortality observed in the country. Nevertheless, after 2005, an upward trend is documented, with some states experiencing deviations from the best practices over half a year (first red line). Similar trends are observed in women (\ref{fig:15_39_females}) but with lower magnitude. The impact of the rest of AM categories is negligible. 
+
+
+\begin{figure}
+\label{fig:0-14_contributions}
+\centering
+\caption{Age and cause contributions to state differences from the best
+practices trend for temporary life expectancy 0-14, 1990-2015.}
+\begin{subfigure}{\textwidth}
+\centering
+\caption{Males}
+\vspace{-2em}
+\label{fig:e0_14_males}
+\includegraphics[scale=.5]{Figures/AM_0_14_males.pdf}
+\end{subfigure}
+\\
+\begin{subfigure}{\textwidth}
+\centering
+\caption{Females}
+\vspace{-2em}
+\label{fig:e0_14_females}
+\includegraphics[scale=.5]{Figures/AM_0_14_females.pdf}
+\end{subfigure}
+Source: own calculations based on INEGI and SOMEDE files. 
+\end{figure}
+
+
+
+
+\begin{figure}
+\label{fig:15_39_contributions}
+\centering
+\caption{Age and cause contributions to state differences from the best
+practices trend for temporary life expectancy 15-39, 1990-2015.}
+\begin{subfigure}{\textwidth}
+\centering
+\caption{Males}
+\vspace{-2em}
+\label{fig:e15_39_males}
+\includegraphics[scale=.5]{Figures/AM_15_39_males.pdf}
+\end{subfigure}
+\\
+\begin{subfigure}{\textwidth}
+\centering
+\caption{Females}
+\vspace{-2em}
+\label{fig:15_39_females}
+\includegraphics[scale=.5]{Figures/AM_15_39_females.pdf}
+\end{subfigure}
+Source: own calculations based on INEGI and SOMEDE files. 
+\end{figure}
+
+
+Adult mortality shows the largest deviations from the best practices life expectancy (Figure 4) in both males (\ref{fig:e40_74_males}) and females (\ref{fig:40_74_females}). Specifically, among men, conditions amenable to medical services, diabetes, IHD, cirrhosis and homicides have the largest toll on mortality, leading to the largest gap between the BP line and contributing to disparities among the states. For instance 12 of the 32 states are more than a quarter of life far from the best practices mortality, one of them with almost 0.75 years lagging behind. Similarly, diabetes and IHD show little improvements in the full period. Cirrhosis and homicide are at the heart of health deterioration among the adults. Both of them show large disparities within the states, ranging from values very close to zero in some states, to deviations over 1.25 years from the BP observed. After 2005, homicide shows an important increase in the gap from the minimum mortality observed. 
+
+Results for women  (\ref{fig:40_74_females}) are different. Deviations from the BP line are mainly explained by the high mortality of conditions amenable to medical service, diabetes and IHD. These three categories show a steady pattern far from the BP mortality. On the contrary, Cirrhosis shows convergence to the minimum observed. The rest of conditions are very close to the BP line. 
+
+\begin{figure}
+\label{fig:40_74_contributions}
+\centering
+\caption{Age and cause contributions to state differences from the best
+practices trend for temporary life expectancy 40-74, 1990-2015.}
+\begin{subfigure}{\textwidth}
+\centering
+\caption{Males}
+\vspace{-2em}
+\label{fig:e40_74_males}
+\includegraphics[scale=.5]{Figures/AM_40_74_males.pdf}
+\end{subfigure}
+\\
+\begin{subfigure}{\textwidth}
+\centering
+\caption{Females}
+\vspace{-2em}
+\label{fig:40_74_females}
+\includegraphics[scale=.5]{Figures/AM_40_74_females.pdf}
+\end{subfigure}
+Source: own calculations based on INEGI and SOMEDE files. 
+\end{figure}
+
+
+
+%\subsection*{Age and cause contributions to state differences from the best
+%practices trend.}
+%This section will be completed at a later date. Preliminary results are shown.
+%\begin{figure}[h!]
+%\caption{Cause-specific contributions to the difference between observed and BP. (preliminar figure)}
+%\centering
+%\includegraphics[scale=.4]{Figures/TLE_Decomp.pdf}
+%Source: own calculations based on INEGI and SOMEDE
+%\end{figure}
+
+
 %This will show a few small multiples figures, tbd 
 
 %\section*{Discussion}
@@ -355,11 +463,7 @@ and improved material wellbeing.
 
 Despite this pessimistic finding about the best practices trend, all states have
 converged toward the best practices temporary life expectancy for the age group
-from 0 to 14 over the 21 years studied. This is an important finding to report,
-and it could be related to decreases in infectious and respiratory diseases
-\citep{canudas2014}, which is consistent with public health
-interventions in the period. A forthcoming age-cause decomposition exercise will
-shed more light on this point.
+from 0 to 14 over the 21 years studied. Our results show that this has been due to improvements in causes amenable to medical service. Which is consistent with previous studies highlighting decreases in infectious and respiratory diseases in these ages \citep{canudas2014}. Moreover, major health care reforms and programs, such as Seguro Popular and Oportunidades (now Progresa) have focused efforts in reducing inequalities and improving health services for children. Our results reinforce the success of such programs by bringing life expectancy up and narrowing the gap between the best practices trend and the state-specific life expectancy in these ages.
 
 Males experienced the same positive trend of convergence in the age group 15 to
 39 until the year 2006, when a sudden and sizeable excess in homicide mortality
@@ -367,12 +471,10 @@ began in particular states, especially on the Northern border with the U.S.A.
 The surge in violent deaths overlapped with a more widespread and earlier
 trend in increasing diabetes mortality. It is important to note that the
 so-called accident hump grew manifold in size due to violent deaths in
-particular states. Here too, our forthcoming decomposition
-will shed further light on these observations. Between-state variance in
-temporary life expectancy was much smaller for females over the same period,
-though females showed the same overall trend of convergence, followed by
+particular states. Our results show that deviations from the best practices mortality in this age-group is mainly driven by the unprecedented rise in homicide mortality after 2005, which is consistent with previous research that highlight the burden of violence on population health \citep{Aburto2015}.  Between-state variance in temporary life expectancy was much smaller for females over the same period, though females showed the same overall trend of convergence, followed by
 divergence after 2006.
 
+The main results of our study are the trends in older adult mortality
 For older adults in the 39 to 74 age group, all states except for Chihuahua and
 Baja California converged, albeit not toward the best practices trend. Instead,
 the best practices trend decreased toward the state trends. Males experienced no
@@ -382,8 +484,10 @@ Baja California. Of the three age groups considered, the older adult age group
 has the most potential for gains in the future. All age groups considered have
 room to improve, and many states have much potential for recovery.
 
+%However, they still remain the world's most unequal countries \citep{Barreto2012}.
 %}
 %\bibliographystyle{plainnat}
+\newpage
  \bibliography{AburtoRiffe_Bib.bib}
 
 \end{document}
