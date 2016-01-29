@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{caption}
+\usepackage{longtable}
 \usepackage{placeins}
 \usepackage{graphicx}
 \usepackage{subcaption}
@@ -22,7 +23,7 @@
 \newcommand{\tp}{\quad\quad\text{.}}
 \bibliographystyle{apalike}
 
-\title{ Deviations from best practices mortality:Homicides and adult mortality in Mexican states, 1990-2015}
+\title{ Adult mortality drives deviations from best practices mortality: the role of avoidable causes of death in Mexican states, 1990-2015}
 
 %\author[1]{Nancy Plascencia\thanks{nancy.plascemcia@agricomer.com}}
 \author[1]{Jose Manuel Aburto}
@@ -44,8 +45,16 @@ We analyze trends in temporary life expectancy for three large age groups from 1
 
 \end{abstract}
 
+\section*{Key messages}
+\begin{itemize}
+\item Reducing health inequalities among sub-populations is a goal of every developing country. Addressing such inequalities in older adult populations is proving to be a challenge to reaching this goal.
+\item We hypothesize age-dependent variations in temporary life expectancy. Particularly due to the rise in homicide mortality and the increase of conditions amenable to medical services and policy/behavior actions.
+\item Our results show that deviations from the best practices mortality are mainly driven by old-age mortality. While young-age mortality has been constantly approaching the best practices trend pointing towards the success of public health interventions.
+\item Cirrhosis, homicide, diabetes and isquemic heart diseases contribute the most to the persistence of health inequalities within the states in Mexico. Importantly, some of them could potentially live two additional years if best practices were achieved. 
+\end{itemize}
 
-\section*{Background}
+
+\section*{Introduction (max 6000 words)}
 The \nth{20} century was marked by sizable improvements in mortality, living
 conditions and health in most Latin American countries \citep{who2000}. 
 In Mexico, these improvements have slowed down recently as a result of opposing
@@ -65,7 +74,7 @@ Popular, which aim to provide primary and secondary
 health care to the uninsured population and allocate funds to cover catastrophic
 health expenditures \citep{knaul2005}. Further, the Oportunidades program
 was introduced to supply incentives for families to invest in themselves and
-benefit from education, health, and nutrition \citep{neufeld2012}. Some evidence
+benefit from education, health, and nutrition in the late 1990's \citep{neufeld2012}. Some evidence
 suggests that Mexico experienced substantial decreases in infant and child
 mortality, along with improvements that contributed to the reduction of
 mortality and in the prevalence of acute malnutrition between 1980 and 2000
@@ -74,12 +83,11 @@ suggests that by 2012 Seguro Popular had covered an additional 52 million
 people in Mexico that did not have any access to public health care and, as a result, there has been a reduction in catastrophic health expenditures \citep{knaul2012}.
 
  Although these results are important and underscore the progress in public health interventions,  they do not reveal heterogeneity between
- Mexican states and epidemiological patterns for adult mortality. Which is an important task given the high degree of social and
- health inequalities in Mexico and the heterogeneity in how public health interventions have taken place within the states (e.g., Oportunidades is focused on the poorest states and Seguro Popular did not started at the same time in the states) \citep{Frenk2006}.  Given these improvements
+ Mexican states and epidemiological patterns for adult mortality.  Which is an important task given the high degree of social and health inequalities in Mexico \citep{Frenk2006}, and the expected accelerated process of aging in the country.   The percentage of the population aged 60 or older will go from 10\% in 2015 to 15\% in 2030 \citep{CONAPO}. Therefore,  given the improvements
  in health care coverage, the strong role of institutions, and ongoing public
  health interventions, it is necessary to assess the varied impacts that
  these health interventions may have had on particular causes of death in states
- populations and across the country.
+ populations and across the country. Moreover, it is important to identify specific potential opportunities to improve and put forward solutions to reduce the gap of  the unequal impact of public health interventions. Caused by the heterogeneity in how public health interventions have taken place within the states (e.g., Oportunidades is focused on the poorest states and Seguro Popular did not started at the same time in the states).  
  
  One approach to assess the impact of health services is by operationalizing the
  concept of Avoidable/Amenable Mortality (hereafter abbreviated AM)
@@ -103,9 +111,7 @@ of death were particularly concentrated in the poorest states of the country
 \citep{davila2014mortalidad}. We aim to improve on these studies
 by a more focused segmentation of AM into health intervention-related AM and
 behavior-related AM. Also, we extend analysis to all 32 states, by sex, and over
-the full 21-year period from 1990 to 2010.\footnote{In the final revision of
-this paper we will provide series through 2013. Right now the exposures are not
-yet prepared for years after 2010.} Finally, we compare state mortality patterns
+the full 26-year period from 1990 to 2015. Finally, we compare state mortality patterns
 with best-practice benchmarks for large age groups (e.g., 0-14, 15-39, 40-75). These best practice
 benchmarks are calculated on the basis of the lowest observed mortality within
 ages and causes, among the full set of 32 Mexican states. This concept was first
@@ -133,12 +139,12 @@ in mortality improvements due to state differences in epidemiological patterns
 \section*{Data \& Methods} 
  
 We used death counts available from official microdata files produced by the
-Mexican Statistical Office from 1990 to 2010 \citep{INEGI}. These data contain
+Mexican Statistical Office from 1990 to 2015 \citep{INEGI}. These data contain
 information on causes of death by single age, sex, and place of residence at the
 time of death. In addition, we used population estimates (Exposures) corrected
 for age misstatement, undercounting, and migration--- both internal and
 international--- available from the Mexican Society of Demography to construct
-cause-age-specific death rates by sex and state from 1990 to 2010 \citep{SOMEDE}.
+cause-age-specific death rates by sex and state from 1990 to 2010 \citep{SOMEDE}. Additionally, we performed an inter-census estimation of exposures for the period 2011-2014 using the most recent inter-census survey that took place in 2015  \citep{INEGI}. 
 
 \subsection*{Classification of Causes of Death}
 
@@ -181,7 +187,7 @@ and medical service, and because the first two represent major causes of death
 in Mexico \citep{canudas2014}. In addition to these causes, we also isolate
 homicide, road traffic accidents, and suicide because they have emerged as
 leading causes of death among young people, and the first two had a sizeable
-impact on life expectancy recently in Mexico \citep{canudas2014}. All causes of death were classified using the International Classification of Diseases, revision 9 for the period 1990-1997 and the tenth revision for 1998-2010 (see Apppendix Table 1 for details on ICD codes for each cause).
+impact on life expectancy recently in Mexico \citep{canudas2014}. All causes of death were classified using the International Classification of Diseases, revision 9 for the period 1990-1997 and the tenth revision for 1998-2010 (see Appendix Table 1 for details on ICD codes for each cause).
 
 We truncated analysis at age 75 because classification of causes of deaths and age reporting are considered to be innacurate in death registration at older ages \citep{tobias2001} and because most changes in life expectancy are likely due to changes in mortality patterns below the age of 75 \citep{Aburto2015}. In addition, health care and policy/behavior interventions are more likely to be effective at younger ages \cite{elo2014}.
 
@@ -191,7 +197,7 @@ We first smooth cause-specific death rates over age and time for each
 state and sex separately using the 2-d p-spline method proposed by
 \citet{GC2012}.
 This helps eliminate stochastic zeros, which otherwise would accumulate in the best-practices mortality
-schedule, and artificially inflate BP life expectancy. Smoothed death rates are
+schedule, and artificially inflate the best practices life expectancy. Smoothed death rates are
 then constrained to sum to the unsmoothed all-cause death rates. There are no
 zeros in all-cause death rates. We then calculate period life tables up to
 age 74 for males and females from 1990 to 2010 following the HMD Methods
@@ -281,15 +287,8 @@ the same year can be conceived of as a minimal definition of avoidable
 mortality, a sort of lower bound to how much mortality could have been avoided.
 Certainly, even a best practices schedule will contain elements of mortality
 most would consider avoidable. To the extent that the components of the BP schedule were indeed
-attained somewhere in the popualtion universe, one can view any excess mortality
-with respect to the BP schedule as avoidable. The concept of BP is nonetheless a
-model, and not a real population, but we find it useful. Since we conduct
-age-cause decompositions against the BP trend in each year, we consider both
-views of avoidability.
-
-Despite limitations in data, we made use of the most reliable data available
-publicly to perform our analyses at the sub-national level in Mexico accounting
-for all the cause codes required for this study.
+attained somewhere in the population universe, one can view any excess mortality
+with respect to the BP schedule as avoidable. Little progress has been made in advancing the concept of avoidable mortality \citep{holland2003}. We believe this perspective improves on the original concept and gauge better the avoidable deaths.
 
 \section*{Results}
 \subsection*{Trends in best practices life expectancy}
@@ -302,7 +301,7 @@ the best practices definition.
 The figures clearly shows a convergence pattern among the states toward the BP
 expectancy through at least the year 2000; however the latter period shows
 stagnation and even decreases for some states. Particularly, improvements and a trend to achieve BP is seen between ages 0 and 14. Opposing this trend, male temporary life expectancy between 15 and 39 years shows a clear downward after 2005, with some states experiencing a dramatic deterioration in temporary life expectancy. Results for females show stagnation in achieving BP temporary life expectancy. As in males' results, some states experienced losses of life after 2005, leading to widening the gap between states and BP line. 
-Importantly, temporary life expectancy for adults between 40 and 75 years shows stagnation and deterioration during the 20-year period. Even the BP life expectancy exhibits a downward trend, pointing to increases in adult mortality. Furthermore, also the BP line has been moving further from the maximum temporary life expectancy, which means that the survival in this population group is not following the rectangularization hypothesis. 
+Importantly, temporary life expectancy for adults between 40 and 75 years shows stagnation and deterioration during the 20-year period. Even the BP life expectancy exhibits a downward trend, pointing to increases in adult mortality. Furthermore, also the BP line has been moving further from the maximum temporary life expectancy, which means that the survival in this population group is not following the rectangularization hypothesis \citep{wilmoth1999}. 
 
 
 \begin{figure}
@@ -347,9 +346,9 @@ practices trend. \footnote{This section will be completed at a later date and up
 
 Figure 2, 3 and 4  show cause-specific contributions of avoidable mortality to the gap between temporary life expectancy and the BP life expectancy for males (panels (a))  and females (panels (b)) between 0 and 14, 15 and 39, and 40 and 74 years respectively. Results near 0 mean that they are very close to the minimum observed among all the states, results greater than zero mean deterioration in mortality relative to the minimum observed. 
 
-Reductions in the gap between the observed life expectancy and the best practices between 0 and 14 years are mainly driven by the causes amenable to medical service (\ref{fig:e0_14_males}). Since the 1990s, reductions in mortality of these articular conditions had led to convergence among the states and reducing health disparities. In some states, the gap went from half a year to less than a quarter of year. The results are similar for men and women (\ref{fig:e0_14_females}). Contributions of the other avoidable categories are negligible. 
+Reductions in the gap between the observed life expectancy and the best practices between 0 and 14 years are mainly driven by the causes amenable to medical service (\ref{fig:e0_14_males}). Since the 1990's, reductions in mortality of these articular conditions had led to convergence among the states and reducing health disparities. In some states, the gap went from half a year to less than a quarter of year. The results are similar for men and women (\ref{fig:e0_14_females}). Contributions of the other avoidable categories are negligible. 
 
-Among the young-adult population (15-39), the deviation of the states from BP life expectancy is, almost entirely, explained by homicide mortality and road traffic accidents for males (\ref{fig:e15_39_males}). In the 1990s, some states were more than a quarter of year far from the BP line. This trend was reversed as the 1990s ended and the 2000s begun, almost all the states were less than 0.05 years (blue line) from achieving the minimum homicide-mortality observed in the country. Nevertheless, after 2005, an upward trend is documented, with some states experiencing deviations from the best practices over half a year (first red line). Similar trends are observed in women (\ref{fig:15_39_females}) but with lower magnitude. The impact of the rest of AM categories is negligible. 
+Among the young-adult population (15-39), the deviation of the states from BP life expectancy is, almost entirely, explained by homicide mortality and road traffic accidents for males (\ref{fig:e15_39_males}). In the 1990's, some states were more than a quarter of year far from the BP line. This trend was reversed as the 1990's ended and the 2000's begun, almost all the states were less than 0.05 years (blue line) from achieving the minimum homicide-mortality observed in the country. Nevertheless, after 2005, an upward trend is documented, with some states experiencing deviations from the best practices over half a year (first red line). Similar trends are observed in women (\ref{fig:15_39_females}) but with lower magnitude. The impact of the rest of AM categories is negligible. 
 
 
 \begin{figure}
@@ -449,6 +448,7 @@ Source: own calculations based on INEGI and SOMEDE files.
 %were lost? (not just expectancy). maybe..
 
 \section*{Discussion}
+\subsection*{Trends in best practices life expectancy}
 It is both curious and concerning that the best practices trends have not been
 steadily increasing over the period studied. Rather, trends were irregular for
 children, flat for adults, and decreasing for older adults. We expected
@@ -461,9 +461,10 @@ mortality were to drop to the best practices level in all states, as unrealistic
 the best practices trend to increase given a mix of new technologies, reforms,
 and improved material wellbeing.
 
+\subsection*{Child and young-age mortality}
 Despite this pessimistic finding about the best practices trend, all states have
 converged toward the best practices temporary life expectancy for the age group
-from 0 to 14 over the 21 years studied. Our results show that this has been due to improvements in causes amenable to medical service. Which is consistent with previous studies highlighting decreases in infectious and respiratory diseases in these ages \citep{canudas2014}. Moreover, major health care reforms and programs, such as Seguro Popular and Oportunidades (now Progresa) have focused efforts in reducing inequalities and improving health services for children. Our results reinforce the success of such programs by bringing life expectancy up and narrowing the gap between the best practices trend and the state-specific life expectancy in these ages.
+from 0 to 14 over the 21 years studied. Our results show that this has been due to improvements in causes amenable to medical service. Which is consistent with previous studies highlighting decreases in infectious and respiratory diseases in these ages \citep{canudas2014}. Moreover, major health care reforms and programs, such as Seguro Popular and Oportunidades (now Progresa) have focused efforts in reducing inequalities and improving health services for children. In fact, in 2012 78.3\% of children under age one visited a doctor to monitor their development and growth; however, children with social security showed a significantly greater effective access coverage  than those with Seguro Popular or no health insurance \citep{urquieta2015evolution}. Our results reinforce the success of such programs by bringing life expectancy up and narrowing the gap between the best practices trend and the state-specific life expectancy in these ages.
 
 Males experienced the same positive trend of convergence in the age group 15 to
 39 until the year 2006, when a sudden and sizeable excess in homicide mortality
@@ -471,9 +472,10 @@ began in particular states, especially on the Northern border with the U.S.A.
 The surge in violent deaths overlapped with a more widespread and earlier
 trend in increasing diabetes mortality. It is important to note that the
 so-called accident hump grew manifold in size due to violent deaths in
-particular states. Our results show that deviations from the best practices mortality in this age-group is mainly driven by the unprecedented rise in homicide mortality after 2005, which is consistent with previous research that highlight the burden of violence on population health \citep{Aburto2015}.  Between-state variance in temporary life expectancy was much smaller for females over the same period, though females showed the same overall trend of convergence, followed by
+particular states. Our results show that deviations from the best practices mortality in this age-group is mainly driven by the unprecedented rise in homicide mortality after 2005, which is consistent with previous research that highlight the burden of violence on population health between 2005-2010 \citep{Aburto2015}. We extended this previous analysis by adding information from 2011 to 2015. Our results show that the high prevalence of homicide mortality in these ages remain, which highlight the failure of the Mexican government to bring down the levels of violence that started rising after 2005. In fact, states like xxx are still experiencing high mortality rates provoking losses of life of xx years relative to the best practices mortality. Between-state variance in temporary life expectancy was much smaller for females over the same period, though females showed the same overall trend of convergence, followed by
 divergence after 2006.
 
+\subsection*{Old age mortality}
 The main results of our study are the trends in older adult mortality.
 For older adults in the 39 to 74 age group, all states except for Chihuahua and
 Baja California converged, albeit not toward the best practices trend. Instead,
@@ -482,9 +484,64 @@ notable improvements in these age groups over the period, while females only
 experienced minor improvements, excepting Chihuahua and
 Baja California. 
 
-Of the three age groups considered, the older adult age group
+Improving health is a priority for governments of many developing countries, in part to achieve the Millennium Development Goals established for 2015.  Great improvements have been accomplished in reducing mortality and inequalities in children and the young population. Nevertheless, our results show that older adults are becoming a vulnerable group and more efforts are require to reduce the burden of conditions amenable to health services and policy/related conditions. In particular, this group lacks efforts on attending the burden of violence, through homicides; chronic-degenerative
+causes of death, such as diabetes and isquemic heart diseases; and behavior-related conditions like homicide and cirrhosis. Of the three age groups considered, the older adult age group
 has the most potential for gains in the future. All age groups considered have
 room to improve, and many states have much potential for recovery.
+
+
+After ten years of the implementation of the Popular Insurance program and more than 15 years after conditional transfers programs took place in Mexico, health disparities remain in the country with high, but achievable, challenges for the post-2015 agenda. As \citet{biosca2015} pointed out, these programs should also focus in the awareness of enrollment in health insurance programs to influence the population towards improving health behavior. Our results reinforce the need of such, among others public health interventions, with an special focus on older adults in the country. Nevertheless, the health component of the conditional transfers program Oportunidades targets women between 20 and 59 years old. We argue that such programs must be more inclusive and reach older population since, as we showed, a high number of years is being lost due to the lack of presence of effective and opportune health care service. 
+
+In addition, previous research emphasized the need of public health interventions to lessen the burden of homicides on population's health observed in the first decade of the 21st century \citep{canudas2014, Aburto2015}. We extend the period five years and found that the toll of homicides on the population is still high and it is highly contributing to health inequalities in the young population, consistent with the previous trend observed \citep{canudas2014}. Moreover, our results underscore the impact of violence also in the older adult population reaching unprecedented levels after 2005 making the best practices trend decrease. 
+
+\section*{Supplemental material}
+
+Appendix Table 1. Definitions of cause-of-death categories using the \nth{9} and \nth{10} revision of the International Classification of Diseases.\\
+
+{\renewcommand{\baselinestretch}{1}\selectfont
+
+\begin{longtable}{p{8cm}p{4cm}p{4cm}ccc}
+\hline
+\textbf{Category} & \textbf{ICD-10} & \textbf{ICD-9}\\
+\hline
+\endfirsthead
+\multicolumn{3}{c}%
+{\tablename\ \thetable\ -- \textit{Continue}} \\
+\hline
+\textbf{Category} & \textbf{ICD-10} & \textbf{ICD-9}\\
+\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continues}} \\
+\endfoot
+\hline
+\endlastfoot
+\multicolumn{3}{l}{\bf I. Amenable to medical service}  \\
+ I.A. AM-Infectious \& respiratory diseases : intestinal infections, tuberculosis, zoonotic bacterial diseases, other bacterial diseases, septicemia, poliomyelitis, measles, rubella, infectious hepatitis, ornithosis, rickettsioses/ arthropod-borne, syphilis (all forms), yaws, respiratory diseases, influenza \& pneumonia, chronic lower respiratory diseases & A00-A09, A16-A19, B90, A20-A26, A28, A32, A33, A35, A36, A37, A40-A41, A80, B05-B06, B15-B19, A70, A68, A75, A77, A50-A64, A66, J00-J08, J20-J39, J60-J99, J09-J18, J40-J47 & 001-009, 010-018, 32, 33, 37, 137, 020-027, 38, 45, 55-56, 70, 73, 080-082, 087, 090-099, 102, 460-479, 500-519, 480-488, 490-496 \\
+           I.B. AM-Cancers: malignant neoplasm of colon, skin, breast, cervix, prostate, testis, bladder, kidney-Wilm's tumor only, eye, thyroid carcinoma, Hodgkin’s disease, leukemia & C16,C18-C21, C43-C44, C50, C53, C61, C62, C67, C64, C69, C73, C81, C91-C95 & 153-154, 172-173, 174, 180, 185, 186, 188-189, 190, 193, 201, 204-208\\
+           I.C. AM-Circulatory: active/acute rheumatic fever, chronic rheumatic heart disease, hypertensive disease, cerebrovascular disease & I00-I02, I05-I09, I10-I13, I15, I60-I69 & 390-392, 393-398, 401-405, 430-438\\
+          I.D. AM-Birth: maternal deaths (all), congenital cardiovascular anomalies, perinatal deaths (excluding stillbirths) & O00-O99, Q20-Q28, P00-P96 & 630-676, 745-747, 760-779\\
+          I.E. AM-Other: disease of thyroid, epilepsy, peptic ulcer, appendicitis, abdominal hernia, cholelithiasis \& cholecystitis, nephritis, benign prostatic hyperplasia, misadventures to patients during surgical or medical care, cisticerchosis & E00-E07, 40-G41, K25-K27, K35-K38, K40-K46, K80-K81,  N00-N07, N17-N19, N25-N27, N40, Y60-Y69, Y83-Y84, B69 & 240-246, 345, 531-533, 540-543, 550-553, 574-575.1, 580-589, 600, E870-E876, E878-E879\\
+ & \\          
+ {\bf II. Diabetes}  & E10-E14 & 250 \\      
+ & \\
+ {\bf III. Ischemic Heart Diseases (IHD)}   & I20-I25 & 410-414, 429.2\\
+ & \\           
+ {\bf IV. HIV/AIDS} & B20-B24 & 279.1, 042-044\\ 
+  & \\                
+{\bf V. Lung cancer}  & C33-C34 & 162\\
+  & \\          
+{\bf VI. Cirrhosis}&  K70 & 571.1-571.3\\
+ & \\          
+{\bf VII. Homicides}  & X85-Y09 & E960-E969\\     
+ & \\           
+ {\bf VIII. Road traffic accidents}  & V01-V99 & E810-E819 \\     
+ & \\           
+{\bf IX. Suicide and self-inflicted injuries}  & U03, X60-X84, Y87.0 & E950-E959\\ 
+ & \\          
+{\bf X. Residual Causes }:  other cancers and other heart diseases & C00-D48, I00-I99 if not listed above, R00-R99 & 140-239, 390-459 if not listed above, 780-799
+\label{ME_Mex}
+\end{longtable}
+}
 
 %However, they still remain the world's most unequal countries \citep{Barreto2012}.
 %}
