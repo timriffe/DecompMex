@@ -160,30 +160,30 @@ HexMex <- function(data,value.name = "e0",version = 3, breaks = NULL,
 
 
 
-if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
-	# if I'm on the laptop
-	setwd("/home/tim/git/DecompMex/DecompMex")
-} else {
-	# in that case I'm on Berkeley system, and other people in the dept can run this too
-	setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
-}
+#if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
+#	# if I'm on the laptop
+#	setwd("/home/tim/git/DecompMex/DecompMex")
+#} else {
+#	# in that case I'm on Berkeley system, and other people in the dept can run this too
+#	setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
+#}
 
-library(data.table)
-library(reshape2)
-source("R/Functions.R")
-source("R/LTuniform.R")
-# load in data made in DataPrep.R
-
-
-source("R/1_CalculateBPe0etc.R")
-
-ste0_14
-
-data <- as.data.frame(ste40_74)[ste40_74$Sex==1&ste40_74$Year == 2008,]
-rownames(data) <- data$State
-
-
-HexMex(data, version =1)
-dev.new()
-HexMex(data, version =2)
-HexMex(data, version =3)
+#library(data.table)
+#library(reshape2)
+#source("R/Functions.R")
+#source("R/LTuniform.R")
+## load in data made in DataPrep.R
+#
+#
+#source("R/1_CalculateBPe0etc.R")
+#
+#ste0_14
+#
+#data <- as.data.frame(ste40_74)[ste40_74$Sex==1&ste40_74$Year == 2008,]
+#rownames(data) <- data$State
+#
+#
+#HexMex(data, version =1)
+#dev.new()
+#HexMex(data, version =2)
+#HexMex(data, version =3)
