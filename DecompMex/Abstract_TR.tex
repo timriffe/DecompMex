@@ -108,18 +108,23 @@ people in Mexico that did not have any access to public health care and, as a re
 
  These results underscore the progress in public health interventions, but they
  do not reveal heterogeneity between Mexican states or the epidemiological patterns
- for different age groups. Given improvements in health care coverage, the strong role of institutions,
- and ongoing public health interventions, it is necessary to assess the varied
+ of different age groups. Given improvements in health care coverage, the strong
+ role of institutions, and ongoing public health interventions, it is necessary to assess the varied
  impacts that these interventions may have had on mortality in Mexican
  states. For instance, Oportunidades is focused on the poorest
  states, and Seguro Popular was introduced at different times in different
- states. It is therefore important to describe the high degree of social and
- health inequalities in Mexico \citep{Frenk2006}. The age dimension of
+ states \citep{Frenk2006}. It is therefore important to describe the high degree
+ of social and health inequalities in Mexico. The age dimension of
  mortality inequality is important in part due to anticipated population ageing
- in the coming decades. The percentage of the population aged 60 or older will go from 10\% in 2015 to 15\% in 2030 \citep{CONAPO}.
+ in the coming decades. For example, the percentage of the population aged 60 or
+ older increase from 10\% in 2015 to 15\% in 2030 \citep{CONAPO}.
  
- Moreover, it is important to identify potential opportunities to improve and put forward solutions to reduce the gap of the unequal impact of public health interventions caused by the heterogeneity in how these interventions have taken place within the states.
+% Moreover, it is important to identify potential opportunities to improve and
+ % put forward solutions to reduce the gap of the unequal impact of public health interventions caused by the heterogeneity in how these interventions have taken place within the states.
  
+ 
+ % TR: on average, by 17\%  for males and 14\% for females ---- per annum or
+ % total?
  One approach to assess the impact of health services is by operationalizing the
  concept of Avoidable/Amenable Mortality (hereafter abbreviated AM)
  \citep{nolte&mckee2004, nolte&mckee2008}. This construct aims to measure the quality of health service systems by selecting certain
@@ -129,7 +134,7 @@ people in Mexico that did not have any access to public health care and, as a re
  observed from the late 1990's into the \nth{21} Century
  \citep{nolte&mckee2008}. Avoidable mortality rates fell, on average, by 17\%
  for males and 14\% for females in these countries. Despite mortality reductions for
- both sexes, heterogeneity between countries was identified, with the United
+ both sexes, heterogeneity between countries persists, with the United
  States showing the smallest reductions (around 5\%) for both sexes. However,
  each country showed progress in mortality from treatable cancers and
  circulatory diseases except for ischemic heart diseases.
@@ -139,55 +144,63 @@ late 1990's. Between 2000 and 2004 AM decreased, particularly from
 infectious diseases and nutrition-related conditions \citep{francomarina2006}, while it increased between 1998 and 2010 due to diabetes, circulatory diseases, perinatal and respiratory conditions
 \citep{agudelo2014efecto}. Increases in the latter causes
 of death were particularly concentrated in the poorest states of the country
-\citep{davila2014mortalidad}. We aim to improve on these studies
+\citep{davila2014mortalidad}. We aim to extend these studies
 by a more focused segmentation of AM into health intervention-related AM and
 behavior-related AM. Also, we extend analysis to all 32 states, by sex, and over
 the full 26-year period from 1990 to 2015. Finally, we compare state mortality patterns
-with best-practice benchmarks for large age groups (e.g., 0-14, 15-39, 40-75). These best practice
-benchmarks are calculated on the basis of the lowest observed mortality within
-ages and causes, among the full set of 32 Mexican states. This concept was first
-proposed by \citet{whelpton1947}, later explored by  \citet{wunsch1975minimum} and
-\citet{vallin2008minimum}, and more recently applied under a different
-definition by \citet{eikemo2014}. We apply demographic measures and
-standard decomposition techniques to isolate the cause and age-specific shortcomings between states and the corresponding best-practices lifetable. 
+with an easy-to-understand low-mortality benchmark calculated for large age
+groups (e.g., 0-14, 15-39, 40-75).
+This low-mortality benchmark is calculated on the basis of the lowest observed
+mortality rates within ages and causes, selected from the full set of 32 Mexican
+states.
+This concept was first proposed by \citet{whelpton1947}, and later explored by 
+\citet{wunsch1975minimum} and \citet{vallin2008minimum}. Deviations from the
+low-mortality benchmark indicate a strong potential for improvement. We apply
+demographic measures and standard decomposition techniques to isolate the cause
+and age-specific deviations between states and the corresponding optimal
+lifetable.
 
 We hypothesize age-dependent variations in temporary life expectancy outcomes.
 In particular, we expect convergence between states in temporary life expectancy
 for young people, since public health interventions are mainly focused in infant
-mortality and child health . For instance, the vaccination program and the health
-reform aim to fully cover children in the entire country, and recent
+mortality and child health. For instance, the vaccination program and the health
+reform aim to provide universal coverage to children in Mexico. Recent
 evidence suggests a decrease in mortality between ages 0 to 14 due to a decline
 in infectious and respiratory diseases \citep{canudas2014}. On the contrary, we
-expect little improvements in temporary life expectancy for the adult and older
-adult population due to the unprecedented rise in homicide mortality and the
-increase in diabetes mortality along with endocrine/metabolic diseases in these ages in the country \citep{canudas2014}. Although every
+expect little improvement in temporary life expectancy for the adult and older
+adult population, due to the unprecedented rise in homicide mortality and the
+increase in diabetes mortality along with endocrine/metabolic diseases \citep{canudas2014}. Although every
 state has the commitment to providing universal coverage and equitable access to
 health care since the early 2000's, we anticipate heterogeneity between states
-in mortality improvements due to state differences in epidemiological patterns and the differential in how benefits of health care programs have been delivered to the population.
-\citep{Frenk2006}.
+in mortality improvements due to state differences in epidemiological patterns
+and differences in how benefits of health care programs have been delivered to
+the population \citep{Frenk2006}.
 
 
 \section*{Data \& Methods} 
- This project was done using secondary data of public sources, which did not have any individual identifiers. Therefore, ethical approval for human subject research from the Institutional Review Board of the respective institutions was exempted. 
- 
-We used death counts available from official microdata files produced by the
-Mexican Statistical Office from 1990 to 2015 \citep{INEGI}. These data contain
-information on causes of death by single age, sex, and place of residence at the
-time of death. In addition, we used population estimates (Exposures) corrected
-for age misstatement, undercounting, and migration--- both internal and
-international--- available from the Mexican Society of Demography to construct
-cause-age-specific death rates by sex and state from 1990 to 2010 \citep{SOMEDE}. Additionally, we performed an inter-census estimation of exposures for the period 2011-2014 using the most recent inter-census survey that took place in 2015  \citep{INEGI}. 
+Our analyses are based on publicly available anonymized datasets.%
+% Therefore, ethical approval for human subject research from the Institutional Review Board of the respective institutions was exempted.
+We used deaths microdata available from official files produced by
+the Mexican Statistical Office from 1990 to 2015 \citep{INEGI}. These data
+contain necessary information on causes of death by single age, sex, and state
+of residence at the time of death. Population estimates from 1990 to
+2010 came from the Mexican Society of Demography \citep{SOMEDE}. These
+estimates adjust for age misstatement, undercounting, and interstate
+and international migration. Additionally, we estimate intercensal population
+counts by age, sex and state for the period 2011-2014 using the most recent
+inter-census survey that took place in 2015 \citep{INEGI}. Death counts and
+population exposures were used to calculate cause-age-specific death rates by
+sex and state from 1990 to 2014 \citep{SOMEDE}.
 
 \subsection*{Classification of Causes of Death}
-
+% TR: intersectoral??
 To separate causes of death that are susceptible to medical intervention (e.g.,
 infectious and respiratory diseases) and those related to health behaviors and
 intersectoral policies (e.g., homicides, lung cancer) we use the concept of
 'Avoidable/Amenable Mortality' (AM) \citep{nolte&mckee2004, nolte&mckee2008}. This
-concept assumes a list of conditions that should not occur with the availability
-of timely medical care. Recently, this concept has also been used to gauge the
-effect of causes that can be influenced by public policy (e.g., cirrhosis) \citep{elo2014}. We classified causes of death into ten groups based on prior studies
-\citep{elo2014, Aburto2015}, as listed in Table~\ref{tab:causes}, with
+concept assumes a list of conditions that should not cause death if timely
+medical care is available. Recently, this concept has also been used to gauge
+the effect of causes that can be influenced by public policy (e.g., cirrhosis) \citep{elo2014}. We classified causes of death into ten groups based on prior studies \citep{elo2014, Aburto2015}, as listed in Table~\ref{tab:causes}, with
 relative frequencies by sex.
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
@@ -216,81 +229,84 @@ Causes amenable to medical service & 28.50 & 40.24 \\
 We separate diabetes, ischemic heart diseases (IHD), HIV/AIDS, lung
 cancer, and cirrhosis because all of them are amenable to both health behavior
 and medical service, and because the first two represent major causes of death
-in Mexico \citep{canudas2014}. In addition to these causes, we also isolate
+in Mexico \citep{canudas2014}. In addition to these causes, we also separate
 homicide, road traffic accidents, and suicide because they have emerged as
 leading causes of death among young people, and the first two had a sizeable
-impact on life expectancy recently in Mexico \citep{canudas2014}. All causes of death were classified using the International Classification of Diseases, revision 9 for the period 1990-1997 and the tenth revision for 1998-2015 (see Appendix Table 1 for details on ICD codes for each cause).
+impact on life expectancy recently in Mexico \citep{canudas2014}. All causes of
+death were classified using the International Classification of Diseases,
+revision 9 for the period 1990-1997 and the tenth revision for 1998-2015 (see
+Appendix Table 1 for details on ICD codes for each cause). % cite ICD9 and 10,
+% unless already cited in appendix
 
-We truncated analysis at age 75 because classification of causes of deaths and age reporting are considered to be innacurate in death registration at older ages \citep{tobias2001} and because most changes in life expectancy are likely due to changes in mortality patterns below the age of 75 \citep{Aburto2015}. In addition, health care and policy/behavior interventions are more likely to be effective at younger ages \cite{elo2014}.
+We truncate analysis at age 75 because classification of causes of deaths and
+age reporting are considered to be innacurate in death registration at older
+ages \citep{tobias2001}. Most changes in life expectancy are
+likely due to changes in mortality patterns below the age of 75 \citep{Aburto2015}. In addition, health care and policy/behavior interventions are more likely to be effective at younger ages \cite{elo2014}.
 
 
 \subsection*{Demographic Methods}
-We first smooth cause-specific death rates over age and time for each
+We smooth cause-specific death rates over age and time for each
 state and sex separately using the 2-d p-spline method proposed by
 \citet{GC2012}.
-This helps eliminate stochastic zeros, which otherwise would accumulate in the best-practices mortality
-schedule, and artificially inflate the best practices life expectancy. Smoothed death rates are
-then constrained to sum to the unsmoothed all-cause death rates. There are no
-zeros in all-cause death rates. We then calculate period life tables up to
-age 74 for males and females from 1990 to 2010 following the HMD Methods
-Protocol \citep{HMDMP}. Second, we estimated temporary life expectancy to
-capture differential effects of all-cause mortality among three large age
+This helps eliminate stochastic zeros, which otherwise would accumulate in the
+minimum mortality schedule. Smoothed death rates are then constrained to sum to
+the unsmoothed all-cause death rates. We then calculate period life tables up to age 74 for males and females from 1990 to 2014 following the HMD Methods
+Protocol \citep{HMDMP}. We calculate temporary life expectancy to
+capture differential effects of mortality in three large age
 groups: children (ages 0-14), young adults (ages 15-40) and older adults
-(40-74). We do this following the formulas of \citet{arriaga1984}, as
-defined below.
+(40-74). %We do this following the formulas of \citet{arriaga1984}, as
+%defined below.
 
-We then construct the best practices lifetables (BP) for every year and sex
-and estimated cause-specific contributions to the difference between
-state-specific temporary life expectancy and BP temporary life expectancy
+We estimate cause-specific contributions to the difference between
+state-specific temporary life expectancy and benchmark temporary life expectancy
 ($e^{\star}$) applying standard decomposition methods
 \citep{horiuchi2008}. Decomposition techniques are a suitable method for comparing life expectancies across populations and analyzing age and cause-specific contributions to their differences \citep{preston2001}. All the analyses were carried out
 using \texttt{R}.
 
-\subsection*{Best Practices Lifetable}
+\subsection*{Low-mortality benchmark}
 This approach was first proposed by \citet{whelpton1947}, and we summarize it
-briefly here. The synthetic best practices (BP) lifetable is a composite of the
-lowest observed mortality rates by age, cause, and state for a given sex and year. In continuous terms, we define life expectancy, $e(0)$, as:
-\begin{equation}
-\int _0 ^\infty \ell(x) \dd x \tc
-\end{equation}
-where $\ell(x)$ is the survivorship function defined with radix of one, or as a
-function of the force of mortality, $\mu(x)$ as:
-\begin{equation}
-\label{eq:lx}
-\ell(x) = e^{-\int_0^x \mu(a) \dd a}
-\end{equation}
-
-In general, $\mu(x)$ can be treated as the sum of $I$ cause-specific mortality
-rates at age $x$ assuming that causes of death are independent of one another:
+briefly here. The low-mortality lifetable is based on synthetic mortality
+rates, defined as the sum of the lowest observed mortality rates by age, cause,
+from among all states for a given sex and year. %In continuous terms, we define
+% life expectancy, $e(0)$, as:
+%\begin{equation}
+%\int _0 ^\infty \ell(x) \dd x \tc
+%\end{equation}
+%where $\ell(x)$ is the survivorship function defined with radix of one%, or as
+% a function of the force of mortality, $\mu(x)$ as:
+%\begin{equation}
+%\label{eq:lx}
+%\ell(x) = e^{-\int_0^x \mu(a) \dd a}
+%\end{equation}
+The low mortality rates, $\mu(x)^{\star}$, are calculated as the sum of $C$
+cause-specific minimum mortality rates at age $x$, under the assumption that
+causes of death are independent of one another:
 \begin{equation}
 \label{eq:mxmin}
-\mu(x)^{\star} = \sum_1^I min(\mu_i(x))
+\mu(x)^{\star} = \sum_{c=1}^C min(\mu(x,c,s)) \tc
 \end{equation}
-This BP mortality rate schedule ($\mu^{\star}(x)$) has a unique
-age profile, and it determines a pattern of $\ell(x)^{\star}$, per \eqref{eq:lx}, that corresponds with a
-best practices life expectancy, $e(0)^{\star}$. Thus, $e(0)^{\star}$ can be treated as a
-maximum presently achievable life expectancy given the best available
-practices and technologies within a given set of populations and assuming
-perfect diffusion \citep{vallin2008minimum}. It is an imaginary quantity because no particular population
-ever achieves this mortality pattern.. However, this value is
-a real referent not based on a projection of improvements into the future, and
-so it bounds our optimism in a practical way. This definition of best practices
-is different from other uses found in the literature, and it is important to
-notice that it is not the same as the vanguard, or record-holder life
-expectancy. Vanguard life expectancy is the notion that was treated by
-\citet{oeppen2002broken}, and it is different from our definition of best
-practices in that the vanguard life expectancy of a given year is based on
-all-cause mortality and refers to a single population.
+where $x$ is age, $c$ is the given cause, and $s$ indexes the set of 32 states
+from which the minimum is selected. The resulting minimum mortality rate schedule
+($\mu^{\star}(x)$) has a unique age profile, and it determines our benchmark life expectancy, $e(0)^{\star}$.
+$e(0)^{\star}$ can be treated as the maximum presently achievable life
+expectancy assuming perfect diffusion of the best available practices and
+technologies within a given set of populations \citep{vallin2008minimum}. It is
+an imaginary quantity because no particular population is expected to achieve
+this mortality pattern. However, this value is a practical reference because it
+is based neither on a projection of improvements into the future nor on an
+arbitrary and likely dissimilar population. We refer to the state with the
+highest life expectancy in a given year as the vanguard state.
 
 \subsection*{Temporary Life Expectancy}
 
-We require an estimate of temporary life expectancy between ages
-$x_1$ and $x_2$, for $x_1<x_2$, or the average years of life lived between these ages according to a given set of period mortality rates \citep{arriaga1984}. We denote this quantity as
-$e(x_1,x_2)$, and its best practices maximum as $e^{\star}(x_1,x_2)$. Defined in
-terms of $\ell(x)^\star$:
+Temporary life expectancy between ages
+$x_1$ and $x_2$, for $x_1<x_2$, is defined as the average years of life lived
+between these ages according to a given set of mortality rates
+\citep{arriaga1984}. We denote this quantity as $e(x_1,x_2)$, and its benchmark
+maximum as $e^{\star}(x_1,x_2)$. Defined in terms of lifetable survivorship, $\ell(x)$:
 
 \begin{equation}
-e^{\star}(x_1,x_2) = \frac{\int _{x_1}^{x_2} \ell(x)^\star \dd x}{\ell(x_1)^\star}
+e(x_1,x_2) = \frac{\int _{x_1}^{x_2} \ell(x) \dd x}{\ell(x_1)} \tp
 \end{equation}
 
 The interpretation of temporary life expectancy has the advantage, that if nobody dies between the starting and ending age, then the maximum life expectancy is $x_2-x_1$.  For example, if we set $x_1=0$ and $x_2=14$, if no person dies between the ages 0 and 14, on average the population lives 14 full years, which means that the temporary life expectancy between these ages, $e(0,14)$, is fourteen. Which sets a maximum achievable and, therefore, measurable.
