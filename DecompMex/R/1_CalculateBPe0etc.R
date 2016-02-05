@@ -1,5 +1,5 @@
 
-#	setwd('C:\\Users\\aburtoflores\\Desktop\\Working papers\\Aburto & Riffe 2015')
+setwd("/Users/josemanuelaf/Documents/DecompMex/DecompMex")
 
 
 if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){

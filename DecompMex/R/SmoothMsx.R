@@ -1,15 +1,6 @@
 # check to see if it's necessary to smooth mx by state,sex
 # Author: tim
 ###############################################################################
-
-
-if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
-	# if I'm on the laptop
-	setwd("/home/tim/git/DecompMex/DecompMex")
-} else {
-	# in that case I'm on Berkeley system, and other people in the dept can run this too
-	setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
-}
 library(data.table)
 library(reshape2)
 library(MortalitySmooth)
@@ -76,16 +67,6 @@ setnames(van0_14,"V1","e0")
 setnames(van15_39,"V1","e0")
 setnames(van40_74,"V1","e0")
 
-# print and save figures
-pdf("Figures/et0_14s.pdf",width=6,height=5)
-print(Fig0_14)
-dev.off()
-pdf("Figures/et15_39s.pdf",width=6,height=5)
-print(Fig15_39)
-dev.off()
-pdf("Figures/et40_74s.pdf",width=6,height=5)
-print(Fig40_74)
-dev.off()
 
 
 
