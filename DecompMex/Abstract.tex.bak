@@ -27,8 +27,7 @@
 \newcommand{\tp}{\quad\quad\text{.}}
 \bibliographystyle{apalike}
 
-\title{ Deviations in avoidable causes of death in adulthood drive mortality inequality between
-Mexican states}
+\title{Avoidable causes of death drive adulthood survival's stagnation and reversal in Mexican states, 1990-2015}
 
 %\author[1]{Nancy Plascencia\thanks{nancy.plascemcia@agricomer.com}}
 \author[1]{Jos\'e Manuel Aburto}
@@ -43,16 +42,16 @@ Mexican states}
 \maketitle
 
 \begin{abstract}
-We analyze trends in mortality for three large age groups from 1990 to 2010 for all 32 Mexican states, and compare these with a low mortality benchmark. We assess the impact of avoidable mortality on survival at the state level by sex. We apply demographic measures and use standard decomposition techniques to disentangle the effects of selected causes of death on trends in state health inequality. We find improvements in survival for the population aged 0 to 14, as they continuously approached the low mortality benchmark. However, the adult population aged 15 to 39 shows deterioration among males after 2006 in almost every state. Females on the whole converged toward the low mortality benchmark in the same age group. Adults aged 40 to 74 show an unexpected decrease in the mow mortality benchmark, indicating universal deterioration in temporary life expectancy for this age group, albeit with wide variation between states. These findings support the case for reforms that treat all causes of death as public health priorities, and that target regional disparities in health.
+We analyze trends in mortality for three large age groups from 1990 to 2010 for all 32 Mexican states, and compare these with a low mortality benchmark. We assess the impact of avoidable mortality on survival at the state level by sex. We apply demographic measures and use standard decomposition techniques to disentangle the effects of selected causes of death on trends in state health inequality. We find improvements in survival for the population aged 0 to 14, as they continuously approached the low mortality benchmark. However, the adult population aged 15 to 39 shows deterioration among males after 2006 in almost every state. Females on the whole converged toward the low mortality benchmark in the same age group. Adults aged 40 to 74 show an unexpected decrease in the low mortality benchmark, indicating universal deterioration in temporary life expectancy for this age group, albeit with wide variation between states. These findings support the case for reforms that treat all causes of death as public health priorities, and that target regional disparities in health.
 
 \end{abstract}
 
 \section*{Key messages}
 \begin{itemize}
-\item Reducing health inequalities and improving survival among sub-populations is a goal of every developing country. Addressing such inequalities in the older adult population in Mexico is proving to be a challenge to reaching this goal.
-\item We hypothesize age-dependent variations in survival between states. Particularly due to geographic variation in the rise in homicide mortality and the increase of conditions amenable to medical services and policy/behavior actions.
-\item Our results show that deviations from our low mortality benchmark are mainly driven by adult mortality. Young-age mortality has steadily converged toward the low mortality benchmark, pointing towards the success of public health interventions.
-\item Cirrhosis, homicide, diabetes and isquemic heart diseases contribute the most to health inequalities between Mexican states. Importantly, some of them could gain up to two years of life on average if the low mortality benchmark were achieved.
+\item Improving survival among sub-populations is a goal of every developing country. Achieving such goal in the adult population in Mexico is proving to be a challenging since the 1990s.
+\item Geographic variation in the rise in homicide mortality and the increase of conditions amenable to medical services and policy/behavior actions are driving survival stagnation in adults.
+\item Young-age mortality has steadily improved, mainly due to progress made in causes amenable to public health interventions.
+\item Mexican states could benefit by two additional years of life if  cirrhosis, homicides, diabetes and isquemic heart diseases mortality were to achieve the low mortality benchmark 
 \end{itemize}
 
 \begin{spacing}{1.5}
@@ -82,9 +81,9 @@ mortality and in the prevalence of acute malnutrition between 1980 and 2000
 because of these interventions \citep{sepulveda2006}. Similarly, by 2012 Seguro Popular had provided health insurance coverage to an additional 52 million
 people in Mexico that previously did not have any access to public health care and, as a result, there has been a reduction in catastrophic health expenditures \citep{knaul2012}.
 
-These results underscore broad progress in public health interventions, but they mask heterogeneity between Mexican states and the epidemiological patterns for different age groups. Given improvements in health care coverage, the strong role of institutions, and ongoing public
- health interventions, it is necessary to assess the varied impacts that
- these interventions may have had on mortality on Mexican states. For instance, PROSPERA is focused on the poorest states, and Seguro Popular was introduced at different times in different states. In addition, Mexico faces a rapid aging process in which we can anticipate the interaction between infectious diseases and noncommunicable conditions \citep{Bygbjerg1499}, such as diabetes, on the adult population.\footnote{The percentage of the population aged 60 or older will go from 10\% in 2015 to 15\% in 2030 according to projections made by \citet{CONAPO}} Identifying specific opportunities to improve and put forward solutions to reduce the gap of  the unequal impact of public health interventions on health is a necessary step to promote equitable increases in survival among the Mexican population.% the high degree of social and health inequalities present in the country \citep{Frenk2006} 
+These results underscore broad progress in public health interventions, but they mask heterogeneity between Mexican states and the epidemiological patterns for different age groups. Therefore, it is necessary to assess the varied impacts that these interventions may have had on mortality in Mexican states. For instance, PROSPERA is focused on the poorest states, and Seguro Popular was introduced at different times in different states. In addition, Mexico faces a rapid aging process in which we can anticipate the interaction between infectious diseases and noncommunicable conditions \citep{Bygbjerg1499}, such as diabetes, on the adult population.\footnote{The percentage of the population aged 60 or older will go from 10\% in 2015 to 15\% in 2030 according to projections made by \citet{CONAPO}} Identifying specific opportunities to improve and put forward solutions to reduce the gap of  the unequal impact of public health interventions on health is a necessary step to promote equitable increases in survival among the Mexican population.% the high degree of social and health inequalities present in the country \citep{Frenk2006} 
+% In addition,  given the improvements in health care coverage, the strong role %of institutions, and ongoing public
+ %health interventions, 
  
  One approach to assess the impact of health care and other interventions is by operationalizing the
  concept of Avoidable or Amenable Mortality (hereafter abbreviated AM)
@@ -94,11 +93,11 @@ These results underscore broad progress in public health interventions, but they
  Australia, France, Japan, a reduction in AM rates was
  observed over the part 20 years
  \citep{nolte&mckee2008}. Avoidable mortality rates fell, on average, by 17\%
- for males and 14\% for females in these countries. Despite mortality reductions for
+ for males and 14\% for females in these countries. Despite mortality reductions from cancers and circulatory diseases for
  both sexes, heterogeneity between countries persists, with the United
- States showing the smallest reductions (around 5\%) for both sexes  \citep{nolte&mckee2008}. However, the authors found that each country showed progress in mortality from treatable cancers and circulatory diseases except for ischemic heart diseases.
-
-In Mexico, the components of avoidable mortality had different trends since the
+ States showing the smallest reductions (around 5\%) for both sexes  \citep{nolte&mckee2008}. 
+ 
+ In Mexico, the components of avoidable mortality had different trends since the
 late 1990's. Between 2000 and 2004 AM decreased, particularly from
 infectious diseases and nutrition-related conditions \citep{francomarina2006}, while it increased between 1998 and 2010 due to diabetes, circulatory diseases, perinatal and respiratory conditions
 \citep{agudelo2014efecto}. Increases in the latter causes
@@ -106,7 +105,7 @@ of death were particularly concentrated in the poorest states of the country
 \citep{davila2014mortalidad}. We aim to extend these studies
 by a more focused segmentation of AM into health intervention-related AM and
 behavior-related AM. Also, we extend analysis to all 32 states, by sex, and over
-the full 26-year period from 1990 to 2010. Finally, we compare state mortality patterns
+the full 26-year period from 1990 to 2015. Finally, we compare state mortality patterns
 with an easy-to-understand low-mortality benchmark calculated for large age groups (e.g., 0-14, 15-39, 40-75). This low mortality
 benchmarks is calculated on the basis of the lowest observed mortality within
 ages and causes, selected from the full set of 32 Mexican states. This concept was first
@@ -121,9 +120,7 @@ mortality and child health. For instance, the vaccination program and the health
 reform aim to fully cover children in the entire country, and recent
 evidence suggests a decrease in mortality between ages 0 to 14 due to a decline
 in infectious and respiratory diseases \citep{canudas2014}. On the contrary, we
-expect little improvement in survival for the adult and older
-adult population due to the unprecedented rise in homicide mortality and the
-increase in diabetes mortality along with endocrine/metabolic diseases in these ages in the country \citep{canudas2014}. Although every
+expect little improvements in survival for the  young-adult population due to the unprecedented rise in homicide mortality, and on the older adults because of the increase in diabetes mortality along with endocrine/metabolic diseases in these ages in the country \citep{canudas2014}. Although every
 state has the commitment to providing universal coverage and equitable access to
 health care since the early 2000's, we anticipate heterogeneity between states
 in mortality improvements due to state differences in epidemiological patterns and differences in how  health care programs have been delivered to the population
@@ -132,16 +129,17 @@ in mortality improvements due to state differences in epidemiological patterns a
 
 \section*{Data \& Methods} 
 Our analyses are based on publicly available anonymized datasets. We used deaths microdata available from official files produced by the
-Mexican Statistical Office from 1990 to 2010 \citep{INEGI}. These data contain
+Mexican Statistical Office from 1990 to 2015 \citep{INEGI}. These data contain
 information on causes of death by single age, sex, and state of residence at the
-time of death. Population estimates from 1990 to 2010 came from the Mexican Society of Demography. These estimates adjust for age misstatement, undercounting, and interstate and international migration. Additionally, we estimate intercensal population counts by age, sex and state for the period 2011-2014 using the most recent inter-census survey that took place in 2010  \citep{INEGI}. Death counts and estimated of the population exposed to risk were used to calculate cause-age-specific death rates by sex and state from 1990 to 2014.
+time of death. Population estimates from 1990 to 2015 came from the Mexican Society of Demography. These estimates adjust for age misstatement, undercounting, and interstate and international migration. Death counts and estimated of the population exposed to risk were used to calculate cause-age-specific death rates by sex and state from 1990 to 2015.
+%Additionally, we estimate intercensal population counts by age, sex and state for the period 2011-2014 using the most recent inter-census survey that took place in 2010  \citep{INEGI}. Note: this is not possible the way we thought to do it, I did some estimations and had unsatisfactory results, some cases with crazy exposures, I think mainly because the results for 2015 are still not corrected for age miss-statement. Options: use CONAPO exposures, they are forecasted 5 years or wait to the new estimates.
 
 \subsection*{Classification of Causes of Death}
 
 To separate causes of death that are susceptible to medical intervention (such as
 infectious and respiratory diseases) and those related to health behaviors and
 intersectoral policies (such as homicides, lung cancer) we use the concept of
-``Avoidable/Amenable Mortality'' (AM) \citep{nolte&mckee2004, nolte&mckee2008}. We group causes of death into ten categories based on \citep{elo2014} classification, recently complemented to the  Mexico's case \citep{Aburto2015}, as listed in Table~\ref{tab:causes}, with relative frequencies by sex for the period 2000-2010.
+``Avoidable/Amenable Mortality'' (AM) \citep{nolte&mckee2004, nolte&mckee2008}. We group causes of death into ten categories based on \citet{elo2014}'s classification, recently complemented to the  Mexico's case \citep{Aburto2015}, as listed in Table~\ref{tab:causes}, with relative frequencies by sex for the period 2000-2015.
 
 % latex table generated in R 3.2.2 by xtable 1.8-0 package
 % Mon Feb  8 21:50:32 2016
@@ -197,12 +195,12 @@ Causes amenable to medical service &                             28.5 \% &      
 We separate diabetes, ischemic heart diseases (IHD), HIV/AIDS, lung
 cancer, and cirrhosis because these causes are susceptible to both health behavior
 and medical service, and because the first two represent major causes of death
-in Mexico \citep{canudas2014}. We also separate
+in Mexican adults \citep{canudas2014}. We also separate
 homicide, road traffic accidents, and suicide because they have emerged as
 leading causes of death among young people, and the first two had a sizeable
-impact on life expectancy recently in Mexico \citep{canudas2014}. All causes of death were classified using the International Classification of Diseases, revision 9 for the period 1990-1997 and the tenth revision for 1998-2010 (see Appendix Table 1 for details on ICD codes for each cause). To avoid spurious results concerning the change in coding practices between the ninth and tenth revision, we performed a sensitivity analysis and did not find major changes in mortality trends by AM classification (See Appendix figure \ref{fig:ClassSens}).
+impact on life expectancy recently in Mexico \citep{canudas2014}. All causes of death were classified using the International Classification of Diseases, revision 9 for the period 1990-1997 and the tenth revision for 1998-2010 (see Appendix Table 1 for details on ICD codes for each cause). To avoid spurious results concerning the change in coding practices between the ninth and tenth revision, we performed a sensitivity analysis and did not find major changes in mortality trends by AM classification (See Appendix figure \ref{fig:ClassSens}). Although ill-defined causes represent a small percent of the total deaths (2\% in 1992 \citep{rivera2002epidemiological}), we decided to leave them in the residual category because if we spread them proportionally,  among the other causes of death could over estimate our results.
 
-We truncated analysis at age 75 because classification of causes of deaths and age reporting are considered to be innacurate in death registration at older ages \citep{tobias2001}. Most changes in life expectancy are likely due to changes in mortality patterns below the age of 75 \citep{Aburto2015}. In addition, health care and policy/behavior interventions are more likely to be effective at younger ages \citep{elo2014}.
+We truncated analysis at age 75 because classification of causes of deaths and age reporting are considered to be innacurate in death registration at older ages \citep{tobias2001} and most changes in life expectancy are likely due to changes in mortality patterns below the age of 75 \citep{Aburto2015}. 
 
 \subsection*{Age Groups}
 
@@ -212,7 +210,7 @@ We focus on older adults because they are susceptible to external causes of deat
 \subsection*{Demographic Methods}
 We smooth cause-specific death rates over age and time for each
 state and sex separately using the 2-d p-spline method proposed by
-\citet{GC2012}. Smoothed death rates are
+\citet{GC2012} to avoid random variations between ages. Smoothed death rates are
 then constrained to sum to the unsmoothed all-cause death rates. We then calculate period life tables up to
 age 74 for males and females from 1990 to 2010 following the HMD Methods
 Protocol \citep{HMDMP}. We calculate the average years lived in each age group (temporary life expectancy) \citep{arriaga1984} (See Appendix for a technical overview) and estimate cause-specific contributions to the difference between
@@ -230,7 +228,7 @@ Our low-mortality benchmark is calculated in the basis of the lowest observed mo
 %\end{equation}
 %where $x$ is age, $c$ is the given cause of death, and $s$ indexes the set of 32 states from which %the minimum is selected. 
 
-The resulting minimum mortality rate schedule has a unique age profile, and it determines our benchmark temporary life expectancy, $e(0)^\star$. The minimum mortality schedule can be treated as the best presently achievable mortality assuming perfect diffusion of the best available practices and technologies within a given set of populations \citep{vallin2008minimum}. It is an imaginary quantity because no particular population is expected to achieve this mortality pattern. However, this value is a practical reference because it is based neither on a projection of improvements into the future nor on an arbitrary and likely dissimilar population. We refer to the state with the highest life expectancy in a given year as the vanguard state. 
+The resulting minimum mortality rate schedule has a unique age profile, and it determines our benchmark temporary life expectancy, $e(0)^\star$. The minimum mortality schedule can be treated as the best presently achievable mortality assuming perfect diffusion of the best available practices and technologies within a given set of populations \citep{vallin2008minimum}. It is an imaginary quantity because no particular population is expected to achieve this mortality pattern. However, this value is a practical reference because it is based neither on a projection of improvements into the future nor on an arbitrary and likely dissimilar population. We refer to the state with the highest life expectancy in a given year as the vanguard state. Importantly, the low mortality benchmark is constructed with the minimum mortality rate, these results do not imply that states with low homicide contributions did not experience homicide mortality.
 
 
 \subsection*{Limitations}
@@ -265,7 +263,7 @@ Opposing this trend, temporary life expectancy between 15 and 39 years shows a c
 Temporary life expectancy for adults between 40 and 75 years shows stagnation and deterioration during the entire period (panel c)). Even the low mortality benchmark exhibits a gradual downward trend, pointing to increases in adult mortality in every state. From a potential maximum of 35 years, 
 all the states are living on average less than 30 years for males and 32 for females. Importantly,  Baja California, Chihuahua and Sonora could potentially live more than two additional years if the low mortality benchmark were achieved for males. Similar to the young-adult males, some states experienced a  clear downward trend after 2005. Results for females show stagnation in this age-group. 
 
-These results show the mortality inequality prevalent in Mexico over the last 25 years by state, sex and age-groups. They also allow us to identify three different patterns between the age groups and states. Mortality in ages 0-14 has been decreasing, approaching almost complete survival. Adults aged 15-39, particularly males, present a clear reversal in temporary life expectancy after 2005. Males and females aged 40-74 showed stagnation and deterioration since the 1990's. This has led to a 2-year gap for males and 1-year gap for females with benchmark survival, which itself falls short of the full 35 years by almost 3 years for males and 2.2 for females. To fully understand the underlying causes of death driving these stories, we decompose the gap between state-specific temporary life expectancy and the low mortality benchmark within each age-group.
+These results allow us to identify three different patterns between the age groups and states. Mortality in ages 0-14 has been decreasing, approaching almost complete survival. Adults aged 15-39, particularly males, present a clear reversal in temporary life expectancy after 2005. Males and females aged 40-74 showed stagnation and deterioration since the 1990's. This has led to a 2-year gap for males and 1-year gap for females with benchmark survival, which itself falls short of the full 25 years by almost 3 years for males and 2.2 for females. To fully understand the underlying causes of death driving these stories, we decompose the gap between state-specific temporary life expectancy and the low mortality benchmark within each age-group.
 
 
 \begin{figure}
@@ -338,12 +336,14 @@ Among the adult population aged 15-39, deviations from the low mortality benchma
 
 This analysis demonstrates the potential contribution of achieving the low mortality benchmark to improvements in survival. However, it is concerning that the low mortality benchmarks have not been steadily increasing over the period studied. Trends were flat for children, they are experiencing almost full survival before age 15. More worrisome is the common shift after 2005 in adults aged 15-39 and decreasing survival among older adults aged 35-74.
 
-Despite the flattening pattern of the low mortality benchmark in children, our results show that all states in Mexico have improved survival towards this benchmark and to the maximum survival. Causes amenable to medical service are at the heart of such improvements, consistent with decreases in infectious and respiratory diseases associated with public health interventions targeted to children in Mexico previously documented in Mexico \citep{sepulveda2006}. For example, Puebla and Tlaxcala improved survival over half a year since the 1990's. By 2010 mortality inequality was reduced so that all states' temporary life expectancy ranged between 14.6 and 14.8 years. We further estimated survival inequalities between states by age group calculating Gini coefficients for every year (Figure \ref{fig:Gini}).  Indeed, survival equality before age 15 is almost achieved paralleling improvements in mortality rates during the period. In addition, our results are also consistent with advances in coverage for skilled attendance at delivery, which by 2012 remained above 90\% and more than 78\% of children under age one visited the doctor to monitor their development and growth  \citep{urquieta2015evolution}. Moreover, vaccination coverage has been achieved for the entire young population, the success of such public health interventions are in line with our results, underscoring the improvements in survival in the population younger than 15 years associated to the progress detected in health insurance coverage due to vaccination programs and the implementation of the Seguro Popular \citep{urquieta2015evolution}. Although average years lived below 15 has improved, there still exist areas of opportunity to achieve full-survival under age 15 in causes amenable to medical service, mainly in states in the Central and Southern regions of the country. 
-
-Adults aged 15-39 show a converging pattern towards the low mortality benchmark in all states just until 2005. A sudden increase in homicide rates widened the gap with the low mortality benchmark by almost four times on average in 2010 relative to the level observed in 2005. Previous research documented losses in the overall life expectancy up to three years in the state of Chihuahua (the bordering state with Texas, USA) and almost two years in Sinaloa, Durango (North) and Guerrero (South) between 2005 and 2010 due to homicides \citep{Aburto2015}. Our findings show that the trend towards the low mortality benchmark was reversed after 2005 due to the increase in homicide mortality, with a peak in 2011. These results also coincide  with the rise in survival inequalities after the same year (see figure \ref{fig:Gini}).  Although homicide rates decreased after 2011, they still are the main cause of death contributing to the gap between the observed survival and the low mortality benchmark in particular states, such as Sinaloa, Durango in the North, Nayarit and Michoac\'an in the cetral region, and Guerrero in the South. These findings underscore the need for effective interventions to reduce homicide mortality, as it still contributes the most to survival shortcomings among the young-adult population and mortality inequality among states. Even ten years after the national security strategy that aimed at reducing drug cartels' operations started and homicides begun to spread all over the country \citep{espinal2015analysis}, the effect of homicide on average survival is appalling. Between-state inequality in female survival was much smaller over the same period (figure \ref{fig:Gini}), though females showed the same overall trend of convergence, followed by divergence after 2005. Importantly, the low mortality benchmark is constructed with the minimum mortality rate, these results do not imply that states with low homicide contributions did not experience homicide mortality.
+Despite the flattening pattern of the low mortality benchmark in children, our results show that all states in Mexico have improved survival towards this benchmark and to the maximum survival. Causes amenable to medical service are at the heart of such improvements, consistent with decreases in infectious and respiratory diseases associated with public health interventions targeted to children in Mexico previously documented \citep{sepulveda2006}. For example, Puebla and Tlaxcala improved survival over half a year since the 1990's. By 2010 survival was improved so that all states' temporary life expectancy ranged between 14.6 and 14.8 years. We further estimated survival inequalities between states by age group calculating Gini coefficients for every year (Figure \ref{fig:Gini}).  Indeed, survival equality before age 15 is almost achieved paralleling improvements in mortality rates during the period. In addition, our results are also consistent with advances in coverage for skilled attendance at delivery, which by 2012 remained above 90\% and more than 78\% of children under age one visited the doctor to monitor their development and growth  \citep{urquieta2015evolution}. Moreover, vaccination coverage has been achieved for the entire young population, the success of such public health interventions are in line with our results, underscoring the improvements in survival in the population younger than 15 years associated to the progress detected in health insurance coverage due to vaccination programs and the implementation of the Seguro Popular \citep{urquieta2015evolution}. Although average years lived below 15 has improved, there still exist areas of opportunity to achieve full-survival under age 15 in causes amenable to medical service, mainly in states in the Central and Southern regions of the country. 
 
 
 \subsection*{Older-adult mortality}
+
+Adults aged 15-39 show a converging pattern towards the low mortality benchmark in all states just until 2005. A sudden increase in homicide rates widened the gap with the low mortality benchmark by almost four times on average in 2010 relative to the level observed in 2005. Previous research documented losses in the overall life expectancy up to three years in the state of Chihuahua (the bordering state with Texas, USA) and almost two years in Sinaloa, Durango (North) and Guerrero (South) between 2005 and 2010 due to homicides \citep{Aburto2015}. Our findings show that the trend towards the low mortality benchmark was reversed after 2005 due to the increase in homicide mortality, with a peak in 2011. Although homicide rates decreased after 2011, they still are the main cause of death contributing to the gap between the observed survival and the low mortality benchmark in particular states, such as Sinaloa, Durango in the North, Nayarit and Michoac\'an in the cetral region, and Guerrero in the South. These findings underscore the need for effective interventions to reduce homicide mortality, as it still contributes the most to survival shortcomings among the young-adult population and mortality inequality among states. Even ten years after the national security strategy that aimed at reducing drug cartels' operations started and homicides begun to spread all over the country \citep{espinal2015analysis}, the effect of homicide on average survival is appalling. Between-state inequality in female survival was much smaller over the same period (figure \ref{fig:Gini}), though females showed the same overall trend of convergence, followed by divergence after 2005. 
+
+
 %rember capital letters to norht, south, etc..
 In Mexico, since the beginning of the 1990's, adult survival in ages 40-74 deteriorate for males and stagnate for females. Our results help explain on this pattern showing that the low mortality benchmark decreased as a result of state-specific mortality trends and the interaction between specific causes of death. In particular, there are offsetting effects between improvements in causes amenable to medical service, such as infectious and respiratory diseases, and deterioration in diabetes, isquemic heart diseases (IHD), and behavior-related mortality through cirrhosis and homicides. 
 
