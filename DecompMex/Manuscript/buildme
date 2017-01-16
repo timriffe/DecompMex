@@ -1,0 +1,11 @@
+#  JM: make another line for you!
+#setwd("/home/tim/git/DecompMex/DecompMex")
+system("pdflatex Abstract.tex ")
+system("bibtex Abstract.aux ")
+system("pdflatex Abstract.tex ")
+system("pdflatex Abstract.tex ")
+
+system("pdflatex Abstract_TR.tex ")
+system("bibtex Abstract_TR.aux ")
+system("pdflatex Abstract_TR.tex ")
+system("pdflatex Abstract_TR.tex ")
