@@ -28,11 +28,14 @@ library(reshape2)
 
 ## minimum mortality rates by state, year, sex, cause
 #constrain to the original ones
-data       <- local(get(load("Data/smoothed rates_Constraint.RData")))
+#data       <- local(get(load("Data/smoothed rates_Constraint.RData")))
 #constrain to the smoothed total ones
 #data       <- local(get(load("Data/smoothed rates_ConstraintSmooth.RData")))
 # No constrain, sum over smoother causes
 #data       <- local(get(load("Data/smoothed rates_No Constraint.RData")))
+
+#data <- local(get(load("Data/Total_Smooth.RData")))
+
 
 Mxsc       <- data[,-c(5),with=F]
 Mxsc       <- melt.data.table(Mxsc,id.vars = 1:4,variable.name = "cause",value.name = "mx")
@@ -71,6 +74,8 @@ setnames(BP_temp,"V1","temp_e0")
 #######################################
 #gdata:: keep(Mxsc,data,BP_temp,sure=T)
 Mxs         <- data[,1:5,with=F]
+#setnames(Mxs,"Tot","mx")
+
 Stateslx    <- Mxs[,lx:=myLTlx(mx, sex), by = list(state,year, sex)]
 Stateslx    <- Stateslx[,Lx := lx2Lx(lx), by = list(state,year, sex)]
 head(Stateslx)

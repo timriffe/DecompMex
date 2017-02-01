@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  5 DEC 2016 20:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  18 JAN 2017 14:55
 entering extended mode
 **./Abstract.tex
 (Abstract.tex
@@ -260,273 +260,15 @@ Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 ce.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\animate\animate
-.sty"
-Package: animate 2016/08/31 PDF animations from files and inline graphics
-
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
-"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\iflu
-atex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\ifdraf
-t.sty"
-Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count112
-\calc@Bcount=\count113
-\calc@Adimen=\dimen133
-\calc@Bdimen=\dimen134
-\calc@Askip=\skip53
-\calc@Bskip=\skip54
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count114
-\calc@Cskip=\skip55
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\atendd
-vi.sty"
-Package: atenddvi 2016/05/16 v1.2 At end DVI hook (HO)
-
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\zref-a
-bspage.sty"
-Package: zref-abspage 2016/05/21 v2.26 Module abspage for zref (HO)
-
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\zref-b
-ase.sty"
-Package: zref-base 2016/05/21 v2.26 Module base for zref (HO)
-
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvse
-tkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etex
-cmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-))
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvde
-finekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdft
-excmds.sty"
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhoo
-k.sty"
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-)
-Package zref Info: New property list: main on input line 759.
-Package zref Info: New property: default on input line 760.
-Package zref Info: New property: page on input line 761.
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\atbe
-gshi.sty"
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-)
-\c@abspage=\count115
-Package zref Info: New property: abspage on input line 62.
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\zref-l
-astpage.sty"
-Package: zref-lastpage 2016/05/21 v2.26 Module lastpage for zref (HO)
-
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\atvery
-end.sty"
-Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-)
-Package zref Info: New property list: LastPage on input line 55.
-))
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\media9\pdfbase.
-sty"
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3.
-sty"
-Package: expl3 2016/05/18 v6512 L3 programming layer (loader) 
-
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3-
-code.tex"
-Package: expl3 2016/05/18 v6512 L3 programming layer (code)
-L3 Module: l3bootstrap 2016/02/12 v6412 L3 Bootstrap code
-L3 Module: l3names 2016/03/11 v6433 L3 Namespace for primitives
-L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
-L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
-L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
-L3 Module: l3str 2016/03/24 v6441 L3 Strings
-L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
-L3 Module: l3int 2016/03/24 v6441 L3 Integers
-\c_max_int=\count116
-\l_tmpa_int=\count117
-\l_tmpb_int=\count118
-\g_tmpa_int=\count119
-\g_tmpb_int=\count120
-L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
-L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
-\g__prg_map_int=\count121
-L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
-L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
-L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
-L3 Module: l3msg 2016/03/26 v6464 L3 Messages
-L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
-\l_iow_line_count_int=\count122
-\l__iow_target_count_int=\count123
-\l__iow_current_line_int=\count124
-\l__iow_current_word_int=\count125
-\l__iow_current_indentation_int=\count126
-L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
-\c_zero_dim=\dimen135
-\c_max_dim=\dimen136
-\l_tmpa_dim=\dimen137
-\l_tmpb_dim=\dimen138
-\g_tmpa_dim=\dimen139
-\g_tmpb_dim=\dimen140
-\c_zero_skip=\skip56
-\c_max_skip=\skip57
-\l_tmpa_skip=\skip58
-\l_tmpb_skip=\skip59
-\g_tmpa_skip=\skip60
-\g_tmpb_skip=\skip61
-\c_zero_muskip=\muskip11
-\c_max_muskip=\muskip12
-\l_tmpa_muskip=\muskip13
-\l_tmpb_muskip=\muskip14
-\g_tmpa_muskip=\muskip15
-\g_tmpb_muskip=\muskip16
-L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
-\g__keyval_level_int=\count127
-\l_keys_choice_int=\count128
-L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
-\c__fp_leading_shift_int=\count129
-\c__fp_middle_shift_int=\count130
-\c__fp_trailing_shift_int=\count131
-\c__fp_big_leading_shift_int=\count132
-\c__fp_big_middle_shift_int=\count133
-\c__fp_big_trailing_shift_int=\count134
-\c__fp_Bigg_leading_shift_int=\count135
-\c__fp_Bigg_middle_shift_int=\count136
-\c__fp_Bigg_trailing_shift_int=\count137
-L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
-\c_empty_box=\box32
-\l_tmpa_box=\box33
-\l_tmpb_box=\box34
-\g_tmpa_box=\box35
-\g_tmpb_box=\box36
-L3 Module: l3coffins 2016/05/17 v6508 L3 Coffin code layer
-\l__coffin_internal_box=\box37
-\l__coffin_internal_dim=\dimen141
-\l__coffin_offset_x_dim=\dimen142
-\l__coffin_offset_y_dim=\dimen143
-\l__coffin_x_dim=\dimen144
-\l__coffin_y_dim=\dimen145
-\l__coffin_x_prime_dim=\dimen146
-\l__coffin_y_prime_dim=\dimen147
-\c_empty_coffin=\box38
-\l__coffin_aligned_coffin=\box39
-\l__coffin_aligned_internal_coffin=\box40
-\l_tmpa_coffin=\box41
-\l_tmpb_coffin=\box42
-\l__coffin_display_coffin=\box43
-\l__coffin_display_coord_coffin=\box44
-\l__coffin_display_pole_coffin=\box45
-\l__coffin_display_offset_dim=\dimen148
-\l__coffin_display_x_dim=\dimen149
-\l__coffin_display_y_dim=\dimen150
-L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
-L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
-L3 Module: l3candidates 2016/05/13 v6484 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen151
-\l__box_bottom_dim=\dimen152
-\l__box_left_dim=\dimen153
-\l__box_right_dim=\dimen154
-\l__box_top_new_dim=\dimen155
-\l__box_bottom_new_dim=\dimen156
-\l__box_left_new_dim=\dimen157
-\l__box_right_new_dim=\dimen158
-\l__box_internal_box=\box46
-\l__coffin_bounding_shift_dim=\dimen159
-\l__coffin_left_corner_dim=\dimen160
-\l__coffin_right_corner_dim=\dimen161
-\l__coffin_bottom_corner_dim=\dimen162
-\l__coffin_top_corner_dim=\dimen163
-\l__coffin_scaled_total_height_dim=\dimen164
-\l__coffin_scaled_width_dim=\dimen165
-L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3pdfm
-ode.def"
-File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count138
-\l__driver_tmp_box=\box47
-))
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\l3ke
-ys2e\l3keys2e.sty"
-Package: l3keys2e 2016/05/18 v6512 LaTeX2e option processing using LaTeX3 keys
-)
-Package: pdfbase 2016/06/08 v0.9 driver independent access to low-level PDF fea
-tures
-\g_pbs_oc_int=\count139
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ocgx2\ocgbase.s
-ty"
-Package: ocgbase 2016/03/11 v0.6 support package for ocgx2.sty
-)
-("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
-.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count140
-\scratchdimen=\dimen166
-\scratchbox=\box48
-\nofMPsegments=\count141
-\nofMParguments=\count142
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count143
-\MPscratchDim=\dimen167
-\MPnumerator=\count144
-\makeMPintoPDFobject=\count145
-\everyMPtoPDFconversion=\toks25
-)
-\@anim@box=\box49
-\@anim@measbox=\box50
-\@anim@tmpdima=\dimen168
-\@anim@tmpdimb=\dimen169
-\@anim@num=\count146
-\@anim@curframe=\count147
-\@anim@curframe@zb=\count148
-\@anim@resizeflags=\count149
-\@anim@skipfram=\count150
-\@anim@mulframecnt=\count151
-\@anim@@tmlnfile=\read1
-\@anim@tmpcnt=\count152
-\c@@anim@ltxcnt=\count153
-\@anim@curlayer=\count154
-\@anim@lineno=\count155
-\@anim@curfield=\count156
-\@anim@@resizeflags=\count157
-)
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.s
 ty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip62
-\bibsep=\skip63
+\bibhang=\skip53
+\bibsep=\skip54
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count158
+\c@NAT@ctr=\count112
 ) ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
-\Urlmuskip=\muskip17
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\genmisc\nth.s
@@ -536,33 +278,33 @@ Package: nth 2002/02/27
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\preprint\authbl
 k.sty"
 Package: authblk 2001/02/27 1.3 (PWD)
-\affilsep=\skip64
-\@affilsep=\skip65
-\c@Maxaffil=\count159
-\c@authors=\count160
-\c@affil=\count161
+\affilsep=\skip55
+\@affilsep=\skip56
+\c@Maxaffil=\count113
+\c@authors=\count114
+\c@affil=\count115
 )
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listin
 gs.sty"
-\lst@mode=\count162
-\lst@gtempboxa=\box51
-\lst@token=\toks26
-\lst@length=\count163
-\lst@currlwidth=\dimen170
-\lst@column=\count164
-\lst@pos=\count165
-\lst@lostspace=\dimen171
-\lst@width=\dimen172
-\lst@newlines=\count166
-\lst@lineno=\count167
-\lst@maxwidth=\dimen173
+\lst@mode=\count116
+\lst@gtempboxa=\box32
+\lst@token=\toks24
+\lst@length=\count117
+\lst@currlwidth=\dimen133
+\lst@column=\count118
+\lst@pos=\count119
+\lst@lostspace=\dimen134
+\lst@width=\dimen135
+\lst@newlines=\count120
+\lst@lineno=\count121
+\lst@maxwidth=\dimen136
 
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmis
 c.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count168
-\lst@skipnumbers=\count169
-\lst@framebox=\box52
+\c@lstnumber=\count122
+\lst@skipnumbers=\count123
+\lst@framebox=\box33
 )
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listin
 gs.cfg"
@@ -577,19 +319,49 @@ LaTeX Warning: Unused global option(s):
 (Abstract.aux)
 \openout1 = `Abstract.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
+.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen137
+\scratchbox=\box34
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen138
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks26
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdft
+excmds.sty"
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\iflu
+atex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstop
 df-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -597,11 +369,27 @@ Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext
 .sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvde
+finekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvopti
 ons.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvse
+tkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etex
+cmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
@@ -652,93 +440,85 @@ on.sty"
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box53
-\c@lstlisting=\count170
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+\c@lstlisting=\count130
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
 
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
  [1
 
 {C:/Users/jmaburto/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 [2] [3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 [6]
-
-Package caption Warning: \label without proper reference on input line 358.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `Fig_temporary_le' on page 7 undefined on input line 2
-69.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
 [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
-[10] [11] <Figures/Temp_fig.pdf, id=49, 867.24pt x 505.89pt>
-File: Figures/Temp_fig.pdf Graphic file (type pdf)
+[10] [11] <Figure_1.pdf, id=48, 1011.78pt x 578.16pt>
+File: Figure_1.pdf Graphic file (type pdf)
+ <use Figure_1.pdf>
+Package pdftex.def Info: Figure_1.pdf used on input line 336.
+(pdftex.def)             Requested size: 505.88876pt x 289.07928pt.
 
-<use Figures/Temp_fig.pdf>
-Package pdftex.def Info: Figures/Temp_fig.pdf used on input line 362.
-(pdftex.def)             Requested size: 433.61894pt x 252.94437pt.
+Overfull \hbox (33.85753pt too wide) in paragraph at lines 336--337
+ [][] 
+ []
 
-<Figures/Adult_Female_heatmap.pdf, id=50, 1445.4pt x 794.97pt>
-File: Figures/Adult_Female_heatmap.pdf Graphic file (type pdf)
+<Adult_Female_heatmap.pdf, id=49, 1445.4pt x 794.97pt>
+File: Adult_Female_heatmap.pdf Graphic file (type pdf)
 
-<use Figures/Adult_Female_heatmap.pdf>
-Package pdftex.def Info: Figures/Adult_Female_heatmap.pdf used on input line 37
-2.
+<use Adult_Female_heatmap.pdf>
+Package pdftex.def Info: Adult_Female_heatmap.pdf used on input line 346.
 (pdftex.def)             Requested size: 448.06937pt x 246.43816pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/Adult_Male_heatmap.pdf, id=51, 1445.4pt x 794.97pt>
-File: Figures/Adult_Male_heatmap.pdf Graphic file (type pdf)
+<Adult_Male_heatmap.pdf, id=50, 1445.4pt x 794.97pt>
+File: Adult_Male_heatmap.pdf Graphic file (type pdf)
 
-<use Figures/Adult_Male_heatmap.pdf>
-Package pdftex.def Info: Figures/Adult_Male_heatmap.pdf used on input line 380.
-
+<use Adult_Male_heatmap.pdf>
+Package pdftex.def Info: Adult_Male_heatmap.pdf used on input line 354.
 (pdftex.def)             Requested size: 448.06937pt x 246.43816pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/Gini_fig.pdf, id=52, 361.35pt x 650.43pt>
-File: Figures/Gini_fig.pdf Graphic file (type pdf)
- <use Figures/Gini_fig.pdf>
-Package pdftex.def Info: Figures/Gini_fig.pdf used on input line 389.
-(pdftex.def)             Requested size: 180.67456pt x 325.2142pt.
+<Gini_fig.pdf, id=51, 722.7pt x 433.62pt>
+File: Gini_fig.pdf Graphic file (type pdf)
+ <use Gini_fig.pdf>
+Package pdftex.def Info: Gini_fig.pdf used on input line 363.
+(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./Figures/Temp_fig.pdf>]
+[12 <./Figure_1.pdf>]
 
 LaTeX Warning: Text page 13 contains only floats.
 
-[13 <./Figures/Adult_Female_heatmap.pdf> <./Figures/Adult_Male_heatmap.pdf>]
-(Abstract.bbl [14 <./Figures/Gini_fig.pdf>]
+[13 <./Adult_Female_heatmap.pdf> <./Adult_Male_heatmap.pdf>] (Abstract.bbl
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ³ in font cmr10!
+
+[14 <./Gini_fig.pdf>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -764,42 +544,42 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
  [15]) [16]
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 412--416
+Overfull \hbox (19.21284pt too wide) in alignment at lines 385--389
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 416--422
+Overfull \hbox (19.21284pt too wide) in alignment at lines 389--395
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 422--424
+Overfull \hbox (19.21284pt too wide) in alignment at lines 395--397
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 424--426
+Overfull \hbox (19.21284pt too wide) in alignment at lines 397--399
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 428--428
+Underfull \hbox (badness 6141) in paragraph at lines 401--401
 \OT1/cmr/m/n/10 J39, J60-J99, J09-J18,
  []
 
 
-Underfull \hbox (badness 5908) in paragraph at lines 428--429
+Underfull \hbox (badness 5908) in paragraph at lines 401--402
 \OT1/cmr/m/n/10 37, 137, 020-027, 38,
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 428--429
+Underfull \hbox (badness 1210) in paragraph at lines 401--402
 \OT1/cmr/m/n/10 082, 087, 090-099, 102,
  []
 
@@ -807,151 +587,133 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 3029) in paragraph at lines 429--429
+Underfull \hbox (badness 3029) in paragraph at lines 402--402
 \OT1/cmr/m/n/10 skin, breast, cervix, prostate, testis, blad-der,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
 []|\OT1/cmr/m/n/10 C16,C18-C21, C43-C44,
  []
 
 
-Underfull \hbox (badness 5519) in paragraph at lines 429--429
+Underfull \hbox (badness 5519) in paragraph at lines 402--402
 \OT1/cmr/m/n/10 C50, C53, C61, C62,
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 429--430
+Underfull \hbox (badness 6961) in paragraph at lines 402--403
 []|\OT1/cmr/m/n/10 153-154, 172-173, 174,
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 429--430
+Underfull \hbox (badness 1210) in paragraph at lines 402--403
 \OT1/cmr/m/n/10 180, 185, 186, 188-189,
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 432--432
+Underfull \hbox (badness 2600) in paragraph at lines 405--405
 []|\OT1/cmr/m/n/10 E00-E07, 40-G41, K25-
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 432--433
+Underfull \hbox (badness 6961) in paragraph at lines 405--406
 []|\OT1/cmr/m/n/10 240-246, 345, 531-533,
  []
 
 
-Underfull \hbox (badness 6300) in paragraph at lines 432--433
+Underfull \hbox (badness 6300) in paragraph at lines 405--406
 \OT1/cmr/m/n/10 540-543, 550-553, 574-
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 426--447
+Overfull \hbox (19.21284pt too wide) in alignment at lines 399--420
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 450--450
+Underfull \hbox (badness 1087) in paragraph at lines 423--423
 []|\OT1/cmr/m/n/10 C00-D48, I00-I99 if not
  []
 
 
-Underfull \hbox (badness 1755) in paragraph at lines 450--452
+Underfull \hbox (badness 1755) in paragraph at lines 423--425
 []|\OT1/cmr/m/n/10 140-239, 390-459 if not
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 447--452
+Overfull \hbox (19.21284pt too wide) in alignment at lines 420--425
  [] [] [] [] [] [] 
  []
 
-<Figures/Class_fig.pdf, id=94, 722.7pt x 505.89pt>
-File: Figures/Class_fig.pdf Graphic file (type pdf)
- <use Figures/Class_fig.pdf>
-Package pdftex.def Info: Figures/Class_fig.pdf used on input line 458.
+<Sensitivity_fig.pdf, id=92, 722.7pt x 505.89pt>
+File: Sensitivity_fig.pdf Graphic file (type pdf)
+ <use Sensitivity_fig.pdf>
+Package pdftex.def Info: Sensitivity_fig.pdf used on input line 431.
 (pdftex.def)             Requested size: 433.62334pt x 303.53633pt.
 
-[17] [18 <./Figures/Class_fig.pdf>]
-<Figures/Young_Male_heatmap.pdf, id=106, 1445.4pt x 794.97pt>
-File: Figures/Young_Male_heatmap.pdf Graphic file (type pdf)
+[17] [18 <./Sensitivity_fig.pdf>]
+<Young_Male_heatmap.pdf, id=105, 1445.4pt x 794.97pt>
+File: Young_Male_heatmap.pdf Graphic file (type pdf)
 
-<use Figures/Young_Male_heatmap.pdf>
-Package pdftex.def Info: Figures/Young_Male_heatmap.pdf used on input line 482.
-
+<use Young_Male_heatmap.pdf>
+Package pdftex.def Info: Young_Male_heatmap.pdf used on input line 455.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Figures/Young_Female_heatmap.pdf, id=107, 1445.4pt x 794.97pt>
-File: Figures/Young_Female_heatmap.pdf Graphic file (type pdf)
+<Young_Female_heatmap.pdf, id=106, 1445.4pt x 794.97pt>
+File: Young_Female_heatmap.pdf Graphic file (type pdf)
 
-<use Figures/Young_Female_heatmap.pdf>
-Package pdftex.def Info: Figures/Young_Female_heatmap.pdf used on input line 48
-9.
+<use Young_Female_heatmap.pdf>
+Package pdftex.def Info: Young_Female_heatmap.pdf used on input line 462.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Figures/YoungAdult_Male_heatmap.pdf, id=108, 1445.4pt x 794.97pt>
-File: Figures/YoungAdult_Male_heatmap.pdf Graphic file (type pdf)
+<YoungAdult_Male_heatmap.pdf, id=107, 1445.4pt x 794.97pt>
+File: YoungAdult_Male_heatmap.pdf Graphic file (type pdf)
 
-<use Figures/YoungAdult_Male_heatmap.pdf>
-Package pdftex.def Info: Figures/YoungAdult_Male_heatmap.pdf used on input line
- 498.
+<use YoungAdult_Male_heatmap.pdf>
+Package pdftex.def Info: YoungAdult_Male_heatmap.pdf used on input line 471.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Figures/YoungAdult_Female_heatmap.pdf, id=109, 1445.4pt x 794.97pt>
-File: Figures/YoungAdult_Female_heatmap.pdf Graphic file (type pdf)
+<YoungAdult_Female_heatmap.pdf, id=108, 1445.4pt x 794.97pt>
+File: YoungAdult_Female_heatmap.pdf Graphic file (type pdf)
 
-<use Figures/YoungAdult_Female_heatmap.pdf>
-Package pdftex.def Info: Figures/YoungAdult_Female_heatmap.pdf used on input li
-ne 506.
+<use YoungAdult_Female_heatmap.pdf>
+Package pdftex.def Info: YoungAdult_Female_heatmap.pdf used on input line 479.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
- [19 <./Figures/Young_Male_heatmap.pdf>] [20 <./Figures/Young_Female_heatmap.pd
-f> <./Figures/YoungAdult_Male_heatmap.pdf>] [21 <./Figures/YoungAdult_Female_he
-atmap.pdf>] [22
-
-]
-Package atenddvi Info: Last page = 23.
- [23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 634.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 634.
- (Abstract.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 634.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 634.
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 634.
- ) 
+ [19 <./Young_Male_heatmap.pdf>] [20 <./Young_Female_heatmap.pdf> <./YoungAdult
+_Male_heatmap.pdf>] [21 <./YoungAdult_Female_heatmap.pdf>] (Abstract.aux) ) 
 Here is how much of TeX's memory you used:
- 14006 strings out of 493334
- 248467 string characters out of 3128924
- 388716 words of memory out of 3000000
- 17366 multiletter control sequences out of 15000+200000
+ 6318 strings out of 493334
+ 95037 string characters out of 3128924
+ 186360 words of memory out of 3000000
+ 9739 multiletter control sequences out of 15000+200000
  9976 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,10n,42p,10412b,383s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/jmaburto/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jmab
-urto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jmaburto/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jmaburt
-o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:
-/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr6.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jmaburto/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/jmaburto/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
-jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
-0.pfb>
-Output written on Abstract.pdf (23 pages, 464962 bytes).
+ 41i,9n,39p,2086b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/
+Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/jmaburto/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jmaburto/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
+Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jmaburto/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jmaburto/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users
+/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6
+.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/jmaburto/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jmabur
+to/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+
+Output written on Abstract.pdf (21 pages, 480786 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
+ 191 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
