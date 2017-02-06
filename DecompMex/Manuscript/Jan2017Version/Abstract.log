@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  18 JAN 2017 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  3 FEB 2017 15:04
 entering extended mode
 **./Abstract.tex
 (Abstract.tex
@@ -319,18 +319,18 @@ LaTeX Warning: Unused global option(s):
 (Abstract.aux)
 \openout1 = `Abstract.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
 .mkii"
@@ -441,84 +441,100 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count130
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
 
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
  [1
 
 {C:/Users/jmaburto/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2] [3] [4] [5]
+[2] [3]
+
+LaTeX Warning: Reference `fig:ClassSens' on page 4 undefined on input line 176.
+
+
+[4] [5] [6]
 Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
-[6]
+
+LaTeX Warning: Reference `Fig1:temp' on page 7 undefined on input line 243.
+
+
+LaTeX Warning: Reference `fig:e40_74_females' on page 7 undefined on input line
+ 254.
+
+
+LaTeX Warning: Reference `fig:e40_74_males' on page 7 undefined on input line 2
+54.
+
+
+LaTeX Warning: Reference `fig:e40_74_females' on page 7 undefined on input line
+ 256.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
+
+[7]
+
+LaTeX Warning: Reference `fig:e40_74_females' on page 8 undefined on input line
+ 259.
+
+
+LaTeX Warning: Reference `fig:e40_74_males' on page 8 undefined on input line 2
+63.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
-[7] [8] [9]
+
+LaTeX Warning: Reference `fig:e40_74_males' on page 8 undefined on input line 2
+66.
+
+
+LaTeX Warning: Reference `fig:e0_14_males' on page 8 undefined on input line 27
+0.
+
+
+LaTeX Warning: Reference `fig:e15_39_males' on page 8 undefined on input line 2
+70.
+
+
+LaTeX Warning: Reference `fig:e15_39_males' on page 8 undefined on input line 2
+72.
+
+
+LaTeX Warning: Reference `fig:e15_39_females' on page 8 undefined on input line
+ 272.
+
+[8]
+
+LaTeX Warning: Reference `fig:Gini' on page 9 undefined on input line 298.
+
+
+LaTeX Warning: Reference `fig:Gini' on page 9 undefined on input line 303.
+
+[9]
+
+LaTeX Warning: Reference `fig:Gini' on page 10 undefined on input line 309.
+
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
-[10] [11] <Figure_1.pdf, id=48, 1011.78pt x 578.16pt>
-File: Figure_1.pdf Graphic file (type pdf)
- <use Figure_1.pdf>
-Package pdftex.def Info: Figure_1.pdf used on input line 336.
-(pdftex.def)             Requested size: 505.88876pt x 289.07928pt.
 
-Overfull \hbox (33.85753pt too wide) in paragraph at lines 336--337
- [][] 
- []
+LaTeX Warning: Reference `fig:Gini' on page 11 undefined on input line 315.
 
-<Adult_Female_heatmap.pdf, id=49, 1445.4pt x 794.97pt>
-File: Adult_Female_heatmap.pdf Graphic file (type pdf)
-
-<use Adult_Female_heatmap.pdf>
-Package pdftex.def Info: Adult_Female_heatmap.pdf used on input line 346.
-(pdftex.def)             Requested size: 448.06937pt x 246.43816pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Adult_Male_heatmap.pdf, id=50, 1445.4pt x 794.97pt>
-File: Adult_Male_heatmap.pdf Graphic file (type pdf)
-
-<use Adult_Male_heatmap.pdf>
-Package pdftex.def Info: Adult_Male_heatmap.pdf used on input line 354.
-(pdftex.def)             Requested size: 448.06937pt x 246.43816pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Gini_fig.pdf, id=51, 722.7pt x 433.62pt>
-File: Gini_fig.pdf Graphic file (type pdf)
- <use Gini_fig.pdf>
-Package pdftex.def Info: Gini_fig.pdf used on input line 363.
-(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12 <./Figure_1.pdf>]
-
-LaTeX Warning: Text page 13 contains only floats.
-
-[13 <./Adult_Female_heatmap.pdf> <./Adult_Male_heatmap.pdf>] (Abstract.bbl
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-
-[14 <./Gini_fig.pdf>]
+[11] (Abstract.bbl
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -528,6 +544,7 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
+ [12]
 Missing character: There is no ‚ in font cmti10!
 Missing character: There is no Ä in font cmti10!
 Missing character: There is no ô in font cmti10!
@@ -537,183 +554,45 @@ Missing character: There is no ú in font cmti10!
 Missing character: There is no ‚ in font cmti10!
 Missing character: There is no Ä in font cmti10!
 Missing character: There is no ù in font cmti10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ≥ in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no î in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no î in font cmr10!
- [15]) [16]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+ [13]) [14] (Abstract.aux)
 
- []
+LaTeX Warning: There were undefined references.
 
-
-Overfull \hbox (19.21284pt too wide) in alignment at lines 385--389
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (19.21284pt too wide) in alignment at lines 389--395
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (19.21284pt too wide) in alignment at lines 395--397
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (19.21284pt too wide) in alignment at lines 397--399
- [] [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 6141) in paragraph at lines 401--401
-\OT1/cmr/m/n/10 J39, J60-J99, J09-J18,
- []
-
-
-Underfull \hbox (badness 5908) in paragraph at lines 401--402
-\OT1/cmr/m/n/10 37, 137, 020-027, 38,
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 401--402
-\OT1/cmr/m/n/10 082, 087, 090-099, 102,
- []
-
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-
-Underfull \hbox (badness 3029) in paragraph at lines 402--402
-\OT1/cmr/m/n/10 skin, breast, cervix, prostate, testis, blad-der,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
-[]|\OT1/cmr/m/n/10 C16,C18-C21, C43-C44,
- []
-
-
-Underfull \hbox (badness 5519) in paragraph at lines 402--402
-\OT1/cmr/m/n/10 C50, C53, C61, C62,
- []
-
-
-Underfull \hbox (badness 6961) in paragraph at lines 402--403
-[]|\OT1/cmr/m/n/10 153-154, 172-173, 174,
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 402--403
-\OT1/cmr/m/n/10 180, 185, 186, 188-189,
- []
-
-
-Underfull \hbox (badness 2600) in paragraph at lines 405--405
-[]|\OT1/cmr/m/n/10 E00-E07, 40-G41, K25-
- []
-
-
-Underfull \hbox (badness 6961) in paragraph at lines 405--406
-[]|\OT1/cmr/m/n/10 240-246, 345, 531-533,
- []
-
-
-Underfull \hbox (badness 6300) in paragraph at lines 405--406
-\OT1/cmr/m/n/10 540-543, 550-553, 574-
- []
-
-
-Overfull \hbox (19.21284pt too wide) in alignment at lines 399--420
- [] [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 1087) in paragraph at lines 423--423
-[]|\OT1/cmr/m/n/10 C00-D48, I00-I99 if not
- []
-
-
-Underfull \hbox (badness 1755) in paragraph at lines 423--425
-[]|\OT1/cmr/m/n/10 140-239, 390-459 if not
- []
-
-
-Overfull \hbox (19.21284pt too wide) in alignment at lines 420--425
- [] [] [] [] [] [] 
- []
-
-<Sensitivity_fig.pdf, id=92, 722.7pt x 505.89pt>
-File: Sensitivity_fig.pdf Graphic file (type pdf)
- <use Sensitivity_fig.pdf>
-Package pdftex.def Info: Sensitivity_fig.pdf used on input line 431.
-(pdftex.def)             Requested size: 433.62334pt x 303.53633pt.
-
-[17] [18 <./Sensitivity_fig.pdf>]
-<Young_Male_heatmap.pdf, id=105, 1445.4pt x 794.97pt>
-File: Young_Male_heatmap.pdf Graphic file (type pdf)
-
-<use Young_Male_heatmap.pdf>
-Package pdftex.def Info: Young_Male_heatmap.pdf used on input line 455.
-(pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
-
-<Young_Female_heatmap.pdf, id=106, 1445.4pt x 794.97pt>
-File: Young_Female_heatmap.pdf Graphic file (type pdf)
-
-<use Young_Female_heatmap.pdf>
-Package pdftex.def Info: Young_Female_heatmap.pdf used on input line 462.
-(pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
-
-<YoungAdult_Male_heatmap.pdf, id=107, 1445.4pt x 794.97pt>
-File: YoungAdult_Male_heatmap.pdf Graphic file (type pdf)
-
-<use YoungAdult_Male_heatmap.pdf>
-Package pdftex.def Info: YoungAdult_Male_heatmap.pdf used on input line 471.
-(pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
-
-<YoungAdult_Female_heatmap.pdf, id=108, 1445.4pt x 794.97pt>
-File: YoungAdult_Female_heatmap.pdf Graphic file (type pdf)
-
-<use YoungAdult_Female_heatmap.pdf>
-Package pdftex.def Info: YoungAdult_Female_heatmap.pdf used on input line 479.
-(pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
- [19 <./Young_Male_heatmap.pdf>] [20 <./Young_Female_heatmap.pdf> <./YoungAdult
-_Male_heatmap.pdf>] [21 <./YoungAdult_Female_heatmap.pdf>] (Abstract.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 6318 strings out of 493334
- 95037 string characters out of 3128924
- 186360 words of memory out of 3000000
- 9739 multiletter control sequences out of 15000+200000
+ 6274 strings out of 493334
+ 94030 string characters out of 3128924
+ 176327 words of memory out of 3000000
+ 9704 multiletter control sequences out of 15000+200000
  9976 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,39p,2086b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/
-Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/jmaburto/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jmaburto/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jmaburto/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jmaburto/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users
-/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6
-.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/jmaburto/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jmabur
-to/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-
-Output written on Abstract.pdf (21 pages, 480786 bytes).
+ 41i,9n,39p,2086b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/jmaburto/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jmabu
+rto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+<C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr17.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr6.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jmaburto/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jmaburto/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/User
+s/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmti10.pfb>
+Output written on Abstract.pdf (14 pages, 210821 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

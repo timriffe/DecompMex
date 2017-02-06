@@ -56,10 +56,6 @@ Castro-Rios, A., Doubova, S.~V., Mart{\'\i}nez-Valverde, S., Coria-Soto, I.,
   diabetes and hypertension.
 \newblock {\em Health Affairs}, 29(12):2171--2179.
 
-\bibitem[{{Consejo Nacional de Poblaci\'on}}, 2015]{CONAPO}
-{{Consejo Nacional de Poblaci\'on}} (2015).
-\newblock Proyecciones de población 2010-2050.
-
 \bibitem[D{\'a}vila-Cervantes and Agudelo-Botero, 2014]{davila2014mortalidad}
 D{\'a}vila-Cervantes, C.~A. and Agudelo-Botero, M. (2014).
 \newblock Mortalidad evitable en m{\'e}xico y su contribuci{\'o}n a los
@@ -97,6 +93,22 @@ Glassman, A., Gaziano, T.~A., Buendia, C. P.~B., and de~Aguiar, F. C.~G.
 \newblock Confronting the chronic disease burden in latin america and the
   caribbean.
 \newblock {\em Health Affairs}, 29(12):2142--2148.
+
+\bibitem[G{\'o}mez-Dant{\'e}s et~al., 2016]{gomez2016dissonant}
+G{\'o}mez-Dant{\'e}s, H., Fullman, N., Lamadrid-Figueroa, H., Cahuana-Hurtado,
+  L., Darney, B., Avila-Burgos, L., Correa-Rotter, R., Rivera, J.~A., Barquera,
+  S., Gonz{\'a}lez-Pier, E., et~al. (2016).
+\newblock Dissonant health transition in the states of {M}exico, 1990--2013: a
+  systematic analysis for the {G}lobal {B}urden of {D}isease study 2013.
+\newblock {\em The Lancet}, 388(10058):2386--2402.
+
+\bibitem[Gonz{\'a}lez-Pier et~al., 2016]{gonzalez2016mexico}
+Gonz{\'a}lez-Pier, E., Barraza-Llor{\'e}ns, M., Beyeler, N., Jamison, D.,
+  Knaul, F., Lozano, R., Yamey, G., and Sep{\'u}lveda, J. (2016).
+\newblock Mexico's path towards the {S}ustainable {D}evelopment {G}oal for
+  health: an assessment of the feasibility of reducing premature mortality by
+  40\% by 2030.
+\newblock {\em The Lancet Global Health}, 4(10):e714--e725.
 
 \bibitem[Holland, 2003]{holland2003}
 Holland, W. (2003).
@@ -141,6 +153,15 @@ Knaul, F.~M., Gonz{\'a}lez-Pier, E., G{\'o}mez-Dant{\'e}s, O.,
   for all in mexico.
 \newblock {\em The Lancet}, 380(9849):1259--1279.
 
+\bibitem[{{Mexican Population Council}}, 2015]{CONAPO}
+{{Mexican Population Council}} (2015).
+\newblock Proyecciones de población 2010-2050.
+
+\bibitem[{{Mexican Society of Demography}}, 2011]{SOMEDE}
+{{Mexican Society of Demography}} (2011).
+\newblock Demographic conciliation of mexico and its states.
+\newblock [unpublished].
+
 \bibitem[Monteverde et~al., 2010]{monteverde2010obesity}
 Monteverde, M., Noronha, K., Palloni, A., and Novak, B. (2010).
 \newblock Obesity and excess mortality among the elderly in the united states
@@ -169,6 +190,11 @@ Nolte, E. and McKee, M. (2004).
 \newblock {\em Does health care save lives? Avoidable mortality revisited.}
 \newblock The Nuffield Trust.
 
+\bibitem[Preston et~al., 2001]{preston2001}
+Preston, S.~H., Heuveline, P., and Guillot, M. (2001).
+\newblock {\em Demography: measuring and modeling population processes}.
+\newblock Blackwell Publishers, Malden, MA.
+
 \bibitem[Rivera et~al., 2002]{rivera2002epidemiological}
 Rivera, J.~A., Barquera, S., Campirano, F., Campos, I., Safdie, M., and Tovar,
   V. (2002).
@@ -181,11 +207,6 @@ Sep{\'u}lveda, J., Bustreo, F., Tapia, R., Rivera, J., Lozano, R., Ol{\'a}iz,
   G., Partida, V., Garc{\'i}a-Garc{\'i}a, L., and Valdespino, J.~L. (2006).
 \newblock Improvement of child survival in mexico: the diagonal approach.
 \newblock {\em The Lancet}, 368(9551):2017--2027.
-
-\bibitem[{{Sociedad Mexicana de Demograf{\'i}a}}, 2011]{SOMEDE}
-{{Sociedad Mexicana de Demograf{\'i}a}} (2011).
-\newblock Demographic conciliation of mexico and its states.
-\newblock [unpublished].
 
 \bibitem[Tobias and Jackson, 2001]{tobias2001}
 Tobias, M. and Jackson, G. (2001).
@@ -212,13 +233,6 @@ Vallin, J. and Mesl{\'e}, F. (2008).
 Whelpton, P.~K., Eldridge, H.~T., and Siegel, J.~S. (1947).
 \newblock {\em Forecasts of the Population of the United States, 1945-1975}.
 \newblock US government printing office.
-
-\bibitem[Wilmoth et~al., 2007]{HMDMP}
-Wilmoth, J.~R., Andreev, K., Jdanov, D., Glei, D.~A., Boe, C., Bubenheim, M.,
-  Philipov, D., Shkolnikov, V., and Vachon, P. (2007).
-\newblock Methods protocol for the human mortality database.
-\newblock Technical report, University of California, Berkeley, and Max Planck
-  Institute for Demographic Research, Rostock.
 
 \bibitem[{{Worl Health Organization}}, 2000]{who2000}
 {{Worl Health Organization}} (2000).
