@@ -25,6 +25,7 @@ if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
 
 load('Data/Counts&Rates_1990-2015Mex.RData')
 
+
 #Groups used in the article:
 # 1. Amenable to meical service: 1+2+3+4+6
 # 2. Diabetes: 5
@@ -49,6 +50,7 @@ Counts <- cbind(Counts, g7=Data_Counts[,17])
 Counts <- cbind(Counts, g8=Data_Counts[,18])
 Counts <- cbind(Counts, g9=Data_Counts[,14])
 Counts <- cbind(Counts, g10=rowSums(Data_Counts[,19:21]))
+Counts <- cbind(Counts, g11=rowSums(Counts[,5:14]))
 Counts$Pop <- Data_Counts$Pop
 
 Rates <- Data_rates[,c(1:4,21)]
@@ -66,19 +68,32 @@ source("R/Functions.R")
 library(reshape2)
 library(MortalitySmooth)
 
-causes   <- 5:14
+causes   <- 5:15
 Counts2  <- data.table(cbind(Counts[,1:4,with=F],g1= rowSums(Counts[,5:14,with=F]),Counts[,15,with=F]))
 
 sm.rates <- data.table(as.matrix(Counts)[,1:4])
 sm.rates2 <- data.table(as.matrix(Counts2)[,1:4])
+sm.rates2  <- sm.rates2[order(year,sex,state,age)]
+sm.rates  <- sm.rates[order(year,sex,state,age)]
 
 #i <- 5
 #Dx <- Counts[sex==1 & state ==1 ]
 #DX      <- acast(Dx, age~year, value.var = colnames(Counts)[i], fill = 0)
 #EX      <- acast(Dx, age~year, value.var = "Pop", fill = 0)
 
+#r <- DX/EX
+#image(log(r))
+
+#r.s <- sm.mat(DX,EX)
+#r.s2 <- acast(r.s, age~year, value.var = "mxs")
+#image((log(r.s2)-log(r)))
+
+
+# melt so that we just use data.table
+
 for (i in causes){
-  Mxs      <- Counts[,sm.chunk(.SD),by=list(state,sex)]
+  Mxs      <- Counts[,sm.chunk(.SD,i),by=list(state,sex)]
+  Mxs  <- Mxs[order(year,sex,state,age)]
   sm.rates[,paste0("g",i-4)] <- Mxs$mxs
   print(i)
  # cbind(sm.rates,i= Mxs$mxs)
@@ -88,14 +103,19 @@ for (i in causes){
 Counts2$g1[Counts2$Pop == 0] <- 0
 Counts2$g1[Counts2$Pop < Counts2$g1] <- Counts2$Pop[Counts2$Pop < Counts2$g1]
 
-i <- 5
-Mxs2      <- Counts2[,sm.chunk(.SD),by=list(state,sex)]
+Mxs2      <- Counts2[,sm.chunk(.SD,5),by=list(state,sex)]
+Mxs2 <- Mxs2[order(year,sex,state,age)]
+
+
 plot(Mxs2$mxs[Mxs2$state==1 & Mxs2$sex==1 & Mxs2$year==1990])
+
 sm.rates2[,"Tot"] <- Mxs2$mxs
+
+
+
 
 #Order all datasets
 sm.rates <- sm.rates[order(year,sex,state,age)]
-sm.rates2  <- sm.rates2[order(year,sex,state,age)]
 Rates <- Rates[order(year,sex,state,age)]
 
 
@@ -124,4 +144,5 @@ save(smooth.rates2,file = "Data/smoothed rates_ConstraintSmooth.RData")
 # This file contains smooth rates NOT constraint to the original ones
 save(sm.rates,file = "Data/smoothed rates_No Constraint.RData")
 
+save(sm.rates2,file = "Data/Total_Smooth.RData")
 

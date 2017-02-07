@@ -189,6 +189,8 @@ system.time(contrib2 <- mydecomp(
   uppera=14))
 
 
+
+
 library(parallel)
 library(parallelsugar)
 

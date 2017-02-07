@@ -181,7 +181,7 @@ DF15_39$Sex <- 1
 DM15_39$Sex <- 2
 DF40_74$Sex <- 1
 DM40_74$Sex <- 2
-  
+
 Data <- rbind(DM0_14,DF0_14,DM15_39,DF15_39,DM40_74,DF40_74)
 gdata::keep(Data,my.settings,makeTransparent, sure=T)
 

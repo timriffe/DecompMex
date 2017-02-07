@@ -37,7 +37,7 @@ Fig1 <- useOuterStrips(xyplot(temp_e0 ~ year|age.g+sex,groups = state,data = fig
 Fig1
 
 # print and save figures
-pdf("Figures/Figure 1_Constrain original.pdf",width=14,height=8)
+pdf("Figures/Figure 1_NoConstrain smoothed.pdf",width=14,height=8)
 print(Fig1)
 dev.off()
 

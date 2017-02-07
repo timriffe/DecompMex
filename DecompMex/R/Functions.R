@@ -21,26 +21,28 @@ mydecomp <- function (func, rates1, rates2, N, ...) {
 
 
 # smoothing functions
-  
+
+
 sm.mat   <- function(DX, EX){
   ages  		<- 0:109
   years 		<- 1990:2015
   W     		<- EX
   W[W > 0] 	<- 1
   W[DX < 1 & W == 1] 	<- .3
+  #W[DX == 0] 	<- 0
   fit   <- Mort2Dsmooth(
     x = ages, 
     y = years, 
     Z = DX,
     offset = log(EX), 
     W = W,
-    control=list(MAX.IT=1000))
+    control=list(MAX.IT=300))
   mxs <- exp(fit$logmortality)
   mxs <- melt(mxs, varnames=c("age","year"), value.name = "mxs")
   mxs
 }
 
-sm.chunk <- function(.SD){
+sm.chunk <- function(.SD,i){
   DX      <- acast(.SD, age~year, value.var = colnames(Counts)[i], fill = 0)
   EX      <- acast(.SD, age~year, value.var = "Pop", fill = 0)
   
