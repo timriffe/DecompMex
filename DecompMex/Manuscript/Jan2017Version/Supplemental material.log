@@ -1,0 +1,663 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  6 FEB 2017 18:00
+entering extended mode
+**"./Supplemental material.tex"
+("Supplemental material.tex"
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cl
+s"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
+"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.s
+ty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.
+cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pd
+ftex.def"
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infw
+arerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxc
+mds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colort
+bl.sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty
+"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen103
+\extrarowheight=\dimen104
+\NC@list=\toks14
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+\everycr=\toks15
+\minrowclearance=\skip45
+)
+\rownum=\count88
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multir
+ow.sty"
+\bigstrutjot=\dimen105
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape
+.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphi
+cs.sty"
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.s
+ty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphi
+cs.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+))
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\filecontents\fi
+lecontents.sty"
+Package: filecontents 2011/10/08 v1.3 Create an external file from within a LaT
+eX document
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
+ry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval
+.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpd
+f.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvt
+ex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxet
+ex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen106
+\Gm@wd@mp=\dimen107
+\Gm@odd@mp=\dimen108
+\Gm@even@mp=\dimen109
+\Gm@layoutwidth=\dimen110
+\Gm@layoutheight=\dimen111
+\Gm@layouthoffset=\dimen112
+\Gm@layoutvoffset=\dimen113
+\Gm@dimlist=\toks17
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
+ry.cfg"))
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath
+.sty"
+Package: amsmath 2016/06/28 v2.15d AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext
+.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.
+sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen114
+))
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.
+sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen115
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.
+sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen116
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks19
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks20
+\eqnshift@=\dimen117
+\alignsep@=\dimen118
+\tagshift@=\dimen119
+\tagwidth@=\dimen120
+\totwidth@=\dimen121
+\lineht@=\dimen122
+\@envbody=\toks21
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption
+.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption
+3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen123
+\captionmargin@=\dimen124
+\captionwidth=\dimen125
+\caption@tempdima=\dimen126
+\caption@indent=\dimen127
+\caption@parindent=\dimen128
+\caption@hangindent=\dimen129
+)
+\c@ContinuedFloat=\count104
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable
+.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count105
+\LTcapwidth=\dimen130
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count106
+\LT@rows=\count107
+\c@LT@tables=\count108
+\c@LT@chunks=\count109
+\LT@p@ftn=\toks23
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\placeins\placei
+ns.sty"
+Package: placeins 2005/04/18  v 2.2
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphi
+cx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen131
+\Gin@req@width=\dimen132
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcapt
+ion.sty"
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+\c@subfigure=\count110
+\c@subtable=\count111
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\setspace\setspa
+ce.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.s
+ty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip53
+\bibsep=\skip54
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count112
+) ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\genmisc\nth.s
+ty"
+Package: nth 2002/02/27
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\preprint\authbl
+k.sty"
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip55
+\@affilsep=\skip56
+\c@Maxaffil=\count113
+\c@authors=\count114
+\c@affil=\count115
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listin
+gs.sty"
+\lst@mode=\count116
+\lst@gtempboxa=\box32
+\lst@token=\toks24
+\lst@length=\count117
+\lst@currlwidth=\dimen133
+\lst@column=\count118
+\lst@pos=\count119
+\lst@lostspace=\dimen134
+\lst@width=\dimen135
+\lst@newlines=\count120
+\lst@lineno=\count121
+\lst@maxwidth=\dimen136
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmis
+c.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count122
+\lst@skipnumbers=\count123
+\lst@framebox=\box33
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listin
+gs.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+
+LaTeX Warning: Unused global option(s):
+    [11.5pt].
+
+("Supplemental material.aux")
+\openout1 = `"Supplemental material.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
+.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen137
+\scratchbox=\box34
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen138
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks26
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdft
+excmds.sty"
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\iflu
+atex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstop
+df-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext
+.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvde
+finekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvopti
+ons.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvse
+tkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etex
+cmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=652.70622pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltcapti
+on.sty"
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count130
+ [1
+
+{C:/Users/jmaburto/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Overfull \hbox (19.21284pt too wide) in alignment at lines 48--52
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (19.21284pt too wide) in alignment at lines 52--58
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (19.21284pt too wide) in alignment at lines 58--60
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (19.21284pt too wide) in alignment at lines 60--62
+ [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 6141) in paragraph at lines 64--64
+\OT1/cmr/m/n/10 J39, J60-J99, J09-J18,
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 64--65
+\OT1/cmr/m/n/10 37, 137, 020-027, 38,
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 64--65
+\OT1/cmr/m/n/10 082, 087, 090-099, 102,
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 3029) in paragraph at lines 65--65
+\OT1/cmr/m/n/10 skin, breast, cervix, prostate, testis, blad-der,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+[]|\OT1/cmr/m/n/10 C16,C18-C21, C43-C44,
+ []
+
+
+Underfull \hbox (badness 5519) in paragraph at lines 65--65
+\OT1/cmr/m/n/10 C50, C53, C61, C62,
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 65--66
+[]|\OT1/cmr/m/n/10 153-154, 172-173, 174,
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 65--66
+\OT1/cmr/m/n/10 180, 185, 186, 188-189,
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 68--68
+[]|\OT1/cmr/m/n/10 E00-E07, 40-G41, K25-
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 68--69
+[]|\OT1/cmr/m/n/10 240-246, 345, 531-533,
+ []
+
+
+Underfull \hbox (badness 6300) in paragraph at lines 68--69
+\OT1/cmr/m/n/10 540-543, 550-553, 574-
+ []
+
+
+Overfull \hbox (19.21284pt too wide) in alignment at lines 62--83
+ [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 86--86
+[]|\OT1/cmr/m/n/10 C00-D48, I00-I99 if not
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 86--88
+[]|\OT1/cmr/m/n/10 140-239, 390-459 if not
+ []
+
+
+Overfull \hbox (19.21284pt too wide) in alignment at lines 83--88
+ [] [] [] [] [] [] 
+ []
+
+
+Package natbib Warning: Citation `arriaga1984' on page 2 undefined on input lin
+e 94.
+
+[2] <Sensitivity_fig.pdf, id=14, 722.7pt x 505.89pt>
+File: Sensitivity_fig.pdf Graphic file (type pdf)
+ <use Sensitivity_fig.pdf>
+Package pdftex.def Info: Sensitivity_fig.pdf used on input line 110.
+(pdftex.def)             Requested size: 433.62334pt x 303.53633pt.
+
+<Gini_fig.pdf, id=15, 722.7pt x 433.62pt>
+File: Gini_fig.pdf Graphic file (type pdf)
+ <use Gini_fig.pdf>
+Package pdftex.def Info: Gini_fig.pdf used on input line 119.
+(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Adult_Female_heatmap.pdf, id=16, 1445.4pt x 794.97pt>
+File: Adult_Female_heatmap.pdf Graphic file (type pdf)
+
+<use Adult_Female_heatmap.pdf>
+Package pdftex.def Info: Adult_Female_heatmap.pdf used on input line 129.
+(pdftex.def)             Requested size: 448.06937pt x 246.43816pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Young_Male_heatmap.pdf, id=17, 1445.4pt x 794.97pt>
+File: Young_Male_heatmap.pdf Graphic file (type pdf)
+
+<use Young_Male_heatmap.pdf>
+Package pdftex.def Info: Young_Male_heatmap.pdf used on input line 137.
+(pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
+
+<Young_Female_heatmap.pdf, id=18, 1445.4pt x 794.97pt>
+File: Young_Female_heatmap.pdf Graphic file (type pdf)
+
+<use Young_Female_heatmap.pdf>
+Package pdftex.def Info: Young_Female_heatmap.pdf used on input line 144.
+(pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
+
+<YoungAdult_Male_heatmap.pdf, id=19, 1445.4pt x 794.97pt>
+File: YoungAdult_Male_heatmap.pdf Graphic file (type pdf)
+
+<use YoungAdult_Male_heatmap.pdf>
+Package pdftex.def Info: YoungAdult_Male_heatmap.pdf used on input line 153.
+(pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
+
+<YoungAdult_Female_heatmap.pdf, id=20, 1445.4pt x 794.97pt>
+File: YoungAdult_Female_heatmap.pdf Graphic file (type pdf)
+
+<use YoungAdult_Female_heatmap.pdf>
+Package pdftex.def Info: YoungAdult_Female_heatmap.pdf used on input line 161.
+(pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
+
+<Distance_y.pdf, id=21, 578.16pt x 794.97pt>
+File: Distance_y.pdf Graphic file (type pdf)
+ <use Distance_y.pdf>
+Package pdftex.def Info: Distance_y.pdf used on input line 170.
+(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
+
+<Distance_ya.pdf, id=22, 578.16pt x 794.97pt>
+File: Distance_ya.pdf Graphic file (type pdf)
+ <use Distance_ya.pdf>
+Package pdftex.def Info: Distance_ya.pdf used on input line 181.
+(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
+
+<Distance_oa.pdf, id=23, 578.16pt x 794.97pt>
+File: Distance_oa.pdf Graphic file (type pdf)
+ <use Distance_oa.pdf>
+Package pdftex.def Info: Distance_oa.pdf used on input line 191.
+(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
+
+
+Package natbib Warning: There were undefined citations.
+
+[3 <./Sensitivity_fig.pdf>] [4 <./Gini_fig.pdf> <./Adult_Female_heatmap.pdf>]
+[5 <./Young_Male_heatmap.pdf> <./Young_Female_heatmap.pdf>] [6 <./YoungAdult_Ma
+le_heatmap.pdf> <./YoungAdult_Female_heatmap.pdf>] [7 <./Distance_y.pdf>]
+[8 <./Distance_ya.pdf>] [9 <./Distance_oa.pdf>] ("Supplemental material.aux") )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 46 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 6174 strings out of 493334
+ 92242 string characters out of 3128924
+ 185938 words of memory out of 3000000
+ 9602 multiletter control sequences out of 15000+200000
+ 9369 words of font info for 34 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,7n,39p,699b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jmaburto/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jmabu
+rto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jmaburto/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jmaburto
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/
+Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Supplemental material.pdf" (9 pages, 337206 bytes).
+PDF statistics:
+ 143 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+
