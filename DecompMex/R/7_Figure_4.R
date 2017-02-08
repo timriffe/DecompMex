@@ -275,6 +275,7 @@ ref.order <- data.table(ref.order)
 setnames(ref.order, "Distance", "Order")
 ref.order <- ref.order[,c(2,5),with=F]
 head(ref.order)
+save(ref.order, file= "Data/Order.Rdata")
 
 
 Dist.data$Statenom<- "a"
@@ -440,15 +441,15 @@ dev.off()
 
 fig.data <- subset(Dist.data,Sex=="Males" & Ages == "40-74")
 
-  f2 <- dotplot(Statenom ~ Distance|region,aspect = c(0.9),ylab= list("State",cex=1.3),strip.left=T,layout=c(1,3),strip=F,
-            xlab=list("Distance from benchmark survival",cex=1.3),main=FALSE,cex=1,
+  f2 <- dotplot(Statenom ~ Distance|region,aspect = c(0.9),ylab= NULL,strip.left=T,layout=c(1,3),strip=F,
+            xlab=list("Departure from benchmark survival",cex=1),main=FALSE,cex=1,
             data=fig.data, groups=Year,pch=my.pch, col=my.fill,col.line=col.line,lin=line,par.settings=my.settings,
             xlim=c(0,4),between=list(y=.5),
             scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
                                              labels=as.character(seq(0,4,.5))),
                         y=list(relation="free")),
-            key=list(space="right",background="white",
-                     title="Year",text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
+            key=list(x=.62,y=.77,background="white",
+                     text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
             panel=function(x,y,lin,col.line,...){    
               panel.abline(v=seq(.5,3.5,1),lwd=1,lty=3,col="darkgrey")
               panel.abline(v=seq(0,4,1),lwd=1,lty=2,col="black")
@@ -466,13 +467,13 @@ fig.data <- subset(Dist.data,Sex=="Males" & Ages == "40-74")
 #1.Causes amenable to medical service
 #2.Diabetes
 #3.Ischemic heart diseases
-#4.HIV/AIDS
 #5.Lung cancer
 #6.Cirrhosis
 #7.Homicide
 #8.Road traffic accidents
 #9.Suicide
 #10.Other causes
+#11.HIV/AIDS
 
   
 #### calculate proportions
@@ -482,22 +483,22 @@ fig.data <- subset(Dist.data,Sex=="Males" & Ages == "40-74")
     z
   }
   Data <- Data[,Prop:= my.prop(Contribution), by = list(Year,State,Ages,Sex)]
-  
+  # recode HIV
+  Data[AMCategory == 4]$AMCategory <- 11
   
   f2.cause <- Data[Ages=="40-74" & Year==2015 & Sex== "Males"]
   
 
-myColours1 <- c("pink","blue","deepskyblue3", "lightgrey","darkblue","green","red", "orange",  "gray69","gray69")
+myColours1 <- c("pink","darkblue","blue","deepskyblue3","lightblue1","red", "orange",  "lightgrey","lightgrey","lightgrey")
 #myColours1 <- c("cornflowerblue","red","chocolate2","yellow", "orange", "coral", "lightgrey","blue","darkorchid1","black","grey")
 fig.labels <- c("1.Causes amenable to medical service",
 "2.Diabetes",
 "3.Ischemic heart diseases",
-"4.HIV/AIDS",
-"5.Lung cancer",
-"6.Cirrhosis",
-"7.Homicide",
-"8.Road traffic accidents",
-"9. Other causes")
+"4.Lung cancer",
+"5.Cirrhosis",
+"6.Homicide",
+"7.Road traffic accidents",
+"8. Other causes")
 
 my.settings1 <- list(
   superpose.polygon=list(col=myColours1[], border="transparent"),
@@ -510,29 +511,193 @@ f2.c <- merge(f2.cause,ref.order, by = c("State"),all.y = T)
 
 f2.c$Statenom<-with(f2.c,reorder(reorder(Statenom,Order),as.numeric(region)))
 
-
+axis.yout<- function(side, ...) { 
+  if(side %in% c("left", "right")) {
+    if (panel.number() %% 2 == which(c("right","left")==side)-1) {
+      panel.axis(side = side, outside =TRUE)
+    }
+  } else {
+    axis.default(side = side, ...)
+  }
+}
 
 f2.c2 <-  barchart(Statenom ~ Prop |region, data=f2.c,
-                   #aspect = c(.9),
-                   #aspect = "xy",
-                      groups=AMCategory,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
+                      groups=AMCategory,  ylab="",xlab=list("Proportion by cause of death in 2015",cex=1),
            layout=c(1,3),strip.left=F,strip=F,
                       stack=TRUE,
                       between = list(y = .5),
-           scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
-                                            labels=as.character(seq(0,4,.5))),
+           scales=list(alternating=1,x=list(cex=1,at=seq(0,1,.25), 
+                                            labels=as.character(seq(0,1,.25))),
                        y=list(relation="free")),
                       par.settings=my.settings1,
                       key = list(space="right", title="Cause of death",background="white",
                                  text=list(fig.labels)
                                  ,cex=.9,
-                                 points=list(pch=19,col=myColours1[-10])))
+                                 points=list(pch=19,col=myColours1[-c(9,10)])),
+           panel=function(x,y,lin,col.line,...){    
+             panel.barchart(x,y,...)                     
+             panel.abline(v=seq(0,1,.25),lwd=1,lty=2,col="darkgrey")
+           })
+f2.c2
+
+
+
+library(gridExtra)
+library(grid)
+blank<-rectGrob(gp=gpar(col="white"))
+
+pdf(file="Figure 4.pdf",width=15,height=7,pointsize=12)
+grid.arrange(f2,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.9))
+dev.off()
+
+
+
+################ Supplemental figures 
+
+
+sup.data <- Data[Year == 2005 | Year == 2010 | Year == 2015]
+
+sup.data2 <- merge(sup.data,ref.order, by = c("State"),all.y = T)
+
+sup.data2$Statenom<-with(sup.data2,reorder(reorder(Statenom,Order),as.numeric(region)))
+sup.data2$Year <- factor(sup.data2$Year,levels=c(2005,2010,2015),labels=c("2005","2010","2015"))
+
+
+#supplemental figure for young
+
+prop.ym <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="0-14" & Sex=="Males"),
+                   groups=AMCategory,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
+                   stack=TRUE,main="Young Males",
+                   between = list(y = .5),
+                   scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
+                                                    labels=as.character(seq(0,4,.5))),
+                               y=list(relation="free")),
+                   par.settings=my.settings1,
+                   key = list(space="bottom", title="Cause of death",background="white",
+                              text=list(fig.labels)
+                              ,cex=.9,
+                              points=list(pch=19,col=myColours1[-10]))),strip.left=T)
+prop.ym
 
 
 require(gridExtra)
-pdf(file="Figure 4.pdf",width=15,height=7,pointsize=12)
-grid.arrange(f2,f2.c2,ncol=2)
+pdf(file="Figure_prop_ym.pdf",width=14,height=10,pointsize=12)
+prop.ym
 dev.off()
+
+
+
+prop.yf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="0-14" & Sex=="Females"),
+                                    groups=AMCategory,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
+                                    stack=TRUE,main="Young Females",
+                                    between = list(y = .5),
+                                    scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
+                                                                     labels=as.character(seq(0,4,.5))),
+                                                y=list(relation="free")),
+                                    par.settings=my.settings1,
+                                    key = list(space="bottom", title="Cause of death",background="white",
+                                               text=list(fig.labels)
+                                               ,cex=.9,
+                                               points=list(pch=19,col=myColours1[-10]))),strip.left=T)
+prop.yf
+
+
+require(gridExtra)
+pdf(file="Figure_prop_yf.pdf",width=14,height=10,pointsize=12)
+prop.yf
+dev.off()
+
+
+
+
+prop.yam <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="15-39" & Sex=="Males"),
+                                    groups=AMCategory,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
+                                    stack=TRUE,main="Young adult males",
+                                    between = list(y = .5),
+                                    scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
+                                                                     labels=as.character(seq(0,4,.5))),
+                                                y=list(relation="free")),
+                                    par.settings=my.settings1,
+                                    key = list(space="bottom", title="Cause of death",background="white",
+                                               text=list(fig.labels)
+                                               ,cex=.9,
+                                               points=list(pch=19,col=myColours1[-10]))),strip.left=T)
+prop.yam
+
+
+require(gridExtra)
+pdf(file="Figure_prop_yam.pdf",width=14,height=10,pointsize=12)
+prop.yam
+dev.off()
+
+
+prop.yaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="15-39" & Sex=="Females"),
+                                     groups=AMCategory,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
+                                     stack=TRUE,main="Young adult females",
+                                     between = list(y = .5),
+                                     scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
+                                                                      labels=as.character(seq(0,4,.5))),
+                                                 y=list(relation="free")),
+                                     par.settings=my.settings1,
+                                     key = list(space="bottom", title="Cause of death",background="white",
+                                                text=list(fig.labels)
+                                                ,cex=.9,
+                                                points=list(pch=19,col=myColours1[-10]))),strip.left=T)
+prop.yaf
+
+
+require(gridExtra)
+pdf(file="Figure_prop_yaf.pdf",width=14,height=10,pointsize=12)
+prop.yaf
+dev.off()
+
+
+
+prop.oam <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="40-74" & Sex=="Males"),
+                                     groups=AMCategory,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
+                                     stack=TRUE,main="Older adult males",
+                                     between = list(y = .5),
+                                     scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
+                                                                      labels=as.character(seq(0,4,.5))),
+                                                 y=list(relation="free")),
+                                     par.settings=my.settings1,
+                                     key = list(space="bottom", title="Cause of death",background="white",
+                                                text=list(fig.labels)
+                                                ,cex=.9,
+                                                points=list(pch=19,col=myColours1[-10]))),strip.left=T)
+prop.oam
+
+
+require(gridExtra)
+pdf(file="Figure_prop_oam.pdf",width=14,height=10,pointsize=12)
+prop.oam
+dev.off()
+
+
+
+
+prop.oaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="40-74" & Sex=="Females"),
+                                     groups=AMCategory,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
+                                     stack=TRUE,main="Older adult females",
+                                     between = list(y = .5),
+                                     scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
+                                                                      labels=as.character(seq(0,4,.5))),
+                                                 y=list(relation="free")),
+                                     par.settings=my.settings1,
+                                     key = list(space="bottom", title="Cause of death",background="white",
+                                                text=list(fig.labels)
+                                                ,cex=.9,
+                                                points=list(pch=19,col=myColours1[-10]))),strip.left=T)
+prop.oaf
+
+
+require(gridExtra)
+pdf(file="Figure_prop_oaf.pdf",width=14,height=10,pointsize=12)
+prop.oam
+dev.off()
+
+
+
 
 
 

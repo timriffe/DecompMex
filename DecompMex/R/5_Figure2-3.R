@@ -261,7 +261,11 @@ Data$region<-factor(Data$region,levels=c(1,2,3),labels=c("South", "Central", "No
 Data$Ages<-factor(Data$Ages,levels=c(1,2,3),labels=c("0-14", "15-39", "40-74"))
 Data$Sex<-factor(Data$Sex,levels=c(1,2),labels=c("Females","Males"))
 
-Data$Statenom<-with(Data,reorder(reorder(Statenom,State),as.numeric(region)))
+load("Data/order.RData")
+
+Data <- merge(Data,ref.order, by = c("State"),all.y = T)
+
+Data$Statenom<-with(Data,reorder(reorder(Statenom,Order),as.numeric(region)))
 
 
 ##### Figure function
