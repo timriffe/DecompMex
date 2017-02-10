@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  8 FEB 2017 09:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  8 FEB 2017 13:53
 entering extended mode
 **./bmc_article.tex
 (bmc_article.tex
@@ -552,7 +552,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 167.
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 268.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 273.
 
 
 
@@ -565,80 +565,79 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 ]
 [2] [3]
 
-LaTeX Warning: Citation `HMDMP' on page 4 undefined on input line 348.
+LaTeX Warning: Citation `HMDMP' on page 4 undefined on input line 353.
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 
 LaTeX Warning: Reference `fig:e40_74_females' on page 6 undefined on input line
- 412.
+ 420.
 
 
 LaTeX Warning: Reference `fig:e40_74_males' on page 6 undefined on input line 4
-12.
+20.
 
 
 LaTeX Warning: Reference `fig:e40_74_females' on page 6 undefined on input line
- 414.
+ 422.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 [6]
 
 LaTeX Warning: Reference `fig:e40_74_males' on page 7 undefined on input line 4
-21.
+29.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
 
-LaTeX Warning: Reference `fig:e0_14_males' on page 7 undefined on input line 42
-8.
+LaTeX Warning: Reference `fig:e0_14_males' on page 7 undefined on input line 43
+6.
 
 
 LaTeX Warning: Reference `fig:e15_39_males' on page 7 undefined on input line 4
-28.
+36.
 
 
 LaTeX Warning: Reference `fig:e15_39_males' on page 7 undefined on input line 4
-30.
+38.
 
 
 LaTeX Warning: Reference `fig:e15_39_females' on page 7 undefined on input line
- 430.
+ 438.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
 
  []
 
 [7]
 
-LaTeX Warning: Reference `fig:Gini' on page 8 undefined on input line 443.
+LaTeX Warning: Reference `fig:Gini' on page 8 undefined on input line 451.
 
 
-LaTeX Warning: Reference `fig:Gini' on page 8 undefined on input line 448.
+LaTeX Warning: Reference `fig:Gini' on page 8 undefined on input line 456.
 
 [8]
 
-LaTeX Warning: Reference `fig:Gini' on page 9 undefined on input line 454.
+LaTeX Warning: Reference `fig:Gini' on page 9 undefined on input line 462.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 465--466
 
  []
 
-[9]
 
-LaTeX Warning: Reference `fig:Gini' on page 10 undefined on input line 460.
+LaTeX Warning: Reference `fig:Gini' on page 10 undefined on input line 468.
 
 (bmc_article.bbl [10]
 
@@ -646,46 +645,59 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 139.
 
 
-[11]) <Figure1.pdf, id=47, 1011.78pt x 578.16pt>
+
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+ [11])
+<Figure1.pdf, id=47, 1011.78pt x 578.16pt>
 File: Figure1.pdf Graphic file (type pdf)
  <use Figure1.pdf>
-Package pdftex.def Info: Figure1.pdf used on input line 538.
+Package pdftex.def Info: Figure1.pdf used on input line 546.
 (pdftex.def)             Requested size: 354.1283pt x 202.35902pt.
 
-Overfull \hbox (5.6283pt too wide) in paragraph at lines 538--539
+Overfull \hbox (5.6283pt too wide) in paragraph at lines 546--547
  [][] 
  []
 
 <CVfig.pdf, id=48, 722.7pt x 433.62pt>
 File: CVfig.pdf Graphic file (type pdf)
  <use CVfig.pdf>
-Package pdftex.def Info: CVfig.pdf used on input line 549.
+Package pdftex.def Info: CVfig.pdf used on input line 557.
 (pdftex.def)             Requested size: 289.07487pt x 173.44492pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <AdultMaleheatmap.pdf, id=49, 1445.4pt x 794.97pt>
 File: AdultMaleheatmap.pdf Graphic file (type pdf)
  <use AdultMaleheatmap.pdf>
-Package pdftex.def Info: AdultMaleheatmap.pdf used on input line 561.
+Package pdftex.def Info: AdultMaleheatmap.pdf used on input line 569.
 (pdftex.def)             Requested size: 332.43501pt x 182.83925pt.
 
-[12 <./Figure1.pdf> <./CVfig.pdf>] <Figure_4.pdf, id=66, 1084.05pt x 505.89pt>
-File: Figure_4.pdf Graphic file (type pdf)
 
-<use Figure_4.pdf>
-Package pdftex.def Info: Figure_4.pdf used on input line 570.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figure_4.pdf, id=50, 1084.05pt x 505.89pt>
+File: Figure_4.pdf Graphic file (type pdf)
+ <use Figure_4.pdf>
+Package pdftex.def Info: Figure_4.pdf used on input line 578.
 (pdftex.def)             Requested size: 357.73761pt x 166.9442pt.
 
-Overfull \hbox (9.23761pt too wide) in paragraph at lines 570--572
+Overfull \hbox (9.23761pt too wide) in paragraph at lines 578--580
  [][] 
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 590.
+(Font)              <8> on input line 598.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 590.
+(Font)              <6> on input line 598.
 
 AED: lastpage setting LastPage
-[13 <./AdultMaleheatmap.pdf> <./Figure_4.pdf>] [14] (bmc_article.aux)
+[12 <./Figure1.pdf>] [13 <./CVfig.pdf> <./AdultMaleheatmap.pdf>] [14 <./Figure_
+4.pdf>] (bmc_article.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -696,15 +708,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  2996 strings out of 493334
  39981 string characters out of 3128924
- 117289 words of memory out of 3000000
+ 120550 words of memory out of 3000000
  6499 multiletter control sequences out of 15000+200000
  10688 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,37p,2087b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,10n,37p,2087b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmr10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKT
@@ -719,7 +734,7 @@ public/amsfonts/cm/cmss8.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2
 to/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
 C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb>
-Output written on bmc_article.pdf (14 pages, 260398 bytes).
+Output written on bmc_article.pdf (14 pages, 261080 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

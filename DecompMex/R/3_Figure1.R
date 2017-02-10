@@ -42,5 +42,28 @@ print(Fig1)
 dev.off()
 
 
+### some querys for the paper
+fig1.data$Statenom <- fig1.data$state
+fig1.data$Statenom  <- factor(fig1.data$Statenom ,levels=c(1:34),
+                              labels=c("Aguascalientes","Baja California","Baja California Sur",
+                                       "Campeche","Coahuila","Colima","Chiapas","Chihuahua",
+                                       "Mexico City","Durango","Guanajuato","Guerrero",
+                                       "Hidalgo","Jalisco","Mexico State","Michoacan","Morelos",
+                                       "Nayarit","Nuevo Leon","Oaxaca","Puebla","Queretaro",
+                                       "Quintana Roo","San Luis Potosi","Sinaloa","Sonora",
+                                       "Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatan",
+                                       "Zacatecas","Benchmark","Record"))
 
+
+setorder(fig1.data[year == 2015 & age.g=="Young (0-14)" & sex=="Females"],temp_e0)[]
+
+
+
+
+
+for (j in 1:32){
+  plot(setorder(fig1.data[state == j & age.g=="Young (0-14)" & sex=="Females"],year)$temp_e0, type="l")
+  print(j)
+Sys.sleep(2)
+}
 
