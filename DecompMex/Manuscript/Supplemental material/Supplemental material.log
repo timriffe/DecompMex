@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  7 FEB 2017 15:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  13 FEB 2017 18:25
 entering extended mode
 **"./Supplemental material.tex"
 ("Supplemental material.tex"
@@ -603,58 +603,58 @@ File: YoungAdult_Female_heatmap.pdf Graphic file (type pdf)
 Package pdftex.def Info: YoungAdult_Female_heatmap.pdf used on input line 159.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Distance_y.pdf, id=21, 578.16pt x 794.97pt>
-File: Distance_y.pdf Graphic file (type pdf)
- <use Distance_y.pdf>
-Package pdftex.def Info: Distance_y.pdf used on input line 168.
-(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
-
-<Distance_ya.pdf, id=22, 578.16pt x 794.97pt>
-File: Distance_ya.pdf Graphic file (type pdf)
- <use Distance_ya.pdf>
-Package pdftex.def Info: Distance_ya.pdf used on input line 177.
-(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
-
-<Distance_oa.pdf, id=23, 578.16pt x 794.97pt>
-File: Distance_oa.pdf Graphic file (type pdf)
- <use Distance_oa.pdf>
-Package pdftex.def Info: Distance_oa.pdf used on input line 185.
-(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
-
-<Figure_prop_yf.pdf, id=24, 1011.78pt x 722.7pt>
-File: Figure_prop_yf.pdf Graphic file (type pdf)
- <use Figure_prop_yf.pdf>
-Package pdftex.def Info: Figure_prop_yf.pdf used on input line 196.
-(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
-
-<Figure_prop_ym.pdf, id=25, 1011.78pt x 722.7pt>
-File: Figure_prop_ym.pdf Graphic file (type pdf)
- <use Figure_prop_ym.pdf>
-Package pdftex.def Info: Figure_prop_ym.pdf used on input line 204.
-(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
-
-<Figure_prop_yaf.pdf, id=26, 1011.78pt x 722.7pt>
-File: Figure_prop_yaf.pdf Graphic file (type pdf)
- <use Figure_prop_yaf.pdf>
-Package pdftex.def Info: Figure_prop_yaf.pdf used on input line 213.
-(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
-
-<Figure_prop_yam.pdf, id=27, 1011.78pt x 722.7pt>
-File: Figure_prop_yam.pdf Graphic file (type pdf)
- <use Figure_prop_yam.pdf>
-Package pdftex.def Info: Figure_prop_yam.pdf used on input line 222.
-(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
-
-<Figure_prop_oaf.pdf, id=28, 1011.78pt x 722.7pt>
-File: Figure_prop_oaf.pdf Graphic file (type pdf)
- <use Figure_prop_oaf.pdf>
-Package pdftex.def Info: Figure_prop_oaf.pdf used on input line 231.
-(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
-
-<Figure_prop_oam.pdf, id=29, 1011.78pt x 722.7pt>
+<Figure_prop_oam.pdf, id=21, 1011.78pt x 722.7pt>
 File: Figure_prop_oam.pdf Graphic file (type pdf)
  <use Figure_prop_oam.pdf>
-Package pdftex.def Info: Figure_prop_oam.pdf used on input line 240.
+Package pdftex.def Info: Figure_prop_oam.pdf used on input line 167.
+(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
+
+<Distance_oa.pdf, id=22, 578.16pt x 794.97pt>
+File: Distance_oa.pdf Graphic file (type pdf)
+ <use Distance_oa.pdf>
+Package pdftex.def Info: Distance_oa.pdf used on input line 176.
+(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
+
+<Figure_prop_oaf.pdf, id=23, 1011.78pt x 722.7pt>
+File: Figure_prop_oaf.pdf Graphic file (type pdf)
+ <use Figure_prop_oaf.pdf>
+Package pdftex.def Info: Figure_prop_oaf.pdf used on input line 184.
+(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
+
+<Distance_y.pdf, id=24, 578.16pt x 794.97pt>
+File: Distance_y.pdf Graphic file (type pdf)
+ <use Distance_y.pdf>
+Package pdftex.def Info: Distance_y.pdf used on input line 193.
+(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
+
+<Distance_ya.pdf, id=25, 578.16pt x 794.97pt>
+File: Distance_ya.pdf Graphic file (type pdf)
+ <use Distance_ya.pdf>
+Package pdftex.def Info: Distance_ya.pdf used on input line 202.
+(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
+
+<Figure_prop_yf.pdf, id=26, 1011.78pt x 722.7pt>
+File: Figure_prop_yf.pdf Graphic file (type pdf)
+ <use Figure_prop_yf.pdf>
+Package pdftex.def Info: Figure_prop_yf.pdf used on input line 214.
+(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
+
+<Figure_prop_ym.pdf, id=27, 1011.78pt x 722.7pt>
+File: Figure_prop_ym.pdf Graphic file (type pdf)
+ <use Figure_prop_ym.pdf>
+Package pdftex.def Info: Figure_prop_ym.pdf used on input line 222.
+(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
+
+<Figure_prop_yaf.pdf, id=28, 1011.78pt x 722.7pt>
+File: Figure_prop_yaf.pdf Graphic file (type pdf)
+ <use Figure_prop_yaf.pdf>
+Package pdftex.def Info: Figure_prop_yaf.pdf used on input line 231.
+(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
+
+<Figure_prop_yam.pdf, id=29, 1011.78pt x 722.7pt>
+File: Figure_prop_yam.pdf Graphic file (type pdf)
+ <use Figure_prop_yam.pdf>
+Package pdftex.def Info: Figure_prop_yam.pdf used on input line 240.
 (pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
 
 
@@ -662,10 +662,10 @@ Package natbib Warning: There were undefined citations.
 
 [3 <./Sensitivity_fig.pdf>] [4 <./Gini_fig.pdf> <./Adult_Female_heatmap.pdf>]
 [5 <./Young_Male_heatmap.pdf> <./Young_Female_heatmap.pdf>] [6 <./YoungAdult_Ma
-le_heatmap.pdf> <./YoungAdult_Female_heatmap.pdf>] [7 <./Distance_y.pdf>]
-[8 <./Distance_ya.pdf>] [9 <./Distance_oa.pdf>] [10 <./Figure_prop_yf.pdf>]
-[11 <./Figure_prop_ym.pdf>] [12 <./Figure_prop_yaf.pdf>] [13 <./Figure_prop_yam
-.pdf>] [14 <./Figure_prop_oaf.pdf>] [15 <./Figure_prop_oam.pdf>]
+le_heatmap.pdf> <./YoungAdult_Female_heatmap.pdf>] [7 <./Figure_prop_oam.pdf>]
+[8 <./Distance_oa.pdf>] [9 <./Figure_prop_oaf.pdf>] [10 <./Distance_y.pdf>]
+[11 <./Distance_ya.pdf>] [12 <./Figure_prop_yf.pdf>] [13 <./Figure_prop_ym.pdf>
+] [14 <./Figure_prop_yaf.pdf>] [15 <./Figure_prop_yam.pdf>]
 ("Supplemental material.aux") )
 (\end occurred inside a group at level 1)
 
@@ -694,9 +694,9 @@ Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmr7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr8.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Supplemental material.pdf" (15 pages, 430296 bytes).
+Output written on "Supplemental material.pdf" (15 pages, 439484 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
+ 219 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

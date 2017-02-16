@@ -100,6 +100,8 @@ for (i in causes){
 }
 
 #smooth total mortality rates
+Counts2  <- data.table(cbind(Counts[,1:4,with=F],g1= rowSums(Counts[,5:14,with=F]),Counts[,16,with=F]))
+
 Counts2$g1[Counts2$Pop == 0] <- 0
 Counts2$g1[Counts2$Pop < Counts2$g1] <- Counts2$Pop[Counts2$Pop < Counts2$g1]
 
@@ -135,6 +137,7 @@ smooth.rates2 <- as.data.table(smooth.rates2)
 #wihout constrain in smoothing by cause
 sm.rates$mx <- sm.tot
 colnames(sm.rates)
+sm.rates <- sm.rates[,-15, with=F]
 setcolorder(sm.rates,c("year","sex","state","age","mx","g1","g2","g3","g4","g5","g6","g7","g8","g9","g10"))
 head(sm.rates)
 
