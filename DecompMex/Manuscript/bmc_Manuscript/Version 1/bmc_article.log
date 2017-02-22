@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  13 FEB 2017 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  21 FEB 2017 14:28
 entering extended mode
 **./bmc_article.tex
 (bmc_article.tex
@@ -517,42 +517,42 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <13> not available
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <24> not available
 (Font)              size <24.88> substituted on input line 101.
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 122.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 123.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 122.
+(Font)              size <5> substituted on input line 123.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 122.
+(Font)              size <5> substituted on input line 123.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 122.
+(Font)              size <5> substituted on input line 123.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11> on input line 122.
+(Font)              <11> on input line 123.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.69997> on input line 122.
+(Font)              <7.69997> on input line 123.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.5> on input line 122.
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 127
+(Font)              <5.5> on input line 123.
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 123
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 127.
+LaTeX Font Info:    No file OMScmss.fd. on input line 123.
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textdagger' on input line 127.
+(Font)              for symbol `textdagger' on input line 123.
 
 \address@aff1=\toks21
 \address@aff2=\toks22
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 167.
+(Font)              <7> on input line 172.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 167.
+(Font)              <5> on input line 172.
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 278.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 283.
 
 
 
@@ -565,25 +565,25 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 ]
 [2] [3]
 
-LaTeX Warning: Citation `HMDMP' on page 4 undefined on input line 358.
+LaTeX Warning: Citation `HMDMP' on page 4 undefined on input line 363.
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 
  []
 
@@ -598,9 +598,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10])
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 606.
+(Font)              <8> on input line 611.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 606.
+(Font)              <6> on input line 611.
 
 
 AED: lastpage setting LastPage
@@ -617,13 +617,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2970 strings out of 493334
- 39542 string characters out of 3128924
- 118062 words of memory out of 3000000
- 6477 multiletter control sequences out of 15000+200000
+ 2976 strings out of 493334
+ 39627 string characters out of 3128924
+ 118184 words of memory out of 3000000
+ 6483 multiletter control sequences out of 15000+200000
  10688 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,9n,37p,2064b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,9n,37p,2064b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmr10.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKT
@@ -638,7 +638,7 @@ public/amsfonts/cm/cmss8.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2
 to/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
 C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb>
-Output written on bmc_article.pdf (12 pages, 172713 bytes).
+Output written on bmc_article.pdf (12 pages, 173276 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
