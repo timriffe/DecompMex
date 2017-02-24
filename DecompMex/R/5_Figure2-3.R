@@ -53,34 +53,34 @@ for( i in 1:26){
 ###### for ages 15 - 39 ##############################################################
 #####################################################################################
 ### For females
-DecomF15_39 <- local(get(load("Data/ContribFemales15_39.Rdata")))
-DF15_39 <- NULL
+DecomF15_49 <- local(get(load("Data/ContribFemales15_49.Rdata")))
+DF15_49 <- NULL
 for( i in 1:26){
-  D        <- do.call(rbind.data.frame,DecomF15_39[[i]])
+  D        <- do.call(rbind.data.frame,DecomF15_49[[i]])
   D$Age    <- seq(0,109,1)
   D$State  <- rep(1:32, each=110)
-  D        <- subset(D, Age > 14 & Age < 40)
+  D        <- subset(D, Age > 14 & Age < 50)
   D1       <- aggregate(x = D, by = list(D$State), FUN = sum)
   D1       <- D1[1:11]
   D2       <- melt(as.data.frame(D1), id="Group.1")
   D3       <- as.data.frame(cbind(Year= i+1989,State=D2$Group.1, AMCategory = D2$variable, Contribution = D2$value))  
-  DF15_39   <- as.data.frame(rbind(DF15_39, D3))
+  DF15_49   <- as.data.frame(rbind(DF15_49, D3))
 }
 ## Data frame with results for females
 
 ## For males
-DecomM15_39 <- local(get(load("Data/ContribMales15_39.Rdata")))
-DM15_39 <- NULL
+DecomM15_49 <- local(get(load("Data/ContribMales15_49.Rdata")))
+DM15_49 <- NULL
 for( i in 1:26){
-  D        <- do.call(rbind.data.frame,DecomM15_39[[i]])
+  D        <- do.call(rbind.data.frame,DecomM15_49[[i]])
   D$Age    <- seq(0,109,1)
   D$State  <- rep(1:32, each=110)
-  D        <- subset(D, Age > 14 & Age < 40)
+  D        <- subset(D, Age > 14 & Age < 50)
   D1       <- aggregate(x = D, by = list(D$State), FUN = sum)
   D1       <- D1[1:11]
   D2       <- melt(as.data.frame(D1), id="Group.1")
   D3       <- as.data.frame(cbind(Year= i+1989,State=D2$Group.1, AMCategory = D2$variable, Contribution = D2$value))  
-  DM15_39   <- as.data.frame(rbind(DM15_39, D3))
+  DM15_49   <- as.data.frame(rbind(DM15_49, D3))
 }
 ## Data frame with results for males
 #####################################################################################
@@ -88,37 +88,37 @@ for( i in 1:26){
 ###### for ages 40 - 74 ##############################################################
 #####################################################################################
 ### For females
-DecomF40_74 <- local(get(load("Data/ContribFemales40_74.Rdata")))
-DF40_74 <- NULL
+DecomF50_84 <- local(get(load("Data/ContribFemales50_84.Rdata")))
+DF50_84 <- NULL
 for( i in 1:26){
-  D        <- do.call(rbind.data.frame,DecomF40_74[[i]])
+  D        <- do.call(rbind.data.frame,DecomF50_84[[i]])
   D$Age    <- seq(0,109,1)
   D$State  <- rep(1:32, each=110)
-  D        <- subset(D, Age > 39 & Age < 74)
+  D        <- subset(D, Age > 49 & Age < 85)
   D1       <- aggregate(x = D, by = list(D$State), FUN = sum)
   D1       <- D1[1:11]
   D2       <- melt(as.data.frame(D1), id="Group.1")
   D3       <- as.data.frame(cbind(Year= i+1989,State=D2$Group.1, AMCategory = D2$variable, Contribution = D2$value))  
-  DF40_74   <- as.data.frame(rbind(DF40_74, D3))
+  DF50_84   <- as.data.frame(rbind(DF50_84, D3))
 }
 ## Data frame with results for females
 
 ## For males
-DecomM40_74 <- local(get(load("Data/ContribMales40_74.Rdata")))
-DM40_74 <- NULL
+DecomM50_84 <- local(get(load("Data/ContribMales50_84.Rdata")))
+DM50_84 <- NULL
 for( i in 1:26){
-  D        <- do.call(rbind.data.frame,DecomM40_74[[i]])
+  D        <- do.call(rbind.data.frame,DecomM50_84[[i]])
   D$Age    <- seq(0,109,1)
   D$State  <- rep(1:32, each=110)
-  D        <- subset(D, Age > 39 & Age < 74)
+  D        <- subset(D, Age > 49 & Age < 85)
   D1       <- aggregate(x = D, by = list(D$State), FUN = sum)
   D1       <- D1[1:11]
   D2       <- melt(as.data.frame(D1), id="Group.1")
   D3       <- as.data.frame(cbind(Year= i+1989,State=D2$Group.1, AMCategory = D2$variable, Contribution = D2$value))  
-  DM40_74   <- as.data.frame(rbind(DM40_74, D3))
+  DM50_84   <- as.data.frame(rbind(DM50_84, D3))
 }
 ## Data frame with results for males
-gdata::keep(DF0_14,DM0_14,DF15_39,DM15_39,DF40_74,DM40_74,sure=T)
+gdata::keep(DF0_14,DM0_14,DF15_49,DM15_49,DF50_84,DM50_84,sure=T)
 #####################################################################################
 #####################################################################################
 
@@ -163,26 +163,26 @@ makeTransparent<-function(someColor, alpha=100)
 
 DM0_14$AMLabel <- factor(DM0_14$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
 DF0_14$AMLabel <- factor(DF0_14$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
-DF15_39$AMLabel <- factor(DF15_39$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
-DM15_39$AMLabel <- factor(DM15_39$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
-DF40_74$AMLabel <- factor(DF40_74$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
-DM40_74$AMLabel <- factor(DM40_74$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
+DF15_49$AMLabel <- factor(DF15_49$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
+DM15_49$AMLabel <- factor(DM15_49$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
+DF50_84$AMLabel <- factor(DF50_84$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
+DM50_84$AMLabel <- factor(DM50_84$AMCategory,levels=c(1:10),labels=c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homicide","RTA","Suicide","RC"))
 
 DM0_14$Ages  <- 1
 DF0_14$Ages  <- 1
-DF15_39$Ages <- 2
-DM15_39$Ages <- 2
-DF40_74$Ages <- 3
-DM40_74$Ages <- 3
+DF15_49$Ages <- 2
+DM15_49$Ages <- 2
+DF50_84$Ages <- 3
+DM50_84$Ages <- 3
 
 DM0_14$Sex  <- 2
 DF0_14$Sex  <- 1
-DF15_39$Sex <- 1
-DM15_39$Sex <- 2
-DF40_74$Sex <- 1
-DM40_74$Sex <- 2
+DF15_49$Sex <- 1
+DM15_49$Sex <- 2
+DF50_84$Sex <- 1
+DM50_84$Sex <- 2
 
-Data <- rbind(DM0_14,DF0_14,DM15_39,DF15_39,DM40_74,DF40_74)
+Data <- rbind(DM0_14,DF0_14,DM15_49,DF15_49,DM50_84,DF50_84)
 gdata::keep(Data,my.settings,makeTransparent, sure=T)
 
 ###########################################heat map exercise
@@ -258,7 +258,7 @@ Data$region[Data$State==31] <- 1
 Data$region[Data$State==32] <- 3
 detach(Data)
 Data$region<-factor(Data$region,levels=c(1,2,3),labels=c("South", "Central", "North"))
-Data$Ages<-factor(Data$Ages,levels=c(1,2,3),labels=c("0-14", "15-39", "40-74"))
+Data$Ages<-factor(Data$Ages,levels=c(1,2,3),labels=c("0-14", "15-49", "50-84"))
 Data$Sex<-factor(Data$Sex,levels=c(1,2),labels=c("Females","Males"))
 
 load("Data/order.RData")
@@ -269,6 +269,7 @@ Data$Statenom<-with(Data,reorder(reorder(Statenom,Order),as.numeric(region)))
 
 
 ##### Figure function
+
 Figure.heatmap <- function(SubData,Age.group){
   useOuterStrips(levelplot(Contribution ~ Year*Statenom|AMLabel+region,                           
                            data=SubData,                       
@@ -277,7 +278,7 @@ Figure.heatmap <- function(SubData,Age.group){
                            ylab.right = list("(Years)",cex=1.2),par.settings=my.settings,
                            xlab=list("Year",cex=1.2),ylab=list("State",cex=1.2),
                            #colorkey=T,
-                           colorkey = list(at = seq(0,2,.25), labels=list(at=seq(0,2,.25))),
+                           colorkey = list(at = seq(0,3,.25), labels=list(at=seq(0,3,.25))),
                            ylim= c(rep(list(c(1,10)),7),rep(list(c(11,21)),7),rep(list(c(22,32)),7)),
                            between = list(x = -8.5),scales=list(x=list(cex=1.3,rot=45,at=seq(1990,2015,5)),
                                                                 y=list(relation="free",at = c(rep(list(c(1:32)),21)),
@@ -294,7 +295,7 @@ Figure.heatmap <- function(SubData,Age.group){
                            at=c(do.breaks(c(0,0.25),20), 
                                 do.breaks(c(0.2500001,0.5),20),
                                 do.breaks(c(0.5000001,1),20), 
-                                do.breaks(c(1.0000001,2),20)),                                                   
+                                do.breaks(c(1.0000001,3),20)),                                                   
                            col.regions=colorRampPalette(brewer.pal(9,"YlOrRd")[c(1,4,7,9)]),
                            #col.regions=colorRampPalette(brewer.pal(9,"YlOrBr")[c(1,4,7,9)]),
                            
@@ -303,7 +304,7 @@ Figure.heatmap <- function(SubData,Age.group){
 
 
 #Male Adults
-Heat.map1 <- Figure.heatmap(SubData=subset(Data,Sex=="Males" & Ages=="40-74" &
+Heat.map1 <- Figure.heatmap(SubData=subset(Data,Sex=="Males" & Ages=="50-84" &
                                              AMCategory!=10&AMCategory!=4 & AMCategory!=9),
                             Age.group="male adults")
 
@@ -314,7 +315,7 @@ dev.off()
 
 
 #Female Adults
-Heat.map2 <- Figure.heatmap(SubData=subset(Data,Sex=="Females" & Ages=="40-74" &
+Heat.map2 <- Figure.heatmap(SubData=subset(Data,Sex=="Females" & Ages=="50-84" &
                                              AMCategory!=10&AMCategory!=4 & AMCategory!=9),
                             Age.group="female adults")
 pdf(file="Adult_Female_heatmap.pdf",width=20,height=11,pointsize=12)
@@ -323,7 +324,7 @@ dev.off()
 
 
 #Male young-adults
-Heat.map3 <- Figure.heatmap(SubData=subset(Data,Sex=="Males" & Ages=="15-39" &
+Heat.map3 <- Figure.heatmap(SubData=subset(Data,Sex=="Males" & Ages=="15-49" &
                                              AMCategory!=10&AMCategory!=4 & AMCategory!=9),
                             Age.group="male young-adults")
 pdf(file="YoungAdult_Male_heatmap.pdf",width=20,height=11,pointsize=12)
@@ -331,7 +332,7 @@ print(Heat.map3)
 dev.off()
 
 #Female young-adults
-Heat.map4 <- Figure.heatmap(SubData=subset(Data,Sex=="Females" & Ages=="15-39" &
+Heat.map4 <- Figure.heatmap(SubData=subset(Data,Sex=="Females" & Ages=="15-49" &
                                              AMCategory!=10&AMCategory!=4 & AMCategory!=9),
                             Age.group="female young-adults")
 pdf(file="YoungAdult_Female_heatmap.pdf",width=20,height=11,pointsize=12)
