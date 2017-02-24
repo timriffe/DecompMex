@@ -58,15 +58,15 @@ bpe0_14       <- BPlx[,getTempe0(.SD),by=list(year, sex)]
 bpe0_14$state <- 33
 bpe0_14$age.g <- 1
 
-bpe15_39 <- BPlx[,getTempe0(.SD,15,39),by=list(year, sex)]
-bpe15_39$state <- 33
-bpe15_39$age.g <- 2
+bpe15_49 <- BPlx[,getTempe0(.SD,15,49),by=list(year, sex)]
+bpe15_49$state <- 33
+bpe15_49$age.g <- 2
 
-bpe40_74 <- BPlx[,getTempe0(.SD,40,74),by=list(year, sex)]
-bpe40_74$state <- 33
-bpe40_74$age.g <- 3
+bpe50_84 <- BPlx[,getTempe0(.SD,50,84),by=list(year, sex)]
+bpe50_84$state <- 33
+bpe50_84$age.g <- 3
 
-BP_temp <- rbind(bpe0_14,bpe15_39,bpe40_74)
+BP_temp <- rbind(bpe0_14,bpe15_49,bpe50_84)
 setnames(BP_temp,"V1","temp_e0")
 
 #######################################
@@ -82,12 +82,12 @@ head(Stateslx)
 # now get temp e0 for states
 ste0_14     <- Stateslx[,getTempe0(.SD,lowera = 0, uppera = 14),by=list(state,year, sex)]
 ste0_14$age.g <-1
-ste15_39    <- Stateslx[,getTempe0(.SD,lowera=15,uppera=39),by=list(state,year, sex)]
-ste15_39$age.g <-2
-ste40_74    <- Stateslx[,getTempe0(.SD,lowera=40,uppera=74),by=list(state,year, sex)]
-ste40_74$age.g <-3
+ste15_49    <- Stateslx[,getTempe0(.SD,lowera=15,uppera=49),by=list(state,year, sex)]
+ste15_49$age.g <-2
+ste50_84    <- Stateslx[,getTempe0(.SD,lowera=50,uppera=84),by=list(state,year, sex)]
+ste50_84$age.g <-3
 
-ste_temp <- rbind(ste0_14,ste15_39,ste40_74)
+ste_temp <- rbind(ste0_14,ste15_49,ste50_84)
 setnames(ste_temp,"V1","temp_e0")
 head(ste_temp)
 

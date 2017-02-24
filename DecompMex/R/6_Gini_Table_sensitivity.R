@@ -133,30 +133,32 @@ Greens           <- brewer.pal(5,"Greens")[2:5]
 
 temp.data <- temp.data[state < 33]
 
-tot.tempe0.st <- temp.data[,sum(temp_e0), by = list(year,sex,state)]
-tot.gini <- tot.tempe0.st[,giniSimple(V1), by = list(year,sex)]
-tot.gini$age.g <- 4
-setcolorder(tot.gini,c("year","sex","age.g","V1"))
+#tot.tempe0.st <- temp.data[,sum(temp_e0), by = list(year,sex,state)]
+#tot.gini <- tot.tempe0.st[,giniSimple(V1), by = list(year,sex)]
+#tot.gini$age.g <- 4
+#setcolorder(tot.gini,c("year","sex","age.g","V1"))
 
 gini.states <- temp.data[,giniSimple(temp_e0), by = list(year,sex,age.g)]
 
-gini.states <- rbind(gini.states,tot.gini)
+#gini.states <- rbind(gini.states,tot.gini)
 
 gini.states$sex <- factor(gini.states$sex,levels=c(1,2),labels=c("Males", "Females"))
 
+
 Gini.fig <-xyplot(V1~year|sex,data=gini.states,groups=age.g,type="l",lwd=2,between=list(x=1),
-                  xlim=c(1990,2015),ylim=c(0,.6),ylab="Gini coefficient",
+                  xlim=c(1990,2015),ylim=c(0,.7),ylab="Gini coefficient",
                   layout=c(2,1),strip.left=F,strip=T,
-                  col=Greens,par.settings=my.settings,xlab="Year", 
+                  col=Greens[-4],par.settings=my.settings,xlab="Year", 
                   key=list(x=.2,y=.9,background="transparent",
-                           text=list(c('Young (0-14)','Young adults(15-39)','Older adults(40-74)','Total (0-74)'),
+                           #text=list(c('Young (0-14)','Young adults(15-39)','Older adults(40-74)','Total (0-74)'),
+                           text=list(c('Young (0-14)','Young adults(15-49)','Older adults(50-84)'),
                                      col="black"),cex=1,
-                           lines=list(lty=c(1,1,1,2),lwd=2,col=Greens)),
+                           lines=list(lty=c(1,1,1),lwd=2,col=Greens[-4])),
                   scales=list(alternating=1,x=list(cex=.75,at=c(seq(1990,2015,5))),
-                              y=list(cex=.75,at=seq(0,.5,.1),alternating=1)),                                       
+                              y=list(cex=.75,at=seq(0,.7,.1),alternating=1)),                                       
                   panel = function(x, y,...){           
                     panel.abline(v=c(seq(1990,2015,5)),col='dark grey',lty=3)
-                    panel.abline(h=c(seq(0,.5,.1)),col='dark grey',lty=3)
+                    panel.abline(h=c(seq(0,.7,.1)),col='dark grey',lty=3)
                     panel.xyplot(x, y,lty=c(1,1,1,2),...)  
                   })
 Gini.fig             
@@ -170,16 +172,16 @@ dev.off()
 cv <- function(x){ y <- sd(x)/mean(x)
 y}
 
-tot.tempe0.st <- temp.data[,sum(temp_e0), by = list(year,sex,state)]
-tot.cv <- tot.tempe0.st[,cv(V1), by = list(year,sex)]
-tot.cv$age.g <- 4
-setcolorder(tot.cv,c("year","sex","age.g","V1"))
+#tot.tempe0.st <- temp.data[,sum(temp_e0), by = list(year,sex,state)]
+#tot.cv <- tot.tempe0.st[,cv(V1), by = list(year,sex)]
+#tot.cv$age.g <- 4
+#setcolorder(tot.cv,c("year","sex","age.g","V1"))
 
 
 
 cv.states <- temp.data[,cv(temp_e0), by = list(year,sex,age.g)]
 
-cv.states <- rbind(cv.states,tot.cv)
+#cv.states <- rbind(cv.states,tot.cv)
 
 cv.states$sex <- factor(cv.states$sex,levels=c(1,2),labels=c("Males", "Females"))
 
@@ -190,16 +192,16 @@ cv.fig <-xyplot(V1~year|sex,data=cv.states,groups=age.g,type="l",lwd=2,between=l
                 #ylim=c(0,.6),
                 ylab="Coefficient of variation",
                   layout=c(2,1),strip.left=F,strip=T,
-                  col=Greens,par.settings=my.settings,xlab="Year", 
+                  col=Greens[-4],par.settings=my.settings,xlab="Year", 
                   key=list(x=.2,y=.9,background="transparent",
-                           text=list(c('Young (0-14)','Young adults(15-39)','Older adults(40-74)','Total (0-74)'),
+                           text=list(c('Young (0-14)','Young adults(15-49)','Older adults(50-84)'),
                                      col="black"),cex=1,
-                           lines=list(lty=c(1,1,1,2),lwd=2,col=Greens)),
+                           lines=list(lty=c(1,1,1),lwd=2,col=Greens[-4])),
                   scales=list(x=list(cex=.75,at=c(seq(1990,2015,5))),
-                              y=list(cex=.75,at=seq(0,.025,.005),alternating=1)),                                       
+                              y=list(cex=.75,at=seq(0,.05,.005),alternating=1)),                                       
                   panel = function(x, y,...){           
                     panel.abline(v=c(seq(1990,2015,5)),col='dark grey',lty=3)
-                    panel.abline(h=c(seq(0,.025,.005)),col='dark grey',lty=3)
+                    panel.abline(h=c(seq(0,.05,.005)),col='dark grey',lty=3)
                     panel.xyplot(x, y,lty=c(1,1,1,2),...)  
                   })
 cv.fig         

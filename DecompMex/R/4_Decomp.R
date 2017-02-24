@@ -168,10 +168,10 @@ mxcvec   <- c(FBPL[[1]])
 
 mcx2etemp(mxc ,"f",0,14)
 mcx2etemp(mxcvec,"f",0,14)
-mcx2etemp(mxc ,"f",15,39)
-mcx2etemp(mxcvec,"f",15,39)
-mcx2etemp(mxc ,"f",40,74)
-mcx2etemp(mxcvec,"f",40,74)
+mcx2etemp(mxc ,"f",15,49)
+mcx2etemp(mxcvec,"f",15,49)
+mcx2etemp(mxc ,"f",50,84)
+mcx2etemp(mxcvec,"f",50,84)
 
 
 
@@ -207,7 +207,7 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 20,
+      N = 40,
       sex = "f",
       lowera=0,
       uppera=14
@@ -223,7 +223,7 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 20,
+      N = 40,
       sex = "m",
       lowera=0,
       uppera=14
@@ -252,10 +252,10 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 20,
+      N = 40,
       sex = "f",
       lowera=15,
-      uppera=39
+      uppera=49
     )
     dim(contrib)        <- dim(YRST)
     dimnames(contrib)   <- dimnames(YRST)
@@ -268,10 +268,10 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 20,
+      N = 40,
       sex = "m",
       lowera=15,
-      uppera=39
+      uppera=49
     )
     dim(contrib)        <- dim(YRST)
     dimnames(contrib)   <- dimnames(YRST)
@@ -280,8 +280,8 @@ for (yr in 1990:2015){
   gc()
 }
 
-save(Females, file = "Data/ContribFemales15_39.Rdata")
-save(Males, file = "Data/ContribMales15_39.Rdata")
+save(Females, file = "Data/ContribFemales15_49.Rdata")
+save(Males, file = "Data/ContribMales15_49.Rdata")
 
 
 Females <- list()
@@ -294,10 +294,10 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 20,
+      N = 40,
       sex = "f",
-      lowera=40,
-      uppera=74
+      lowera=50,
+      uppera=84
     )
     dim(contrib)        <- dim(YRST)
     dimnames(contrib)   <- dimnames(YRST)
@@ -310,10 +310,10 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 20,
+      N = 40,
       sex = "m",
-      lowera=40,
-      uppera=74
+      lowera=50,
+      uppera=84
     )
     dim(contrib)        <- dim(YRST)
     dimnames(contrib)   <- dimnames(YRST)
@@ -322,5 +322,5 @@ for (yr in 1990:2015){
   gc()
 }
 
-save(Females, file = "Data/ContribFemales40_74.Rdata")
-save(Males, file = "Data/ContribMales40_74.Rdata")
+save(Females, file = "Data/ContribFemales50_84.Rdata")
+save(Males, file = "Data/ContribMales50_84.Rdata")
