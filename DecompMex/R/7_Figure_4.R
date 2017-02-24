@@ -69,44 +69,44 @@ DM0_14 <- do.call(rbind,
                          lower = 0, 
                          upper = 15))
 
-###### for ages 15 - 39 ##############################################################
+###### for ages 15 - 49 ##############################################################
 #####################################################################################
-DecomF15_39 <- local(get(load("Data/ContribFemales15_39.Rdata")))
-DecomM15_39 <- local(get(load("Data/ContribMales15_39.Rdata")))
+DecomF15_49 <- local(get(load("Data/ContribFemales15_49.Rdata")))
+DecomM15_49 <- local(get(load("Data/ContribMales15_49.Rdata")))
 # then do the aggregate-reshape
-DF15_39 <- do.call(rbind,
-                   lapply(1:length(DecomF15_39), 
+DF15_49 <- do.call(rbind,
+                   lapply(1:length(DecomF15_49), 
                           FUN = my_reshape.function, 
-                          DecompIn = DecomF15_39, 
+                          DecompIn = DecomF15_49, 
                           lower = 15, 
-                          upper = 40))
-DM15_39 <- do.call(rbind,
-                   lapply(1:length(DecomM15_39), 
+                          upper = 50))
+DM15_49 <- do.call(rbind,
+                   lapply(1:length(DecomM15_49), 
                           FUN = my_reshape.function, 
-                          DecompIn = DecomM15_39, 
+                          DecompIn = DecomM15_49, 
                           lower = 15, 
-                          upper = 40))
+                          upper = 50))
 
 ###### for ages 40 - 74 ##############################################################
 #####################################################################################
 ### For females
-DecomF40_74 <- local(get(load("Data/ContribFemales40_74.Rdata")))
-DecomM40_74 <- local(get(load("Data/ContribMales40_74.Rdata")))
-DF40_74     <- do.call(rbind,
-                       lapply(1:length(DecomF40_74), 
+DecomF50_84 <- local(get(load("Data/ContribFemales50_84.Rdata")))
+DecomM50_84 <- local(get(load("Data/ContribMales50_84.Rdata")))
+DF50_84     <- do.call(rbind,
+                       lapply(1:length(DecomF50_84), 
                               FUN = my_reshape.function, 
-                              DecompIn = DecomF40_74, 
-                              lower = 40, 
-                              upper = 75))
-DM40_74     <- do.call(rbind,
-                       lapply(1:length(DecomM40_74), 
+                              DecompIn = DecomF50_84, 
+                              lower = 50, 
+                              upper = 85))
+DM50_84     <- do.call(rbind,
+                       lapply(1:length(DecomM50_84), 
                               FUN = my_reshape.function, 
-                              DecompIn = DecomM40_74, 
-                              lower = 40, 
-                              upper = 75))
+                              DecompIn = DecomM50_84, 
+                              lower = 50, 
+                              upper = 85))
 
 ## Data frame with results for males
-gdata::keep(DF0_14,DM0_14,DF15_39,DM15_39,DF40_74,DM40_74,sure=TRUE)
+gdata::keep(DF0_14,DM0_14,DF15_49,DM15_49,DF50_84,DM50_84,sure=TRUE)
 #####################################################################################
 #####################################################################################
 
@@ -145,28 +145,28 @@ cause.labels <- c("AMS","Diabetes","IHD","HIV","Lung cancer","Cirrhosis","Homici
 lev.am <- levels(DM0_14$AMCategory)
 DM0_14$AMLabel  <- factor(DM0_14$AMCategory, levels =lev.am, labels = cause.labels)
 DF0_14$AMLabel  <- factor(DF0_14$AMCategory, levels = lev.am, labels = cause.labels)
-DF15_39$AMLabel <- factor(DF15_39$AMCategory, levels =lev.am, labels = cause.labels)	
-DM15_39$AMLabel <- factor(DM15_39$AMCategory, levels = lev.am, labels = cause.labels)	
-DF40_74$AMLabel <- factor(DF40_74$AMCategory, levels = lev.am, labels = cause.labels)
-DM40_74$AMLabel <- factor(DM40_74$AMCategory, levels = lev.am, labels = cause.labels)
+DF15_49$AMLabel <- factor(DF15_49$AMCategory, levels =lev.am, labels = cause.labels)	
+DM15_49$AMLabel <- factor(DM15_49$AMCategory, levels = lev.am, labels = cause.labels)	
+DF50_84$AMLabel <- factor(DF50_84$AMCategory, levels = lev.am, labels = cause.labels)
+DM50_84$AMLabel <- factor(DM50_84$AMCategory, levels = lev.am, labels = cause.labels)
 
 # Age group codes
 DM0_14$Ages  <- 1
 DF0_14$Ages  <- 1
-DF15_39$Ages <- 2
-DM15_39$Ages <- 2
-DF40_74$Ages <- 3
-DM40_74$Ages <- 3
+DF15_49$Ages <- 2
+DM15_49$Ages <- 2
+DF50_84$Ages <- 3
+DM50_84$Ages <- 3
 
 # Sex codes
 DM0_14$Sex  <- 2
 DF0_14$Sex  <- 1
-DF15_39$Sex <- 1
-DM15_39$Sex <- 2
-DF40_74$Sex <- 1
-DM40_74$Sex <- 2
+DF15_49$Sex <- 1
+DM15_49$Sex <- 2
+DF50_84$Sex <- 1
+DM50_84$Sex <- 2
 
-Data <- rbind(DM0_14,DF0_14,DM15_39,DF15_39,DM40_74,DF40_74)
+Data <- rbind(DM0_14,DF0_14,DM15_49,DF15_49,DM50_84,DF50_84)
 gdata::keep(Data, sure = TRUE)
 
 ###########################################
@@ -197,7 +197,7 @@ Data$region <- factor(Data$region,
                       labels = c("South", "Central", "North"))
 Data$Ages   <- factor(Data$Ages, 
                       levels = c(1, 2, 3), 
-                      labels = c("0-14", "15-39", "40-74"))
+                      labels = c("0-14", "15-49", "50-84"))
 Data$Sex    <- factor(Data$Sex, 
                       levels = c(1, 2), 
                       labels = c("Females", "Males"))
@@ -209,7 +209,7 @@ Dist.data   <- Data[,sum(Contribution), by = list(Year, State, Ages, Sex)]
 setnames(Dist.data,"V1","Distance")
 
 
-ref.order   <- subset(Dist.data, Year==2015 & Sex == "Males" & Ages == "40-74")
+ref.order   <- subset(Dist.data, Year==2015 & Sex == "Males" & Ages == "50-84")
 ref.order   <- data.table(ref.order)
 setnames(ref.order, "Distance", "Order")
 # select State and Order columns
@@ -291,7 +291,7 @@ pdf(file="Distance_y.pdf",width=8,height=11)
 print(f1.y)
 dev.off()
 
-f1.ya.data <- subset(Dist.data,Ages=="15-39")
+f1.ya.data <- subset(Dist.data,Ages=="15-49")
 f1.ya <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),ylab= list("State",cex=1),
                                  #layout=c(3,6),
                                  strip=T,
@@ -303,7 +303,7 @@ f1.ya <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),
                                  key=list(position="top",background="white",
                                           title="Year",text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
                                  panel=function(x,y,lin,col.line,...){    
-                                   panel.abline(v=seq(0,2,.5),lwd=1,lty=1,col="#A1A1A150")
+                                   panel.abline(v=seq(0,3.5,.5),lwd=1,lty=1,col="#A1A1A150")
                                    panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
                                  }),strip.left=T)
 f1.ya
@@ -312,7 +312,7 @@ print(f1.ya)
 dev.off()
 
 
-f1.oa.data <- subset(Dist.data,Ages=="40-74")
+f1.oa.data <- subset(Dist.data,Ages=="50-84")
 f1.oa <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),ylab= list("State",cex=1),
                                  #layout=c(3,6),
                                  strip=T,
@@ -342,7 +342,7 @@ dev.off()
 
 
 
-fig.data <- subset(Dist.data,Sex=="Males" & Ages == "40-74")
+fig.data <- subset(Dist.data,Sex=="Males" & Ages == "50-84")
 
 
 # TR: changing x ticks and grids
@@ -362,7 +362,7 @@ f2 <- dotplot(Statenom ~ Distance | region,
               col.line = col.line,
               lin = line,
               par.settings = my.settings,
-              xlim = c(0,4),
+              xlim = c(0,5),
               between = list(y = .5),
               scales = list(alternating = 1,
                             x = list(cex = 1, at = seq(0,4,1), labels = as.character(seq(0,4,1))),
@@ -381,6 +381,36 @@ f2 <- dotplot(Statenom ~ Distance | region,
 f2
 
 
+
+fig.data2<- subset(fig.data,Year==2015)
+f2.1 <- dotplot(Statenom ~ Distance | region,
+              aspect = c(0.9),
+              ylab = "", 
+              strip.left = TRUE, 
+              layout = c(1, 3), 
+              strip = FALSE,
+              xlab = list(main.label, cex=1),
+              main = FALSE, 
+              cex = 1,
+              data = fig.data2,
+              groups = Year, 
+              pch = my.pch[3], 
+              col = my.fill[3],
+              col.line = col.line,
+              lin = line,
+              par.settings = my.settings,
+              xlim = c(0,5),
+              between = list(y = .5),
+              scales = list(alternating = 1,
+                            x = list(cex = 1, at = seq(0,4,1), labels = as.character(seq(0,4,1))),
+                            y = list(relation = "free")),
+              panel=function(x, y, lin, col.line,...){    
+                #panel.abline(v=seq(.5,3.5,1),lwd=1,lty=3,col="darkgrey")
+                panel.abline(v=seq(0,4,1),lwd=1,lty=1,col="#A1A1A150")
+                #panel.abline(v=lin[[1]],col=col.line[[1]],lwd=1,lty=2)
+                panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
+              })
+f2.1
 
 
 
@@ -423,7 +453,7 @@ Data.fig$Statenom <- state.code.recvec[as.character(Data.fig$State)]
 Data.fig$region   <- region.recvec[as.character(Data.fig$State)] 
 # labels according to figure
 
-f2.cause <- Data.fig[Ages=="40-74" & Year==2015 & Sex== "Males"]
+f2.cause <- Data.fig[Ages=="50-84" & Year==2015 & Sex== "Males"]
 
 
 
@@ -506,6 +536,9 @@ pdf(file="Figure 4.pdf",width=15,height=7,pointsize=12)
 grid.arrange(f2,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.9))
 dev.off()
 
+pdf(file="Figure 4_2.pdf",width=15,height=7,pointsize=12)
+grid.arrange(f2.1,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.9))
+dev.off()
 
 
 ################ Supplemental figures 
@@ -575,7 +608,7 @@ dev.off()
 
 
 
-prop.yam <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="15-39" & Sex=="Males"),
+prop.yam <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="15-49" & Sex=="Males"),
                                      groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
                                      stack=TRUE,main="Young adult males",
                                      between = list(y = .5),
@@ -596,7 +629,7 @@ prop.yam
 dev.off()
 
 
-prop.yaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="15-39" & Sex=="Females"),
+prop.yaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="15-49" & Sex=="Females"),
                                      groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
                                      stack=TRUE,main="Young adult females",
                                      between = list(y = .5),
@@ -618,7 +651,7 @@ dev.off()
 
 
 
-prop.oam <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="40-74" & Sex=="Males"),
+prop.oam <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="50-84" & Sex=="Males"),
                                      groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
                                      stack=TRUE,main="Older adult males",
                                      between = list(y = .5),
@@ -641,7 +674,7 @@ dev.off()
 
 
 
-prop.oaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="40-74" & Sex=="Females"),
+prop.oaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="50-84" & Sex=="Females"),
                                      groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
                                      stack=TRUE,main="Older adult females",
                                      between = list(y = .5),
