@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  13 FEB 2017 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  28 FEB 2017 15:28
 entering extended mode
 **"./Supplemental material.tex"
 ("Supplemental material.tex"
@@ -319,18 +319,18 @@ LaTeX Warning: Unused global option(s):
 ("Supplemental material.aux")
 \openout1 = `"Supplemental material.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 ("C:\Users\jmaburto\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
 .mkii"
@@ -444,42 +444,42 @@ Package caption Info: End \AtBeginDocument code.
  [1
 
 {C:/Users/jmaburto/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 48--52
+Overfull \hbox (19.21284pt too wide) in alignment at lines 49--53
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 52--58
+Overfull \hbox (19.21284pt too wide) in alignment at lines 53--59
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 58--60
+Overfull \hbox (19.21284pt too wide) in alignment at lines 59--61
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 60--62
+Overfull \hbox (19.21284pt too wide) in alignment at lines 61--63
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 64--64
+Underfull \hbox (badness 6141) in paragraph at lines 65--65
 \OT1/cmr/m/n/10 J39, J60-J99, J09-J18,
  []
 
 
-Underfull \hbox (badness 5908) in paragraph at lines 64--65
+Underfull \hbox (badness 5908) in paragraph at lines 65--66
 \OT1/cmr/m/n/10 37, 137, 020-027, 38,
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 64--65
+Underfull \hbox (badness 1210) in paragraph at lines 65--66
 \OT1/cmr/m/n/10 082, 087, 090-099, 102,
  []
 
@@ -487,79 +487,75 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 3029) in paragraph at lines 65--65
+Underfull \hbox (badness 3029) in paragraph at lines 66--66
 \OT1/cmr/m/n/10 skin, breast, cervix, prostate, testis, blad-der,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
 []|\OT1/cmr/m/n/10 C16,C18-C21, C43-C44,
  []
 
 
-Underfull \hbox (badness 5519) in paragraph at lines 65--65
+Underfull \hbox (badness 5519) in paragraph at lines 66--66
 \OT1/cmr/m/n/10 C50, C53, C61, C62,
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 65--66
+Underfull \hbox (badness 6961) in paragraph at lines 66--67
 []|\OT1/cmr/m/n/10 153-154, 172-173, 174,
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 65--66
+Underfull \hbox (badness 1210) in paragraph at lines 66--67
 \OT1/cmr/m/n/10 180, 185, 186, 188-189,
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 68--68
+Underfull \hbox (badness 2600) in paragraph at lines 69--69
 []|\OT1/cmr/m/n/10 E00-E07, 40-G41, K25-
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 68--69
+Underfull \hbox (badness 6961) in paragraph at lines 69--70
 []|\OT1/cmr/m/n/10 240-246, 345, 531-533,
  []
 
 
-Underfull \hbox (badness 6300) in paragraph at lines 68--69
+Underfull \hbox (badness 6300) in paragraph at lines 69--70
 \OT1/cmr/m/n/10 540-543, 550-553, 574-
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 62--83
+Overfull \hbox (19.21284pt too wide) in alignment at lines 63--84
  [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 86--86
+Underfull \hbox (badness 1087) in paragraph at lines 87--87
 []|\OT1/cmr/m/n/10 C00-D48, I00-I99 if not
  []
 
 
-Underfull \hbox (badness 1755) in paragraph at lines 86--88
+Underfull \hbox (badness 1755) in paragraph at lines 87--89
 []|\OT1/cmr/m/n/10 140-239, 390-459 if not
  []
 
 
-Overfull \hbox (19.21284pt too wide) in alignment at lines 83--88
+Overfull \hbox (19.21284pt too wide) in alignment at lines 84--89
  [] [] [] [] [] [] 
  []
-
-
-Package natbib Warning: Citation `arriaga1984' on page 2 undefined on input lin
-e 94.
 
 [2] <Sensitivity_fig.pdf, id=14, 722.7pt x 505.89pt>
 File: Sensitivity_fig.pdf Graphic file (type pdf)
  <use Sensitivity_fig.pdf>
-Package pdftex.def Info: Sensitivity_fig.pdf used on input line 110.
+Package pdftex.def Info: Sensitivity_fig.pdf used on input line 111.
 (pdftex.def)             Requested size: 433.62334pt x 303.53633pt.
 
 <Gini_fig.pdf, id=15, 722.7pt x 433.62pt>
 File: Gini_fig.pdf Graphic file (type pdf)
  <use Gini_fig.pdf>
-Package pdftex.def Info: Gini_fig.pdf used on input line 119.
+Package pdftex.def Info: Gini_fig.pdf used on input line 120.
 (pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
 
 
@@ -569,7 +565,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Adult_Female_heatmap.pdf Graphic file (type pdf)
 
 <use Adult_Female_heatmap.pdf>
-Package pdftex.def Info: Adult_Female_heatmap.pdf used on input line 127.
+Package pdftex.def Info: Adult_Female_heatmap.pdf used on input line 128.
 (pdftex.def)             Requested size: 448.06937pt x 246.43816pt.
 
 
@@ -579,14 +575,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Young_Male_heatmap.pdf Graphic file (type pdf)
 
 <use Young_Male_heatmap.pdf>
-Package pdftex.def Info: Young_Male_heatmap.pdf used on input line 135.
+Package pdftex.def Info: Young_Male_heatmap.pdf used on input line 136.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
 <Young_Female_heatmap.pdf, id=18, 1445.4pt x 794.97pt>
 File: Young_Female_heatmap.pdf Graphic file (type pdf)
 
 <use Young_Female_heatmap.pdf>
-Package pdftex.def Info: Young_Female_heatmap.pdf used on input line 142.
+Package pdftex.def Info: Young_Female_heatmap.pdf used on input line 143.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
 <YoungAdult_Male_heatmap.pdf, id=19, 1445.4pt x 794.97pt>
@@ -603,79 +599,76 @@ File: YoungAdult_Female_heatmap.pdf Graphic file (type pdf)
 Package pdftex.def Info: YoungAdult_Female_heatmap.pdf used on input line 159.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Figure_prop_oam.pdf, id=21, 1011.78pt x 722.7pt>
-File: Figure_prop_oam.pdf Graphic file (type pdf)
- <use Figure_prop_oam.pdf>
-Package pdftex.def Info: Figure_prop_oam.pdf used on input line 167.
-(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
-
-<Distance_oa.pdf, id=22, 578.16pt x 794.97pt>
+<Distance_oa.pdf, id=21, 578.16pt x 794.97pt>
 File: Distance_oa.pdf Graphic file (type pdf)
  <use Distance_oa.pdf>
-Package pdftex.def Info: Distance_oa.pdf used on input line 176.
+Package pdftex.def Info: Distance_oa.pdf used on input line 167.
 (pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
+
+<Figure_prop_oam.pdf, id=22, 1011.78pt x 722.7pt>
+File: Figure_prop_oam.pdf Graphic file (type pdf)
+ <use Figure_prop_oam.pdf>
+Package pdftex.def Info: Figure_prop_oam.pdf used on input line 176.
+(pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
 
 <Figure_prop_oaf.pdf, id=23, 1011.78pt x 722.7pt>
 File: Figure_prop_oaf.pdf Graphic file (type pdf)
  <use Figure_prop_oaf.pdf>
-Package pdftex.def Info: Figure_prop_oaf.pdf used on input line 184.
+Package pdftex.def Info: Figure_prop_oaf.pdf used on input line 185.
 (pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
 
 <Distance_y.pdf, id=24, 578.16pt x 794.97pt>
 File: Distance_y.pdf Graphic file (type pdf)
  <use Distance_y.pdf>
-Package pdftex.def Info: Distance_y.pdf used on input line 193.
+Package pdftex.def Info: Distance_y.pdf used on input line 194.
 (pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
 
-<Distance_ya.pdf, id=25, 578.16pt x 794.97pt>
-File: Distance_ya.pdf Graphic file (type pdf)
- <use Distance_ya.pdf>
-Package pdftex.def Info: Distance_ya.pdf used on input line 202.
-(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
-
-<Figure_prop_yf.pdf, id=26, 1011.78pt x 722.7pt>
+<Figure_prop_yf.pdf, id=25, 1011.78pt x 722.7pt>
 File: Figure_prop_yf.pdf Graphic file (type pdf)
  <use Figure_prop_yf.pdf>
-Package pdftex.def Info: Figure_prop_yf.pdf used on input line 214.
+Package pdftex.def Info: Figure_prop_yf.pdf used on input line 203.
 (pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
 
-<Figure_prop_ym.pdf, id=27, 1011.78pt x 722.7pt>
+<Figure_prop_ym.pdf, id=26, 1011.78pt x 722.7pt>
 File: Figure_prop_ym.pdf Graphic file (type pdf)
  <use Figure_prop_ym.pdf>
-Package pdftex.def Info: Figure_prop_ym.pdf used on input line 222.
+Package pdftex.def Info: Figure_prop_ym.pdf used on input line 211.
 (pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
+
+<Distance_ya.pdf, id=27, 578.16pt x 794.97pt>
+File: Distance_ya.pdf Graphic file (type pdf)
+ <use Distance_ya.pdf>
+Package pdftex.def Info: Distance_ya.pdf used on input line 220.
+(pdftex.def)             Requested size: 289.07928pt x 397.48402pt.
 
 <Figure_prop_yaf.pdf, id=28, 1011.78pt x 722.7pt>
 File: Figure_prop_yaf.pdf Graphic file (type pdf)
  <use Figure_prop_yaf.pdf>
-Package pdftex.def Info: Figure_prop_yaf.pdf used on input line 231.
+Package pdftex.def Info: Figure_prop_yaf.pdf used on input line 229.
 (pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
 
 <Figure_prop_yam.pdf, id=29, 1011.78pt x 722.7pt>
 File: Figure_prop_yam.pdf Graphic file (type pdf)
  <use Figure_prop_yam.pdf>
-Package pdftex.def Info: Figure_prop_yam.pdf used on input line 240.
+Package pdftex.def Info: Figure_prop_yam.pdf used on input line 238.
 (pdftex.def)             Requested size: 455.2968pt x 325.21199pt.
 
-
-Package natbib Warning: There were undefined citations.
-
-[3 <./Sensitivity_fig.pdf>] [4 <./Gini_fig.pdf> <./Adult_Female_heatmap.pdf>]
-[5 <./Young_Male_heatmap.pdf> <./Young_Female_heatmap.pdf>] [6 <./YoungAdult_Ma
-le_heatmap.pdf> <./YoungAdult_Female_heatmap.pdf>] [7 <./Figure_prop_oam.pdf>]
-[8 <./Distance_oa.pdf>] [9 <./Figure_prop_oaf.pdf>] [10 <./Distance_y.pdf>]
-[11 <./Distance_ya.pdf>] [12 <./Figure_prop_yf.pdf>] [13 <./Figure_prop_ym.pdf>
-] [14 <./Figure_prop_yaf.pdf>] [15 <./Figure_prop_yam.pdf>]
-("Supplemental material.aux") )
+("Supplemental material.bbl") [3 <./Sensitivity_fig.pdf>] [4 <./Gini_fig.pdf> <
+./Adult_Female_heatmap.pdf>] [5 <./Young_Male_heatmap.pdf> <./Young_Female_heat
+map.pdf>] [6 <./YoungAdult_Male_heatmap.pdf> <./YoungAdult_Female_heatmap.pdf>]
+[7 <./Distance_oa.pdf>] [8 <./Figure_prop_oam.pdf>] [9 <./Figure_prop_oaf.pdf>]
+[10 <./Distance_y.pdf>] [11 <./Figure_prop_yf.pdf>] [12 <./Figure_prop_ym.pdf>]
+[13 <./Distance_ya.pdf>] [14 <./Figure_prop_yaf.pdf>] [15 <./Figure_prop_yam.pd
+f>] ("Supplemental material.aux") )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 46 ({)
+### simple group (level 1) entered at line 47 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6204 strings out of 493334
- 92916 string characters out of 3128924
- 184941 words of memory out of 3000000
- 9626 multiletter control sequences out of 15000+200000
+ 6210 strings out of 493334
+ 93019 string characters out of 3128924
+ 185933 words of memory out of 3000000
+ 9629 multiletter control sequences out of 15000+200000
  9369 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,39p,699b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -693,10 +686,12 @@ Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jmaburto
 Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmr7.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr8.pfb><C:/Users/jmaburto/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Supplemental material.pdf" (15 pages, 439484 bytes).
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jmaburto/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/jmaburto/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Supplemental material.pdf" (15 pages, 460741 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
+ 227 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

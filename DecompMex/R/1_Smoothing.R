@@ -25,9 +25,8 @@ if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
 
 load('Data/Counts&Rates_1990-2015Mex.RData')
 
-
 #Groups used in the article:
-# 1. Amenable to meical service: 1+2+3+4+6
+# 1. Amenable to medical service: 1+2+3+4+6
 # 2. Diabetes: 5
 # 3. IHD:7
 # 4. HIV:8
