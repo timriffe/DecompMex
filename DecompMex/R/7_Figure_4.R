@@ -691,7 +691,7 @@ prop.oaf
 
 require(gridExtra)
 pdf(file="Figure_prop_oaf.pdf",width=14,height=10,pointsize=12)
-prop.oam
+prop.oaf
 dev.off()
 
 

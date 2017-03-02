@@ -69,10 +69,14 @@ tab.state <- function(age,yr,sx){
 setorder(fig1.data[year == yr & age.g==as.character(unique(fig1.data$age.g)[age]) & sex==sx],temp_e0)[]}
 
   
+  tab.state(1,2015,"Females")
   tab.state(1,2015,"Males")
-  tab.state(2,2015,"Males")
+  
+  tab.state(3,2010,"Males")
 
-
+  mean(tab.state(2,2015,"Males")$temp_e0[-c(33,34)])
+  
+  
 mean(tab.state(3,1990,"Females")$temp_e0[-c(33,34)])
 mean(tab.state(3,2000,"Females")$temp_e0[-c(33,34)])
 mean(tab.state(3,2010,"Females")$temp_e0[-c(33,34)])
