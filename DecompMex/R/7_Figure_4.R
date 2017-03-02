@@ -174,12 +174,12 @@ gdata::keep(Data, sure = TRUE)
 
 # states codes and names
 state.code.recvec <- 
-  c("Aguascalientes","Baja California","Baja California Sur","Campeche",
-    "Coahuila","Colima","Chiapas","Chihuahua","Mexico City","Durango",
-    "Guanajuato","Guerrero","Hidalgo","Jalisco","Mexico State","Michoacan",
-    "Morelos","Nayarit","Nuevo Leon","Oaxaca","Puebla","Queretaro",
-    "Quintana Roo","San Luis Potosi","Sinaloa","Sonora","Tabasco","Tamaulipas",
-    "Tlaxcala","Veracruz","Yucatan","Zacatecas")
+		c("Aguascalientes","Baja California","Baja California Sur","Campeche",
+				"Coahuila","Colima","Chiapas","Chihuahua","Mexico City","Durango",
+				"Guanajuato","Guerrero","Hidalgo","Jalisco","México State","Michoacán",
+				"Morelos","Nayarit","Nuevo León","Oaxaca","Puebla","Querétaro",
+				"Quintana Roo","San Luis Potosí","Sinaloa","Sonora","Tabasco","Tamaulipas",
+				"Tlaxcala","Veracruz","Yucatán","Zacatecas")
 names(state.code.recvec) <- 1:32
 
 # state and region codes
