@@ -8,7 +8,7 @@ if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
   # in that case I'm on Berkeley system, and other people in the dept can run this too
   setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
 }
-
+library(reshape2)
 library(latticeExtra)
 library(data.table)
 
@@ -53,6 +53,9 @@ dim(tk.1[p < .5])
 
 3415/4560
 
+
+
+# TR: begin Rank plot here. This code snippet can move elsewhere once finished.
 # single out just needed e0 year ranges
 dat <- temp.data
 dat <- dat[dat$year >= 2010 & dat$state <= 32, ]
@@ -81,24 +84,27 @@ dat$region               <- region.recvec[as.character(dat$state)]
 table(dat$region) / 3 / 2
 
 library(reshape2)
+# Blues for North
 blues   <- colorRampPalette(brewer.pal(9,"Blues")[-c(1:3)], space = "Lab")(10)
+# Purples Central
 purples <- colorRampPalette(brewer.pal(9,"Purples")[-c(1:3)], space = "Lab")(11)
+# Greens South
 greens  <- colorRampPalette(brewer.pal(9,"Greens")[-c(1:3)], space = "Lab")(11)
 
-# fatter lines for light colors (maybe start at 3?
-lwdblues   <- seq(from=4,to=1,length=10)
-lwdpurples <- seq(from=4,to=1,length=11)
-lwdgreens  <- seq(from=4,to=1,length=11)
+# fatter lines for light colors 
+lwdblues   	<- seq(from=4,to=1,length=10)
+lwdpurples 	<- seq(from=4,to=1,length=11)
+lwdgreens  	<- seq(from=4,to=1,length=11)
+
+# combine into vectors
+colors 		<- c(blues, purples, greens)
+lwdvec 		<- c(lwdblues, lwdpurples, lwdgreens)
 
 # want darker lines for higher ranks? palettes go from light to dark, so order
 # in ascending
-young <- dat[dat$age.g == 1, ]
-young <- young[order(young$region, young$sex, young$mean_temp_e0), ]
+young 		<- dat[dat$age.g == 1, ]
+young 		<- young[order(young$region, young$sex, young$mean_temp_e0), ]
 
-
-# separate sexes
-males   <- dat[dat$sex == 1, ]
-females <- dat[dat$sex == 2, ]
 # order based on left column, which will have state labels. This refers
 # to young age group, ergo, we need within
 youngmales   <- males[males$age.g == 1, ]
@@ -106,24 +112,32 @@ youngmales   <- youngmales[order(youngmales$region, youngmales$mean_temp_e0), ]
 youngfemales <- females[females$age.g == 1, ]
 youngfemales <- youngfemales[order(youngfemales$region, youngfemales$mean_temp_e0), ]
 
-order.vec.females        <- youngfemales$state
-order.vec.males        <- youngmales$state
-names(order.vec.males)   <- 1:32
-names(order.vec.females) <- 1:32
+# at the moment we have independent colors for males and females.
+# that makes it tough to compare sexes. So probably just include
+# males in the paper and females in an Appendix. Will need to point
+# that out, but shouldn't matter since lines are labelled on left side.
+colfemales        	<- colmales        <- colors
+names(colmales)  	<- youngmales$state
+names(colfemales) 	<- youngfemales$state
+lwdfemales 			<- lwdmales <- lwdvec
+names(lwdmales) 	<- youngmales$state
+names(lwdfemales) 	<- youngfemales$state
+# this matrix is no longer ordered.
+m.mat   			<- acast(males, age.g ~ state, value.var = "mean_temp_e0")
+f.mat   			<- acast(females, age.g ~ state, value.var = "mean_temp_e0")
 
-# get into matrices
-m.mat   <- acast(males, state ~ age.g, value.var = "mean_temp_e0")
-f.mat   <- acast(females, state ~ age.g, value.var = "mean_temp_e0")
+# the final color ordering?
+colmales 		<- colmales[colnames(m.mat)]
+lwdmales        <- lwdmales[colnames(m.mat)]
 
-m.mat <- m.mat[order.vec.males, ]
-f.mat <- f.mat[order.vec.females, ]
+colfemales 		<- colfemales[colnames(f.mat)]
+lwdfemales        <- lwdfemales[colnames(f.mat)]
 
-col <- c(blues, purples, greens)
-lwd <- c(lwdblues, lwdpurples, lwdgreens)
+# how about state labels proper?
+colnames(m.mat) <- state.code.recvec[colnames(m.mat)]
+colnames(f.mat) <- state.code.recvec[colnames(f.mat)]
 
-# TODO: get ordering right for col and lwd. These should be ordered as in the original matrix,
-# and get reordered inside the function as the matrix itself is reordered. 
-
+# rankplot skeleton function (minimal)
 rankplot <- function(mat, 
 		col,
 		lwd, 
@@ -139,7 +153,7 @@ rankplot <- function(mat,
 	laby              <- ys[1,]
 	#ys[mat < 1e-5] <- NA
 	xs                <- as.integer(rownames(ys))
-	causes            <- colnames(ys)
+	labels            <- colnames(ys)
 	plot(NULL, 
 			type = "n", 
 			xlim = range(xs), 
@@ -147,7 +161,7 @@ rankplot <- function(mat,
 			axes = FALSE,
 			xlab = "",
 			ylab = "")
-	text(min(xs),laby,causes,pos=2,xpd=TRUE)
+	text(min(xs),laby,labels,pos=2,xpd=TRUE)
 	for (i in 1:Nrank){
 		lines(xs, ys[,i ], col = col[i], lwd = lwd[i])
 	}
@@ -158,8 +172,36 @@ rankplot <- function(mat,
 	}
 }
 
+pdf("Manuscript/bmc_Manuscript/Version 2/RankMales.pdf",width=5,height=8)
+par(mai=c(.5,1.5,.5,.5))
+rankplot(m.mat, colmales, lwdmales)
+text(1:3,33,c("Young (0-14)","Middle (15-39)","Older (40-74)"),xpd=TRUE)
+legend(x=1,y=-1,
+		fill=c(blues[5],purples[5],greens[5]),
+		legend=c("North","Central","South"),
+		bty="n",
+		horiz=TRUE,
+		xpd=TRUE,
+		border = NA)
+dev.off()
+
+pdf("Manuscript/bmc_Manuscript/Version 2/RankFemales.pdf",width=5,height=8)
+par(mai=c(.5,1.5,.5,.5))
+rankplot(f.mat, colfemales, lwdfemales)
+text(1:3,33,c("Young (0-14)","Middle (15-39)","Older (40-74)"),xpd=TRUE)
+legend(x=1,y=-1,
+		fill=c(blues[5],purples[5],greens[5]),
+		legend=c("North","Central","South"),
+		bty="n",
+		horiz=TRUE,
+		xpd=TRUE,
+		border = NA)
+dev.off()
+
+
+
 library(RcolorBrewer)
-display.brewer.all()
+
 
 rankplot(t(m.mat), col = col, lwd = lwd)
 
