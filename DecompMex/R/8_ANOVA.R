@@ -86,20 +86,20 @@ table(dat$region) / 3 / 2
 
 
 # Blues for North
-blues   <- colorRampPalette(brewer.pal(9,"Blues")[-c(1:3)], space = "Lab")(10)
+oranges   <- colorRampPalette(brewer.pal(9,"Blues")[-c(1:3)], space = "Lab")(11)
 # Purples Central
 purples <- colorRampPalette(brewer.pal(9,"Purples")[-c(1:3)], space = "Lab")(11)
 # Greens South
-greens  <- colorRampPalette(brewer.pal(9,"Greens")[-c(1:3)], space = "Lab")(11)
+greens  <- colorRampPalette(brewer.pal(9,"Greens")[-c(1:3)], space = "Lab")(10)
 
 # fatter lines for light colors 
-lwdblues   	<- seq(from=4,to=1,length=10)# N (3_
-lwdpurples 	<- seq(from=4,to=1,length=11)# C (2)
-lwdgreens  	<- seq(from=4,to=1,length=11)# S (1)
+lwdoranges  <- seq(from=4,to=1.4,length=11)# N (3_
+lwdpurples 	<- seq(from=4,to=1.4,length=11)# C (2)
+lwdgreens  	<- seq(from=4,to=1.4,length=10)# S (1)
 
 # combine into vectors
-colors 		<- c(greens, purples, blues)
-lwdvec 		<- c(lwdgreens, lwdpurples, lwdblues)
+colors 		<- c(greens, purples, oranges)
+lwdvec 		<- c(lwdgreens, lwdpurples, lwdoranges)
 
 # want darker lines for higher ranks? palettes go from light to dark, so order
 # in ascending
@@ -128,11 +128,24 @@ m.mat   			<- acast(males, age.g ~ state, value.var = "mean_temp_e0")
 f.mat   			<- acast(females, age.g ~ state, value.var = "mean_temp_e0")
 
 # the final color ordering?
-colmales 		<- colmales[colnames(m.mat)]
-lwdmales        <- lwdmales[colnames(m.mat)]
+colmales 			<- colmales[colnames(m.mat)]
+lwdmales        	<- lwdmales[colnames(m.mat)]
 
-colfemales 		<- colfemales[colnames(f.mat)]
-lwdfemales        <- lwdfemales[colnames(f.mat)]
+colfemales 			<- colfemales[colnames(f.mat)]
+lwdfemales        	<- lwdfemales[colnames(f.mat)]
+
+
+# assign pch to regions
+pchvec        <- c(15,16,17)
+names(pchvec) <- c(1,2,3)
+# expand to match regions
+pchvec        <- pchvec[as.character(region.recvec)]
+# relabel to states, same order
+names(pchvec) <- names(region.recvec)
+
+pchmales      <- pchvec[colnames(m.mat)]
+pchfemales    <- pchvec[colnames(f.mat)]
+
 
 # how about state labels proper?
 colnames(m.mat) <- state.code.recvec[colnames(m.mat)]
@@ -142,6 +155,7 @@ colnames(f.mat) <- state.code.recvec[colnames(f.mat)]
 rankplot <- function(mat, 
 		col,
 		lwd, 
+		pch,
 		...){
 	
 	rank <- mat * 0
@@ -161,37 +175,48 @@ rankplot <- function(mat,
 			ylim = c(0, Nrank + 1), 
 			axes = FALSE,
 			xlab = "",
-			ylab = "")
+			ylab = "",
+			...)
 	text(min(xs),laby,labels,pos=2,xpd=TRUE)
 	for (i in 1:Nrank){
 		lines(xs, ys[,i ], col = col[i], lwd = lwd[i])
 	}
-	points(rep(xs[1],Nrank), laby, col = col, pch=16,cex=1)
 	
+	#points(rep(xs[1],Nrank), laby, col = col, pch=16,cex=1
 	for (i in 1:Nrank){
-		points(xs[-1], ys[, i][-1], col = col[i], pch=16,cex=1)
+		points(xs, ys[, i], col = col[i], pch=pch[i],cex=1.2)
 	}
 }
-
+display.brewer.all()
 pdf("Manuscript/bmc_Manuscript/Version 2/RankMales.pdf",width=5,height=8)
 par(mai=c(.5,1.5,.5,.5))
-rankplot(m.mat, colmales, lwdmales)
+
+rankplot(m.mat, colmales, lwdmales, pchmales, 
+		panel.first=
+				list(
+						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
 text(1:3,33,c("Young (0-14)","Middle (15-39)","Older (40-74)"),xpd=TRUE)
 legend(x=1,y=-1,
-		fill=c(blues[5],purples[5],greens[5]),
+		pch = c(17,16,15),
+		col=c(oranges[5],purples[5],greens[5]),
 		legend=c("North","Central","South"),
 		bty="n",
 		horiz=TRUE,
 		xpd=TRUE,
 		border = NA)
+
 dev.off()
 
 pdf("Manuscript/bmc_Manuscript/Version 2/RankFemales.pdf",width=5,height=8)
 par(mai=c(.5,1.5,.5,.5))
-rankplot(f.mat, colfemales, lwdfemales)
+rankplot(f.mat, colfemales, lwdfemales, 
+		panel.first=
+				list(
+						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
 text(1:3,33,c("Young (0-14)","Middle (15-39)","Older (40-74)"),xpd=TRUE)
 legend(x=1,y=-1,
-		fill=c(blues[5],purples[5],greens[5]),
+		pch = c(17,16,15),
+		col=c(oranges[5],purples[5],greens[5]),
 		legend=c("North","Central","South"),
 		bty="n",
 		horiz=TRUE,
