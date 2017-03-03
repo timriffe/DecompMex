@@ -195,7 +195,7 @@ rankplot(m.mat, colmales, lwdmales, pchmales,
 		panel.first=
 				list(
 						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
-text(1:3,33,c("Young (0-14)","Middle (15-39)","Older (40-74)"),xpd=TRUE)
+text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (40-84)"),xpd=TRUE)
 legend(x=1,y=-1,
 		pch = c(17,16,15),
 		col=c(oranges[5],purples[5],greens[5]),
@@ -213,7 +213,7 @@ rankplot(f.mat, colfemales, lwdfemales,
 		panel.first=
 				list(
 						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
-text(1:3,33,c("Young (0-14)","Middle (15-39)","Older (40-74)"),xpd=TRUE)
+text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (40-84)"),xpd=TRUE)
 legend(x=1,y=-1,
 		pch = c(17,16,15),
 		col=c(oranges[5],purples[5],greens[5]),
