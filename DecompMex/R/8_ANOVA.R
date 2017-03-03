@@ -11,6 +11,7 @@ if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
 library(reshape2)
 library(latticeExtra)
 library(data.table)
+library(RColorBrewer)
 
 load("Data/Temp_e0_results.RData")
 source("R/Functions_fig.R")
@@ -83,7 +84,7 @@ dat$region               <- region.recvec[as.character(dat$state)]
 
 table(dat$region) / 3 / 2
 
-library(reshape2)
+
 # Blues for North
 blues   <- colorRampPalette(brewer.pal(9,"Blues")[-c(1:3)], space = "Lab")(10)
 # Purples Central
@@ -92,13 +93,13 @@ purples <- colorRampPalette(brewer.pal(9,"Purples")[-c(1:3)], space = "Lab")(11)
 greens  <- colorRampPalette(brewer.pal(9,"Greens")[-c(1:3)], space = "Lab")(11)
 
 # fatter lines for light colors 
-lwdblues   	<- seq(from=4,to=1,length=10)
-lwdpurples 	<- seq(from=4,to=1,length=11)
-lwdgreens  	<- seq(from=4,to=1,length=11)
+lwdblues   	<- seq(from=4,to=1,length=10)# N (3_
+lwdpurples 	<- seq(from=4,to=1,length=11)# C (2)
+lwdgreens  	<- seq(from=4,to=1,length=11)# S (1)
 
 # combine into vectors
-colors 		<- c(blues, purples, greens)
-lwdvec 		<- c(lwdblues, lwdpurples, lwdgreens)
+colors 		<- c(greens, purples, blues)
+lwdvec 		<- c(lwdgreens, lwdpurples, lwdblues)
 
 # want darker lines for higher ranks? palettes go from light to dark, so order
 # in ascending
