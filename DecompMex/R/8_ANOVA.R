@@ -8,6 +8,7 @@ if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
   # in that case I'm on Berkeley system, and other people in the dept can run this too
   setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
 }
+
 library(reshape2)
 library(latticeExtra)
 library(data.table)
@@ -61,16 +62,17 @@ dim(tk.1[p < .5])
 dat <- temp.data
 dat <- dat[dat$year >= 2010 & dat$state <= 32, ]
 # get avg for 6 years starting 2010
+dat <- data.table(dat)
 dat <- dat[, list(mean_temp_e0 = mean(temp_e0)), by=list(sex,state,age.g)]
 
 # get regions
 state.code.recvec <- 
 		c("Aguascalientes","Baja California","Baja California Sur","Campeche",
 				"Coahuila","Colima","Chiapas","Chihuahua","Mexico City","Durango",
-				"Guanajuato","Guerrero","Hidalgo","Jalisco","México State","Michoacán",
-				"Morelos","Nayarit","Nuevo León","Oaxaca","Puebla","Querétaro",
-				"Quintana Roo","San Luis Potosí","Sinaloa","Sonora","Tabasco","Tamaulipas",
-				"Tlaxcala","Veracruz","Yucatán","Zacatecas")
+				"Guanajuato","Guerrero","Hidalgo","Jalisco","Mexico State","Michoacan",
+				"Morelos","Nayarit","Nuevo Leon","Oaxaca","Puebla","Queretaro",
+				"Quintana Roo","San Luis Potosi","Sinaloa","Sonora","Tabasco","Tamaulipas",
+				"Tlaxcala","Veracruz","Yucatan","Zacatecas")
 names(state.code.recvec) <- 1:32
 
 
@@ -108,6 +110,9 @@ young 		<- young[order(young$region, young$sex, young$mean_temp_e0), ]
 
 # order based on left column, which will have state labels. This refers
 # to young age group, ergo, we need within
+males <- dat[sex==1]
+females <- dat[sex==2]
+
 youngmales   <- males[males$age.g == 1, ]
 youngmales   <- youngmales[order(youngmales$region, youngmales$mean_temp_e0), ]
 youngfemales <- females[females$age.g == 1, ]
@@ -187,6 +192,7 @@ rankplot <- function(mat,
 		points(xs, ys[, i], col = col[i], pch=pch[i],cex=1.2)
 	}
 }
+
 display.brewer.all()
 pdf("Manuscript/bmc_Manuscript/Version 2/RankMales.pdf",width=5,height=8)
 par(mai=c(.5,1.5,.5,.5))
@@ -195,7 +201,7 @@ rankplot(m.mat, colmales, lwdmales, pchmales,
 		panel.first=
 				list(
 						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
-text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (40-84)"),xpd=TRUE)
+text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (50-84)"),xpd=TRUE)
 legend(x=1,y=-1,
 		pch = c(17,16,15),
 		col=c(oranges[5],purples[5],greens[5]),
@@ -213,7 +219,7 @@ rankplot(f.mat, colfemales, lwdfemales,
 		panel.first=
 				list(
 						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
-text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (40-84)"),xpd=TRUE)
+text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (50-84)"),xpd=TRUE)
 legend(x=1,y=-1,
 		pch = c(17,16,15),
 		col=c(oranges[5],purples[5],greens[5]),
@@ -226,10 +232,116 @@ dev.off()
 
 
 
-library(RcolorBrewer)
+####################################  new graph with v shapes higlighted
+
+# codes according to v and inverted v shapes
+
+region.vshape <- c(2,2,2,2,
+                   2,1,2,2,3,2,
+                   2,1,3,3,2,1,
+                   1,1,2,2,3,3,
+                   2,2,1,2,2,2,
+                   3,2,3,1)
+length(region.vshape)
+names(region.vshape)     <- 1:32
+
+head(dat)
+dat$region.v               <- region.vshape[as.character(dat$state)]
+
+d <- table(dat$region.v) / 3 / 2
 
 
-rankplot(t(m.mat), col = col, lwd = lwd)
+# Blues for North
+oranges   <-  rep("#7566AE",d[3])
+oranges   <- colorRampPalette(brewer.pal(9,"Purples")[-c(1:3)], space = "Lab")(d[3])
+# Purples Central
+purples <- rep("lightgrey",d[2])
+# Greens South
+greens  <- rep("#278F48",d[1])
+greens  <-colorRampPalette(brewer.pal(9,"Greens")[-c(1:3)], space = "Lab")(d[1])
+
+# not fatter lines for light colors 
+lwdoranges  <- rep(2,d[3])
+lwdoranges  <- seq(from=4,to=2,length=d[3])# N (3_
+lwdpurples 	<- rep(1,d[2])
+  #seq(from=4,to=1.4,length=16)# C (2)
+lwdgreens  	<- rep(2,d[1])
+lwdgreens  	<- seq(from=4,to=2,length=d[1])# S (1)
+
+# combine into vectors
+colors 		<- c(greens, purples, oranges)
+lwdvec 		<- c(lwdgreens, lwdpurples, lwdoranges)
+
+# want darker lines for higher ranks? palettes go from light to dark, so order
+# in ascending
+young 		<- dat[dat$age.g == 1, ]
+young 		<- young[order(young$region.v, young$sex, young$mean_temp_e0), ]
+
+# order based on left column, which will have state labels. This refers
+# to young age group, ergo, we need within
+males    <- dat[dat$sex == 1, ]
+females  <- dat[dat$sex == 2, ]
+
+youngmales   <- males[males$age.g == 1, ]
+youngmales   <- youngmales[order(youngmales$region.v, youngmales$mean_temp_e0), ]
+youngfemales <- females[females$age.g == 1, ]
+youngfemales <- youngfemales[order(youngfemales$region.v, youngfemales$mean_temp_e0), ]
+
+# at the moment we have independent colors for males and females.
+# that makes it tough to compare sexes. So probably just include
+# males in the paper and females in an Appendix. Will need to point
+# that out, but shouldn't matter since lines are labelled on left side.
+
+colfemales        	<- colmales        <- colors
+names(colmales)  	<- youngmales$state
+names(colfemales) 	<- youngfemales$state
+lwdfemales 			<- lwdmales <- lwdvec
+names(lwdmales) 	<- youngmales$state
+names(lwdfemales) 	<- youngfemales$state
+# this matrix is no longer ordered.
+m.mat   			<- acast(males, age.g ~ state, value.var = "mean_temp_e0")
+f.mat   			<- acast(females, age.g ~ state, value.var = "mean_temp_e0")
+
+# the final color ordering?
+colmales 			<- colmales[colnames(m.mat)]
+lwdmales        	<- lwdmales[colnames(m.mat)]
+
+colfemales 			<- colfemales[colnames(f.mat)]
+lwdfemales        	<- lwdfemales[colnames(f.mat)]
 
 
+# assign pch to regions
+pchvec        <- c(15,16,17)
+names(pchvec) <- c(1,2,3)
+# expand to match regions
+pchvec        <- pchvec[as.character(region.recvec)]
+# relabel to states, same order
+names(pchvec) <- names(region.recvec)
+
+pchmales      <- pchvec[colnames(m.mat)]
+pchfemales    <- pchvec[colnames(f.mat)]
+
+
+# how about state labels proper?
+colnames(m.mat) <- state.code.recvec[colnames(m.mat)]
+colnames(f.mat) <- state.code.recvec[colnames(f.mat)]
+
+pdf("Manuscript/bmc_Manuscript/Version 2/RankMales_2.pdf",width=5,height=8)
+par(mai=c(.5,1.5,.5,.5))
+
+rankplot(m.mat, colmales, lwdmales, pchmales, 
+         panel.first=
+           list(
+             rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.95),border=NA)))
+text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (50-84)"),xpd=TRUE)
+legend(x=1,y=-1,
+       pch = c(17,16,15),
+       col=c("black","black","black"),
+       legend=c("North","Central","South"),
+       bty="n",
+       horiz=TRUE,
+       xpd=TRUE,
+       border = NA)
+
+dev.off()
 
