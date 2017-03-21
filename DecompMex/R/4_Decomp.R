@@ -1,21 +1,22 @@
 # Author: tim
 ###############################################################################
 
-setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
-
+if (system("hostname",intern=TRUE) == "ADM-108625") {
+  setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
+} else {
 if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
   # if I'm on the laptop
   setwd("/home/tim/git/DecompMex/DecompMex")
 } else {
   # in that case I'm on Berkeley system, and other people in the dept can run this too
   setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
-}
+}}
 
 
 library(data.table)
 library(reshape2)
 
-load("Data/Temp_e0_results.RData")
+load("Data/Temp_e0_results_smooth.RData")
 
 
 # Arrange data objects ----------------------------------------------------
@@ -73,10 +74,7 @@ FST <-  lapply(years, function(yr,LTC, Empty){
 }, LTC = data, Empty=Empty)
 
 
-names(MST)  <- 1990:2015
-names(FST)  <- 1990:2015
-names(FBPL) <- 1990:2015
-names(MBPL) <- 1990:2015
+names(MST)  <- names(FST) <- names(FBPL) <- names(MBPL) <- years
 
 source("R/Functions.R")
 
@@ -168,10 +166,10 @@ mxcvec   <- c(FBPL[[1]])
 
 mcx2etemp(mxc ,"f",0,14)
 mcx2etemp(mxcvec,"f",0,14)
-mcx2etemp(mxc ,"f",15,49)
-mcx2etemp(mxcvec,"f",15,49)
-mcx2etemp(mxc ,"f",50,84)
-mcx2etemp(mxcvec,"f",50,84)
+mcx2etemp(mxc ,"f",15,39)
+mcx2etemp(mxcvec,"f",15,39)
+mcx2etemp(mxc ,"f",40,74)
+mcx2etemp(mxcvec,"f",40,74)
 
 
 
@@ -207,7 +205,7 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 40,
+      N = 20,
       sex = "f",
       lowera=0,
       uppera=14
@@ -223,7 +221,7 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 40,
+      N = 50,
       sex = "m",
       lowera=0,
       uppera=14
@@ -252,7 +250,7 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 40,
+      N = 50,
       sex = "f",
       lowera=15,
       uppera=49
@@ -268,7 +266,7 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 40,
+      N = 20,
       sex = "m",
       lowera=15,
       uppera=49
@@ -294,7 +292,7 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 40,
+      N = 20,
       sex = "f",
       lowera=50,
       uppera=84
@@ -310,7 +308,7 @@ for (yr in 1990:2015){
       func = mcx2etemp, 
       rates1 = c(YRST),
       rates2 = c(YRBP),
-      N = 40,
+      N = 20,
       sex = "m",
       lowera=50,
       uppera=84
@@ -324,3 +322,5 @@ for (yr in 1990:2015){
 
 save(Females, file = "Data/ContribFemales50_84.Rdata")
 save(Males, file = "Data/ContribMales50_84.Rdata")
+
+ 

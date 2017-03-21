@@ -2,16 +2,18 @@
 #######################################
 # IMPORTANT: impute zeros for missing ages, causes, states, years
 # otherwise BP is too high...
+rm(list=ls(all=TRUE))
 
-setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
-
-if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
-  # if I'm on the laptop
-  setwd("/home/tim/git/DecompMex/DecompMex")
+if (system("hostname",intern=TRUE) == "ADM-108625") {
+  setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
 } else {
-  # in that case I'm on Berkeley system, and other people in the dept can run this too
-  setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
-}
+  if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
+    # if I'm on the laptop
+    setwd("/home/tim/git/DecompMex/DecompMex")
+  } else {
+    # in that case I'm on Berkeley system, and other people in the dept can run this too
+    setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
+  }}
 
 
 
@@ -25,6 +27,8 @@ if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
 
 load('Data/Counts&Rates_1990-2015Mex.RData')
 
+
+
 #Groups used in the article:
 # 1. Amenable to medical service: 1+2+3+4+6
 # 2. Diabetes: 5
@@ -36,23 +40,23 @@ load('Data/Counts&Rates_1990-2015Mex.RData')
 # 8. Road traffic: 13 
 # 9. Suicide: 9
 # 10. All other causes: 14+15+16
-
+library(data.table)
 #group accordingly
-Counts <- Data_Counts[,1:4]
-Counts <- cbind(Counts, g1=rowSums(Data_Counts[, c(6,7,8,9,11)]))
-Counts <- cbind(Counts, g2=Data_Counts[,10])
-Counts <- cbind(Counts, g3=Data_Counts[,12])
-Counts <- cbind(Counts, g4=Data_Counts[,13])
-Counts <- cbind(Counts, g5=Data_Counts[,15])
-Counts <- cbind(Counts, g6=Data_Counts[,16])
-Counts <- cbind(Counts, g7=Data_Counts[,17])
-Counts <- cbind(Counts, g8=Data_Counts[,18])
-Counts <- cbind(Counts, g9=Data_Counts[,14])
-Counts <- cbind(Counts, g10=rowSums(Data_Counts[,19:21]))
-Counts <- cbind(Counts, g11=rowSums(Counts[,5:14]))
+Counts <- Data_Counts[,1:4,with=F]
+Counts$g1 <- rowSums(Data_Counts[, c(6,7,8,9,11),with=F])
+Counts$g2 <- Data_Counts[,10,with=F]
+Counts$g3 <- Data_Counts[,12,with=F]
+Counts$g4 <- Data_Counts[,13,with=F]
+Counts$g5 <- Data_Counts[,15,with=F]
+Counts$g6 <- Data_Counts[,16,with=F]
+Counts$g7 <- Data_Counts[,17,with=F]
+Counts$g8 <- Data_Counts[,18,with=F]
+Counts$g9 <- Data_Counts[,14,with=F]
+Counts$g10 <- rowSums(Data_Counts[,19:21,with=F])
+Counts$g11 <- rowSums(Counts[,5:14,with=F])
 Counts$Pop <- Data_Counts$Pop
-
-Rates <- Data_rates[,c(1:4,21)]
+sum(colSums(Counts)[5:15])/2
+Rates <- Data_rates[,c(1:4,22),with=F]
 gdata::keep(Counts,Rates, sure = T)
 library(data.table)
 Counts <- data.table(Counts)
@@ -62,18 +66,24 @@ Rates <- data.table(Rates)
 
 #First smooth with Camarda's method. We smooth cause-specific deaths and then constrain to the unsmoothed rates
 
+# consitency of population estimates and deaths
+# just in very high ages
+Counts[Pop < g11]$g1 <- Counts[Pop < g11]$g2 <- Counts[Pop < g11]$g3 <- Counts[Pop < g11]$g4 <- Counts[Pop < g11]$g5 <- Counts[Pop < g11]$g6 <- Counts[Pop < g11]$g7 <- Counts[Pop < g11]$g8 <- Counts[Pop < g11]$g9 <- Counts[Pop < g11]$g10 <- 0 
+Counts[Pop < g11]$g11 <- Counts[Pop < g11]$Pop
+Rates[total > 1]$total <- 1
+
 source("R/Functions.R")
 
 library(reshape2)
 library(MortalitySmooth)
 
 causes   <- 5:15
-Counts2  <- data.table(cbind(Counts[,1:4,with=F],g1= rowSums(Counts[,5:14,with=F]),Counts[,15,with=F]))
+Counts2  <- data.table(cbind(Counts[,1:4,with=F],g1=Counts$g11,Counts$Pop))
 
 sm.rates <- data.table(as.matrix(Counts)[,1:4])
 sm.rates2 <- data.table(as.matrix(Counts2)[,1:4])
-sm.rates2  <- sm.rates2[order(year,sex,state,age)]
-sm.rates  <- sm.rates[order(year,sex,state,age)]
+sm.rates2  <- sm.rates2[with(sm.rates2,order(year,sex,state,age)),]
+sm.rates  <- sm.rates[with(sm.rates,order(year,sex,state,age)),]
 
 #i <- 5
 #Dx <- Counts[sex==1 & state ==1 ]
@@ -92,32 +102,27 @@ sm.rates  <- sm.rates[order(year,sex,state,age)]
 
 for (i in causes){
   Mxs      <- Counts[,sm.chunk(.SD,i),by=list(state,sex)]
-  Mxs  <- Mxs[order(year,sex,state,age)]
+  Mxs  <- Mxs[with(Mxs,order(year,sex,state,age)),]
   sm.rates[,paste0("g",i-4)] <- Mxs$mxs
   print(i)
- # cbind(sm.rates,i= Mxs$mxs)
+  # cbind(sm.rates,i= Mxs$mxs)
 }
 
+
+ 
 #smooth total mortality rates
-Counts2  <- data.table(cbind(Counts[,1:4,with=F],g1= rowSums(Counts[,5:14,with=F]),Counts[,16,with=F]))
-
-Counts2$g1[Counts2$Pop == 0] <- 0
-Counts2$g1[Counts2$Pop < Counts2$g1] <- Counts2$Pop[Counts2$Pop < Counts2$g1]
-
-Mxs2      <- Counts2[,sm.chunk(.SD,5),by=list(state,sex)]
-Mxs2 <- Mxs2[order(year,sex,state,age)]
+Mxs2      <- sm.rates[,1:4,with=F]
+Mxs2$mxs <- sm.rates$g11
+Mxs2 <- Mxs2[with(Mxs2,order(year,sex,state,age)),]
+sm.rates2 <- sm.rates2[with(sm.rates2,order(year,sex,state,age)),]
+sm.rates2[,"Tot"] <- Mxs2$mxs
 
 
 plot(Mxs2$mxs[Mxs2$state==1 & Mxs2$sex==1 & Mxs2$year==1990])
 
-sm.rates2[,"Tot"] <- Mxs2$mxs
-
-
-
-
 #Order all datasets
-sm.rates <- sm.rates[order(year,sex,state,age)]
-Rates <- Rates[order(year,sex,state,age)]
+sm.rates <- sm.rates[with(sm.rates,order(year,sex,state,age)),]
+Rates <- Rates[with(Rates,order(year,sex,state,age)),]
 
 
 #now constrain to original ones
@@ -125,12 +130,12 @@ sm.r    <- sm.rates[,5:14,with=F]
 sm.tot  <- rowSums(sm.r)
 sm.prop <- sm.r/sm.tot
 sm.prop2 <- sm.prop*Rates$total
-smooth.rates <- cbind(as.matrix(Rates)[,1:4],mx=rowSums(sm.prop2),sm.prop2)
+smooth.rates <- cbind(Rates[,1:4,with=F],mx=rowSums(sm.prop2),sm.prop2)
 smooth.rates <- as.data.table(smooth.rates)
 
 #now constrain to smoothed ones
 sm.prop3 <- sm.prop*sm.rates2$Tot
-smooth.rates2 <- cbind(as.matrix(Rates)[,1:4],mx=rowSums(sm.prop3),sm.prop3)
+smooth.rates2 <- cbind(Rates[,1:4,with=F],mx=rowSums(sm.prop3),sm.prop3)
 smooth.rates2 <- as.data.table(smooth.rates2)
 
 #wihout constrain in smoothing by cause

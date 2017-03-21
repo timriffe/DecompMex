@@ -4,50 +4,20 @@ library(xtable)
 library(reshape2)
 library(data.table)
 
-setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
-
-if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
-  # if I'm on the laptop
-  setwd("/home/tim/git/DecompMex/DecompMex")
+if (system("hostname",intern=TRUE) == "ADM-108625") {
+  setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
 } else {
-  # in that case I'm on Berkeley system, and other people in the dept can run this too
-  setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
-}
+  if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
+    # if I'm on the laptop
+    setwd("/home/tim/git/DecompMex/DecompMex")
+  } else {
+    # in that case I'm on Berkeley system, and other people in the dept can run this too
+    setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
+  }}
 
-# TR:
-# Aggregator / reshaper function:
-# TR: this function replaces the for loops. Now everything
-# a little more robust and explicit.
 
-my_reshape.function <- function(i,DecompIn, lower = 0, upper = 15){
-  Z        <- DecompIn[[i]]
-  # and I'm going to append Age and State before
-  # rbind.list.ing
-  
-  Z        <- lapply(1:length(Z), function(ii,Z){
-    XX       <- as.data.frame(Z[[ii]])
-    XX$State <- ii
-    XX$Age   <- 0:109
-    XX
-  }, Z = Z)
-  # now stick it together
-  D        <- do.call(rbind.data.frame, Z)
-  # select age range
-  D        <- subset(D, Age >= lower & Age < upper)
-  # toggle to long
-  
-  DT       <- as.data.table(melt(D, 
-                                 id.vars = list("State","Age"),
-                                 variable.name = "AMCategory"))
-  # replaces aggregate()
-  DT       <- DT[, list(Contribution = sum(value)), by = list(State,AMCategory)]
-  # add year
-  DT$Year  <- 1989 + i
-  DT
-}
+source("R/Functions.R")
 
-# now apply this function the the crazy list objects containing 
-# decomposition results.
 
 ###### for ages 0 - 14 ##############################################################
 #####################################################################################
@@ -176,10 +146,10 @@ gdata::keep(Data, sure = TRUE)
 state.code.recvec <- 
 		c("Aguascalientes","Baja California","Baja California Sur","Campeche",
 				"Coahuila","Colima","Chiapas","Chihuahua","Mexico City","Durango",
-				"Guanajuato","Guerrero","Hidalgo","Jalisco","México State","Michoacán",
-				"Morelos","Nayarit","Nuevo León","Oaxaca","Puebla","Querétaro",
-				"Quintana Roo","San Luis Potosí","Sinaloa","Sonora","Tabasco","Tamaulipas",
-				"Tlaxcala","Veracruz","Yucatán","Zacatecas")
+				"Guanajuato","Guerrero","Hidalgo","Jalisco","Mexico State","Michoacan",
+				"Morelos","Nayarit","Nuevo Leon","Oaxaca","Puebla","Queretaro",
+				"Quintana Roo","San Luis Potosi","Sinaloa","Sonora","Tabasco","Tamaulipas",
+				"Tlaxcala","Veracruz","Yucatan","Zacatecas")
 names(state.code.recvec) <- 1:32
 
 # state and region codes
@@ -287,7 +257,7 @@ f1.y <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),y
                                   panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
                                 }),strip.left=T)
 f1.y
-pdf(file="Distance_y.pdf",width=8,height=11)
+pdf(file="Appendix Figures/Distance_y.pdf",width=8,height=11)
 print(f1.y)
 dev.off()
 
@@ -307,7 +277,7 @@ f1.ya <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),
                                    panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
                                  }),strip.left=T)
 f1.ya
-pdf(file="Distance_ya.pdf",width=8,height=11)
+pdf(file="Appendix Figures/Distance_ya.pdf",width=8,height=11)
 print(f1.ya)
 dev.off()
 
@@ -330,7 +300,7 @@ f1.oa <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),
                                    panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
                                  }),strip.left=T)
 f1.oa
-pdf(file="Distance_oa.pdf",width=8,height=11)
+pdf(file="Appendix Figures/Distance_oa.pdf",width=8,height=11)
 print(f1.oa)
 dev.off()
 
@@ -345,41 +315,41 @@ dev.off()
 fig.data <- subset(Dist.data,Sex=="Males" & Ages == "50-84")
 
 
-# TR: changing x ticks and grids
-f2 <- dotplot(Statenom ~ Distance | region,
-              aspect = c(0.9),
-              ylab = "", 
-              strip.left = TRUE, 
-              layout = c(1, 3), 
-              strip = FALSE,
-              xlab = list(main.label, cex=1),
-              main = FALSE, 
-              cex = 1,
-              data = fig.data, 
-              groups = Year, 
-              pch = my.pch, 
-              col = my.fill,
-              col.line = col.line,
-              lin = line,
-              par.settings = my.settings,
-              xlim = c(0,5),
-              between = list(y = .5),
-              scales = list(alternating = 1,
-                            x = list(cex = 1, at = seq(0,4,1), labels = as.character(seq(0,4,1))),
-                            y = list(relation = "free")),
-              key=list(space = "right", 
-                       background="white",
-                       title = "Year", 
-                       text = list(txt.legend), 
-                       points = list(pch = my.pch1, col = my.fill1, cex = 1)),                       
-              panel=function(x, y, lin, col.line,...){    
-                #panel.abline(v=seq(.5,3.5,1),lwd=1,lty=3,col="darkgrey")
-                panel.abline(v=seq(0,4,1),lwd=1,lty=1,col="#A1A1A150")
-                #panel.abline(v=lin[[1]],col=col.line[[1]],lwd=1,lty=2)
-                panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
-              })
-f2
-
+# # TR: changing x ticks and grids
+# f2 <- dotplot(Statenom ~ Distance | region,
+#               aspect = c(0.9),
+#               ylab = "", 
+#               strip.left = TRUE, 
+#               layout = c(1, 3), 
+#               strip = FALSE,
+#               xlab = list(main.label, cex=1),
+#               main = FALSE, 
+#               cex = 1,
+#               data = fig.data, 
+#               groups = Year, 
+#               pch = my.pch, 
+#               col = my.fill,
+#               col.line = col.line,
+#               lin = line,
+#               par.settings = my.settings,
+#               xlim = c(0,5),
+#               between = list(y = .5),
+#               scales = list(alternating = 1,
+#                             x = list(cex = 1, at = seq(0,4,1), labels = as.character(seq(0,4,1))),
+#                             y = list(relation = "free")),
+#               key=list(space = "right", 
+#                        background="white",
+#                        title = "Year", 
+#                        text = list(txt.legend), 
+#                        points = list(pch = my.pch1, col = my.fill1, cex = 1)),                       
+#               panel=function(x, y, lin, col.line,...){    
+#                 #panel.abline(v=seq(.5,3.5,1),lwd=1,lty=3,col="darkgrey")
+#                 panel.abline(v=seq(0,4,1),lwd=1,lty=1,col="#A1A1A150")
+#                 #panel.abline(v=lin[[1]],col=col.line[[1]],lwd=1,lty=2)
+#                 panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
+#               })
+# f2
+# 
 
 
 fig.data2<- subset(fig.data,Year==2015)
@@ -413,9 +383,6 @@ f2.1 <- dotplot(Statenom ~ Distance | region,
 f2.1
 
 
-
-
-
 #1.Causes amenable to medical service
 #2.Diabetes
 #3.Ischemic heart diseases
@@ -426,8 +393,6 @@ f2.1
 #8.Road traffic accidents
 #9.Suicide
 #10.Other causes
-
-
 
 #### calculate proportions
 Data$col.label <- 8
@@ -474,14 +439,14 @@ base2 <- base2[c(5,4,2,1,6,3,7)]
 #		"orange",  "lightgrey","lightgrey","lightgrey")
 myColours1 <- c(toupper(base2), rep(gray(.7), 1))
 
-fig.labels <- c("1. Causes amenable to medical service",
-                "2. Diabetes",
-                "3. Ischemic heart diseases",
-                "4. Lung cancer",
-                "5. Cirrhosis",
-                "6. Homicide",
-                "7. Road traffic accidents",
-                "8. Other causes")
+fig.labels <- c("Causes amenable to medical service",
+                "Diabetes",
+                "Ischemic heart diseases",
+                "Lung cancer",
+                "Cirrhosis",
+                "Homicide",
+                "Road traffic accidents",
+                "Other causes")
 
 
 my.settings1 <- list(
@@ -509,35 +474,32 @@ f2.c$Statenom  <- with(f2.c,reorder(reorder(Statenom,Order),as.numeric(region)))
 f2.c2 <-  barchart(Statenom ~ Prop |region, data=f2.c,
                    groups = col.label,  ylab="",xlab=list("Gap composition by cause of death in 2015",cex=1),
                    layout=c(1,3),strip.left=F,strip=F,
-                   stack=TRUE, 
+                   stack=TRUE,box.ratio=5,
                    between = list(y = .5),
                    scales=list(alternating=1,x=list(cex=1,at=seq(0,1,.25), 
                                                     labels=as.character(seq(0,1,.25))),
                                y=list(relation="free")),
                    par.settings=my.settings1,
                    key = list(space="right", title="Cause of death",background="white",
+                              points=list(pch=19,col=myColours1),
                               text=list(fig.labels)
-                              ,cex=.9,
-                              points=list(pch=19,col=myColours1)),
+                              ,cex=.9),
                    panel=function(x,y,lin,col.line,...){    
                      panel.barchart(x,y,...)                     
                      panel.abline(v=seq(0,1,.25),lwd=1,lty=2,col="darkgrey")
                    })
 f2.c2
 
-
-
-
 library(gridExtra)
 library(grid)
 blank<-rectGrob(gp=gpar(col="white"))
 
-pdf(file="Figure 4.pdf",width=15,height=7,pointsize=12)
-grid.arrange(f2,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.9))
-dev.off()
+# pdf(file="Figure 4.pdf",width=15,height=7,pointsize=12)
+# grid.arrange(f2,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.9))
+# dev.off()
 
-pdf(file="Figure 4_2.pdf",width=15,height=7,pointsize=12)
-grid.arrange(f2.1,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.9))
+pdf(file="Paper Figures/Gap_Prop_Fig.pdf",width=13,height=7,pointsize=12,useDingbats = F)
+grid.arrange(f2.1,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.8))
 dev.off()
 
 
@@ -579,7 +541,7 @@ blank<-rectGrob(gp=gpar(col="white"))
 
 
 require(gridExtra)
-pdf(file="Figure_prop_ym.pdf",width=14,height=10,pointsize=12)
+pdf(file="Appendix Figures/Figure_prop_ym.pdf",width=14,height=10,pointsize=12)
 prop.ym
 
 dev.off()
@@ -601,7 +563,7 @@ prop.yf
 
 
 require(gridExtra)
-pdf(file="Figure_prop_yf.pdf",width=14,height=10,pointsize=12)
+pdf(file="Appendix Figures/Figure_prop_yf.pdf",width=14,height=10,pointsize=12)
 prop.yf
 dev.off()
 
@@ -624,7 +586,7 @@ prop.yam
 
 
 require(gridExtra)
-pdf(file="Figure_prop_yam.pdf",width=14,height=10,pointsize=12)
+pdf(file="Appendix Figures/Figure_prop_yam.pdf",width=14,height=10,pointsize=12)
 prop.yam
 dev.off()
 
@@ -645,7 +607,7 @@ prop.yaf
 
 
 require(gridExtra)
-pdf(file="Figure_prop_yaf.pdf",width=14,height=10,pointsize=12)
+pdf(file="Appendix Figures/Figure_prop_yaf.pdf",width=14,height=10,pointsize=12)
 prop.yaf
 dev.off()
 
@@ -667,11 +629,9 @@ prop.oam
 
 
 require(gridExtra)
-pdf(file="Figure_prop_oam.pdf",width=14,height=10,pointsize=12)
+pdf(file="Appendix Figures/Figure_prop_oam.pdf",width=14,height=10,pointsize=12)
 prop.oam
 dev.off()
-
-
 
 
 prop.oaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="50-84" & Sex=="Females"),
@@ -690,7 +650,7 @@ prop.oaf
 
 
 require(gridExtra)
-pdf(file="Figure_prop_oaf.pdf",width=14,height=10,pointsize=12)
+pdf(file="Appendix Figures/Figure_prop_oaf.pdf",width=14,height=10,pointsize=12)
 prop.oaf
 dev.off()
 
