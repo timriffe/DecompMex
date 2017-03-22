@@ -1,13 +1,15 @@
 
-setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
-
-if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
-  # if I'm on the laptop
-  setwd("/home/tim/git/DecompMex/DecompMex")
+if (system("hostname",intern=TRUE) == "ADM-108625") {
+  setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
 } else {
-  # in that case I'm on Berkeley system, and other people in the dept can run this too
-  setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
-}
+  if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
+    # if I'm on the laptop
+    setwd("/home/tim/git/DecompMex/DecompMex")
+  } else {
+    # in that case I'm on Berkeley system, and other people in the dept can run this too
+    setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
+  }}
+
 
 source("R/Functions.R")
 
@@ -28,7 +30,7 @@ library(reshape2)
 
 ## minimum mortality rates by state, year, sex, cause
 #constrain to the original ones
-#data       <- local(get(load("Data/smoothed rates_Constraint.RData")))
+#data       <- local(get(load("Data/smoothed rates_ConstraintOrig.RData")))
 #constrain to the smoothed total ones
 #data       <- local(get(load("Data/smoothed rates_ConstraintSmooth.RData")))
 # No constrain, sum over smoother causes
@@ -40,8 +42,7 @@ library(reshape2)
 Mxsc       <- data[,-c(5),with=F]
 Mxsc       <- melt.data.table(Mxsc,id.vars = 1:4,variable.name = "cause",value.name = "mx")
 Mxscmin    <- Mxsc[,min(mx), by = list(year, sex, age, cause)]
-Mxsmin     <- Mxscmin[,sum(V1),by=list(year, sex, age)]
-setnames(Mxsmin,4,"mx_min")
+Mxsmin     <- Mxscmin[,list(mx_min=sum(V1)),by=list(year, sex, age)]
 # object with minimum death rates for every year by sex and age
 head(Mxsmin)
 
@@ -54,7 +55,7 @@ BPlx <- Mxsmin[,lx:=myLTlx(mx_min, sex), by = list(year,sex)]
 BPlx[,Lx:=lx2Lx(lx),by = list(year,sex)]
 
 # get temp e0 for BP
-bpe0_14       <- BPlx[,getTempe0(.SD),by=list(year, sex)]
+bpe0_14       <- BPlx[,getTempe0(.SD,0,14),by=list(year, sex)]
 bpe0_14$state <- 33
 bpe0_14$age.g <- 1
 
@@ -75,6 +76,7 @@ setnames(BP_temp,"V1","temp_e0")
 #gdata:: keep(Mxsc,data,BP_temp,sure=T)
 Mxs         <- data[,1:5,with=F]
 #setnames(Mxs,"Tot","mx")
+
 
 Stateslx    <- Mxs[,lx:=myLTlx(mx, sex), by = list(state,year, sex)]
 Stateslx    <- Stateslx[,Lx := lx2Lx(lx), by = list(state,year, sex)]
@@ -101,7 +103,18 @@ head(van_temp)
 #### create an object with all temp data
 
 temp.data <- rbind(BP_temp,ste_temp,van_temp)
-temp.data <- temp.data[order(year,sex,state,age.g)]
+temp.data <- temp.data[with(temp.data,order(year,sex,state,age.g)),]
 
 save(data,temp.data,Mxsc,file = "Data/Temp_e0_results.RData")
+save(data,temp.data,Mxsc,file = "Data/Temp_e0_results_smooth.RData")
+
+
+
+
+
+
+
+
+
+
 

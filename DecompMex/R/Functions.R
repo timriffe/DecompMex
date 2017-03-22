@@ -1,3 +1,38 @@
+# TR:
+# Aggregator / reshaper function:
+# TR: this function replaces the for loops. Now everything
+# a little more robust and explicit.
+
+my_reshape.function <- function(i,DecompIn, lower = 0, upper = 15){
+  Z        <- DecompIn[[i]]
+  # and I'm going to append Age and State before
+  # rbind.list.ing
+  
+  Z        <- lapply(1:length(Z), function(ii,Z){
+    XX       <- as.data.frame(Z[[ii]])
+    XX$State <- ii
+    XX$Age   <- 0:109
+    XX
+  }, Z = Z)
+  # now stick it together
+  D        <- do.call(rbind.data.frame, Z)
+  # select age range
+  D        <- subset(D, Age >= lower & Age < upper)
+  # toggle to long
+  
+  DT       <- as.data.table(melt(D, 
+                                 id.vars = list("State","Age"),
+                                 variable.name = "AMCategory"))
+  # replaces aggregate()
+  DT       <- DT[, list(Contribution = sum(value)), by = list(State,AMCategory)]
+  # add year
+  DT$Year  <- 1989 + i
+  DT
+}
+
+# now apply this function the the crazy list objects containing 
+# decomposition results.
+
 #Decomposition function
 mydecomp <- function (func, rates1, rates2, N, ...) {
   y1 <- func(rates1, ...)
@@ -21,8 +56,6 @@ mydecomp <- function (func, rates1, rates2, N, ...) {
 
 
 # smoothing functions
-
-
 sm.mat   <- function(DX, EX){
   ages  		<- 0:109
   years 		<- 1990:2015
