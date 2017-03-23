@@ -1,0 +1,1347 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{43}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{who2000}
+\begin{botherref}
+\oauthor{\bsnm{{{Worl Health Organization}}}}:
+The world health report 2000: health systems: improving performance.
+WHO
+(2000)
+\end{botherref}
+\endbibitem
+
+%%% 2
+\bibitem{SOMEDE}
+\begin{botherref}
+\oauthor{\bsnm{{{Mexican Society of Demography}}}}:
+Demographic conciliation of {M}exico and its states.
+{{Sociedad Mexicana de Demograf{\'i}a}}.
+[unpublished]
+(2011).
+\url{http://forecast.colmex.mx/index.php/data}
+\end{botherref}
+\endbibitem
+
+%%% 3
+\bibitem{canudas2014}
+\begin{botherref}
+\oauthor{\bsnm{Canudas-Romo}, \binits{V.}},
+\oauthor{\bsnm{Garc\'ia-Guerrero}, \binits{V.M.}},
+\oauthor{\bsnm{Echarri-C\'anovas}, \binits{C.J.}}:
+The stagnation of the mexican male life expectancy in the first decade of the
+  21st century: the impact of homicides and diabetes mellitus.
+Journal of epidemiology and community health,
+2014
+(2014)
+\end{botherref}
+\endbibitem
+
+%%% 4
+\bibitem{knaul2005}
+\begin{barticle}
+\bauthor{\bsnm{Knaul}, \binits{F.M.}},
+\bauthor{\bsnm{Frenk}, \binits{J.}}:
+\batitle{Health insurance in {M}exico: achieving universal coverage through
+  structural reform}.
+\bjtitle{Health affairs}
+\bvolume{24}(\bissue{6}),
+\bfpage{1467}--\blpage{1476}
+(\byear{2005})
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem{neufeld2012}
+\begin{bchapter}
+\bauthor{\bsnm{Neufeld}, \binits{L.M.}}:
+\bctitle{The oportunidades program and child growth: {M}exico perspectives}.
+In: \bbtitle{Handbook of Growth and Growth Monitoring in Health and Disease},
+pp. \bfpage{1659}--\blpage{1671}.
+\bpublisher{Springer}, \blocation{???}
+(\byear{2012})
+\end{bchapter}
+\endbibitem
+
+%%% 6
+\bibitem{sepulveda2006}
+\begin{barticle}
+\bauthor{\bsnm{Sep{\'u}lveda}, \binits{J.}},
+\bauthor{\bsnm{Bustreo}, \binits{F.}},
+\bauthor{\bsnm{Tapia}, \binits{R.}},
+\bauthor{\bsnm{Rivera}, \binits{J.}},
+\bauthor{\bsnm{Lozano}, \binits{R.}},
+\bauthor{\bsnm{Ol{\'a}iz}, \binits{G.}},
+\bauthor{\bsnm{Partida}, \binits{V.}},
+\bauthor{\bsnm{Garc{\'i}a-Garc{\'i}a}, \binits{L.}},
+\bauthor{\bsnm{Valdespino}, \binits{J.L.}}:
+\batitle{Improvement of child survival in {M}exico: the diagonal approach}.
+\bjtitle{The Lancet}
+\bvolume{368}(\bissue{9551}),
+\bfpage{2017}--\blpage{2027}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem{knaul2012}
+\begin{barticle}
+\bauthor{\bsnm{Knaul}, \binits{F.M.}},
+\bauthor{\bsnm{Gonz{\'a}lez-Pier}, \binits{E.}},
+\bauthor{\bsnm{G{\'o}mez-Dant{\'e}s}, \binits{O.}},
+\bauthor{\bsnm{Garc{\'i}a-Junco}, \binits{D.}},
+\bauthor{\bsnm{Arreola-Ornelas}, \binits{H.}},
+\bauthor{\bsnm{Barraza-Llor{\'e}ns}, \binits{M.}},
+\bauthor{\bsnm{Sandoval}, \binits{R.}},
+\bauthor{\bsnm{Caballero}, \binits{F.}},
+\bauthor{\bsnm{Hern{\'a}ndez-Avila}, \binits{M.}},
+\bauthor{\bsnm{Juan}, \binits{M.}}, \betal:
+\batitle{The quest for universal health coverage: achieving social protection
+  for all in {M}exico}.
+\bjtitle{The Lancet}
+\bvolume{380}(\bissue{9849}),
+\bfpage{1259}--\blpage{1279}
+(\byear{2012})
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem{Bygbjerg1499}
+\begin{barticle}
+\bauthor{\bsnm{Bygbjerg}, \binits{I.C.}}:
+\batitle{Double burden of noncommunicable and infectious diseases in developing
+  countries}.
+\bjtitle{Science}
+\bvolume{337}(\bissue{6101}),
+\bfpage{1499}--\blpage{1501}
+(\byear{2012}).
+doi:\doiurl{10.1126/science.1223466}.
+\arxivurl{http://science.sciencemag.org/content/337/6101/1499.full.pdf}
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem{CONAPO}
+\begin{botherref}
+\oauthor{\bsnm{{{Mexican Population Council}}}}:
+Proyecciones de población 2010-2050.
+{{Consejo Nacional de Poblaci\'on}},Secretaría de Gobernaci\'on
+(2015).
+\url{http://conapo.gob.mx/es/CONAPO/Proyecciones}
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem{urquieta2015evolution}
+\begin{botherref}
+\oauthor{\bsnm{Urquieta-Salom{\'o}n}, \binits{J.E.}},
+\oauthor{\bsnm{Villarreal}, \binits{H.J.}}:
+Evolution of health coverage in {M}exico: evidence of progress and challenges
+  in the mexican health system.
+Health policy and planning
+(2015)
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem{nolte&mckee2004}
+\begin{bbook}
+\bauthor{\bsnm{Nolte}, \binits{E.}},
+\bauthor{\bsnm{McKee}, \binits{M.}}:
+\bbtitle{Does Health Care Save Lives? Avoidable Mortality Revisited.}
+\bpublisher{The Nuffield Trust}, \blocation{???}
+(\byear{2004})
+\end{bbook}
+\endbibitem
+
+%%% 12
+\bibitem{nolte&mckee2008}
+\begin{barticle}
+\bauthor{\bsnm{Nolte}, \binits{E.}},
+\bauthor{\bsnm{McKee}, \binits{C.M.}}:
+\batitle{Measuring the health of nations: updating an earlier analysis}.
+\bjtitle{Health affairs}
+\bvolume{27}(\bissue{1}),
+\bfpage{58}--\blpage{71}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem{elo2014}
+\begin{barticle}
+\bauthor{\bsnm{Elo}, \binits{I.T.}},
+\bauthor{\bsnm{Beltr{\'a}n-S{\'a}nchez}, \binits{H.}},
+\bauthor{\bsnm{Macinko}, \binits{J.}}:
+\batitle{The contribution of health care and other interventions to
+  black--white disparities in life expectancy, 1980--2007}.
+\bjtitle{Population research and policy review}
+\bvolume{33}(\bissue{1}),
+\bfpage{97}--\blpage{126}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem{francomarina2006}
+\begin{botherref}
+\oauthor{\bsnm{Franco-Marina}, \binits{F.}},
+\oauthor{\bsnm{Lozano}, \binits{R.}},
+\oauthor{\bsnm{Villa}, \binits{B.}},
+\oauthor{\bsnm{Soliz}, \binits{P.}}:
+La mortalidad en m{\'e}xico, 2000-2004 “muertes evitables: magnitud,
+  distribuci{\'o}n y tendencias”.
+Direcci{\'o}n General de Informaci{\'o}n en Salud, Secretar{\'\i}a de Salud.
+  M{\'e}xico,
+2
+(2006)
+\end{botherref}
+\endbibitem
+
+%%% 15
+\bibitem{agudelo2014efecto}
+\begin{barticle}
+\bauthor{\bsnm{Agudelo-Botero}, \binits{M.}},
+\bauthor{\bsnm{D{\'a}vila-Cervantes}, \binits{C.A.}}:
+\batitle{Efecto de las muertes evitables y no evitables en la esperanza de vida
+  en m{\'e}xico, 1998--2000 y 2008--2010}.
+\bjtitle{Rev Panam Salud Publica}
+\bvolume{35}(\bissue{2}),
+\bfpage{121}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem{davila2014mortalidad}
+\begin{barticle}
+\bauthor{\bsnm{D{\'a}vila-Cervantes}, \binits{C.A.}},
+\bauthor{\bsnm{Agudelo-Botero}, \binits{M.}}:
+\batitle{Mortalidad evitable en m{\'e}xico y su contribuci{\'o}n a los a{\~n}os
+  de vida perdidos: An{\'a}lisis por grado de marginaci{\'o}n estatal,
+  2001-2010}.
+\bjtitle{Papeles de poblaci{\'o}n}
+\bvolume{20}(\bissue{82}),
+\bfpage{267}--\blpage{286}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem{Aburto2015}
+\begin{barticle}
+\bauthor{\bsnm{Aburto}, \binits{J.M.}},
+\bauthor{\bsnm{Beltr{\'a}n-S{\'a}nchez}, \binits{H.}},
+\bauthor{\bsnm{Garc\'ia-Guerrero}, \binits{V.M.}},
+\bauthor{\bsnm{Canudas-Romo}, \binits{V.}}:
+\batitle{Homicides in {M}exico reversed life expectancy gains for men and
+  slowed them for women, 2000-10}.
+\bjtitle{Health affairs}
+\bvolume{35}(\bissue{1}),
+\bfpage{1}--\blpage{8}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem{whelpton1947}
+\begin{bbook}
+\bauthor{\bsnm{Whelpton}, \binits{P.K.}},
+\bauthor{\bsnm{Eldridge}, \binits{H.T.}},
+\bauthor{\bsnm{Siegel}, \binits{J.S.}}:
+\bbtitle{Forecasts of the Population of the United States, 1945-1975}.
+\bpublisher{US government printing office}, \blocation{???}
+(\byear{1947})
+\end{bbook}
+\endbibitem
+
+%%% 19
+\bibitem{wunsch1975minimum}
+\begin{barticle}
+\bauthor{\bsnm{Wunsch}, \binits{G.}}:
+\batitle{A minimum life-table for europe}.
+\bjtitle{European Demographic Information Bulletin}
+\bvolume{5}(\bissue{1}),
+\bfpage{2}--\blpage{10}
+(\byear{1975})
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem{vallin2008minimum}
+\begin{barticle}
+\bauthor{\bsnm{Vallin}, \binits{J.}},
+\bauthor{\bsnm{Mesl{\'e}}, \binits{F.}}:
+\batitle{Minimum mortality: A predictor of future progress?}
+\bjtitle{Population-E}
+\bvolume{63}(\bissue{04}),
+\bfpage{557}--\blpage{590}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem{gonzalez2016mexico}
+\begin{barticle}
+\bauthor{\bsnm{Gonz{\'a}lez-Pier}, \binits{E.}},
+\bauthor{\bsnm{Barraza-Llor{\'e}ns}, \binits{M.}},
+\bauthor{\bsnm{Beyeler}, \binits{N.}},
+\bauthor{\bsnm{Jamison}, \binits{D.}},
+\bauthor{\bsnm{Knaul}, \binits{F.}},
+\bauthor{\bsnm{Lozano}, \binits{R.}},
+\bauthor{\bsnm{Yamey}, \binits{G.}},
+\bauthor{\bsnm{Sep{\'u}lveda}, \binits{J.}}:
+\batitle{{M}exico's path towards the {S}ustainable {D}evelopment {G}oal for
+  health: an assessment of the feasibility of reducing premature mortality by
+  40\% by 2030}.
+\bjtitle{The Lancet Global Health}
+\bvolume{4}(\bissue{10}),
+\bfpage{714}--\blpage{725}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem{gonzalez2011health}
+\begin{barticle}
+\bauthor{\bsnm{Gonz{\'a}lez-Gonz{\'a}lez}, \binits{C.}},
+\bauthor{\bsnm{S{\'a}nchez-Garc{\'\i}a}, \binits{S.}},
+\bauthor{\bsnm{Ju{\'a}rez-Cedillo}, \binits{T.}},
+\bauthor{\bsnm{Rosas-Carrasco}, \binits{O.}},
+\bauthor{\bsnm{Guti{\'e}rrez-Robledo}, \binits{L.M.}},
+\bauthor{\bsnm{Garc{\'\i}a-Pe{\~n}a}, \binits{C.}}:
+\batitle{Health care utilization in the elderly mexican population:
+  expenditures and determinants}.
+\bjtitle{BMC public health}
+\bvolume{11}(\bissue{1}),
+\bfpage{192}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 23
+\bibitem{gomez2016dissonant}
+\begin{barticle}
+\bauthor{\bsnm{G{\'o}mez-Dant{\'e}s}, \binits{H.}},
+\bauthor{\bsnm{Fullman}, \binits{N.}},
+\bauthor{\bsnm{Lamadrid-Figueroa}, \binits{H.}},
+\bauthor{\bsnm{Cahuana-Hurtado}, \binits{L.}},
+\bauthor{\bsnm{Darney}, \binits{B.}},
+\bauthor{\bsnm{Avila-Burgos}, \binits{L.}},
+\bauthor{\bsnm{Correa-Rotter}, \binits{R.}},
+\bauthor{\bsnm{Rivera}, \binits{J.A.}},
+\bauthor{\bsnm{Barquera}, \binits{S.}},
+\bauthor{\bsnm{Gonz{\'a}lez-Pier}, \binits{E.}}, \betal:
+\batitle{Dissonant health transition in the states of {M}exico, 1990--2013: a
+  systematic analysis for the {G}lobal {B}urden of {D}isease study 2013}.
+\bjtitle{The Lancet}
+\bvolume{388}(\bissue{10058}),
+\bfpage{2386}--\blpage{2402}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem{Frenk2006}
+\begin{barticle}
+\bauthor{\bsnm{Frenk}, \binits{J.}}:
+\batitle{Bridging the divide: global lessons from evidence-based health policy
+  in {M}exico}.
+\bjtitle{The Lancet}
+\bvolume{368}(\bissue{9539}),
+\bfpage{954}--\blpage{961}
+(\byear{2006}).
+doi:\doiurl{10.1016/S0140-6736(06)69376-8}
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem{INEGI}
+\begin{botherref}
+\oauthor{\bsnm{{{Instituto Nacional de Estad{\'i}stica y Geograf{\'i}a}}}}:
+Deaths microdata.
+INEGI.
+machine readable files
+(2015).
+\url{http://www3.inegi.org.mx/sistemas/microdatos}
+\end{botherref}
+\endbibitem
+
+%%% 26
+\bibitem{rivera2002epidemiological}
+\begin{barticle}
+\bauthor{\bsnm{Rivera}, \binits{J.A.}},
+\bauthor{\bsnm{Barquera}, \binits{S.}},
+\bauthor{\bsnm{Campirano}, \binits{F.}},
+\bauthor{\bsnm{Campos}, \binits{I.}},
+\bauthor{\bsnm{Safdie}, \binits{M.}},
+\bauthor{\bsnm{Tovar}, \binits{V.}}:
+\batitle{Epidemiological and nutritional transition in {M}exico: rapid increase
+  of non-communicable chronic diseases and obesity}.
+\bjtitle{Public health nutrition}
+\bvolume{5}(\bissue{1a}),
+\bfpage{113}--\blpage{122}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 27
+\bibitem{GC2012}
+\begin{barticle}
+\bauthor{\bsnm{Camarda}, \binits{C.G.}}:
+\batitle{{MortalitySmooth}: An {R} package for smoothing {P}oisson counts with
+  {P}-splines}.
+\bjtitle{Journal of Statistical Software}
+\bvolume{50}(\bissue{1}),
+\bfpage{1}--\blpage{24}
+(\byear{2012})
+\end{barticle}
+\endbibitem
+
+%%% 28
+\bibitem{HMDMP}
+\begin{botherref}
+\oauthor{\bsnm{Wilmoth}, \binits{J.R.}},
+\oauthor{\bsnm{Andreev}, \binits{K.}},
+\oauthor{\bsnm{Jdanov}, \binits{D.}},
+\oauthor{\bsnm{Glei}, \binits{D.A.}},
+\oauthor{\bsnm{Boe}, \binits{C.}},
+\oauthor{\bsnm{Bubenheim}, \binits{M.}},
+\oauthor{\bsnm{Philipov}, \binits{D.}},
+\oauthor{\bsnm{Shkolnikov}, \binits{V.}},
+\oauthor{\bsnm{Vachon}, \binits{P.}}:
+Methods protocol for the human mortality database.
+Technical report,
+University of California, Berkeley, and Max Planck Institute for Demographic
+  Research, Rostock.
+(2007).
+\url{http://mortality. org [version 31/05/2007]}
+\end{botherref}
+\endbibitem
+
+%%% 29
+\bibitem{arriaga1984}
+\begin{barticle}
+\bauthor{\bsnm{Arriaga}, \binits{E.E.}}:
+\batitle{Measuring and explaining the change in life expectancies}.
+\bjtitle{Demography}
+\bvolume{21}(\bissue{1}),
+\bfpage{83}--\blpage{96}
+(\byear{1984})
+\end{barticle}
+\endbibitem
+
+%%% 30
+\bibitem{horiuchi2008}
+\begin{barticle}
+\bauthor{\bsnm{Horiuchi}, \binits{S.}},
+\bauthor{\bsnm{Wilmoth}, \binits{J.R.}},
+\bauthor{\bsnm{Pletcher}, \binits{S.D.}}:
+\batitle{A decomposition method based on a model of continuous change}.
+\bjtitle{Demography}
+\bvolume{45}(\bissue{4}),
+\bfpage{785}--\blpage{801}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 31
+\bibitem{tobias2001}
+\begin{barticle}
+\bauthor{\bsnm{Tobias}, \binits{M.}},
+\bauthor{\bsnm{Jackson}, \binits{G.}}:
+\batitle{Avoidable mortality in new zealand, 1981--97}.
+\bjtitle{Australian and New Zealand journal of public health}
+\bvolume{25}(\bissue{1}),
+\bfpage{12}--\blpage{20}
+(\byear{2001})
+\end{barticle}
+\endbibitem
+
+%%% 32
+\bibitem{HRW2011}
+\begin{bbook}
+\bauthor{\bsnm{{{Human Rights Watch}}}}:
+\bbtitle{Neither Rights Nor Security: Killings, Torture, and Disappearances in
+  {M}exico’s “War on Drugs”}.
+\bpublisher{HRW}, \blocation{???}
+(\byear{2011})
+\end{bbook}
+\endbibitem
+
+%%% 33
+\bibitem{beltran2011avoidable}
+\begin{bchapter}
+\bauthor{\bsnm{Beltr{\'a}n-S{\'a}nchez}, \binits{H.}}:
+\bctitle{Avoidable mortality}.
+In: \bbtitle{International Handbook of Adult Mortality},
+pp. \bfpage{491}--\blpage{508}.
+\bpublisher{Springer}, \blocation{???}
+(\byear{2011})
+\end{bchapter}
+\endbibitem
+
+%%% 34
+\bibitem{nolte2012amenable}
+\begin{botherref}
+\oauthor{\bsnm{Nolte}, \binits{E.}},
+\oauthor{\bsnm{McKee}, \binits{C.M.}}:
+In amenable mortality—deaths avoidable through health care—progress in the
+  us lags that of three european countries.
+Health Affairs,
+10--1377
+(2012)
+\end{botherref}
+\endbibitem
+
+%%% 35
+\bibitem{holland2003}
+\begin{barticle}
+\bauthor{\bsnm{Holland}, \binits{W.}}:
+\batitle{Commentary: should we not go further than descriptions of avoidable
+  mortality?}
+\bjtitle{International journal of epidemiology}
+\bvolume{32}(\bissue{3}),
+\bfpage{447}--\blpage{448}
+(\byear{2003})
+\end{barticle}
+\endbibitem
+
+%%% 36
+\bibitem{wright2017epistemological}
+\begin{barticle}
+\bauthor{\bsnm{Wright}, \binits{M.W.}}:
+\batitle{Epistemological ignorances and fighting for the disappeared: Lessons
+  from mexico}.
+\bjtitle{Antipode}
+\bvolume{49}(\bissue{1}),
+\bfpage{249}--\blpage{269}
+(\byear{2017})
+\end{barticle}
+\endbibitem
+
+%%% 37
+\bibitem{canudas2017Mexico}
+\begin{barticle}
+\bauthor{\bsnm{Canudas-Romo}, \binits{V.}},
+\bauthor{\bsnm{Aburto}, \binits{J.M.}},
+\bauthor{\bsnm{Garc{\'\i}a-Guerrero}, \binits{V.M.}},
+\bauthor{\bsnm{Beltr{\'a}n-S{\'a}nchez}, \binits{H.}}:
+\batitle{{M}exico's epidemic of violence and its public health significance on
+  average length of life}.
+\bjtitle{Journal of epidemiology and community health}
+\bvolume{71}(\bissue{2}),
+\bfpage{188}--\blpage{193}
+(\byear{2017})
+\end{barticle}
+\endbibitem
+
+%%% 38
+\bibitem{espinal2015analysis}
+\begin{barticle}
+\bauthor{\bsnm{Espinal-Enr{\'\i}quez}, \binits{J.}},
+\bauthor{\bsnm{Larralde}, \binits{H.}}:
+\batitle{Analysis of m{\'e}xico’s narco-war network (2007--2011)}.
+\bjtitle{PloS one}
+\bvolume{10}(\bissue{5}),
+\bfpage{0126503}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 39
+\bibitem{hossain2007obesity}
+\begin{barticle}
+\bauthor{\bsnm{Hossain}, \binits{P.}},
+\bauthor{\bsnm{Kawar}, \binits{B.}},
+\bauthor{\bsnm{El~Nahas}, \binits{M.}}:
+\batitle{Obesity and diabetes in the developing world—a growing challenge}.
+\bjtitle{N Engl j med}
+\bvolume{2007}(\bissue{356}),
+\bfpage{213}--\blpage{215}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 40
+\bibitem{aschner2016obesity}
+\begin{bchapter}
+\bauthor{\bsnm{Aschner}, \binits{P.}}:
+\bctitle{Obesity in {L}atin {A}merica}.
+In: \bbtitle{Metabolic Syndrome},
+pp. \bfpage{33}--\blpage{39}.
+\bpublisher{Springer}, \blocation{???}
+(\byear{2016})
+\end{bchapter}
+\endbibitem
+
+%%% 41
+\bibitem{kuri2009prevalence}
+\begin{barticle}
+\bauthor{\bsnm{Kuri-Morales}, \binits{P.}},
+\bauthor{\bsnm{Emberson}, \binits{J.}},
+\bauthor{\bsnm{Alegre-D{\'\i}az}, \binits{J.}},
+\bauthor{\bsnm{Tapia-Conyer}, \binits{R.}},
+\bauthor{\bsnm{Collins}, \binits{R.}},
+\bauthor{\bsnm{Peto}, \binits{R.}},
+\bauthor{\bsnm{Whitlock}, \binits{G.}}:
+\batitle{The prevalence of chronic diseases and major disease risk factors at
+  different ages among 150 000 men and women living in {M}exico {C}ity:
+  cross-sectional analyses of a prospective study}.
+\bjtitle{BMC Public Health}
+\bvolume{9}(\bissue{1}),
+\bfpage{9}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 42
+\bibitem{united2009millennium}
+\begin{botherref}
+\oauthor{\bsnm{{{United Nations}}}}:
+The millennium development goals report 2009.
+United Nations Publications
+(2009)
+\end{botherref}
+\endbibitem
+
+%%% 43
+\bibitem{knaul2015achieving}
+\begin{barticle}
+\bauthor{\bsnm{Knaul}, \binits{F.M.}},
+\bauthor{\bsnm{Bhadelia}, \binits{A.}},
+\bauthor{\bsnm{Atun}, \binits{R.}},
+\bauthor{\bsnm{Frenk}, \binits{J.}}:
+\batitle{Achieving effective universal health coverage and diagonal approaches
+  to care for chronic illnesses}.
+\bjtitle{Health Affairs}
+\bvolume{34}(\bissue{9}),
+\bfpage{1514}--\blpage{1522}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>The world health report 2000: health systems: improving
+  performance</p></title>
+  <aug>
+    <au><cnm>{{Worl Health Organization}}</cnm></au>
+  </aug>
+  <publisher>WHO</publisher>
+  <pubdate>2000</pubdate>
+</bibl>
+
+<bibl id="B2">
+  <title><p>Demographic conciliation of {M}exico and its states</p></title>
+  <aug>
+    <au><cnm>{{Mexican Society of Demography}}</cnm></au>
+  </aug>
+  <publisher>{{Sociedad Mexicana de Demograf{\'i}a}}</publisher>
+  <pubdate>2011</pubdate>
+  <url>http://forecast.colmex.mx/index.php/data</url>
+  <note>[unpublished]</note>
+</bibl>
+
+<bibl id="B3">
+  <title><p>The stagnation of the Mexican male life expectancy in the first
+  decade of the 21st century: the impact of homicides and diabetes
+  mellitus</p></title>
+  <aug>
+    <au><snm>Canudas Romo</snm><fnm>V</fnm></au>
+    <au><snm>Garc\'ia Guerrero</snm><fnm>VM</fnm></au>
+    <au><snm>Echarri C\'anovas</snm><fnm>CJ</fnm></au>
+  </aug>
+  <source>Journal of epidemiology and community health</source>
+  <publisher>BMJ Publishing Group Ltd</publisher>
+  <pubdate>2014</pubdate>
+  <fpage>jech</fpage>
+  <lpage>-2014</lpage>
+</bibl>
+
+<bibl id="B4">
+  <title><p>Health insurance in {M}exico: achieving universal coverage through
+  structural reform</p></title>
+  <aug>
+    <au><snm>Knaul</snm><fnm>FM</fnm></au>
+    <au><snm>Frenk</snm><fnm>J</fnm></au>
+  </aug>
+  <source>Health affairs</source>
+  <publisher>Health Affairs</publisher>
+  <pubdate>2005</pubdate>
+  <volume>24</volume>
+  <issue>6</issue>
+  <fpage>1467</fpage>
+  <lpage>-1476</lpage>
+</bibl>
+
+<bibl id="B5">
+  <title><p>The Oportunidades Program and Child Growth: {M}exico
+  Perspectives</p></title>
+  <aug>
+    <au><snm>Neufeld</snm><fnm>LM</fnm></au>
+  </aug>
+  <source>Handbook of Growth and Growth Monitoring in Health and
+  Disease</source>
+  <publisher>Springer</publisher>
+  <pubdate>2012</pubdate>
+  <fpage>1659</fpage>
+  <lpage>-1671</lpage>
+</bibl>
+
+<bibl id="B6">
+  <title><p>Improvement of child survival in {M}exico: the diagonal
+  approach</p></title>
+  <aug>
+    <au><snm>Sep{\'u}lveda</snm><fnm>J</fnm></au>
+    <au><snm>Bustreo</snm><fnm>F</fnm></au>
+    <au><snm>Tapia</snm><fnm>R</fnm></au>
+    <au><snm>Rivera</snm><fnm>J</fnm></au>
+    <au><snm>Lozano</snm><fnm>R</fnm></au>
+    <au><snm>Ol{\'a}iz</snm><fnm>G</fnm></au>
+    <au><snm>Partida</snm><fnm>V</fnm></au>
+    <au><snm>Garc{\'i}a Garc{\'i}a</snm><fnm>L</fnm></au>
+    <au><snm>Valdespino</snm><fnm>JL</fnm></au>
+  </aug>
+  <source>The Lancet</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2006</pubdate>
+  <volume>368</volume>
+  <issue>9551</issue>
+  <fpage>2017</fpage>
+  <lpage>-2027</lpage>
+</bibl>
+
+<bibl id="B7">
+  <title><p>The quest for universal health coverage: achieving social
+  protection for all in {M}exico</p></title>
+  <aug>
+    <au><snm>Knaul</snm><fnm>FM</fnm></au>
+    <au><snm>Gonz{\'a}lez Pier</snm><fnm>E</fnm></au>
+    <au><snm>G{\'o}mez Dant{\'e}s</snm><fnm>O</fnm></au>
+    <au><snm>Garc{\'i}a Junco</snm><fnm>D</fnm></au>
+    <au><snm>Arreola Ornelas</snm><fnm>H</fnm></au>
+    <au><snm>Barraza Llor{\'e}ns</snm><fnm>M</fnm></au>
+    <au><snm>Sandoval</snm><fnm>R</fnm></au>
+    <au><snm>Caballero</snm><fnm>F</fnm></au>
+    <au><snm>Hern{\'a}ndez Avila</snm><fnm>M</fnm></au>
+    <au><snm>Juan</snm><fnm>M</fnm></au>
+    <au><cnm>others</cnm></au>
+  </aug>
+  <source>The Lancet</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2012</pubdate>
+  <volume>380</volume>
+  <issue>9849</issue>
+  <fpage>1259</fpage>
+  <lpage>-1279</lpage>
+</bibl>
+
+<bibl id="B8">
+  <title><p>Double Burden of Noncommunicable and Infectious Diseases in
+  Developing Countries</p></title>
+  <aug>
+    <au><snm>Bygbjerg</snm><fnm>I. C.</fnm></au>
+  </aug>
+  <source>Science</source>
+  <publisher>American Association for the Advancement of Science</publisher>
+  <pubdate>2012</pubdate>
+  <volume>337</volume>
+  <issue>6101</issue>
+  <fpage>1499</fpage>
+  <lpage>-1501</lpage>
+  <url>http://science.sciencemag.org/content/337/6101/1499</url>
+</bibl>
+
+<bibl id="B9">
+  <title><p>Proyecciones de población 2010-2050</p></title>
+  <aug>
+    <au><cnm>{{Mexican Population Council}}</cnm></au>
+  </aug>
+  <publisher>{{Consejo Nacional de Poblaci\'on}},Secretaría de
+  Gobernaci\'on</publisher>
+  <pubdate>2015</pubdate>
+  <url>http://conapo.gob.mx/es/CONAPO/Proyecciones</url>
+</bibl>
+
+<bibl id="B10">
+  <title><p>Evolution of health coverage in {M}exico: evidence of progress and
+  challenges in the Mexican health system.</p></title>
+  <aug>
+    <au><snm>Urquieta Salom{\'o}n</snm><fnm>JE</fnm></au>
+    <au><snm>Villarreal</snm><fnm>HJ</fnm></au>
+  </aug>
+  <source>Health policy and planning</source>
+  <pubdate>2015</pubdate>
+</bibl>
+
+<bibl id="B11">
+  <title><p>Does health care save lives? Avoidable mortality
+  revisited.</p></title>
+  <aug>
+    <au><snm>Nolte</snm><fnm>E</fnm></au>
+    <au><snm>McKee</snm><fnm>M</fnm></au>
+  </aug>
+  <publisher>The Nuffield Trust</publisher>
+  <pubdate>2004</pubdate>
+</bibl>
+
+<bibl id="B12">
+  <title><p>Measuring the health of nations: updating an earlier
+  analysis</p></title>
+  <aug>
+    <au><snm>Nolte</snm><fnm>E</fnm></au>
+    <au><snm>McKee</snm><fnm>CM</fnm></au>
+  </aug>
+  <source>Health affairs</source>
+  <publisher>Health Affairs</publisher>
+  <pubdate>2008</pubdate>
+  <volume>27</volume>
+  <issue>1</issue>
+  <fpage>58</fpage>
+  <lpage>-71</lpage>
+</bibl>
+
+<bibl id="B13">
+  <title><p>The Contribution of Health Care and Other Interventions to
+  Black--White Disparities in Life Expectancy, 1980--2007</p></title>
+  <aug>
+    <au><snm>Elo</snm><fnm>IT</fnm></au>
+    <au><snm>Beltr{\'a}n S{\'a}nchez</snm><fnm>H</fnm></au>
+    <au><snm>Macinko</snm><fnm>J</fnm></au>
+  </aug>
+  <source>Population research and policy review</source>
+  <publisher>Springer</publisher>
+  <pubdate>2014</pubdate>
+  <volume>33</volume>
+  <issue>1</issue>
+  <fpage>97</fpage>
+  <lpage>-126</lpage>
+</bibl>
+
+<bibl id="B14">
+  <title><p>La mortalidad en M{\'e}xico, 2000-2004 “Muertes evitables:
+  magnitud, distribuci{\'o}n y tendencias”</p></title>
+  <aug>
+    <au><snm>Franco Marina</snm><fnm>F</fnm></au>
+    <au><snm>Lozano</snm><fnm>R</fnm></au>
+    <au><snm>Villa</snm><fnm>B</fnm></au>
+    <au><snm>Soliz</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Direcci{\'o}n General de Informaci{\'o}n en Salud, Secretar{\'\i}a de
+  Salud. M{\'e}xico</source>
+  <pubdate>2006</pubdate>
+  <fpage>2</fpage>
+</bibl>
+
+<bibl id="B15">
+  <title><p>Efecto de las muertes evitables y no evitables en la esperanza de
+  vida en M{\'e}xico, 1998--2000 y 2008--2010</p></title>
+  <aug>
+    <au><snm>Agudelo Botero</snm><fnm>M</fnm></au>
+    <au><snm>D{\'a}vila Cervantes</snm><fnm>CA</fnm></au>
+  </aug>
+  <source>Rev Panam Salud Publica</source>
+  <publisher>SciELO Public Health</publisher>
+  <pubdate>2014</pubdate>
+  <volume>35</volume>
+  <issue>2</issue>
+  <fpage>121</fpage>
+</bibl>
+
+<bibl id="B16">
+  <title><p>Mortalidad evitable en M{\'e}xico y su contribuci{\'o}n a los
+  a{\~n}os de vida perdidos: An{\'a}lisis por grado de marginaci{\'o}n estatal,
+  2001-2010</p></title>
+  <aug>
+    <au><snm>D{\'a}vila Cervantes</snm><fnm>CA</fnm></au>
+    <au><snm>Agudelo Botero</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Papeles de poblaci{\'o}n</source>
+  <publisher>Universidad Aut{\'o}noma del Estado de M{\'e}xico, Centro de
+  Investigaci{\'o}n y Estudios Avanzados de la Poblaci{\'o}n</publisher>
+  <pubdate>2014</pubdate>
+  <volume>20</volume>
+  <issue>82</issue>
+  <fpage>267</fpage>
+  <lpage>-286</lpage>
+</bibl>
+
+<bibl id="B17">
+  <title><p>Homicides in {M}exico reversed life expectancy gains for men and
+  slowed them for women, 2000-10</p></title>
+  <aug>
+    <au><snm>Aburto</snm><fnm>JM</fnm></au>
+    <au><snm>Beltr{\'a}n S{\'a}nchez</snm><fnm>H</fnm></au>
+    <au><snm>Garc\'ia Guerrero</snm><fnm>VM</fnm></au>
+    <au><snm>Canudas Romo</snm><fnm>V</fnm></au>
+  </aug>
+  <source>Health affairs</source>
+  <pubdate>2016</pubdate>
+  <volume>35</volume>
+  <issue>1</issue>
+  <fpage>1</fpage>
+  <lpage>8</lpage>
+</bibl>
+
+<bibl id="B18">
+  <title><p>Forecasts of the Population of the United States,
+  1945-1975</p></title>
+  <aug>
+    <au><snm>Whelpton</snm><fnm>PK</fnm></au>
+    <au><snm>Eldridge</snm><fnm>HT</fnm></au>
+    <au><snm>Siegel</snm><fnm>JS</fnm></au>
+  </aug>
+  <publisher>US government printing office</publisher>
+  <pubdate>1947</pubdate>
+</bibl>
+
+<bibl id="B19">
+  <title><p>A minimum life-table for Europe</p></title>
+  <aug>
+    <au><snm>Wunsch</snm><fnm>G</fnm></au>
+  </aug>
+  <source>European Demographic Information Bulletin</source>
+  <publisher>Springer</publisher>
+  <pubdate>1975</pubdate>
+  <volume>5</volume>
+  <issue>1</issue>
+  <fpage>2</fpage>
+  <lpage>-10</lpage>
+</bibl>
+
+<bibl id="B20">
+  <title><p>Minimum Mortality: A Predictor of Future Progress?</p></title>
+  <aug>
+    <au><snm>Vallin</snm><fnm>J</fnm></au>
+    <au><snm>Mesl{\'e}</snm><fnm>F</fnm></au>
+  </aug>
+  <source>Population-E</source>
+  <publisher>Necplus</publisher>
+  <pubdate>2008</pubdate>
+  <volume>63</volume>
+  <issue>04</issue>
+  <fpage>557</fpage>
+  <lpage>-590</lpage>
+</bibl>
+
+<bibl id="B21">
+  <title><p>{M}exico's path towards the {S}ustainable {D}evelopment {G}oal for
+  health: an assessment of the feasibility of reducing premature mortality by
+  40\% by 2030</p></title>
+  <aug>
+    <au><snm>Gonz{\'a}lez Pier</snm><fnm>E</fnm></au>
+    <au><snm>Barraza Llor{\'e}ns</snm><fnm>M</fnm></au>
+    <au><snm>Beyeler</snm><fnm>N</fnm></au>
+    <au><snm>Jamison</snm><fnm>D</fnm></au>
+    <au><snm>Knaul</snm><fnm>F</fnm></au>
+    <au><snm>Lozano</snm><fnm>R</fnm></au>
+    <au><snm>Yamey</snm><fnm>G</fnm></au>
+    <au><snm>Sep{\'u}lveda</snm><fnm>J</fnm></au>
+  </aug>
+  <source>The Lancet Global Health</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2016</pubdate>
+  <volume>4</volume>
+  <issue>10</issue>
+  <fpage>e714</fpage>
+  <lpage>-e725</lpage>
+</bibl>
+
+<bibl id="B22">
+  <title><p>Health care utilization in the elderly Mexican population:
+  expenditures and determinants</p></title>
+  <aug>
+    <au><snm>Gonz{\'a}lez Gonz{\'a}lez</snm><fnm>C</fnm></au>
+    <au><snm>S{\'a}nchez Garc{\'\i}a</snm><fnm>S</fnm></au>
+    <au><snm>Ju{\'a}rez Cedillo</snm><fnm>T</fnm></au>
+    <au><snm>Rosas Carrasco</snm><fnm>O</fnm></au>
+    <au><snm>Guti{\'e}rrez Robledo</snm><fnm>LM</fnm></au>
+    <au><snm>Garc{\'\i}a Pe{\~n}a</snm><fnm>C</fnm></au>
+  </aug>
+  <source>BMC public health</source>
+  <publisher>BioMed Central</publisher>
+  <pubdate>2011</pubdate>
+  <volume>11</volume>
+  <issue>1</issue>
+  <fpage>192</fpage>
+</bibl>
+
+<bibl id="B23">
+  <title><p>Dissonant health transition in the states of {M}exico, 1990--2013:
+  a systematic analysis for the {G}lobal {B}urden of {D}isease Study
+  2013</p></title>
+  <aug>
+    <au><snm>G{\'o}mez Dant{\'e}s</snm><fnm>H</fnm></au>
+    <au><snm>Fullman</snm><fnm>N</fnm></au>
+    <au><snm>Lamadrid Figueroa</snm><fnm>H</fnm></au>
+    <au><snm>Cahuana Hurtado</snm><fnm>L</fnm></au>
+    <au><snm>Darney</snm><fnm>B</fnm></au>
+    <au><snm>Avila Burgos</snm><fnm>L</fnm></au>
+    <au><snm>Correa Rotter</snm><fnm>R</fnm></au>
+    <au><snm>Rivera</snm><fnm>JA</fnm></au>
+    <au><snm>Barquera</snm><fnm>S</fnm></au>
+    <au><snm>Gonz{\'a}lez Pier</snm><fnm>E</fnm></au>
+    <au><cnm>others</cnm></au>
+  </aug>
+  <source>The Lancet</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2016</pubdate>
+  <volume>388</volume>
+  <issue>10058</issue>
+  <fpage>2386</fpage>
+  <lpage>-2402</lpage>
+</bibl>
+
+<bibl id="B24">
+  <title><p>Bridging the divide: global lessons from evidence-based health
+  policy in {M}exico</p></title>
+  <aug>
+    <au><snm>Frenk</snm><fnm>J</fnm></au>
+  </aug>
+  <source>The Lancet</source>
+  <pubdate>2006</pubdate>
+  <volume>368</volume>
+  <issue>9539</issue>
+  <fpage>954</fpage>
+  <lpage>961</lpage>
+  <url>http://www.sciencedirect.com/science/article/pii/S0140673606693768</url>
+</bibl>
+
+<bibl id="B25">
+  <title><p>Deaths microdata</p></title>
+  <aug>
+    <au><cnm>{{Instituto Nacional de Estad{\'i}stica y
+  Geograf{\'i}a}}</cnm></au>
+  </aug>
+  <publisher>INEGI</publisher>
+  <pubdate>2015</pubdate>
+  <url>http://www3.inegi.org.mx/sistemas/microdatos</url>
+  <note>machine readable files</note>
+</bibl>
+
+<bibl id="B26">
+  <title><p>Epidemiological and nutritional transition in {M}exico: rapid
+  increase of non-communicable chronic diseases and obesity</p></title>
+  <aug>
+    <au><snm>Rivera</snm><fnm>JA</fnm></au>
+    <au><snm>Barquera</snm><fnm>S</fnm></au>
+    <au><snm>Campirano</snm><fnm>F</fnm></au>
+    <au><snm>Campos</snm><fnm>I</fnm></au>
+    <au><snm>Safdie</snm><fnm>M</fnm></au>
+    <au><snm>Tovar</snm><fnm>V</fnm></au>
+  </aug>
+  <source>Public health nutrition</source>
+  <publisher>Cambridge Univ Press</publisher>
+  <pubdate>2002</pubdate>
+  <volume>5</volume>
+  <issue>1a</issue>
+  <fpage>113</fpage>
+  <lpage>-122</lpage>
+</bibl>
+
+<bibl id="B27">
+  <title><p>{MortalitySmooth}: An {R} Package for Smoothing {P}oisson Counts
+  with {P}-Splines</p></title>
+  <aug>
+    <au><snm>Camarda</snm><fnm>CG</fnm></au>
+  </aug>
+  <source>Journal of Statistical Software</source>
+  <pubdate>2012</pubdate>
+  <volume>50</volume>
+  <issue>1</issue>
+  <fpage>1</fpage>
+  <lpage>-24</lpage>
+  <url>http://www.jstatsoft.org/v50/i01/</url>
+</bibl>
+
+<bibl id="B28">
+  <title><p>Methods protocol for the human mortality database</p></title>
+  <aug>
+    <au><snm>Wilmoth</snm><fnm>JR</fnm></au>
+    <au><snm>Andreev</snm><fnm>K</fnm></au>
+    <au><snm>Jdanov</snm><fnm>D</fnm></au>
+    <au><snm>Glei</snm><fnm>DA</fnm></au>
+    <au><snm>Boe</snm><fnm>C</fnm></au>
+    <au><snm>Bubenheim</snm><fnm>M</fnm></au>
+    <au><snm>Philipov</snm><fnm>D</fnm></au>
+    <au><snm>Shkolnikov</snm><fnm>V</fnm></au>
+    <au><snm>Vachon</snm><fnm>P</fnm></au>
+  </aug>
+  <pubdate>2007</pubdate>
+  <url>http://mortality. org [version 31/05/2007]</url>
+</bibl>
+
+<bibl id="B29">
+  <title><p>Measuring and explaining the change in life
+  expectancies</p></title>
+  <aug>
+    <au><snm>Arriaga</snm><fnm>EE</fnm></au>
+  </aug>
+  <source>Demography</source>
+  <publisher>Springer</publisher>
+  <pubdate>1984</pubdate>
+  <volume>21</volume>
+  <issue>1</issue>
+  <fpage>83</fpage>
+  <lpage>-96</lpage>
+</bibl>
+
+<bibl id="B30">
+  <title><p>A decomposition method based on a model of continuous
+  change</p></title>
+  <aug>
+    <au><snm>Horiuchi</snm><fnm>S</fnm></au>
+    <au><snm>Wilmoth</snm><fnm>JR</fnm></au>
+    <au><snm>Pletcher</snm><fnm>SD</fnm></au>
+  </aug>
+  <source>Demography</source>
+  <publisher>Springer</publisher>
+  <pubdate>2008</pubdate>
+  <volume>45</volume>
+  <issue>4</issue>
+  <fpage>785</fpage>
+  <lpage>-801</lpage>
+</bibl>
+
+<bibl id="B31">
+  <title><p>Avoidable mortality in New Zealand, 1981--97</p></title>
+  <aug>
+    <au><snm>Tobias</snm><fnm>M</fnm></au>
+    <au><snm>Jackson</snm><fnm>G</fnm></au>
+  </aug>
+  <source>Australian and New Zealand journal of public health</source>
+  <publisher>Wiley Online Library</publisher>
+  <pubdate>2001</pubdate>
+  <volume>25</volume>
+  <issue>1</issue>
+  <fpage>12</fpage>
+  <lpage>-20</lpage>
+</bibl>
+
+<bibl id="B32">
+  <title><p>Neither Rights Nor Security: Killings, Torture, and Disappearances
+  in {M}exico’s “War on Drugs”</p></title>
+  <aug>
+    <au><cnm>{{Human Rights Watch}}</cnm></au>
+  </aug>
+  <publisher>HRW</publisher>
+  <pubdate>2011</pubdate>
+</bibl>
+
+<bibl id="B33">
+  <title><p>Avoidable Mortality</p></title>
+  <aug>
+    <au><snm>Beltr{\'a}n S{\'a}nchez</snm><fnm>H</fnm></au>
+  </aug>
+  <source>International handbook of adult mortality</source>
+  <publisher>Springer</publisher>
+  <pubdate>2011</pubdate>
+  <fpage>491</fpage>
+  <lpage>-508</lpage>
+</bibl>
+
+<bibl id="B34">
+  <title><p>In amenable mortality—deaths avoidable through health
+  care—progress in the US lags that of three European countries</p></title>
+  <aug>
+    <au><snm>Nolte</snm><fnm>E</fnm></au>
+    <au><snm>McKee</snm><fnm>CM</fnm></au>
+  </aug>
+  <source>Health Affairs</source>
+  <publisher>Health Affairs</publisher>
+  <pubdate>2012</pubdate>
+  <fpage>10</fpage>
+  <lpage>-1377</lpage>
+</bibl>
+
+<bibl id="B35">
+  <title><p>Commentary: should we not go further than descriptions of avoidable
+  mortality?</p></title>
+  <aug>
+    <au><snm>Holland</snm><fnm>WW</fnm></au>
+  </aug>
+  <source>International journal of epidemiology</source>
+  <publisher>IEA</publisher>
+  <pubdate>2003</pubdate>
+  <volume>32</volume>
+  <issue>3</issue>
+  <fpage>447</fpage>
+  <lpage>-448</lpage>
+</bibl>
+
+<bibl id="B36">
+  <title><p>Epistemological Ignorances and Fighting for the Disappeared:
+  Lessons from Mexico</p></title>
+  <aug>
+    <au><snm>Wright</snm><fnm>MW</fnm></au>
+  </aug>
+  <source>Antipode</source>
+  <publisher>Wiley Online Library</publisher>
+  <pubdate>2017</pubdate>
+  <volume>49</volume>
+  <issue>1</issue>
+  <fpage>249</fpage>
+  <lpage>-269</lpage>
+</bibl>
+
+<bibl id="B37">
+  <title><p>{M}exico's epidemic of violence and its public health significance
+  on average length of life</p></title>
+  <aug>
+    <au><snm>Canudas Romo</snm><fnm>V</fnm></au>
+    <au><snm>Aburto</snm><fnm>JM</fnm></au>
+    <au><snm>Garc{\'\i}a Guerrero</snm><fnm>VM</fnm></au>
+    <au><snm>Beltr{\'a}n S{\'a}nchez</snm><fnm>H</fnm></au>
+  </aug>
+  <source>Journal of epidemiology and community health</source>
+  <publisher>BMJ Publishing Group Ltd</publisher>
+  <pubdate>2017</pubdate>
+  <volume>71</volume>
+  <issue>2</issue>
+  <fpage>188</fpage>
+  <lpage>-193</lpage>
+</bibl>
+
+<bibl id="B38">
+  <title><p>Analysis of M{\'e}xico’s Narco-War Network
+  (2007--2011)</p></title>
+  <aug>
+    <au><snm>Espinal Enr{\'\i}quez</snm><fnm>J</fnm></au>
+    <au><snm>Larralde</snm><fnm>H</fnm></au>
+  </aug>
+  <source>PloS one</source>
+  <publisher>Public Library of Science</publisher>
+  <pubdate>2015</pubdate>
+  <volume>10</volume>
+  <issue>5</issue>
+  <fpage>e0126503</fpage>
+</bibl>
+
+<bibl id="B39">
+  <title><p>Obesity and diabetes in the developing world—a growing
+  challenge</p></title>
+  <aug>
+    <au><snm>Hossain</snm><fnm>P</fnm></au>
+    <au><snm>Kawar</snm><fnm>B</fnm></au>
+    <au><snm>El Nahas</snm><fnm>M</fnm></au>
+  </aug>
+  <source>N Engl j med</source>
+  <publisher>Mass Medical Soc</publisher>
+  <pubdate>2007</pubdate>
+  <volume>2007</volume>
+  <issue>356</issue>
+  <fpage>213</fpage>
+  <lpage>-215</lpage>
+</bibl>
+
+<bibl id="B40">
+  <title><p>Obesity in {L}atin {A}merica</p></title>
+  <aug>
+    <au><snm>Aschner</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Metabolic Syndrome</source>
+  <publisher>Springer</publisher>
+  <pubdate>2016</pubdate>
+  <fpage>33</fpage>
+  <lpage>-39</lpage>
+</bibl>
+
+<bibl id="B41">
+  <title><p>The prevalence of chronic diseases and major disease risk factors
+  at different ages among 150 000 men and women living in {M}exico {C}ity:
+  cross-sectional analyses of a prospective study</p></title>
+  <aug>
+    <au><snm>Kuri Morales</snm><fnm>P</fnm></au>
+    <au><snm>Emberson</snm><fnm>J</fnm></au>
+    <au><snm>Alegre D{\'\i}az</snm><fnm>J</fnm></au>
+    <au><snm>Tapia Conyer</snm><fnm>R</fnm></au>
+    <au><snm>Collins</snm><fnm>R</fnm></au>
+    <au><snm>Peto</snm><fnm>R</fnm></au>
+    <au><snm>Whitlock</snm><fnm>G</fnm></au>
+  </aug>
+  <source>BMC Public Health</source>
+  <publisher>BioMed Central</publisher>
+  <pubdate>2009</pubdate>
+  <volume>9</volume>
+  <issue>1</issue>
+  <fpage>9</fpage>
+</bibl>
+
+<bibl id="B42">
+  <title><p>The millennium development goals report 2009</p></title>
+  <aug>
+    <au><cnm>{{United Nations}}</cnm></au>
+  </aug>
+  <publisher>United Nations Publications</publisher>
+  <pubdate>2009</pubdate>
+</bibl>
+
+<bibl id="B43">
+  <title><p>Achieving Effective Universal Health Coverage And Diagonal
+  Approaches To Care For Chronic Illnesses</p></title>
+  <aug>
+    <au><snm>Knaul</snm><fnm>FM</fnm></au>
+    <au><snm>Bhadelia</snm><fnm>A</fnm></au>
+    <au><snm>Atun</snm><fnm>R</fnm></au>
+    <au><snm>Frenk</snm><fnm>J</fnm></au>
+  </aug>
+  <source>Health Affairs</source>
+  <publisher>Health Affairs</publisher>
+  <pubdate>2015</pubdate>
+  <volume>34</volume>
+  <issue>9</issue>
+  <fpage>1514</fpage>
+  <lpage>-1522</lpage>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment
