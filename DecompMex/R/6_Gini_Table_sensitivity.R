@@ -1,14 +1,13 @@
-
-setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
-
-if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
-  # if I'm on the laptop
-  setwd("/home/tim/git/DecompMex/DecompMex")
+if (system("hostname",intern=TRUE) == "ADM-108625") {
+  setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
 } else {
-  # in that case I'm on Berkeley system, and other people in the dept can run this too
-  setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
-}
-
+  if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
+    # if I'm on the laptop
+    setwd("/home/tim/git/DecompMex/DecompMex")
+  } else {
+    # in that case I'm on Berkeley system, and other people in the dept can run this too
+    setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
+  }}
 
 
 # Load data and group causes according to paper ---------------------------
@@ -64,23 +63,23 @@ library(latticeExtra)
 
 #### Table 1
 Dx <- melt(Counts, id.vars = 1:4, variable.name = "cause", value.name = "Dx" )
-Dx.75 <- Dx[age<76]
+Dx.85 <- Dx[age<86]
 
-Dxc2 <- tapply(Dx.75$Dx,list(Dx.75$year, Dx.75$cause), sum)[,1:10]
+Dxc2 <- tapply(Dx.85$Dx,list(Dx.85$year, Dx.85$cause), sum)[,1:10]
 
-am.names <- c("Causes amenable to medical service","Diabetes","Ischemic heart diseases",
+am.names <- c("AMS","Diabetes","Ischemic heart diseases",
               "HIV/AIDS","Lung cancer","Cirrhosis","Homicide","Road traffic accidents",
               "Suicide","Other causes")
 
 tab1<- round(Dxc2/1000,1)
-per <-   round(t(100 * Dxc2/ rowSums(Dxc)),1)
+per <-   round(t(100 * Dxc2/ rowSums(Dxc2)),1)
 t1  <- paste(per[,1],"%",sep=" ")
 t2  <- paste(per[,2],"%",sep=" ")
 ta  <- cbind(Category=am.names,Males =t1,MalesPercent=tab1[1,],Females=t2,FemalesPercent=tab1[2,])
 
 print(xtable(prettyNum(ta,big.mark=","),
              caption = "Avoidable Mortality classification, 
-             with crude percentages below age 75.",
+             with crude percentages below age 85.",
              label="tab:causes"), include.rownames=F,caption.placement = "top")
 
 ######### Sensitivity analysis of classification
@@ -92,19 +91,19 @@ Dxc <- tapply(Dx$Dx,list(Dx$year, Dx$cause), sum)
 
 colnames(Dxc) <- c.names
 Dxc.df    <- melt(Dxc)
-
+source("R/Functions_fig.R")
 Sens.fig <- xyplot(value~Var1|Var2,group=Var2, data=Dxc.df, type="l",
-                   ylab="Death counts", xlab="Year",
+                   ylab="Death counts", xlab="Year",,par.settings=my.settings,
                    scales=list(alternating=1,x=list(cex=.75,at=c(seq(1990,2015,5))),
-                               y=list(relation="free")),                                       
+                               y=list(relation="free",cex=.6)),                                       
                    panel = function(x, y,...){           
                      panel.abline(v=c(seq(1990,2015,5)),col='dark grey',lty=3)
                      panel.abline(v=1998,col='red',lty=1)
                      panel.grid(h=-1,v=0,col='dark grey',lty=3)           
                      panel.xyplot(x, y,lty=1,...)  
                    })
-
-pdf(file="Sensitivity_fig.pdf",width=10,height=7,pointsize=12)
+Sens.fig
+pdf(file="Appendix Figures/Sensitivity_fig.pdf",width=10,height=7,pointsize=12)
 print(Sens.fig)
 dev.off()
 
@@ -127,7 +126,7 @@ my.settings <- list(
   strip.border=list(col="black")
 )
 
-load("Data/Temp_e0_results.RData")
+load("Data/Temp_e0_results_smooth.RData")
 
 Greens           <- brewer.pal(5,"Greens")[2:5]
 
@@ -163,7 +162,7 @@ Gini.fig <-xyplot(V1~year|sex,data=gini.states,groups=age.g,type="l",lwd=2,betwe
                   })
 Gini.fig             
 
-pdf(file="Gini_fig.pdf",width=10,height=6,pointsize=12)
+pdf(file="Appendix Figures/Gini_fig.pdf",width=10,height=6,pointsize=12)
 print(Gini.fig)
 dev.off()
 
@@ -187,25 +186,50 @@ cv.states$sex <- factor(cv.states$sex,levels=c(1,2),labels=c("Males", "Females")
 
 
 
-cv.fig <-xyplot(V1~year|sex,data=cv.states,groups=age.g,type="l",lwd=2,between=list(x=1),
+ cv.fig <-xyplot(V1~year|sex,data=cv.states,groups=age.g,type="l",lwd=2,between=list(x=1),
                   xlim=c(1990,2015),main="Survival inequality",
                 #ylim=c(0,.6),
                 ylab="Coefficient of variation",
                   layout=c(2,1),strip.left=F,strip=T,
-                  col=Greens[-4],par.settings=my.settings,xlab="Year", 
+                  col=Greens[-4],par.settings=my.settings,xlab="Year",
                   key=list(x=.2,y=.9,background="transparent",
                            text=list(c('Young (0-14)','Young adults(15-49)','Older adults(50-84)'),
                                      col="black"),cex=1,
                            lines=list(lty=c(1,1,1),lwd=2,col=Greens[-4])),
                   scales=list(x=list(cex=.75,at=c(seq(1990,2015,5))),
-                              y=list(cex=.75,at=seq(0,.05,.005),alternating=1)),                                       
-                  panel = function(x, y,...){           
+                              y=list(cex=.75,at=seq(0,.05,.005),alternating=1)),
+                  panel = function(x, y,...){
                     panel.abline(v=c(seq(1990,2015,5)),col='dark grey',lty=3)
                     panel.abline(h=c(seq(0,.05,.005)),col='dark grey',lty=3)
-                    panel.xyplot(x, y,lty=c(1,1,1,2),...)  
+                    panel.xyplot(x, y,lty=c(1,1,1,2),...)
                   })
-cv.fig         
-
-pdf(file="CVfig.pdf",width=11,height=7,pointsize=12)
+cv.fig
+pdf(file="Appendix Figures/CVfig.pdf",width=11,height=7,pointsize=12)
 print(cv.fig)
+dev.off()
+
+
+Greens           <- brewer.pal(5,"Blues")[2:5]
+
+cv.fig2 <-xyplot(V1~year,data=cv.states[sex=="Males"],groups=age.g,type="l",between=list(x=1),
+                xlim=c(1990,2015),main="Disparities between states",
+                ylim = c(0,.04),
+                ylab="Coefficient of variation",
+                strip.left=F,strip=T,
+                col=Greens[-4],par.settings=my.settings,xlab="Year", 
+                #  key=list(x=.2,y=.9,background="transparent",
+                         #   text=list(c('Young (0-14)','Young adults(15-49)','Older adults(50-84)'),
+                                  #            col="black"),cex=1,
+                        #    lines=list(lty=c(1,1,1),lwd=2,col=Greens[-4])),
+                scales=list(x=list(cex=1,at=c(seq(1990,2015,5))),
+                            y=list(cex=1,at=seq(0,.05,.005),alternating=1)),                                       
+                panel = function(x, y,...){           
+                  panel.abline(v=c(seq(1990,2015,5)),col='dark grey',lty=3)
+                  panel.abline(h=c(seq(0,.05,.005)),col='dark grey',lty=3)
+                  panel.xyplot(x, y,lwd = 4,...)  
+                })
+cv.fig2      
+
+pdf(file="Paper Figures/CVfig_males.pdf",width=7,height=4,pointsize=12)
+print(cv.fig2)
 dev.off()

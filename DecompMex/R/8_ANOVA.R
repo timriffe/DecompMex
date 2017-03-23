@@ -1,20 +1,20 @@
-
-setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
-
-if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
-  # if I'm on the laptop
-  setwd("/home/tim/git/DecompMex/DecompMex")
+if (system("hostname",intern=TRUE) == "ADM-108625") {
+  setwd("C:/Users/jmaburto/Documents/GitHub/DecompMex/DecompMex")
 } else {
-  # in that case I'm on Berkeley system, and other people in the dept can run this too
-  setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
-}
+  if (system("hostname",intern=TRUE) %in% c("triffe-N80Vm", "tim-ThinkPad-L440")){
+    # if I'm on the laptop
+    setwd("/home/tim/git/DecompMex/DecompMex")
+  } else {
+    # in that case I'm on Berkeley system, and other people in the dept can run this too
+    setwd(paste0("/data/commons/",system("whoami",intern=TRUE),"/git/DecompMex/DecompMex"))
+  }}
 
 library(reshape2)
 library(latticeExtra)
 library(data.table)
 library(RColorBrewer)
 
-load("Data/Temp_e0_results.RData")
+load("Data/Temp_e0_results_smooth.RData")
 source("R/Functions_fig.R")
 
 
@@ -51,9 +51,12 @@ setnames(tk.1, "p adj", "p")
 tk.1$combination <- tk.1.names
 head(tk.1)
 rownames(tk.1)
-dim(tk.1[p < .5])
 
-3415/4560
+
+# percentaje of siginificant different combinations
+nrow(tk.1[p < .001])/nrow(tk.1) *100
+
+
 
 
 
@@ -193,27 +196,27 @@ rankplot <- function(mat,
 	}
 }
 
-display.brewer.all()
-pdf("Manuscript/bmc_Manuscript/Version 2/RankMales.pdf",width=5,height=8)
-par(mai=c(.5,1.5,.5,.5))
+# display.brewer.all()
+# pdf("Paper Figures/RankMales.pdf",width=5,height=8)
+# par(mai=c(.5,1.5,.5,.5))
+# 
+# rankplot(m.mat, colmales, lwdmales, pchmales, 
+# 		panel.first=
+# 				list(
+# 						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
+# text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (50-84)"),xpd=TRUE)
+# legend(x=1,y=-1,
+# 		pch = c(17,16,15),
+# 		col=c(oranges[5],purples[5],greens[5]),
+# 		legend=c("North","Central","South"),
+# 		bty="n",
+# 		horiz=TRUE,
+# 		xpd=TRUE,
+# 		border = NA)
+# 
+# dev.off()
 
-rankplot(m.mat, colmales, lwdmales, pchmales, 
-		panel.first=
-				list(
-						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
-text(1:3,33,c("Young (0-14)","Middle (15-49)","Older (50-84)"),xpd=TRUE)
-legend(x=1,y=-1,
-		pch = c(17,16,15),
-		col=c(oranges[5],purples[5],greens[5]),
-		legend=c("North","Central","South"),
-		bty="n",
-		horiz=TRUE,
-		xpd=TRUE,
-		border = NA)
-
-dev.off()
-
-pdf("Manuscript/bmc_Manuscript/Version 2/RankFemales.pdf",width=5,height=8)
+pdf("Appendix Figures/RankFemales.pdf",width=5,height=8)
 par(mai=c(.5,1.5,.5,.5))
 rankplot(f.mat, colfemales, lwdfemales, 
 		panel.first=
@@ -235,13 +238,25 @@ dev.off()
 ####################################  new graph with v shapes higlighted
 
 # codes according to v and inverted v shapes
+# get regions
+state.code.recvec <- 
+  c("Aguascalientes","Baja California","Baja California Sur","Campeche",
+    "Coahuila","Colima","Chiapas","Chihuahua","Mexico City","Durango",
+    "Guanajuato","Guerrero","Hidalgo","Jalisco","Mexico State","Michoacan",
+    "Morelos","Nayarit","Nuevo Leon","Oaxaca","Puebla","Queretaro",
+    "Quintana Roo","San Luis Potosi","Sinaloa","Sonora","Tabasco","Tamaulipas",
+    "Tlaxcala","Veracruz","Yucatan","Zacatecas")
 
-region.vshape <- c(2,2,2,2,
-                   2,1,2,2,3,2,
-                   2,1,3,3,2,1,
-                   1,1,2,2,3,3,
-                   2,2,1,2,2,2,
-                   3,2,3,1)
+names(state.code.recvec) <- 1:32
+
+region.vshape <- c(2,2,2,2,2,
+                   2,2,2,3,2,
+                   2,1,3,2,2,
+                   1,1,1,2,2,
+                   3,3,2,2,1,
+                   2,2,2,2,2,
+                   3,1)
+
 length(region.vshape)
 names(region.vshape)     <- 1:32
 
@@ -326,7 +341,7 @@ pchfemales    <- pchvec[colnames(f.mat)]
 colnames(m.mat) <- state.code.recvec[colnames(m.mat)]
 colnames(f.mat) <- state.code.recvec[colnames(f.mat)]
 
-pdf("Manuscript/bmc_Manuscript/Version 2/RankMales_2.pdf",width=5,height=8)
+pdf("Paper Figures/RankMales_2.pdf",width=5,height=8,useDingbats = F)
 par(mai=c(.5,1.5,.5,.5))
 
 rankplot(m.mat, colmales, lwdmales, pchmales, 
