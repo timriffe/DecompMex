@@ -121,15 +121,14 @@ sm.mat.2   <- function(DX, EX){
 	W     		<- EX
 	W[W > 0] 	<- 1
 	W[DX < 1 & W == 1] 	<- .3
-	#W[DX == 0] 	<- 0
 	mxs         <- W * 0
 	for (i in 1:ncol(mxs)){
 		fiti   	<- Mort1Dsmooth(
 				x = ages, 
 				y = DX[,i],
 				offset = log(EX[,i]), 
-				W = W[,i],
-				control=list(MAX.IT=300))
+				w = W[,i],
+				control=list(MAX.IT=200))
 		
 		mxsi 	<- exp(fit$logmortality)
 		mxs[,i] <- mxsi
@@ -138,6 +137,7 @@ sm.mat.2   <- function(DX, EX){
 	mxs <- melt(mxs, varnames=c("age","year"), value.name = "mxs")
 	mxs
 }
+
 sm.chunk.2 <- function(.SD,i){
 	DX      <- acast(.SD, age~year, value.var = colnames(Counts)[i], fill = 0)
 	EX      <- acast(.SD, age~year, value.var = "Pop", fill = 0)

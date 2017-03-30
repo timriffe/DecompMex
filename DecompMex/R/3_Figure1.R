@@ -43,8 +43,8 @@
          xlab="",ylab = "Years",par.settings=my.settings,par.strip.text=list(cex=1.3),
          scales = list(alternating=1,x=list(cex=.9,at=c(seq(1990,2015,5))),y = list(relation = "free",cex=.9,rot=0),tck=c(1,0)),
          ylim = list(c(14,15),
-                     c(30,35),
-                     c(23,35)),
+                     c(24,35),
+                     c(24,35)),
          panel = function(x, y, ...){                        
            panel.abline(v=c(seq(1990,2015,5)),col='dark grey',lty=3)				
            panel.abline(h=list(c(15),c(35),c(35)),col="black",lty=1)				
@@ -112,9 +112,16 @@ mean(tab.state(3,2015,"Males")$temp_e0[-c(33,34)])
 
 
 
+model.data <- fig1.data[fig1.data$state < 33 & fig1.data$sex == 'Males' & fig1.data$age.g == unique(fig1.data$age.g)[3],]
+model.data2 <- fig1.data[fig1.data$state < 33 & fig1.data$sex == 'Females' & fig1.data$age.g == unique(fig1.data$age.g)[3],]
+model.data3 <- fig1.data[fig1.data$state < 33 & fig1.data$age.g == unique(fig1.data$age.g)[3],]
 
-
-
+m1 <- lm(temp_e0 ~ year , data = model.data)
+m2 <- lm(temp_e0 ~ year , data = model.data2)
+m3 <- lm(temp_e0 ~ year + sex, data = model.data3)
+summary(m1)
+summary(m2)
+summary(m3)
 
 
 
