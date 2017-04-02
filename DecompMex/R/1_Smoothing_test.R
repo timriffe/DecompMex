@@ -120,26 +120,32 @@ sm.mat.2   <- function(DX, EX){
 	years 		<- 1990:2015
 	W     		<- EX
 	W[W > 0] 	<- 1
-	W[DX < 1 & W == 1] 	<- .3
+	#W[DX < 1 & W == 1] 	<- .3
 	#W[DX == 0] 	<- 0
 	mxs         <- W * 0
-	for (i in 1:ncol(mxs)){
-		fiti   	<- Mort1Dsmooth(
+	for (j in 1:ncol(mxs)){
+		if (sum(DX[,j]) < 10){
+			cat(colnames(DX)[j],"\n")
+		}
+		fiti   	<- suppressWarnings(
+				Mort1Dsmooth(
 				x = ages, 
-				y = DX[,i],
-				offset = log(EX[,i]), 
-				W = W[,i],
-				control=list(MAX.IT=300))
+				y = DX[,j],
+				offset = log(EX[,j]), 
+				w = W[,j],
+				overdispersion = TRUE,
+				control=list(MAX.IT=300)))
 		
-		mxsi 	<- exp(fit$logmortality)
-		mxs[,i] <- mxsi
+		mxsi 	<- exp(fiti$logmortality)
+		mxs[,j] <- mxsi
 	}
 	
 	mxs <- melt(mxs, varnames=c("age","year"), value.name = "mxs")
 	mxs
 }
 sm.chunk.2 <- function(.SD,i){
-	DX      <- acast(.SD, age~year, value.var = colnames(Counts)[i], fill = 0)
+	coli    <- paste0("g",i)
+	DX      <- acast(.SD, age~year, value.var = coli, fill = 0)
 	EX      <- acast(.SD, age~year, value.var = "Pop", fill = 0)
 	
 	mxs     <- sm.mat.2(DX,EX)
@@ -185,10 +191,35 @@ for (i in causes){
 
 # TR: 29-3-2017
 # and for period-only smoothing:
-for (i in causes){
+#mxs <- EX * 0
+#for (j in 1:ncol(mxs)){
+	
+#	fiti   	<- suppressWarnings(
+#			Mort1Dsmooth(
+#			x = ages, 
+#			y = DX[,j],
+#			offset = log(EX[,j]), 
+#			w = W[,j],
+#			overdispersion = TRUE,
+#			control=list(MAX.IT=300))
+#)
+##	
+#	mxsi 	<- exp(fiti$logmortality)
+#	mxs[,j] <- mxsi
+#}
+#image(log(t(mxs)))
+#hist(mxs)
+## selected data
+#.SD <- Counts[sex==1 & state == 1, ]
+#DX      <- acast(.SD, age~year, value.var = "g1", fill = 0)
+#EX      <- acast(.SD, age~year, value.var = "Pop", fill = 0)
+
+
+# i <- 1
+for (i in 1:length(causes)){
 	Mxs      <- Counts[,sm.chunk.2(.SD,i),by=list(state,sex)]
 	Mxs      <- Mxs[with(Mxs,order(year,sex,state,age)),]
-	sm.rates.age.only[,paste0("g",i-4)] <- Mxs$mxs
+	sm.rates.age.only[,paste0("g",i)] <- Mxs$mxs
 	print(i)
 	# cbind(sm.rates,i= Mxs$mxs)
 }
