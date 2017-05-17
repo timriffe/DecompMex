@@ -109,7 +109,7 @@ save(data,temp.data,Mxsc,file = "Data/Temp_e0_results.RData")
 save(data,temp.data,Mxsc,file = "Data/Temp_e0_results_smooth.RData")
 
 
-
+cv.data <- save(BP_temp,ste_temp,file = "Data/cv_figure.RData")
 
 
 

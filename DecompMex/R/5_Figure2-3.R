@@ -223,6 +223,18 @@ print(Heat.map1)
 dev.off()
 
 
+#Male Adults (same scale as appendic)
+brksl <- seq(0,2.75,by=.25)
+brksval <- seq(0,2.75,by=.25/10)
+Heat.map2 <- Figure.heatmap(SubData=Data[Sex=="Males" & Ages=="50-84" &
+                                           AMCategory!="g10" & AMCategory!="g4" & AMCategory!="g9"],
+                            Age.group="female adults",brksl,brksval)
+Heat.map2
+pdf(file="Figures/Adult_Male_heatmap.pdf",width=20,height=11,pointsize=12)
+print(Heat.map2)
+dev.off()
+
+
 #Female Adults
 brksl <- seq(0,2.75,by=.25)
 brksval <- seq(0,2.75,by=.25/10)

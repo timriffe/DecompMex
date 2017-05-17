@@ -236,7 +236,7 @@ my.settings 	<- list(
   strip.border = list(col = "black")
 )
 
-main.label <- "Gap with benchmark survival (years)"
+main.label <- "Gap with benchmark life expectancy (years)"
 
 
 ### one plot fpr the supplemental material
@@ -247,13 +247,13 @@ f1.y <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),y
                                 # TR: changed to gap
                                 xlab=list(main.label,cex=1),main=FALSE,cex=1,
                                 data=f1.y.data, groups=Year,pch=my.pch, col=my.fill,col.line=col.line,lin=line,par.settings=my.settings,
-                                #xlim=c(0,4),
+                                xlim=c(0,4),
                                 scales=list(alternating=1,x=list(cex=1),
                                             y=list(relation="free")),
                                 key=list(position="top",background="white",
                                          title="Year",text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
                                 panel=function(x,y,lin,col.line,...){    
-                                  panel.abline(v=seq(0,.5,.1),lwd=1,lty=1,col="#A1A1A150")
+                                  #panel.abline(v=seq(0,.5,.1),lwd=1,lty=1,col="#A1A1A150")
                                   panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
                                 }),strip.left=T)
 f1.y
@@ -267,13 +267,13 @@ f1.ya <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),
                                  strip=T,
                                  xlab=list(main.label,cex=1),main=FALSE,cex=1,
                                  data=f1.ya.data, groups=Year,pch=my.pch, col=my.fill,col.line=col.line,lin=line,par.settings=my.settings,
-                                 #xlim=c(0,4),
+                                 xlim=c(0,4),
                                  scales=list(alternating=1,x=list(cex=1),
                                              y=list(relation="free")),
                                  key=list(position="top",background="white",
                                           title="Year",text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
                                  panel=function(x,y,lin,col.line,...){    
-                                   panel.abline(v=seq(0,3.5,.5),lwd=1,lty=1,col="#A1A1A150")
+                                   #panel.abline(v=seq(0,3.5,.5),lwd=1,lty=1,col="#A1A1A150")
                                    panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
                                  }),strip.left=T)
 f1.ya
@@ -288,14 +288,14 @@ f1.oa <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),
                                  strip=T,
                                  xlab=list(main.label,cex=1),main=FALSE,cex=1,
                                  data=f1.oa.data, groups=Year,pch=my.pch, col=my.fill,col.line=col.line,lin=line,par.settings=my.settings,
-                                 #xlim=c(0,4),
+                                 xlim=c(0,4),
                                  scales=list(alternating=1,x=list(cex=1),
                                              y=list(relation="free")),
                                  key=list(position="top",background="white",
                                           title="Year",text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
                                  panel=function(x, y, lin, col.line,...){    
                                    #panel.abline(v=seq(.5,3.5,1),lwd=1,lty=3,col="darkgrey")
-                                   panel.abline(v=seq(0,4,1),lwd=1,lty=1,col="#A1A1A150")
+                                   # panel.abline(v=seq(0,4,1),lwd=1,lty=1,col="#A1A1A150")
                                    #panel.abline(v=lin[[1]],col=col.line[[1]],lwd=1,lty=2)
                                    panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
                                  }),strip.left=T)
