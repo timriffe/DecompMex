@@ -143,6 +143,7 @@ sm.mat.2   <- function(DX, EX){
 	mxs <- melt(mxs, varnames=c("age","year"), value.name = "mxs")
 	mxs
 }
+
 sm.chunk.2 <- function(.SD,i){
 	coli    <- paste0("g",i)
 	DX      <- acast(.SD, age~year, value.var = coli, fill = 0)
