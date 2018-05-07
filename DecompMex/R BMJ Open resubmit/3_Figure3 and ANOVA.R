@@ -14,16 +14,17 @@ library(latticeExtra)
 library(data.table)
 library(RColorBrewer)
 
-load("Data/Temp_e0_results_smooth.RData")
+load("Data/CI_Data.RData")
 source("R/Functions_fig.R")
 
 
 ### standardize temporary life expectancy with the maximum survival
-temp.data <- temp.data[state < 33]
+temp.data <- CI_Data
+temp.data <- temp.data[state < 33,]
 temp.data$sd.e <- 0
-temp.data[age.g==1]$sd.e <- temp.data[age.g==1]$temp_e0/15
-temp.data[age.g==2]$sd.e <- temp.data[age.g==2]$temp_e0/35
-temp.data[age.g==3]$sd.e <- temp.data[age.g==3]$temp_e0/35
+temp.data[age.g=='0-14']$sd.e <- temp.data[age.g=='0-14']$temp_e0/15
+temp.data[age.g=='15-49']$sd.e <- temp.data[age.g=='15-49']$temp_e0/35
+temp.data[age.g=='50-84']$sd.e <- temp.data[age.g=='50-84']$temp_e0/35
 range(temp.data$sd.e)
 
 ### try two way anova
@@ -63,7 +64,6 @@ nrow(tk.1[p < .001])/nrow(tk.1) *100
 dat <- temp.data
 dat <- dat[dat$year >= 2010 & dat$state <= 32, ]
 # get avg for 6 years starting 2010
-dat <- data.table(dat)
 dat <- dat[, list(mean_temp_e0 = mean(temp_e0)), by=list(sex,state,age.g)]
 
 # get regions
@@ -84,6 +84,7 @@ names(region.recvec)     <- 1:32
 
 head(dat)
 dat$region               <- region.recvec[as.character(dat$state)]
+
 
 table(dat$region) / 3 / 2
 
@@ -106,17 +107,17 @@ lwdvec 		<- c(lwdgreens, lwdpurples, lwdoranges)
 
 # want darker lines for higher ranks? palettes go from light to dark, so order
 # in ascending
-young 		<- dat[dat$age.g == 1, ]
+young 		<- dat[dat$age.g == '0-14', ]
 young 		<- young[order(young$region, young$sex, young$mean_temp_e0), ]
 
 # order based on left column, which will have state labels. This refers
 # to young age group, ergo, we need within
-males <- dat[sex==1]
-females <- dat[sex==2]
+males <- dat[sex=='Males']
+females <- dat[sex=='Females']
 
-youngmales   <- males[males$age.g == 1, ]
+youngmales   <- males[males$age.g == '0-14', ]
 youngmales   <- youngmales[order(youngmales$region, youngmales$mean_temp_e0), ]
-youngfemales <- females[females$age.g == 1, ]
+youngfemales <- females[females$age.g == '0-14', ]
 youngfemales <- youngfemales[order(youngfemales$region, youngfemales$mean_temp_e0), ]
 
 # at the moment we have independent colors for males and females.
@@ -158,7 +159,7 @@ colnames(m.mat) <- state.code.recvec[colnames(m.mat)]
 colnames(f.mat) <- state.code.recvec[colnames(f.mat)]
 
 # rankplot skeleton function (minimal)
-rankplot <- function(mat, 
+rankplot <- function(mat=m.mat, 
 		col,
 		lwd, 
 		pch,
@@ -173,7 +174,7 @@ rankplot <- function(mat,
 	# ys               <- abs(Nrank - rankmat)
 	laby              <- ys[1,]
 	#ys[mat < 1e-5] <- NA
-	xs                <- as.integer(rownames(ys))
+	xs                <- 1:3
 	labels            <- colnames(ys)
 	plot(NULL, 
 			type = "n", 
@@ -216,7 +217,7 @@ rankplot <- function(mat,
 
 pdf("Appendix Figures/RankFemales.pdf",width=5,height=8)
 par(mai=c(.5,1.5,.5,.5))
-rankplot(f.mat, colfemales, lwdfemales, 
+rankplot(f.mat, col=colfemales,lwd =  lwdfemales, pch = c(17,16,15),
 		panel.first=
 				list(
 						rect(rep(.9,16),seq(1,31,by=2)-.5,rep(3.1,16),seq(2,32,by=2)-.5,col=gray(.92),border=NA)))
@@ -287,17 +288,17 @@ lwdvec 		<- c(lwdgreens, lwdpurples, lwdoranges)
 
 # want darker lines for higher ranks? palettes go from light to dark, so order
 # in ascending
-young 		<- dat[dat$age.g == 1, ]
+young 		<- dat[dat$age.g == '0-14', ]
 young 		<- young[order(young$region.v, young$sex, young$mean_temp_e0), ]
 
 # order based on left column, which will have state labels. This refers
 # to young age group, ergo, we need within
-males    <- dat[dat$sex == 1, ]
-females  <- dat[dat$sex == 2, ]
+males    <- dat[dat$sex == 'Males', ]
+females  <- dat[dat$sex == 'Females', ]
 
-youngmales   <- males[males$age.g == 1, ]
+youngmales   <- males[males$age.g == '0-14', ]
 youngmales   <- youngmales[order(youngmales$region.v, youngmales$mean_temp_e0), ]
-youngfemales <- females[females$age.g == 1, ]
+youngfemales <- females[females$age.g == '0-14', ]
 youngfemales <- youngfemales[order(youngfemales$region.v, youngfemales$mean_temp_e0), ]
 
 # at the moment we have independent colors for males and females.
@@ -339,7 +340,7 @@ pchfemales    <- pchvec[colnames(f.mat)]
 colnames(m.mat) <- state.code.recvec[colnames(m.mat)]
 colnames(f.mat) <- state.code.recvec[colnames(f.mat)]
 
-pdf("Paper Figures/RankMales_2.pdf",width=5,height=8,useDingbats = F)
+pdf("BMJ Open Revise and Resubmit/Figures/Figure3_minimal.pdf",width=5,height=8,useDingbats = F)
 par(mai=c(.5,1.5,.5,.5))
 
 rankplot(m.mat, colmales, lwdmales, pchmales, 
