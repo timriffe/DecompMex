@@ -170,7 +170,7 @@ Data$Ages   <- factor(Data$Ages,
                       labels = c("0-14", "15-49", "50-84"))
 Data$Sex    <- factor(Data$Sex, 
                       levels = c(1, 2), 
-                      labels = c("Females", "Males"))
+                      labels = c("Males", "Females"))
 
 #### Distance data
 # TR: how about we call it a 'gap'?
@@ -255,7 +255,7 @@ f2.1 <- dotplot(Statenom ~ Distance | region,
               col.line = col.line,
               lin = line,
               par.settings = my.settings,
-              xlim = c(0,3),
+              xlim = c(0,4),
               between = list(y = .5),
               scales = list(alternating = 1,
                             x = list(cex = 1, at = seq(0,4,1), labels = as.character(seq(0,4,1))),

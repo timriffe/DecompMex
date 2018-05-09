@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.3)  4 MAY 2018 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.3)  9 MAY 2018 10:16
 entering extended mode
 **"./Supplemental material.tex"
 ("Supplemental material.tex"
@@ -535,205 +535,218 @@ File: Figures/Sensitivity_fig.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/Sensitivity_fig.pdf used on input line 176.
 (pdftex.def)             Requested size: 469.74944pt x 328.82458pt.
 
-<Figures/CVfig.pdf, id=16, 794.97pt x 505.89pt>
+<Figures/Temp_e0_CIs_RR_Final.pdf, id=16, 794.97pt x 722.7pt>
+File: Figures/Temp_e0_CIs_RR_Final.pdf Graphic file (type pdf)
+
+<use Figures/Temp_e0_CIs_RR_Final.pdf>
+Package pdftex.def Info: Figures/Temp_e0_CIs_RR_Final.pdf used on input line 18
+5.
+(pdftex.def)             Requested size: 516.72438pt x 469.74944pt.
+
+Overfull \hbox (94.6932pt too wide) in paragraph at lines 185--187
+[]
+ []
+
+<Figures/CVfig.pdf, id=17, 794.97pt x 505.89pt>
 File: Figures/CVfig.pdf Graphic file (type pdf)
  <use Figures/CVfig.pdf>
-Package pdftex.def Info: Figures/CVfig.pdf used on input line 185.
+Package pdftex.def Info: Figures/CVfig.pdf used on input line 194.
 (pdftex.def)             Requested size: 357.7332pt x 227.64839pt.
 
+[3] [4 <./Figures/Sensitivity_fig.pdf>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/RankFemales.pdf, id=17, 361.35pt x 578.16pt>
+<Figures/RankFemales.pdf, id=39, 361.35pt x 578.16pt>
 File: Figures/RankFemales.pdf Graphic file (type pdf)
 
 <use Figures/RankFemales.pdf>
-Package pdftex.def Info: Figures/RankFemales.pdf used on input line 192.
+Package pdftex.def Info: Figures/RankFemales.pdf used on input line 201.
 (pdftex.def)             Requested size: 180.67456pt x 289.07928pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/Adult_Male_heatmap.pdf, id=18, 1445.4pt x 794.97pt>
+<Figures/Adult_Male_heatmap.pdf, id=40, 1445.4pt x 794.97pt>
 File: Figures/Adult_Male_heatmap.pdf Graphic file (type pdf)
 
 <use Figures/Adult_Male_heatmap.pdf>
-Package pdftex.def Info: Figures/Adult_Male_heatmap.pdf used on input line 201.
+Package pdftex.def Info: Figures/Adult_Male_heatmap.pdf used on input line 210.
 
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/Adult_Female_heatmap.pdf, id=19, 1445.4pt x 794.97pt>
+<Figures/Adult_Female_heatmap.pdf, id=41, 1445.4pt x 794.97pt>
 File: Figures/Adult_Female_heatmap.pdf Graphic file (type pdf)
 
 <use Figures/Adult_Female_heatmap.pdf>
-Package pdftex.def Info: Figures/Adult_Female_heatmap.pdf used on input line 20
-8.
+Package pdftex.def Info: Figures/Adult_Female_heatmap.pdf used on input line 21
+7.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/Young_Male_heatmap.pdf, id=20, 1445.4pt x 794.97pt>
+<Figures/Young_Male_heatmap.pdf, id=42, 1445.4pt x 794.97pt>
 File: Figures/Young_Male_heatmap.pdf Graphic file (type pdf)
 
 <use Figures/Young_Male_heatmap.pdf>
-Package pdftex.def Info: Figures/Young_Male_heatmap.pdf used on input line 216.
+Package pdftex.def Info: Figures/Young_Male_heatmap.pdf used on input line 225.
 
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Figures/Young_Female_heatmap.pdf, id=21, 1445.4pt x 794.97pt>
+<Figures/Young_Female_heatmap.pdf, id=43, 1445.4pt x 794.97pt>
 File: Figures/Young_Female_heatmap.pdf Graphic file (type pdf)
 
 <use Figures/Young_Female_heatmap.pdf>
-Package pdftex.def Info: Figures/Young_Female_heatmap.pdf used on input line 22
-4.
+Package pdftex.def Info: Figures/Young_Female_heatmap.pdf used on input line 23
+3.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Figures/YoungAdult_Male_heatmap.pdf, id=22, 1445.4pt x 794.97pt>
+<Figures/YoungAdult_Male_heatmap.pdf, id=44, 1445.4pt x 794.97pt>
 File: Figures/YoungAdult_Male_heatmap.pdf Graphic file (type pdf)
 
 <use Figures/YoungAdult_Male_heatmap.pdf>
 Package pdftex.def Info: Figures/YoungAdult_Male_heatmap.pdf used on input line
- 234.
+ 243.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Figures/YoungAdult_Female_heatmap.pdf, id=23, 1445.4pt x 794.97pt>
+<Figures/YoungAdult_Female_heatmap.pdf, id=45, 1445.4pt x 794.97pt>
 File: Figures/YoungAdult_Female_heatmap.pdf Graphic file (type pdf)
 
 <use Figures/YoungAdult_Female_heatmap.pdf>
 Package pdftex.def Info: Figures/YoungAdult_Female_heatmap.pdf used on input li
-ne 242.
+ne 251.
 (pdftex.def)             Requested size: 433.62335pt x 238.49284pt.
 
-<Figures/Distance_y.pdf, id=24, 578.16pt x 794.97pt>
+<Figures/Distance_y.pdf, id=46, 578.16pt x 794.97pt>
 File: Figures/Distance_y.pdf Graphic file (type pdf)
 
 <use Figures/Distance_y.pdf>
-Package pdftex.def Info: Figures/Distance_y.pdf used on input line 252.
+Package pdftex.def Info: Figures/Distance_y.pdf used on input line 261.
 (pdftex.def)             Requested size: 462.52863pt x 635.97687pt.
 
 
-LaTeX Warning: Float too large for page by 29.27065pt on input line 254.
+LaTeX Warning: Float too large for page by 29.27065pt on input line 263.
 
-<Figures/Distance_ya.pdf, id=25, 578.16pt x 794.97pt>
+<Figures/Distance_ya.pdf, id=47, 578.16pt x 794.97pt>
 File: Figures/Distance_ya.pdf Graphic file (type pdf)
 
 <use Figures/Distance_ya.pdf>
-Package pdftex.def Info: Figures/Distance_ya.pdf used on input line 260.
+Package pdftex.def Info: Figures/Distance_ya.pdf used on input line 269.
 (pdftex.def)             Requested size: 462.52863pt x 635.97687pt.
 
 
-LaTeX Warning: Float too large for page by 29.27065pt on input line 262.
+LaTeX Warning: Float too large for page by 29.27065pt on input line 271.
 
-<Figures/Distance_oa.pdf, id=26, 578.16pt x 794.97pt>
+<Figures/Distance_oa.pdf, id=48, 578.16pt x 794.97pt>
 File: Figures/Distance_oa.pdf Graphic file (type pdf)
 
 <use Figures/Distance_oa.pdf>
-Package pdftex.def Info: Figures/Distance_oa.pdf used on input line 268.
+Package pdftex.def Info: Figures/Distance_oa.pdf used on input line 277.
 (pdftex.def)             Requested size: 462.52863pt x 635.97687pt.
 
 
-LaTeX Warning: Float too large for page by 29.27065pt on input line 270.
+LaTeX Warning: Float too large for page by 29.27065pt on input line 279.
 
-<Figures/Figure_prop_yf.pdf, id=27, 1011.78pt x 722.7pt>
+<Figures/Figure_prop_yf.pdf, id=49, 1011.78pt x 722.7pt>
 File: Figures/Figure_prop_yf.pdf Graphic file (type pdf)
 
 <use Figures/Figure_prop_yf.pdf>
-Package pdftex.def Info: Figures/Figure_prop_yf.pdf used on input line 281.
+Package pdftex.def Info: Figures/Figure_prop_yf.pdf used on input line 290.
 (pdftex.def)             Requested size: 505.88876pt x 361.3491pt.
 
-Overfull \hbox (33.85753pt too wide) in paragraph at lines 281--282
+Overfull \hbox (33.85753pt too wide) in paragraph at lines 290--291
  [] 
  []
 
-<Figures/Figure_prop_ym.pdf, id=28, 1011.78pt x 722.7pt>
+<Figures/Figure_prop_ym.pdf, id=50, 1011.78pt x 722.7pt>
 File: Figures/Figure_prop_ym.pdf Graphic file (type pdf)
 
 <use Figures/Figure_prop_ym.pdf>
-Package pdftex.def Info: Figures/Figure_prop_ym.pdf used on input line 289.
+Package pdftex.def Info: Figures/Figure_prop_ym.pdf used on input line 298.
 (pdftex.def)             Requested size: 505.88876pt x 361.3491pt.
 
-Overfull \hbox (33.85753pt too wide) in paragraph at lines 289--290
+Overfull \hbox (33.85753pt too wide) in paragraph at lines 298--299
  [] 
  []
 
-<Figures/Figure_prop_yaf.pdf, id=29, 1011.78pt x 722.7pt>
+<Figures/Figure_prop_yaf.pdf, id=51, 1011.78pt x 722.7pt>
 File: Figures/Figure_prop_yaf.pdf Graphic file (type pdf)
 
 <use Figures/Figure_prop_yaf.pdf>
-Package pdftex.def Info: Figures/Figure_prop_yaf.pdf used on input line 299.
-(pdftex.def)             Requested size: 505.88876pt x 361.3491pt.
-
-Overfull \hbox (33.85753pt too wide) in paragraph at lines 299--300
- [] 
- []
-
-<Figures/Figure_prop_yam.pdf, id=30, 1011.78pt x 722.7pt>
-File: Figures/Figure_prop_yam.pdf Graphic file (type pdf)
-
-<use Figures/Figure_prop_yam.pdf>
-Package pdftex.def Info: Figures/Figure_prop_yam.pdf used on input line 308.
+Package pdftex.def Info: Figures/Figure_prop_yaf.pdf used on input line 308.
 (pdftex.def)             Requested size: 505.88876pt x 361.3491pt.
 
 Overfull \hbox (33.85753pt too wide) in paragraph at lines 308--309
  [] 
  []
 
-<Figures/Figure_prop_oam.pdf, id=31, 1011.78pt x 722.7pt>
-File: Figures/Figure_prop_oam.pdf Graphic file (type pdf)
+<Figures/Figure_prop_yam.pdf, id=52, 1011.78pt x 722.7pt>
+File: Figures/Figure_prop_yam.pdf Graphic file (type pdf)
 
-<use Figures/Figure_prop_oam.pdf>
-Package pdftex.def Info: Figures/Figure_prop_oam.pdf used on input line 317.
+<use Figures/Figure_prop_yam.pdf>
+Package pdftex.def Info: Figures/Figure_prop_yam.pdf used on input line 317.
 (pdftex.def)             Requested size: 505.88876pt x 361.3491pt.
 
 Overfull \hbox (33.85753pt too wide) in paragraph at lines 317--318
  [] 
  []
 
-<Figures/Figure_prop_oaf.pdf, id=32, 1011.78pt x 722.7pt>
-File: Figures/Figure_prop_oaf.pdf Graphic file (type pdf)
+<Figures/Figure_prop_oam.pdf, id=53, 1011.78pt x 722.7pt>
+File: Figures/Figure_prop_oam.pdf Graphic file (type pdf)
 
-<use Figures/Figure_prop_oaf.pdf>
-Package pdftex.def Info: Figures/Figure_prop_oaf.pdf used on input line 326.
+<use Figures/Figure_prop_oam.pdf>
+Package pdftex.def Info: Figures/Figure_prop_oam.pdf used on input line 326.
 (pdftex.def)             Requested size: 505.88876pt x 361.3491pt.
 
 Overfull \hbox (33.85753pt too wide) in paragraph at lines 326--327
  [] 
  []
 
-<Figures/Suicide_Appendix.pdf, id=33, 894.45pt x 786.90538pt>
+<Figures/Figure_prop_oaf.pdf, id=54, 1011.78pt x 722.7pt>
+File: Figures/Figure_prop_oaf.pdf Graphic file (type pdf)
+
+<use Figures/Figure_prop_oaf.pdf>
+Package pdftex.def Info: Figures/Figure_prop_oaf.pdf used on input line 335.
+(pdftex.def)             Requested size: 505.88876pt x 361.3491pt.
+
+Overfull \hbox (33.85753pt too wide) in paragraph at lines 335--336
+ [] 
+ []
+
+<Figures/Suicide_Appendix.pdf, id=55, 894.45pt x 786.90538pt>
 File: Figures/Suicide_Appendix.pdf Graphic file (type pdf)
 
 <use Figures/Suicide_Appendix.pdf>
-Package pdftex.def Info: Figures/Suicide_Appendix.pdf used on input line 335.
+Package pdftex.def Info: Figures/Suicide_Appendix.pdf used on input line 344.
 (pdftex.def)             Requested size: 447.2239pt x 393.45172pt.
 
 No file "Supplemental material".bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[3] [4 <./Figures/Sensitivity_fig.pdf>] [5 <./Figures/CVfig.pdf> <./Figures/Ran
-kFemales.pdf>] [6 <./Figures/Adult_Male_heatmap.pdf> <./Figures/Adult_Female_he
-atmap.pdf>] [7 <./Figures/Young_Male_heatmap.pdf> <./Figures/Young_Female_heatm
-ap.pdf>] [8 <./Figures/YoungAdult_Male_heatmap.pdf> <./Figures/YoungAdult_Femal
-e_heatmap.pdf>] [9 <./Figures/Distance_y.pdf>] [10 <./Figures/Distance_ya.pdf>]
-[11 <./Figures/Distance_oa.pdf>] [12 <./Figures/Figure_prop_yf.pdf>] [13 <./Fig
-ures/Figure_prop_ym.pdf>] [14 <./Figures/Figure_prop_yaf.pdf>] [15 <./Figures/F
-igure_prop_yam.pdf>] [16 <./Figures/Figure_prop_oam.pdf>] [17 <./Figures/Figure
-_prop_oaf.pdf>] [18 <./Figures/Suicide_Appendix.pdf>]
+[5 <./Figures/Temp_e0_CIs_RR_Final.pdf>] [6 <./Figures/CVfig.pdf> <./Figures/Ra
+nkFemales.pdf>] [7 <./Figures/Adult_Male_heatmap.pdf> <./Figures/Adult_Female_h
+eatmap.pdf>] [8 <./Figures/Young_Male_heatmap.pdf> <./Figures/Young_Female_heat
+map.pdf>] [9 <./Figures/YoungAdult_Male_heatmap.pdf> <./Figures/YoungAdult_Fema
+le_heatmap.pdf>] [10 <./Figures/Distance_y.pdf>] [11 <./Figures/Distance_ya.pdf
+>] [12 <./Figures/Distance_oa.pdf>] [13 <./Figures/Figure_prop_yf.pdf>]
+[14 <./Figures/Figure_prop_ym.pdf>] [15 <./Figures/Figure_prop_yaf.pdf>]
+[16 <./Figures/Figure_prop_yam.pdf>] [17 <./Figures/Figure_prop_oam.pdf>]
+[18 <./Figures/Figure_prop_oaf.pdf>] [19 <./Figures/Suicide_Appendix.pdf>]
 ("Supplemental material.aux") )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 64 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6295 strings out of 493328
- 92684 string characters out of 3139116
- 185590 words of memory out of 3000000
- 9703 multiletter control sequences out of 15000+200000
+ 6300 strings out of 493328
+ 92855 string characters out of 3139116
+ 185592 words of memory out of 3000000
+ 9707 multiletter control sequences out of 15000+200000
  12959 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,39p,1048b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -753,9 +766,9 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy9.pfb>
-Output written on "Supplemental material.pdf" (18 pages, 833351 bytes).
+Output written on "Supplemental material.pdf" (19 pages, 934083 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
+ 414 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
