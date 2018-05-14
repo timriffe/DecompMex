@@ -93,7 +93,7 @@ deduct[,1]        <- .08
 #dev.new(width=6,height=8)
 
 # male rank plot (main text Figure 3)
-pdf("BMJ Open Revise and Resubmit/Figures/Figure_3.pdf")
+pdf("BMJ Open Revise and Resubmit/Figures/Figure_3.pdf",width=6,height=8)
 par(mai=c(.2,1.8,.2,.7))
 plot(NULL, 
 		type = "n", 
@@ -117,7 +117,7 @@ text(3.3,32.4,"Rank",xpd=TRUE)
 dev.off()
 
 # females rank plot (additional file)
-pdf("BMJ Open Revise and Resubmit/Additional File/Figures/RankFemales.pdf")
+pdf("BMJ Open Revise and Resubmit/Additional File/Figures/RankFemales.pdf",width=6,height=8)
 par(mai=c(.2,1.8,.2,.7))
 plot(NULL, 
 		type = "n", 
