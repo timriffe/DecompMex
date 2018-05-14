@@ -170,36 +170,30 @@ Data$Ages   <- factor(Data$Ages,
                       labels = c("0-14", "15-49", "50-84"))
 Data$Sex    <- factor(Data$Sex, 
                       levels = c(1, 2), 
-                      labels = c("Females", "Males"))
+                      labels = c("Males", "Females"))
 
 #### Distance data
 # TR: how about we call it a 'gap'?
-Data        <- data.table(Data)
-Dist.data   <- Data[,sum(Contribution), by = list(Year, State, Ages, Sex)]
-setnames(Dist.data,"V1","Distance")
+load('Data/CI_Data.RData')
+Dist.data   <- CI_Data
+Dist.data$region              <- region.recvec[as.character(Dist.data$state)] 
 
+# Turn region, Ages, Sex into levelled/ordered factors
+Dist.data$region <- factor(Dist.data$region, 
+                      levels = c(1, 2, 3), 
+                      labels = c("South", "Central", "North"))
 
-ref.order   <- subset(Dist.data, Year==2015 & Sex == "Males" & Ages == "50-84")
-ref.order   <- data.table(ref.order)
+ref.order   <- subset(Dist.data, year==2015 & sex == "Males" & age.g == "50-84")
+
 setnames(ref.order, "Distance", "Order")
 # select State and Order columns
-ref.order   <- ref.order[,c(2,5),with=FALSE]
+ref.order   <- ref.order[,c(8,10),with=FALSE]
+ref.order <- ref.order[order(-Order),]
+ref.order <- ref.order[ref.order$Statenom!='Benchmark',]
 head(ref.order)
 save(ref.order, file= "Data/Order.Rdata")
 
-# get names & regions for current data chunk
-Dist.data$Statenom <- state.code.recvec[as.character(Dist.data$State)]
-Dist.data$region   <- region.recvec[as.character(Data$State)] 
-
-# select years, factor region
-Dist.data          <- Dist.data[Year == 2005 | Year == 2010 | Year == 2015]
-Dist.data          <- as.data.frame(Dist.data)
-Dist.data$region   <- factor(Dist.data$region, 
-                             levels = c(1, 2, 3), 
-                             labels = c("South", "Central", "North"))
-
-
-Dist.data          <- merge(Dist.data, ref.order, by = c("State"), all.y = TRUE)
+Dist.data          <- merge(Dist.data, ref.order, by = c("Statenom"), all.y = TRUE)
 
 Dist.data$Statenom <- with(Dist.data, reorder(reorder(Statenom, Order), as.numeric(region)))
 
@@ -239,120 +233,12 @@ my.settings 	<- list(
 main.label <- "Gap with benchmark life expectancy (years)"
 
 
-### one plot fpr the supplemental material
-f1.y.data <- subset(Dist.data,Ages=="0-14")
-f1.y <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),ylab= list("State",cex=1),
-                                #layout=c(3,6),
-                                strip=TRUE,
-                                # TR: changed to gap
-                                xlab=list(main.label,cex=1),main=FALSE,cex=1,
-                                data=f1.y.data, groups=Year,pch=my.pch, col=my.fill,col.line=col.line,lin=line,par.settings=my.settings,
-                                xlim=c(0,4),
-                                scales=list(alternating=1,x=list(cex=1),
-                                            y=list(relation="free")),
-                                key=list(position="top",background="white",
-                                         title="Year",text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
-                                panel=function(x,y,lin,col.line,...){    
-                                  #panel.abline(v=seq(0,.5,.1),lwd=1,lty=1,col="#A1A1A150")
-                                  panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
-                                }),strip.left=T)
-f1.y
-pdf(file="Appendix Figures/Distance_y.pdf",width=8,height=11)
-print(f1.y)
-dev.off()
-
-f1.ya.data <- subset(Dist.data,Ages=="15-49")
-f1.ya <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),ylab= list("State",cex=1),
-                                 #layout=c(3,6),
-                                 strip=T,
-                                 xlab=list(main.label,cex=1),main=FALSE,cex=1,
-                                 data=f1.ya.data, groups=Year,pch=my.pch, col=my.fill,col.line=col.line,lin=line,par.settings=my.settings,
-                                 xlim=c(0,4),
-                                 scales=list(alternating=1,x=list(cex=1),
-                                             y=list(relation="free")),
-                                 key=list(position="top",background="white",
-                                          title="Year",text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
-                                 panel=function(x,y,lin,col.line,...){    
-                                   #panel.abline(v=seq(0,3.5,.5),lwd=1,lty=1,col="#A1A1A150")
-                                   panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
-                                 }),strip.left=T)
-f1.ya
-pdf(file="Appendix Figures/Distance_ya.pdf",width=8,height=11)
-print(f1.ya)
-dev.off()
 
 
-f1.oa.data <- subset(Dist.data,Ages=="50-84")
-f1.oa <- useOuterStrips( dotplot(Statenom ~ Distance|Sex+region,aspect = c(0.9),ylab= list("State",cex=1),
-                                 #layout=c(3,6),
-                                 strip=T,
-                                 xlab=list(main.label,cex=1),main=FALSE,cex=1,
-                                 data=f1.oa.data, groups=Year,pch=my.pch, col=my.fill,col.line=col.line,lin=line,par.settings=my.settings,
-                                 xlim=c(0,4),
-                                 scales=list(alternating=1,x=list(cex=1),
-                                             y=list(relation="free")),
-                                 key=list(position="top",background="white",
-                                          title="Year",text=list(txt.legend),points=list(pch=my.pch1,col=my.fill1,cex=1)),                       
-                                 panel=function(x, y, lin, col.line,...){    
-                                   #panel.abline(v=seq(.5,3.5,1),lwd=1,lty=3,col="darkgrey")
-                                   # panel.abline(v=seq(0,4,1),lwd=1,lty=1,col="#A1A1A150")
-                                   #panel.abline(v=lin[[1]],col=col.line[[1]],lwd=1,lty=2)
-                                   panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
-                                 }),strip.left=T)
-f1.oa
-pdf(file="Appendix Figures/Distance_oa.pdf",width=8,height=11)
-print(f1.oa)
-dev.off()
+fig.data <- subset(Dist.data,sex=="Males" & age.g == "50-84")
 
 
-
-
-
-### one plot for the paper
-
-
-
-fig.data <- subset(Dist.data,Sex=="Males" & Ages == "50-84")
-
-
-# # TR: changing x ticks and grids
-# f2 <- dotplot(Statenom ~ Distance | region,
-#               aspect = c(0.9),
-#               ylab = "", 
-#               strip.left = TRUE, 
-#               layout = c(1, 3), 
-#               strip = FALSE,
-#               xlab = list(main.label, cex=1),
-#               main = FALSE, 
-#               cex = 1,
-#               data = fig.data, 
-#               groups = Year, 
-#               pch = my.pch, 
-#               col = my.fill,
-#               col.line = col.line,
-#               lin = line,
-#               par.settings = my.settings,
-#               xlim = c(0,5),
-#               between = list(y = .5),
-#               scales = list(alternating = 1,
-#                             x = list(cex = 1, at = seq(0,4,1), labels = as.character(seq(0,4,1))),
-#                             y = list(relation = "free")),
-#               key=list(space = "right", 
-#                        background="white",
-#                        title = "Year", 
-#                        text = list(txt.legend), 
-#                        points = list(pch = my.pch1, col = my.fill1, cex = 1)),                       
-#               panel=function(x, y, lin, col.line,...){    
-#                 #panel.abline(v=seq(.5,3.5,1),lwd=1,lty=3,col="darkgrey")
-#                 panel.abline(v=seq(0,4,1),lwd=1,lty=1,col="#A1A1A150")
-#                 #panel.abline(v=lin[[1]],col=col.line[[1]],lwd=1,lty=2)
-#                 panel.dotplot(x,y,col.line="#A1A1A150",lwd=1,lty=1,...)                     
-#               })
-# f2
-# 
-
-
-fig.data2<- subset(fig.data,Year==2015)
+fig.data2<- subset(fig.data,year==2015)
 f2.1 <- dotplot(Statenom ~ Distance | region,
               aspect = c(0.9),
               ylab = "", 
@@ -363,13 +249,13 @@ f2.1 <- dotplot(Statenom ~ Distance | region,
               main = FALSE, 
               cex = 1,
               data = fig.data2,
-              groups = Year, 
+              groups = year, 
               pch = my.pch[3], 
               col = my.fill[3],
               col.line = col.line,
               lin = line,
               par.settings = my.settings,
-              xlim = c(0,5),
+              xlim = c(0,4),
               between = list(y = .5),
               scales = list(alternating = 1,
                             x = list(cex = 1, at = seq(0,4,1), labels = as.character(seq(0,4,1))),
@@ -456,7 +342,7 @@ my.settings1 <- list(
 )
 
 
-f2.c           <- merge(f2.cause,ref.order, by = c("State"),all.y = T)
+f2.c           <- merge(f2.cause,ref.order, by = c("Statenom"),all.y = T)
 
 
 f2.c$Statenom  <- with(f2.c,reorder(reorder(Statenom,Order),as.numeric(region)))
@@ -498,165 +384,9 @@ blank<-rectGrob(gp=gpar(col="white"))
 # grid.arrange(f2,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.9))
 # dev.off()
 
-pdf(file="Paper Figures/Gap_Prop_Fig.pdf",width=13,height=7,pointsize=12,useDingbats = F)
+pdf(file="BMJ Open Revise and Resubmit/Figures/Gap_Prop_Fig.pdf",width=13,height=7,pointsize=12,useDingbats = F)
 grid.arrange(f2.1,blank,f2.c2,ncol=3,widths=c(0.7,-.15, 0.8))
 dev.off()
-
-
-################ Supplemental figures 
-
-
-sup.data <- Data.fig[Year == 2005 | Year == 2010 | Year == 2015]
-
-sup.data2 <- merge(sup.data,ref.order, by = c("State"),all.y = T)
-
-sup.data2$Statenom<-with(sup.data2,reorder(reorder(Statenom,Order),as.numeric(region)))
-sup.data2$Year <- factor(sup.data2$Year,levels=c(2005,2010,2015),labels=c("2005","2010","2015"))
-sup.data2$region <- factor(sup.data2$region, 
-                      levels = c(1, 2, 3), 
-                      labels = c("South", "Central", "North"))
-
-
-#supplemental figure for young
-
-prop.ym <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="0-14" & Sex=="Males"),
-                                    groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
-                                    stack=TRUE,main="Young Males",
-                                    between = list(y = .5),
-                                    scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
-                                                                     labels=as.character(seq(0,4,.5))),
-                                                y=list(relation="free")),
-                                    par.settings=my.settings1,
-                                    key = list(space="bottom", title="Cause of death",background="white",
-                                               text=list(fig.labels)
-                                               ,cex=.9,
-                                               points=list(pch=19,col=myColours1))),strip.left=T)
-prop.ym
-
-
-library(gridExtra)
-library(grid)
-blank<-rectGrob(gp=gpar(col="white"))
-
-
-
-require(gridExtra)
-pdf(file="Appendix Figures/Figure_prop_ym.pdf",width=14,height=10,pointsize=12)
-prop.ym
-
-dev.off()
-
-
-prop.yf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="0-14" & Sex=="Females"),
-                                    groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
-                                    stack=TRUE,main="Young Females",
-                                    between = list(y = .5),
-                                    scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
-                                                                     labels=as.character(seq(0,4,.5))),
-                                                y=list(relation="free")),
-                                    par.settings=my.settings1,
-                                    key = list(space="bottom", title="Cause of death",background="white",
-                                               text=list(fig.labels)
-                                               ,cex=.9,
-                                               points=list(pch=19,col=myColours1))),strip.left=T)
-prop.yf
-
-
-require(gridExtra)
-pdf(file="Appendix Figures/Figure_prop_yf.pdf",width=14,height=10,pointsize=12)
-prop.yf
-dev.off()
-
-
-
-
-prop.yam <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="15-49" & Sex=="Males"),
-                                     groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
-                                     stack=TRUE,main="Young adult males",
-                                     between = list(y = .5),
-                                     scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
-                                                                      labels=as.character(seq(0,4,.5))),
-                                                 y=list(relation="free")),
-                                     par.settings=my.settings1,
-                                     key = list(space="bottom", title="Cause of death",background="white",
-                                                text=list(fig.labels)
-                                                ,cex=.9,
-                                                points=list(pch=19,col=myColours1))),strip.left=T)
-prop.yam
-
-
-require(gridExtra)
-pdf(file="Appendix Figures/Figure_prop_yam.pdf",width=14,height=10,pointsize=12)
-prop.yam
-dev.off()
-
-
-prop.yaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="15-49" & Sex=="Females"),
-                                     groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
-                                     stack=TRUE,main="Young adult females",
-                                     between = list(y = .5),
-                                     scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
-                                                                      labels=as.character(seq(0,4,.5))),
-                                                 y=list(relation="free")),
-                                     par.settings=my.settings1,
-                                     key = list(space="bottom", title="Cause of death",background="white",
-                                                text=list(fig.labels)
-                                                ,cex=.9,
-                                                points=list(pch=19,col=myColours1))),strip.left=T)
-prop.yaf
-
-
-require(gridExtra)
-pdf(file="Appendix Figures/Figure_prop_yaf.pdf",width=14,height=10,pointsize=12)
-prop.yaf
-dev.off()
-
-
-
-prop.oam <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="50-84" & Sex=="Males"),
-                                     groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
-                                     stack=TRUE,main="Older adult males",
-                                     between = list(y = .5),
-                                     scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
-                                                                      labels=as.character(seq(0,4,.5))),
-                                                 y=list(relation="free")),
-                                     par.settings=my.settings1,
-                                     key = list(space="bottom", title="Cause of death",background="white",
-                                                text=list(fig.labels)
-                                                ,cex=.9,
-                                                points=list(pch=19,col=myColours1))),strip.left=T)
-prop.oam
-
-
-require(gridExtra)
-pdf(file="Appendix Figures/Figure_prop_oam.pdf",width=14,height=10,pointsize=12)
-prop.oam
-dev.off()
-
-
-prop.oaf <-  useOuterStrips(barchart(Statenom ~ Prop |Year+region, data=subset(sup.data2,Ages=="50-84" & Sex=="Females"),
-                                     groups=col.label,  ylab="",xlab=list("Proportion explained by cause of death",cex=1.3),
-                                     stack=TRUE,main="Older adult females",
-                                     between = list(y = .5),
-                                     scales=list(alternating=1,x=list(cex=1,at=seq(0,4,.5), 
-                                                                      labels=as.character(seq(0,4,.5))),
-                                                 y=list(relation="free")),
-                                     par.settings=my.settings1,
-                                     key = list(space="bottom", title="Cause of death",background="white",
-                                                text=list(fig.labels)
-                                                ,cex=.9,
-                                                points=list(pch=19,col=myColours1))),strip.left=T)
-prop.oaf
-
-
-require(gridExtra)
-pdf(file="Appendix Figures/Figure_prop_oaf.pdf",width=14,height=10,pointsize=12)
-prop.oaf
-dev.off()
-
-
-
-
 
 
 

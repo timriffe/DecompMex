@@ -341,7 +341,7 @@ pchfemales    <- pchvec[colnames(f.mat)]
 colnames(m.mat) <- state.code.recvec[colnames(m.mat)]
 colnames(f.mat) <- state.code.recvec[colnames(f.mat)]
 
-pdf("Paper Figures/RankMales_2.pdf",width=5,height=8,useDingbats = F)
+pdf("BMJ Open Revise and Resubmit/Figures//RankMales_2_Unsmoothed.pdf",width=5,height=8,useDingbats = F)
 par(mai=c(.5,1.5,.5,.5))
 
 rankplot(m.mat, colmales, lwdmales, pchmales, 
