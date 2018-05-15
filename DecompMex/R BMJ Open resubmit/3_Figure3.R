@@ -115,12 +115,6 @@ colors[i2 & labels %in% PS] <- Purp4[2]
 colors[i3 & labels %in% PS] <- Purp4[3]
 colors[i4 & labels %in% PS] <- Purp4[4]
 
-
-
-#show.pal(Gree4,F)
-#graphics.off()
-#dev.new(width=6,height=8)
-
 # male rank plot (main text Figure 3)
 pdf("BMJ Open Revise and Resubmit/Figures/Figure_3.pdf",width=6,height=8)
 
@@ -151,6 +145,25 @@ text(1:3,33.5,c("Young (0-14)","Middle (15-49)","Older (50-84)"),xpd=TRUE)
 text(3.3,32.4,"Rank",xpd=TRUE)
 dev.off()
 
+
+
+# reorder labels and colors for females
+
+labels            <- state.code.recvec[rownames(y.f)]
+codes             <- state.abbrev.recvec[rownames(y.f)]
+colors            <- rep(gray(seq(.8,.3,length=4)),8)
+names(colors)     <- labels
+colors[i1 & labels %in% GS] <- Gree4[1]
+colors[i2 & labels %in% GS] <- Gree4[2]
+colors[i3 & labels %in% GS] <- Gree4[3]
+colors[i4 & labels %in% GS] <- Gree4[4]
+colors[i1 & labels %in% PS] <- Purp4[1]
+colors[i2 & labels %in% PS] <- Purp4[2]
+colors[i3 & labels %in% PS] <- Purp4[3]
+colors[i4 & labels %in% PS] <- Purp4[4]
+
+
+
 # females rank plot (additional file)
 pdf("BMJ Open Revise and Resubmit/Additional File/Figures/RankFemales.pdf",width=6,height=8)
 par(mai=c(.2,1.8,.2,.7))
@@ -168,11 +181,10 @@ plot(NULL,
 )
 
 #matplot(t(y.f) ,type='l',lty=1,ylab="",xlab="",col=gray(.2),lwd=1.2,axes=FALSE,add=TRUE)
-matplot(t(y.f[i1,]) ,type='l',lty=1,ylab="",xlab="",col=gray(.6),lwd=3,axes=FALSE,add=TRUE)
-matplot(t(y.f[i2,]) ,type='l',lty=1,ylab="",xlab="",col=gray(.4),lwd=2,axes=FALSE,add=TRUE)
-matplot(t(y.f[i3,]) ,type='l',lty=1,ylab="",xlab="",col=gray(.2),lwd=1.5,axes=FALSE,add=TRUE)
-matplot(t(y.f[i4,]) ,type='l',lty=1,ylab="",xlab="",col=gray(0),lwd=1,axes=FALSE,add=TRUE)
-
+matplot(t(y.f[i1,]) ,type='l',lty=1,ylab="",xlab="",col=colors[i1],lwd=4,axes=FALSE,add=TRUE)
+matplot(t(y.f[i2,]) ,type='l',lty=1,ylab="",xlab="",col=colors[i2],lwd=3,axes=FALSE,add=TRUE)
+matplot(t(y.f[i3,]) ,type='l',lty=1,ylab="",xlab="",col=colors[i3],lwd=2,axes=FALSE,add=TRUE)
+matplot(t(y.f[i4,]) ,type='l',lty=1,ylab="",xlab="",col=colors[i4],lwd=1,axes=FALSE,add=TRUE)
 
 boxed.labels(col(y.f)-deduct,y.f,codes,cex=.8,border=FALSE)
 text(.85,y.f[,1],state.code.recvec[rownames(y.f)],pos=2,xpd=TRUE)
