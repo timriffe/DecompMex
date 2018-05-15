@@ -14,12 +14,12 @@ if (me == "ADM-108625") {
 library(reshape2)
 library(latticeExtra)
 library(data.table)
-#library(RColorBrewer)
+library(RColorBrewer)
 library(plotrix)
 
 load("Data/Temp_e0_results_smooth.RData")
 source("R/Functions_fig.R")
-
+source("R/Color.R")
 
 ### standardize temporary life expectancy with the maximum survival
 dat <- temp.data[state < 33]
@@ -66,16 +66,19 @@ f.mat   		  <- acast(females, age.g ~ state, value.var = "mean_temp_e0")
 
 
 # how about state labels proper?
-colnames(m.mat)   <- state.code.recvec[colnames(m.mat)]
-colnames(f.mat)   <- state.code.recvec[colnames(f.mat)]
+#colnames(m.mat)   <- state.code.recvec[colnames(m.mat)]
+#colnames(f.mat)   <- state.code.recvec[colnames(f.mat)]
 
 m.rank            <- apply(m.mat,1,rank)
 f.rank            <- apply(f.mat,1,rank)
 
+m.rank            <- m.rank[order(m.rank[,1]),]
+f.rank            <- f.rank[order(f.rank[,1]),]
+
 y.f               <- f.rank - 1
 y.m               <- m.rank - 1
 
-Nrank             <- ncol(y.f)
+Nrank             <- nrow(y.f)
 # ys               <- abs(Nrank - rankmat)
 laby              <- ys[1,]
 #ys[mat < 1e-5] <- NA
@@ -89,11 +92,38 @@ codewpar          <- paste0(labels," (", codes,")")
 deduct            <- y.m * 0
 deduct[,1]        <- .08
 
+Purp4 <- RColorBrewer::brewer.pal(9,"Purples")[c(3,5,7,9)]
+Gree4 <- RColorBrewer::brewer.pal(9,"Greens")[c(3,5,7,9)]
+
+GS <- c("Sinaloa","Nayarit","Michoacan","Morelos","Zacatecas","Guerrero")
+PS <- c("Yucatan","Hidalgo","Queretaro","Mexico City","Puebla")
+
+colors <- rep(gray(seq(.8,.3,length=4)),8)
+names(colors) <- labels
+
+ivec <- 1:32 %% 4 
+i1 <- ivec == 1
+i2 <- ivec == 2
+i3 <- ivec == 3
+i4 <- ivec == 0
+colors[i1 & labels %in% GS] <- Gree4[1]
+colors[i2 & labels %in% GS] <- Gree4[2]
+colors[i3 & labels %in% GS] <- Gree4[3]
+colors[i4 & labels %in% GS] <- Gree4[4]
+colors[i1 & labels %in% PS] <- Purp4[1]
+colors[i2 & labels %in% PS] <- Purp4[2]
+colors[i3 & labels %in% PS] <- Purp4[3]
+colors[i4 & labels %in% PS] <- Purp4[4]
+
+
+
+#show.pal(Gree4,F)
 #graphics.off()
 #dev.new(width=6,height=8)
 
 # male rank plot (main text Figure 3)
 pdf("BMJ Open Revise and Resubmit/Figures/Figure_3.pdf",width=6,height=8)
+
 par(mai=c(.2,1.8,.2,.7))
 plot(NULL, 
 		type = "n", 
@@ -108,9 +138,14 @@ plot(NULL,
 								col=gray(.92),border=NA,xpd=TRUE))
 )
 
-matplot(t(y.m) ,type='l',lty=1,ylab="",xlab="",col=gray(.2),lwd=1.2,axes=FALSE,add=TRUE)
+# archaic way of making sure thin lines render on top of fat ones
+matplot(t(y.m[i1,]) ,type='l',lty=1,ylab="",xlab="",col=colors[i1],lwd=4,axes=FALSE,add=TRUE)
+matplot(t(y.m[i2,]) ,type='l',lty=1,ylab="",xlab="",col=colors[i2],lwd=3,axes=FALSE,add=TRUE)
+matplot(t(y.m[i3,]) ,type='l',lty=1,ylab="",xlab="",col=colors[i3],lwd=2,axes=FALSE,add=TRUE)
+matplot(t(y.m[i4,]) ,type='l',lty=1,ylab="",xlab="",col=colors[i4],lwd=1,axes=FALSE,add=TRUE)
+
 boxed.labels(col(y.m)-deduct,y.m,codes,cex=.8,border=FALSE)
-text(.85,y.m[,1],state.code.recvec[rownames(y.m)],pos=2,xpd=TRUE)
+text(.85,y.m[,1],labels[rownames(y.m)],pos=2,xpd=TRUE)
 text(3.3,0:31,32:1,xpd=TRUE,cex=.8)
 text(1:3,33.5,c("Young (0-14)","Middle (15-49)","Older (50-84)"),xpd=TRUE)
 text(3.3,32.4,"Rank",xpd=TRUE)
@@ -132,7 +167,13 @@ plot(NULL,
 								col=gray(.92),border=NA,xpd=TRUE))
 )
 
-matplot(t(y.f) ,type='l',lty=1,ylab="",xlab="",col=gray(.2),lwd=1.2,axes=FALSE,add=TRUE)
+#matplot(t(y.f) ,type='l',lty=1,ylab="",xlab="",col=gray(.2),lwd=1.2,axes=FALSE,add=TRUE)
+matplot(t(y.f[i1,]) ,type='l',lty=1,ylab="",xlab="",col=gray(.6),lwd=3,axes=FALSE,add=TRUE)
+matplot(t(y.f[i2,]) ,type='l',lty=1,ylab="",xlab="",col=gray(.4),lwd=2,axes=FALSE,add=TRUE)
+matplot(t(y.f[i3,]) ,type='l',lty=1,ylab="",xlab="",col=gray(.2),lwd=1.5,axes=FALSE,add=TRUE)
+matplot(t(y.f[i4,]) ,type='l',lty=1,ylab="",xlab="",col=gray(0),lwd=1,axes=FALSE,add=TRUE)
+
+
 boxed.labels(col(y.f)-deduct,y.f,codes,cex=.8,border=FALSE)
 text(.85,y.f[,1],state.code.recvec[rownames(y.f)],pos=2,xpd=TRUE)
 text(3.3,0:31,32:1,xpd=TRUE,cex=.8)
