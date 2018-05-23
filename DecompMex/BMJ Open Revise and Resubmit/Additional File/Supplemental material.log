@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.3)  15 MAY 2018 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.3)  22 MAY 2018 13:50
 entering extended mode
 **"./Supplemental material.tex"
 ("Supplemental material.tex"
@@ -714,32 +714,25 @@ Overfull \hbox (33.85753pt too wide) in paragraph at lines 336--337
  [] 
  []
 
-<Figures/Suicide_Appendix.pdf, id=55, 894.45pt x 786.90538pt>
-File: Figures/Suicide_Appendix.pdf Graphic file (type pdf)
-
-<use Figures/Suicide_Appendix.pdf>
-Package pdftex.def Info: Figures/Suicide_Appendix.pdf used on input line 345.
-(pdftex.def)             Requested size: 447.2239pt x 393.45172pt.
- ("Supplemental material.bbl") [5 <./Figures/Temp_e0_CIs_RR_Final.pdf>] [6 <./F
-igures/CVfig.pdf> <./Figures/RankFemales.pdf>] [7 <./Figures/Adult_Male_heatmap
-.pdf> <./Figures/Adult_Female_heatmap.pdf>]
-[8 <./Figures/Young_Male_heatmap.pdf> <./Figures/Young_Female_heatmap.pdf>]
-[9 <./Figures/YoungAdult_Male_heatmap.pdf> <./Figures/YoungAdult_Female_heatmap
-.pdf>] [10 <./Figures/Distance_y.pdf>] [11 <./Figures/Distance_ya.pdf>]
-[12 <./Figures/Distance_oa.pdf>] [13 <./Figures/Figure_prop_yf.pdf>] [14 <./Fig
-ures/Figure_prop_ym.pdf>] [15 <./Figures/Figure_prop_yaf.pdf>] [16 <./Figures/F
-igure_prop_yam.pdf>] [17 <./Figures/Figure_prop_oam.pdf>] [18 <./Figures/Figure
-_prop_oaf.pdf>] [19 <./Figures/Suicide_Appendix.pdf>]
-("Supplemental material.aux") )
+("Supplemental material.bbl") [5 <./Figures/Temp_e0_CIs_RR_Final.pdf>] [6 <./Fi
+gures/CVfig.pdf> <./Figures/RankFemales.pdf>] [7 <./Figures/Adult_Male_heatmap.
+pdf> <./Figures/Adult_Female_heatmap.pdf>] [8 <./Figures/Young_Male_heatmap.pdf
+> <./Figures/Young_Female_heatmap.pdf>] [9 <./Figures/YoungAdult_Male_heatmap.p
+df> <./Figures/YoungAdult_Female_heatmap.pdf>] [10 <./Figures/Distance_y.pdf>]
+[11 <./Figures/Distance_ya.pdf>] [12 <./Figures/Distance_oa.pdf>] [13 <./Figure
+s/Figure_prop_yf.pdf>] [14 <./Figures/Figure_prop_ym.pdf>] [15 <./Figures/Figur
+e_prop_yaf.pdf>] [16 <./Figures/Figure_prop_yam.pdf>] [17 <./Figures/Figure_pro
+p_oam.pdf>] [18 <./Figures/Figure_prop_oaf.pdf>] ("Supplemental material.aux") 
+)
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 65 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6306 strings out of 493328
- 92995 string characters out of 3139116
+ 6301 strings out of 493328
+ 92844 string characters out of 3139116
  185652 words of memory out of 3000000
- 9711 multiletter control sequences out of 15000+200000
+ 9707 multiletter control sequences out of 15000+200000
  12959 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,39p,1047b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -760,9 +753,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmti9.pfb>
-Output written on "Supplemental material.pdf" (19 pages, 930840 bytes).
+Output written on "Supplemental material.pdf" (18 pages, 876349 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
+ 392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
