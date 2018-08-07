@@ -1,6 +1,6 @@
 # reproducibility repository for
 
-José Manuel Aburto, Tim Riffe, Vladimir Canudas-Romo (2018) (Trends in avoidable mortality over the life course in Mexico, 1990-2015: A cross-sectional demographic analysis)[https://bmjopen.bmj.com/content/8/7/e022350.full.pdf]. BMJ Open 7(8) DOI 10.1136/bmjopen-2018-022350
+(José Manuel Aburto)[http://findresearcher.sdu.dk/portal/en/persons/jose-manuel-aburto(34dcae96-a13a-4c4d-a941-985152180869).html], (Tim Riffe)[https://www.demogr.mpg.de/en/institute/staff_directory_1899/timothy_riffe_2198.htm, (Vladimir Canudas-Romo)[https://researchers.anu.edu.au/researchers/canudas-romo-v] (2018) (Trends in avoidable mortality over the life course in Mexico, 1990-2015: A cross-sectional demographic analysis)[https://bmjopen.bmj.com/content/8/7/e022350.full.pdf]. BMJ Open 7(8) DOI 10.1136/bmjopen-2018-022350
 
 
 ## Objective: 
