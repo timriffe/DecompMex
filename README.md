@@ -1,4 +1,6 @@
-Trends in avoidable mortality over the life course in Mexico, 1990-2015:  A cross-sectional demographic analysis
+# reproducibility repository for
+
+José Manuel Aburto, Tim Riffe, Vladimir Canudas-Romo (2018) (Trends in avoidable mortality over the life course in Mexico, 1990-2015: A cross-sectional demographic analysis)[https://bmjopen.bmj.com/content/8/7/e022350.full.pdf]. BMJ Open 7(8) DOI 10.1136/bmjopen-2018-022350
 
 
 Objective: To analyse average lifespan and quantify the effect of Avoidable/Amenable mortality on the difference between state-specific mortality and a low-mortality benchmark in Mexico dur-ing 1990-2015.
